@@ -1,0 +1,4 @@
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  constructor() {$/;"	function	line:5
+state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^    this.state = {$/;"	property	line:7
+componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  componentWillMount () {$/;"	function	line:11
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  render() {$/;"	function	line:22
