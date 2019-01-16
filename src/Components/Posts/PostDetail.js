@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../Design/Post.css';
+import { ClipLoader } from 'react-spinners';
 
 class PostDetail extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: {}
+      data: {},
+      loading: true
     }
   }
   componentWillMount () {
@@ -16,12 +18,21 @@ class PostDetail extends React.Component {
     fetch(`https://k-blog0130.herokuapp.com/en/api/v1/posts/${id}`)
     .then(response => response.json())
     .then(data => {
-      this.setState({data:data.data})
+      this.setState({
+        data:data.data,
+        loading: false
+      })
     })
   }
   render() {
     return (
       <div>
+        <ClipLoader
+         sizeUnit={"px"}
+         size={100}
+         color={'#00C0B8'}
+         loading={this.state.loading}
+       />
         <h3>{this.state.data.title}</h3>
         <p>{this.state.data.context}</p>
       </div>
