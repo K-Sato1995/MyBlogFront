@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../Design/Post.css';
 import { Link } from 'react-router-dom';
-import { ClipLoader } from 'react-spinners';
 
 class PostBox extends React.Component {
   render() {

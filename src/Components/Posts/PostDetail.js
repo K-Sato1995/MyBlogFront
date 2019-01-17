@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../Design/Post.css';
+import '../../Design/Highlight.css';
 import { ClipLoader } from 'react-spinners';
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
 
 class PostDetail extends React.Component {
   constructor() {
@@ -35,7 +37,12 @@ class PostDetail extends React.Component {
          loading={this.state.loading}
        />
        <h3>{this.state.data.title}</h3>
-        <ReactMarkdown source={this.state.data.context} />
+        <ReactMarkdown
+          source={this.state.data.context}
+          renderers={{
+            code: CodeBlock,
+          }}
+        />
       </div>
     )
   }
