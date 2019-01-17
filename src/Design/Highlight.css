@@ -18,7 +18,7 @@ body > *:last-child {
 }
 
 a {
-  color: #4183C4;
+  color: #00bfb6;
   text-decoration: none;
 }
 
@@ -360,19 +360,10 @@ pre code {
   background: transparent;
 }
 
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
 
 pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
+  background-color: #F5F7F9 !important;
+  border: 1px solid #efefef !important;
   font-size: 13px;
   line-height: 19px;
   overflow: auto;
