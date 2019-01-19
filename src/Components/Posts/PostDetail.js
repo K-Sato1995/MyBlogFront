@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../Design/Post.css';
-import '../../Design/Highlight.css';
+import '../../Design/Post.scss';
+import '../../Design/Highlight.scss';
 import { ClipLoader } from 'react-spinners';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';

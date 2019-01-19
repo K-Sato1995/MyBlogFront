@@ -1,7 +1,6 @@
 import React from 'react';
 import PostsList from './PostsList';
-import '../../Design/Post.css';
-import '../../Design/Highlight.css';
+import '../../Design/Post.scss';
 import PostDetail from './PostDetail'
 import { Route } from 'react-router-dom';
 

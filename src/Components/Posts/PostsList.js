@@ -1,7 +1,8 @@
 import React from 'react';
 import PostBox from './PostBox';
-import '../../Design/Post.css';
+import '../../Design/Post.scss';
 import { ClipLoader } from 'react-spinners';
+import { Col } from 'react-bootstrap';
 
 class PostsList extends React.Component {
   constructor () {
@@ -29,7 +30,7 @@ class PostsList extends React.Component {
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
     return (
-      <div className="post-container">
+      <Col md={12} className='post-container'>
         <ClipLoader
          sizeUnit={"px"}
          size={100}
@@ -37,7 +38,7 @@ class PostsList extends React.Component {
          loading={this.state.loading}
        />
         { posts }
-      </div>
+      </Col>
     )
   }
 }
