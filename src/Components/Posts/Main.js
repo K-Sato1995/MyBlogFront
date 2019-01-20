@@ -8,8 +8,8 @@ class Main extends React.Component {
   render() {
     return (
       <div className="container">
-        <Route exact path='/' component={PostsList} />
-        <Route path="/Post/:id" component={PostDetail} />
+        <Route exact path='/MyBlogFront' component={PostsList} />
+        <Route path="/MyBlogFront/Post/:id" component={PostDetail} />
       </div>
     )
   }
