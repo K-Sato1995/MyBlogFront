@@ -13,4 +13,8 @@
   .post-title:hover {
     color: $a-color;
   }
+  .post-box {
+    border-bottom: solid 1.2px $border-color;
+    height: 70px;
+  }
 }

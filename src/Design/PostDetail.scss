@@ -1,0 +1,6 @@
+@import "global";
+@import "PostList";
+
+.post-container{
+  @extend .container;
+}

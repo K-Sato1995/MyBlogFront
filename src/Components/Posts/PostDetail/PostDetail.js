@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../Design/Post.scss';
-import '../../Design/Highlight.scss';
+import '../../../Design/PostDetail.scss';
+import '../../../Design/Highlight.scss';
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import ReactMarkdown from 'react-markdown';
@@ -34,7 +34,7 @@ class PostDetail extends React.Component {
         margin: 0 auto;
     `;
     return (
-      <div>
+      <div className='post-container'>
         <RingLoader
          css={override}
          sizeUnit={"px"}

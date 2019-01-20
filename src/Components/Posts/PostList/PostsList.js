@@ -1,6 +1,6 @@
 import React from 'react';
 import PostBox from './PostBox';
-import '../../Design/Post.scss';
+import '../../../Design/PostList.scss';
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
@@ -35,7 +35,7 @@ class PostsList extends React.Component {
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
     return (
-      <Col md={12}>
+      <Col　className="container">
         <RingLoader
          css={override}
          sizeUnit={"px"}

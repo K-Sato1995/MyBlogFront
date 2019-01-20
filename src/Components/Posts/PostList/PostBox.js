@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Design/Post.scss';
+import '../../../Design/PostList.scss';
 import { Link } from 'react-router-dom';
 
 class PostBox extends React.Component {
