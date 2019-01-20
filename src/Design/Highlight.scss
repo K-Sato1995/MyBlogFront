@@ -1,4 +1,7 @@
+@import "global";
+
 .post-content {
+  margin-top: 50px;
   body > *:first-child {
     margin-top: 0 !important;
   }
@@ -8,7 +11,7 @@
   }
 
   a {
-    color: #00bfb6;
+    color: #075FD3;
     text-decoration: none;
   }
 
@@ -28,7 +31,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 20px 0 10px;
+    color: #3B444E;
+    font-weight: 700;
+    margin: 1em 0 15px;
     padding: 0;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -71,25 +76,31 @@
 
   h1 {
     font-size: 28px;
-    color: black;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $border-color;
+    color: $h-color;
   }
 
   h2 {
     font-size: 24px;
-    border-bottom: 1px solid #cccccc;
-    color: black;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $border-color;
+    color: $h-color;
   }
 
   h3 {
     font-size: 18px;
+    color: $h-color;
   }
 
   h4 {
     font-size: 16px;
+    color: $h-color;
   }
 
   h5 {
     font-size: 14px;
+    color: $h-color;
   }
 
   h6 {
@@ -99,6 +110,9 @@
 
   p, blockquote, ul, ol, dl, li, table, pre {
     margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: $p-color;
   }
 
   hr {
@@ -343,8 +357,8 @@
   }
 
   pre code {
-    margin: 0;
     padding: 0;
+    margin: 0;
     white-space: pre;
     border: none;
     background: transparent;
@@ -357,6 +371,7 @@
     font-size: 13px;
     line-height: 19px;
     overflow: auto;
+    margin: 20px 0 20px 0;
     padding: 6px 10px;
     border-radius: 3px;
   }

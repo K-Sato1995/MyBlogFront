@@ -2,9 +2,9 @@
 
 .container {
   margin: 0 auto;
-  margin-top: 90px;
-  border: solid 1px $border-color;
-  max-width: 1000px;
+  margin-top: 80px;
+  // border: solid 1px $border-color;
+  max-width: 900px;
   .post-title {
     color: $theme-color;
     font-weight: bold;
@@ -15,6 +15,6 @@
   }
   .post-box {
     border-bottom: solid 1.2px $border-color;
-    height: 70px;
+    height: 80px;
   }
 }

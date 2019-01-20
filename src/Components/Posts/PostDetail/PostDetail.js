@@ -42,7 +42,7 @@ class PostDetail extends React.Component {
          color={'#F0F0F0'}
          loading={this.state.loading}
        />
-       <h3>{this.state.data.title}</h3>
+       <h1 className='post-detail-title'>{this.state.data.title}</h1>
         <ReactMarkdown
           source={this.state.data.context}
           renderers={{
