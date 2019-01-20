@@ -1,7 +1,8 @@
 import React from 'react';
 import PostBox from './PostBox';
 import '../../Design/Post.scss';
-import { ClipLoader } from 'react-spinners';
+import { css } from '@emotion/core';
+import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
 
 class PostsList extends React.Component {
@@ -26,15 +27,20 @@ class PostsList extends React.Component {
     })
   }
   render() {
+    const override = css`
+        margin: 0 auto;
+        display: block;
+    `;
     const posts = this.state.data.map((post, index) =>
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
     return (
       <Col md={12} className='post-container'>
-        <ClipLoader
+        <RingLoader
+         css={override}
          sizeUnit={"px"}
-         size={100}
-         color={'#00C0B8'}
+         size={80}
+         color={'#E0E0E0'}
          loading={this.state.loading}
        />
         { posts }

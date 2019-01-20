@@ -83,10 +83,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Main.js	/^
 export.PureComponent.value	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  static propTypes = {$/;"	property	line:7
 static.language	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  static defaultProps = {$/;"	property	line:12
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  render() {$/;"	function	line:16
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  constructor() {$/;"	function	line:9
-state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^    this.state = {$/;"	property	line:11
-componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  componentWillMount () {$/;"	function	line:16
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  render() {$/;"	function	line:30
 .post-content	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^.post-content {$/;"	function	line:1
 body > *:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:first-child {$/;"	function	line:2
 body > *:last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:last-child {$/;"	function	line:6
@@ -158,38 +154,31 @@ pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^ 
 pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre {$/;"	function	line:354
 pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code, pre tt {$/;"	function	line:364
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/App.js	/^  render() {$/;"	function	line:7
-p-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p-color: #E0E0E0;$/;"	function	line:1
-p2-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p2-color: #EEEEEE;$/;"	function	line:2
-h-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$h-color: #444;$/;"	function	line:3
-a-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$a-color: #666;$/;"	function	line:4
-Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Ruby: #C12214;$/;"	function	line:5
-Go	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Go: #74CDDD;$/;"	function	line:6
-Javascript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Javascript:#F5DE1A;$/;"	function	line:7
-React	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$React:#06D9FE;$/;"	function	line:8
-Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Life:#80F222;$/;"	function	line:9
-Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Rails:#CC0001;$/;"	function	line:10
-Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Others: #CDCDCD;$/;"	function	line:11
-theme-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$theme-color: #00bfb6;$/;"	function	line:12
-border-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$border-color: #e4e4e4;$/;"	function	line:13
 .navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^.navbar {$/;"	function	line:3
 .nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^  .nav-container {$/;"	function	line:12
 .logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^    .logo {$/;"	function	line:18
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Nav/Nav.js	/^  render() {$/;"	function	line:6
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  constructor () {$/;"	function	line:8
-state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^    this.state = {$/;"	property	line:10
-componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  componentWillMount () {$/;"	function	line:15
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  render() {$/;"	function	line:28
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostBox.js	/^  render() {$/;"	function	line:6
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  constructor() {$/;"	function	line:10
+state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^    this.state = {$/;"	property	line:12
+componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  componentWillMount () {$/;"	function	line:17
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  render() {$/;"	function	line:31
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  constructor () {$/;"	function	line:9
+state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^    this.state = {$/;"	property	line:11
+componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  componentWillMount () {$/;"	function	line:16
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  render() {$/;"	function	line:29
+theme-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$theme-color: #2E2E2E;$/;"	function	line:1
+p-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p-color: #E0E0E0;$/;"	function	line:2
+p2-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p2-color: #EEEEEE;$/;"	function	line:3
+h-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$h-color: #444;$/;"	function	line:4
+a-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$a-color: #666;$/;"	function	line:5
+Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Ruby: #C12214;$/;"	function	line:6
+Go	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Go: #74CDDD;$/;"	function	line:7
+Javascript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Javascript:#F5DE1A;$/;"	function	line:8
+React	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$React:#06D9FE;$/;"	function	line:9
+Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Life:#80F222;$/;"	function	line:10
+Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Rails:#CC0001;$/;"	function	line:11
+Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Others: #CDCDCD;$/;"	function	line:12
+border-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$border-color: #e4e4e4;$/;"	function	line:13
 .container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.container {$/;"	function	line:3
 .post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.post-container {$/;"	function	line:8
-#posts	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^#posts {$/;"	function	line:14
-.box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^  .box {$/;"	function	line:17
-.card	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card {$/;"	function	line:23
-.card-head	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card-head{$/;"	function	line:28
-.image	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .image{$/;"	function	line:29
-.card-body	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card-body {$/;"	function	line:38
-.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .post-title {$/;"	function	line:39
-.post-title-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-title-title {$/;"	function	line:44
-.post-title-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-title-title:hover {$/;"	function	line:48
-.post-info	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .post-info{$/;"	function	line:52
-.post-created-on	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-created-on {$/;"	function	line:55

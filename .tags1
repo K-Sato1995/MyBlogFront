@@ -6,14 +6,3 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 .container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.container {$/;"	function	line:3
 .post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.post-container {$/;"	function	line:8
-#posts	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^#posts {$/;"	function	line:14
-.box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^  .box {$/;"	function	line:17
-.card	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card {$/;"	function	line:23
-.card-head	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card-head{$/;"	function	line:28
-.image	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .image{$/;"	function	line:29
-.card-body	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^    .card-body {$/;"	function	line:38
-.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .post-title {$/;"	function	line:39
-.post-title-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-title-title {$/;"	function	line:44
-.post-title-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-title-title:hover {$/;"	function	line:48
-.post-info	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^      .post-info{$/;"	function	line:52
-.post-created-on	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^        .post-created-on {$/;"	function	line:55
