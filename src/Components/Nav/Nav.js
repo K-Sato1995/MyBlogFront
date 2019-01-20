@@ -6,7 +6,7 @@ class Nav extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        <div class="nav-container">
+        <div className="nav-container">
           <Link to='/'><img alt={'LOGO'} src={require('./images/logo.png')} className='logo'/></Link>
         </div>
       </div>

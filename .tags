@@ -79,10 +79,10 @@ code, tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.css	/^co
 pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.css	/^pre code {$/;"	function	line:344
 pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.css	/^pre {$/;"	function	line:353
 pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.css	/^pre code, pre tt {$/;"	function	line:363
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Main.js	/^  render() {$/;"	function	line:8
 export.PureComponent.value	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  static propTypes = {$/;"	property	line:7
 static.language	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  static defaultProps = {$/;"	property	line:12
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/CodeBlock.js	/^  render() {$/;"	function	line:16
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/App.js	/^  render() {$/;"	function	line:7
 .post-content	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^.post-content {$/;"	function	line:1
 body > *:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:first-child {$/;"	function	line:2
 body > *:last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:last-child {$/;"	function	line:6
@@ -153,32 +153,55 @@ code, tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^ 
 pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code {$/;"	function	line:345
 pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre {$/;"	function	line:354
 pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code, pre tt {$/;"	function	line:364
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/App.js	/^  render() {$/;"	function	line:7
-.navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^.navbar {$/;"	function	line:3
-.nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^  .nav-container {$/;"	function	line:12
-.logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^    .logo {$/;"	function	line:18
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Nav/Nav.js	/^  render() {$/;"	function	line:6
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostBox.js	/^  render() {$/;"	function	line:6
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  constructor() {$/;"	function	line:10
-state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^    this.state = {$/;"	property	line:12
-componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  componentWillMount () {$/;"	function	line:17
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  render() {$/;"	function	line:31
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Main.js	/^  render() {$/;"	function	line:8
 constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  constructor () {$/;"	function	line:9
 state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^    this.state = {$/;"	property	line:11
 componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  componentWillMount () {$/;"	function	line:16
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostsList.js	/^  render() {$/;"	function	line:29
-theme-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$theme-color: #2E2E2E;$/;"	function	line:1
+.navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^.navbar {$/;"	function	line:3
+.nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^  .nav-container {$/;"	function	line:12
+.logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^    .logo {$/;"	function	line:17
+theme-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$theme-color: #3B444E;$/;"	function	line:1
 p-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p-color: #E0E0E0;$/;"	function	line:2
 p2-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$p2-color: #EEEEEE;$/;"	function	line:3
 h-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$h-color: #444;$/;"	function	line:4
 a-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$a-color: #666;$/;"	function	line:5
-Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Ruby: #C12214;$/;"	function	line:6
-Go	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Go: #74CDDD;$/;"	function	line:7
-Javascript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Javascript:#F5DE1A;$/;"	function	line:8
-React	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$React:#06D9FE;$/;"	function	line:9
-Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Life:#80F222;$/;"	function	line:10
-Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Rails:#CC0001;$/;"	function	line:11
-Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Others: #CDCDCD;$/;"	function	line:12
-border-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$border-color: #e4e4e4;$/;"	function	line:13
+border-color	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$border-color: #e4e4e4;$/;"	function	line:6
+Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Ruby: #C12214;$/;"	function	line:7
+Go	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Go: #74CDDD;$/;"	function	line:8
+Javascript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Javascript:#F5DE1A;$/;"	function	line:9
+React	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$React:#06D9FE;$/;"	function	line:10
+Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Life:#80F222;$/;"	function	line:11
+Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Rails:#CC0001;$/;"	function	line:12
+Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/global.scss	/^$Others: #CDCDCD;$/;"	function	line:13
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Nav/Nav.js	/^  render() {$/;"	function	line:6
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  constructor() {$/;"	function	line:10
+state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^    this.state = {$/;"	property	line:12
+componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  componentWillMount () {$/;"	function	line:17
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail.js	/^  render() {$/;"	function	line:31
 .container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.container {$/;"	function	line:3
-.post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^.post-container {$/;"	function	line:8
+.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^  .post-title {$/;"	function	line:8
+.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Post.scss	/^  .post-title:hover {$/;"	function	line:13
+formatDate	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostBox.js	/^  formatDate(date){$/;"	function	line:6
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostBox.js	/^  render() {$/;"	function	line:13
+name	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "name": "blog_front",$/;"	function	line:2
+version	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "version": "0.1.0",$/;"	function	line:3
+private	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "private": true,$/;"	function	line:4
+dependencies	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "dependencies": {$/;"	function	line:5
+node-sass	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "node-sass": "^4.11.0",$/;"	function	line:6
+react	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react": "^16.7.0",$/;"	function	line:7
+react-bootstrap	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-bootstrap": "^0.32.4",$/;"	function	line:8
+react-dom	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-dom": "^16.7.0",$/;"	function	line:9
+react-markdown	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-markdown": "^4.0.6",$/;"	function	line:10
+react-router-dom	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-router-dom": "^4.3.1",$/;"	function	line:11
+react-scripts	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-scripts": "2.1.3",$/;"	function	line:12
+react-spinners	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-spinners": "^0.5.1",$/;"	function	line:13
+react-syntax-highlighter	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "react-syntax-highlighter": "^10.1.2"$/;"	function	line:14
+scripts	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "scripts": {$/;"	function	line:16
+start	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "start": "react-scripts start",$/;"	function	line:17
+build	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "build": "react-scripts build",$/;"	function	line:18
+test	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "test": "react-scripts test",$/;"	function	line:19
+eject	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "eject": "react-scripts eject"$/;"	function	line:20
+eslintConfig	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "eslintConfig": {$/;"	function	line:22
+extends	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^    "extends": "react-app"$/;"	function	line:23
+browserslist	/Users/katsuki/WorkSpace/React/blog_front/package.json	/^  "browserslist": [$/;"	function	line:25

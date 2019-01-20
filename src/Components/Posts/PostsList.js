@@ -35,7 +35,7 @@ class PostsList extends React.Component {
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
     return (
-      <Col md={12} className='post-container'>
+      <Col md={12}>
         <RingLoader
          css={override}
          sizeUnit={"px"}
