@@ -13,7 +13,7 @@ class PostBox extends React.Component {
   render() {
     return (
         <div className="post-box">
-          <h3><Link to= {`/MyBlogFront/Post/${this.props.id}`} className='post-title'>{this.props.title}</Link></h3>
+          <h3><Link to= {`/Post/${this.props.id}`} className='post-title'>{this.props.title}</Link></h3>
            <span>{ this.formatDate(this.props.created_at) }</span>
            <span>Category: {this.props.category}</span>
         </div>

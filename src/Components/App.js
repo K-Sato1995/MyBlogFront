@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Nav/Nav';
 import Main from './Posts/Main';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   render() {

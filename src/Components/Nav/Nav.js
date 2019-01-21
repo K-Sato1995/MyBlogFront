@@ -7,7 +7,7 @@ class Nav extends React.Component {
     return (
       <div className='navbar'>
         <div className="nav-container">
-          <Link to='/MyBlogFront'><img alt={'LOGO'} src={require('./images/logo.png')} className='logo'/></Link>
+          <Link to='/'><img alt={'LOGO'} src={require('./images/logo.png')} className='logo'/></Link>
         </div>
       </div>
     )
