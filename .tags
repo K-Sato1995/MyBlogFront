@@ -223,6 +223,7 @@ pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^ 
 pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre {$/;"	function	line:368
 pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code, pre tt {$/;"	function	line:379
 .container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^.container {$/;"	function	line:3
-.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-title {$/;"	function	line:8
-.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-title:hover {$/;"	function	line:13
-.post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-box {$/;"	function	line:16
+.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-title {$/;"	function	line:7
+.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-title:hover {$/;"	function	line:12
+.post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-box {$/;"	function	line:15
+.sarch-bar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .sarch-bar {$/;"	function	line:19

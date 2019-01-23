@@ -10,6 +10,7 @@ class PostsList extends React.Component {
     super();
     this.state = {
       data: [],
+      search: '',
       loading: true
     }
   }
@@ -26,12 +27,22 @@ class PostsList extends React.Component {
       })
     })
   }
+  updateSearch(e) {
+    this.setState({ search: e.target.value})
+    console.log(this.state.search)
+  }
+
   render() {
     const override = css`
         margin: 0 auto;
         display: block;
     `;
-    const posts = this.state.data.map((post, index) =>
+    // Array.prototype.filter() is Array#select in Ruby.
+    const filtered_posts = this.state.data.filter((post) => {
+        return post.title.toLowerCase().includes(this.state.search.toLowerCase())
+      }
+    );
+    const posts = filtered_posts.map((post, index) =>
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
     return (
@@ -43,6 +54,11 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
        />
+       <input
+          type='text' value={this.state.search}
+          onChange={this.updateSearch.bind(this)}
+          className='sarch-bar'
+        />
         { posts }
       </Col>
     )
