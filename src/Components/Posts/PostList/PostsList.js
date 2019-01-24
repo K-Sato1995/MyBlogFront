@@ -58,13 +58,15 @@ class PostsList extends React.Component {
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
 
+    const categories = this.state.categories.map(category =>
+      <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory}/>
+    )
+
     return (
       <Col　className="container">
         <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
-        <CategoryButton value={1} name={'Ruby'} updateCategory={this.updateCategory}/>
-        <CategoryButton value={2} name={'Go'} updateCategory={this.updateCategory}/>
-        <CategoryButton value={3} name={'Javascript'} updateCategory={this.updateCategory}/>
-        <CategoryButton value={5} name={'React'} updateCategory={this.updateCategory}/>
+        {categories}
+
         <RingLoader
          css={override}
          sizeUnit={"px"}
