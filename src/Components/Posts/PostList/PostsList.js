@@ -5,16 +5,20 @@ import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
 import SearchBar from './SearchBar';
+import CategoryButton from './CategoryButton';
 
 class PostsList extends React.Component {
   constructor () {
     super();
     this.state = {
-      data: [],
+      posts: [],
       search: '',
+      category: 0,
+      category_list: [],
       loading: true
     }
     this.updateSearch = this.updateSearch.bind(this);
+    this.updateCategory = this.updateCategory.bind(this);
   }
   componentWillMount () {
     this.getPosts()
@@ -24,7 +28,7 @@ class PostsList extends React.Component {
     .then(response => response.json())
     .then(data => {
       this.setState({
-        data:data.data,
+        posts:data.data,
         loading: false
       })
     })
@@ -32,22 +36,35 @@ class PostsList extends React.Component {
   updateSearch(e) {
     this.setState({ search: e.target.value})
   }
-
+  updateCategory(e) {
+    this.setState({ category: parseInt(e.target.value)})
+  }
   render() {
     const override = css`
         margin: 0 auto;
         display: block;
     `;
     // Array.prototype.filter() is Array#select in Ruby.
-    const filtered_posts = this.state.data.filter((post) => {
+    const filterd_posts = this.state.posts.filter((post) => {
+      if(this.state.category === 0){
         return post.title.toLowerCase().includes(this.state.search.toLowerCase())
+      }else {
+        return (post.category_id === this.state.category && post.title.toLowerCase().includes(this.state.search.toLowerCase()));
       }
-    );
-    const posts = filtered_posts.map((post, index) =>
+    })
+
+    const postList = filterd_posts.map((post, index) =>
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
+
+
     return (
       <Col　className="container">
+        <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
+        <CategoryButton value={1} name={'Ruby'} updateCategory={this.updateCategory}/>
+        <CategoryButton value={2} name={'Go'} updateCategory={this.updateCategory}/>
+        <CategoryButton value={3} name={'Javascript'} updateCategory={this.updateCategory}/>
+        <CategoryButton value={5} name={'React'} updateCategory={this.updateCategory}/>
         <RingLoader
          css={override}
          sizeUnit={"px"}
@@ -55,8 +72,8 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
        />
-      <SearchBar updateSearch={this.updateSearch}/>
-      { posts }
+       <SearchBar updateSearch={this.updateSearch}/>
+       { postList }
       </Col>
     )
   }
