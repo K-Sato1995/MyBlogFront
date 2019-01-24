@@ -4,6 +4,7 @@ import '../../../Design/PostList.scss';
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
+import SearchBar from './SearchBar';
 
 class PostsList extends React.Component {
   constructor () {
@@ -13,6 +14,7 @@ class PostsList extends React.Component {
       search: '',
       loading: true
     }
+    this.updateSearch = this.updateSearch.bind(this);
   }
   componentWillMount () {
     this.getPosts()
@@ -29,7 +31,6 @@ class PostsList extends React.Component {
   }
   updateSearch(e) {
     this.setState({ search: e.target.value})
-    console.log(this.state.search)
   }
 
   render() {
@@ -54,12 +55,8 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
        />
-       <input
-          type='text' value={this.state.search}
-          onChange={this.updateSearch.bind(this)}
-          className='sarch-bar'
-        />
-        { posts }
+      <SearchBar updateSearch={this.updateSearch}/>
+      { posts }
       </Col>
     )
   }
