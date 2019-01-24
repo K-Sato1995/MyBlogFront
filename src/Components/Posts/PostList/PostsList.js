@@ -14,7 +14,7 @@ class PostsList extends React.Component {
       posts: [],
       search: '',
       category: 0,
-      category_list: [],
+      categories: [],
       loading: true
     }
     this.updateSearch = this.updateSearch.bind(this);
@@ -28,7 +28,8 @@ class PostsList extends React.Component {
     .then(response => response.json())
     .then(data => {
       this.setState({
-        posts:data.data,
+        posts:data.data.posts,
+        categories: data.data.categories,
         loading: false
       })
     })
@@ -56,7 +57,6 @@ class PostsList extends React.Component {
     const postList = filterd_posts.map((post, index) =>
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
-
 
     return (
       <Col　className="container">
