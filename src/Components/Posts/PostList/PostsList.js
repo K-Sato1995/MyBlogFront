@@ -12,9 +12,9 @@ class PostsList extends React.Component {
     super();
     this.state = {
       posts: [],
+      categories: [],
       search: '',
       category: 0,
-      categories: [],
       loading: true
     }
     this.updateSearch = this.updateSearch.bind(this);
@@ -40,6 +40,7 @@ class PostsList extends React.Component {
   updateCategory(e) {
     this.setState({ category: parseInt(e.target.value)})
   }
+
   render() {
     const override = css`
         margin: 0 auto;
@@ -58,8 +59,8 @@ class PostsList extends React.Component {
     <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
     )
 
-    const categories = this.state.categories.map(category =>
-      <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory}/>
+    const categories = this.state.categories.map((category, index)=>
+      <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
     )
 
     return (

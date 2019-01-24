@@ -18,11 +18,18 @@
   }
   .sarch-bar {
     position: fixed;
-    top: 20px;
+    top: 23px;
+    right: 200px;
+    position: inline-block;
     z-index: 2;
     border: none;
     outline: none !important;
     border: solid 1px #CFD8DC;
     border-radius: 10px;
+  }
+  .category-button {
+
+    outline: none !important;
+    border: solid 1px $border-color;
   }
 }
