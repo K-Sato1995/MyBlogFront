@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
 import SearchBar from './SearchBar';
-import CategoryButton from './Category/CategoryButton';
+import CategoryButton from './CategoryTag/CategoryButton';
 
 class PostsList extends React.Component {
   constructor () {
@@ -13,12 +13,15 @@ class PostsList extends React.Component {
     this.state = {
       posts: [],
       categories: [],
+      post_tags:[],
       search: '',
       category: 0,
+      tag: 0,
       loading: true
     }
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
+    this.updateTag = this.updateTag.bind(this);
   }
   componentDidMount () {
     this.getPosts()
@@ -27,9 +30,14 @@ class PostsList extends React.Component {
     fetch('https://k-blog0130.herokuapp.com/en/api/v1/posts')
     .then(response => response.json())
     .then(data => {
+      data.data.posts.map((post, index)=>
+        post.tags = data.data.post_tags[index]
+      )
       this.setState({
         posts:data.data.posts,
         categories: data.data.categories,
+        tags: data.data.tags,
+        post_tags: data.data.post_tags,
         loading: false
       })
     })
@@ -38,7 +46,15 @@ class PostsList extends React.Component {
     this.setState({ search: e.target.value})
   }
   updateCategory(e) {
-    this.setState({ category: parseInt(e.target.value)})
+    this.setState(
+      {
+        tag: 0,
+        category: parseInt(e.target.value)
+      }
+    )
+  }
+  updateTag(e) {
+    this.setState({ tag: parseInt(e.target.value)})
   }
 
   render() {
@@ -48,15 +64,28 @@ class PostsList extends React.Component {
     `;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = this.state.posts.filter((post) => {
-      if(this.state.category === 0){
+      let postTags = []
+      post.tags.map(tag => postTags.push(tag.id))
+      if(this.state.category === 0 && this.state.tag === 0){
         return post.title.toLowerCase().includes(this.state.search.toLowerCase())
-      }else {
+      }else if(this.state.tag !== 0){
+        return (postTags.includes(this.state.tag) && post.title.toLowerCase().includes(this.state.search.toLowerCase()));
+      }else{
         return (post.category_id === this.state.category && post.title.toLowerCase().includes(this.state.search.toLowerCase()));
       }
     })
 
     const postList = filterd_posts.map((post, index) =>
-    <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} updateCategory={this.updateCategory} created_at={post.created_at}/>
+    <PostBox key={index}
+             id={post.id}
+             title={post.title}
+             image={post.image}
+             category={post.category_id}
+             tags={post.tags}
+             updateTag={this.updateTag}
+             updateCategory={this.updateCategory}
+             created_at={post.created_at}
+           />
     )
 
     const categories = this.state.categories.map((category, index)=>
@@ -74,6 +103,7 @@ class PostsList extends React.Component {
 
     return (
       <Col　className="container">
+        {console.log(this.state.tag)}
         {searchBox}
         <RingLoader
          css={override}
