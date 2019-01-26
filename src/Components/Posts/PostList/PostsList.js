@@ -63,18 +63,25 @@ class PostsList extends React.Component {
       <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
     )
 
+    const searchBox =
+      this.state.loading === false ? (
+        <div className='search-box'>
+          <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
+          { categories }
+          <SearchBar updateSearch={this.updateSearch}/>
+        </div>
+      ):('')
+
     return (
       <Col　className="container">
-        <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
-        {categories}
-        <SearchBar updateSearch={this.updateSearch}/>
+        {searchBox}
         <RingLoader
          css={override}
          sizeUnit={"px"}
          size={80}
          color={'#E0E0E0'}
          loading={this.state.loading}
-       />
+        />
        { postList }
       </Col>
     )
