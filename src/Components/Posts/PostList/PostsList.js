@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
 import SearchBar from './SearchBar';
-import CategoryButton from './CategoryButton';
+import CategoryButton from './Category/CategoryButton';
 
 class PostsList extends React.Component {
   constructor () {
@@ -20,7 +20,7 @@ class PostsList extends React.Component {
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
   }
-  componentWillMount () {
+  componentDidMount () {
     this.getPosts()
   }
   getPosts = () => {
@@ -56,7 +56,7 @@ class PostsList extends React.Component {
     })
 
     const postList = filterd_posts.map((post, index) =>
-    <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} created_at={post.created_at}/>
+    <PostBox key={index} id={post.id} title={post.title} image={post.image} category={post.category_id} updateCategory={this.updateCategory} created_at={post.created_at}/>
     )
 
     const categories = this.state.categories.map((category, index)=>
@@ -67,7 +67,7 @@ class PostsList extends React.Component {
       <Col　className="container">
         <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
         {categories}
-
+        <SearchBar updateSearch={this.updateSearch}/>
         <RingLoader
          css={override}
          sizeUnit={"px"}
@@ -75,7 +75,6 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
        />
-       <SearchBar updateSearch={this.updateSearch}/>
        { postList }
       </Col>
     )

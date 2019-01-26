@@ -8,6 +8,7 @@ class SearchBar extends React.Component {
            type='text'
            onChange={this.props.updateSearch}
            className='sarch-bar'
+           placeholder='Search'
          />
       </div>
     )
