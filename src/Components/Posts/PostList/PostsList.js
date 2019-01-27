@@ -99,15 +99,19 @@ class PostsList extends React.Component {
     const categories = this.state.categories.map((category, index)=>
       <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
     )
+
     const featuredPosts = this.state.posts.slice(0, 4).map((post, index) =>
       <FeaturedPost key={index} title={post.title} id={post.id} content={post.context}/>
     )
+
     const tags = this.state.tags.map((tag,index) =>
       <Tag key={index} value={tag.id} name={tag.name} updateTag={this.updateTag}/>
     )
+
     const categoryAllButton = this.state.loading === false ? (
       <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
     ) : ('')
+
     const rightContainer =
       this.state.loading === false ? (
         <div className='right-container'>

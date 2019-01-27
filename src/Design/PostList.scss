@@ -36,6 +36,8 @@
     border: none;
   }
   .right-container {
+    position: sticky;
+    top: 60px;
     float: right;
     min-width: 250px;
     max-width: 250px;
