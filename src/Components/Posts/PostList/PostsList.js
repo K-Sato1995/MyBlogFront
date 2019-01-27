@@ -8,6 +8,7 @@ import SearchBar from './RightContainer/SearchBar';
 import CategoryButton from './CategoryTag/CategoryButton';
 import FeaturedPost from './RightContainer/FeaturedPost';
 import Tag from './RightContainer/Tag';
+import NoPostFound from './NoPostFound';
 
 class PostsList extends React.Component {
   constructor () {
@@ -82,19 +83,20 @@ class PostsList extends React.Component {
       }
     })
 
-    const postList = filterd_posts.map((post, index) =>
-    <PostBox key={index}
-             id={post.id}
-             title={post.title}
-             content={post.context}
-             image={post.image}
-             category={post.category_id}
-             tags={post.tags}
-             updateTag={this.updateTag}
-             updateCategory={this.updateCategory}
-             created_at={post.created_at}
-           />
-    )
+    const postList = filterd_posts.length !== 0 ?
+    filterd_posts.map((post, index) =>
+      <PostBox key={index}
+               id={post.id}
+               title={post.title}
+               content={post.context}
+               image={post.image}
+               category={post.category_id}
+               tags={post.tags}
+               updateTag={this.updateTag}
+               updateCategory={this.updateCategory}
+               created_at={post.created_at}
+             />
+    ) : this.state.loading === false? <NoPostFound /> : ''
 
     const categories = this.state.categories.map((category, index)=>
       <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
