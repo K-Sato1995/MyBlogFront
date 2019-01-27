@@ -37,13 +37,14 @@
   }
   .right-container {
     position: sticky;
-    top: 60px;
+    top: 70px;
     float: right;
     min-width: 250px;
     max-width: 250px;
   }
   .search-box {
     .search-box-title {
+      margin-top: 0;
       border-bottom: solid 0.5px $border-color;
       padding-bottom: 5px;
     }

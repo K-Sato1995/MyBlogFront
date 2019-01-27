@@ -125,8 +125,6 @@ class PostsList extends React.Component {
 
     return (
       <Col　className="container">
-        {categoryAllButton}
-        { categories }
         <RingLoader
          css={override}
          sizeUnit={"px"}
@@ -135,6 +133,8 @@ class PostsList extends React.Component {
          loading={this.state.loading}
         />
         <div className='post-list-container'>
+          { categoryAllButton }
+          { categories }
           { postList }
         </div>
         {rightContainer}
