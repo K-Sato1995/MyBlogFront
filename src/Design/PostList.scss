@@ -4,6 +4,10 @@
   margin: 0 auto;
   margin-top: 80px;
   max-width: 900px;
+  .post-list-container {
+    min-width: 600px;
+    float: left;
+  }
   .post-title {
     color: $theme-color;
     font-weight: bold;
@@ -14,14 +18,7 @@
   }
   .post-box {
     border-bottom: solid 1.2px $border-color;
-    height: 80px;
-  }
-  .sarch-bar {
-    border: none;
-    margin-top: 15px;
-    outline: none !important;
-    border: solid 1px #CFD8DC;
-    width: 250px;
+    min-height: 80px;
   }
   .category-button {
     color: $a-color;
@@ -29,10 +26,55 @@
     outline: none !important;
     border: solid 1px $border-color;
   }
+  .category-button:hover {
+    color: $h-color;
+  }
   .tag-button {
     @extend .category-button;
     margin: 0 0 0 0;
     color: $theme-color2;
     border: none;
+  }
+  .right-container {
+    float: right;
+    min-width: 250px;
+    max-width: 250px;
+  }
+  .search-box {
+    .search-box-title {
+      border-bottom: solid 0.5px $border-color;
+      padding-bottom: 5px;
+    }
+    .search-bar {
+      border: none;
+      margin-top: 15px;
+      outline: none !important;
+      border: solid 1px #CFD8DC;
+      width: 250px;
+    }
+  }
+  .featured-post-box {
+    margin: 20px 0 0 5px;;
+  }
+  .featured-posts-title {
+    border-bottom: solid 0.5px $border-color;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  .tag-list-title {
+    @extend .featured-posts-title;
+  }
+  .tag {
+    @extend .category-button;
+    margin: 2px;
+  }
+  .tag:hover {
+    color: $h-color;
+  }
+}
+
+@media (max-width: 990px) {
+  .right-container {
+    display: none;
   }
 }

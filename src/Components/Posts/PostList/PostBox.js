@@ -12,14 +12,14 @@ class PostBox extends React.Component {
     return `${year}/${month}/${day}`
   }
   render() {
-    const tags = this.props.tags.map((tag, index) =>
+    const post_tags = this.props.tags.map((tag, index) =>
       <TagButton key={index} value={tag.id} updateTag={this.props.updateTag} name={tag.name}/>
     )
     return (
       <div className="post-box">
         <h3><Link to= {`/Post/${this.props.id}`} className='post-title'>{this.props.title}</Link></h3>
          <span>{ this.formatDate(this.props.created_at) }</span>
-         { tags }
+         { post_tags }
       </div>
     )
   }

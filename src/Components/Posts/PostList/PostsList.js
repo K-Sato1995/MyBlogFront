@@ -4,8 +4,10 @@ import '../../../Design/PostList.scss';
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
-import SearchBar from './SearchBar';
+import SearchBar from './RightContainer/SearchBar';
 import CategoryButton from './CategoryTag/CategoryButton';
+import FeaturedPost from './RightContainer/FeaturedPost';
+import Tag from './RightContainer/Tag';
 
 class PostsList extends React.Component {
   constructor () {
@@ -14,6 +16,7 @@ class PostsList extends React.Component {
       posts: [],
       categories: [],
       post_tags:[],
+      tags: [],
       search: '',
       category: 0,
       tag: 0,
@@ -79,6 +82,7 @@ class PostsList extends React.Component {
     <PostBox key={index}
              id={post.id}
              title={post.title}
+             content={post.context}
              image={post.image}
              category={post.category_id}
              tags={post.tags}
@@ -91,20 +95,30 @@ class PostsList extends React.Component {
     const categories = this.state.categories.map((category, index)=>
       <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
     )
-
-    const searchBox =
+    const featuredPosts = this.state.posts.slice(0, 4).map((post, index) =>
+      <FeaturedPost key={index} title={post.title} id={post.id} content={post.context}/>
+    )
+    const tags = this.state.tags.map((tag,index) =>
+      <Tag key={index} value={tag.id} name={tag.name} updateTag={this.updateTag}/>
+    )
+    const categoryAllButton = this.state.loading === false ? (
+      <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
+    ) : ('')
+    const rightContainer =
       this.state.loading === false ? (
-        <div className='search-box'>
-          <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
-          { categories }
+        <div className='right-container'>
           <SearchBar updateSearch={this.updateSearch}/>
+          <h3 className='tag-list-title'>Tag List</h3>
+          {tags}
+          <h3 className='featured-posts-title'>Featured Posts</h3>
+          {featuredPosts}
         </div>
       ):('')
 
     return (
       <Col　className="container">
-        {console.log(this.state.tag)}
-        {searchBox}
+        {categoryAllButton}
+        { categories }
         <RingLoader
          css={override}
          sizeUnit={"px"}
@@ -112,7 +126,10 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
         />
-       { postList }
+        <div className='post-list-container'>
+          { postList }
+        </div>
+        {rightContainer}
       </Col>
     )
   }

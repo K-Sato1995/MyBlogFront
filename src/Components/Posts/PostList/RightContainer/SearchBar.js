@@ -3,11 +3,12 @@ import React from 'react';
 class SearchBar extends React.Component {
   render() {
     return (
-      <div>
+      <div className='search-box'>
+        <h3 className='search-box-title'>Search Posts</h3>
         <input
            type='text'
            onChange={this.props.updateSearch}
-           className='sarch-bar'
+           className='search-bar'
            placeholder='Search'
          />
       </div>
