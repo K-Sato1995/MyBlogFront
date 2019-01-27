@@ -71,10 +71,14 @@ class PostsList extends React.Component {
       post.tags.map(tag => postTags.push(tag.id))
       if(this.state.category === 0 && this.state.tag === 0){
         return post.title.toLowerCase().includes(this.state.search.toLowerCase())
+      }else if(this.state.category !== 0 && this.state.tag !== 0){
+        return (post.category_id === this.state.category && postTags.includes(this.state.tag) && post.title.toLowerCase().includes(this.state.search.toLowerCase()))
       }else if(this.state.tag !== 0){
         return (postTags.includes(this.state.tag) && post.title.toLowerCase().includes(this.state.search.toLowerCase()));
-      }else{
+      }else if (this.state.category !== 0){
         return (post.category_id === this.state.category && post.title.toLowerCase().includes(this.state.search.toLowerCase()));
+      }else {
+        return post.title.toLowerCase().includes(this.state.search.toLowerCase());
       }
     })
 
