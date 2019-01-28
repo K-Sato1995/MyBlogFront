@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../Design/PostList.scss';
+import '../../../../Design/RightContainer.scss';
 import { Link } from 'react-router-dom';
 
 class FeaturedPost extends React.Component {

@@ -8,26 +8,6 @@
     float: left;
     min-height: 500px;
   }
-  .post-title {
-    color: $theme-color;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .post-title:hover {
-    color: $a-color;
-  }
-  .post-box {
-    border-bottom: solid 1.2px $border-color;
-    min-height: 80px;
-  }
-  .tag-button {
-    color: $a-color;
-    margin: 0 0 0 0;
-    outline: none !important;
-    border: solid 1px $border-color;
-    color: $theme-color2;
-    border: none;
-  }
 }
 
 @media (max-width: 990px) {

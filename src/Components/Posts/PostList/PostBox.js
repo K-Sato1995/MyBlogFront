@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/PostList.scss';
+import '../../../Design/PostBox.scss';
 import { Link } from 'react-router-dom';
 import TagButton from './CategoryTag/TagButton';
 
@@ -17,9 +17,9 @@ class PostBox extends React.Component {
     )
     return (
       <div className="post-box">
-        <h3><Link to= {`/Post/${this.props.id}`} className='post-title'>{this.props.title}</Link></h3>
-         <span>{ this.formatDate(this.props.created_at) }</span>
-         { post_tags }
+        <h3 className='post-title'><Link to= {`/Post/${this.props.id}`} className='post-title-link'>{this.props.title}</Link></h3>
+         <span className='created-date'>{ this.formatDate(this.props.created_at) }</span>
+         <span className='post-tag-list'>{ post_tags }</span>
       </div>
     )
   }
