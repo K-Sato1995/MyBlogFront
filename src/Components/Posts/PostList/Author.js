@@ -11,7 +11,7 @@ class Author extends React.Component {
           <h3>K-Sato</h3>
         </div>
         <div className='body'>
-          <p>A silly boy aspiring to be a conpetent programmer.</p>
+          <p>I'm just a silly boy aspiring to be a competent programmer.</p>
         </div>
       </div>
     )

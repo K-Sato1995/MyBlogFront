@@ -101,7 +101,7 @@ class PostsList extends React.Component {
     ) : this.state.loading === false? <NoPostFound /> : ''
 
     const categories = this.state.categories.map((category, index)=>
-      <CategoryButton value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
+      <CategoryButton activeCategory={this.state.category} value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
     )
 
     const featuredPosts = this.state.posts.slice(0, 4).map((post, index) =>
@@ -113,7 +113,7 @@ class PostsList extends React.Component {
     )
 
     const categoryAllButton = this.state.loading === false ? (
-      <CategoryButton value={0} name={'All'} updateCategory={this.updateCategory}/>
+      <CategoryButton activeCategory={this.state.category} value={0} name={'All'} updateCategory={this.updateCategory}/>
     ) : ('')
 
     const rightContainer =

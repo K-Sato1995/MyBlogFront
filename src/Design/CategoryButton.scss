@@ -1,0 +1,14 @@
+@import "global";
+
+.category-button {
+  color: $a-color;
+  margin: 0 10px 10px 0;
+  padding: 10px 15px 10px 15px;
+  outline: none !important;
+  border: solid 1px $border-color;
+}
+.category-button-active {
+  @extend .category-button;
+  background-color: $h-color;
+  color: #fff;
+}

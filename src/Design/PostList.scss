@@ -6,6 +6,7 @@
   max-width: 900px;
   .post-list-container {
     float: left;
+    min-height: 500px;
   }
   .post-title {
     color: $theme-color;
@@ -19,18 +20,11 @@
     border-bottom: solid 1.2px $border-color;
     min-height: 80px;
   }
-  .category-button {
+  .tag-button {
     color: $a-color;
-    margin: 0 10px 10px 0;
+    margin: 0 0 0 0;
     outline: none !important;
     border: solid 1px $border-color;
-  }
-  .category-button:hover {
-    color: $h-color;
-  }
-  .tag-button {
-    @extend .category-button;
-    margin: 0 0 0 0;
     color: $theme-color2;
     border: none;
   }
@@ -39,5 +33,8 @@
 @media (max-width: 990px) {
   .right-container {
     display: none;
+  }
+  .author-box {
+    @extend .right-container;
   }
 }
