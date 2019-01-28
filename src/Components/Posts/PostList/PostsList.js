@@ -1,6 +1,7 @@
 import React from 'react';
 import PostBox from './PostBox';
 import '../../../Design/PostList.scss';
+import '../../../Design/RightContainer.scss';
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
@@ -9,6 +10,7 @@ import CategoryButton from './CategoryTag/CategoryButton';
 import FeaturedPost from './RightContainer/FeaturedPost';
 import Tag from './RightContainer/Tag';
 import NoPostFound from './NoPostFound';
+import Author from './Author';
 
 class PostsList extends React.Component {
   constructor () {
@@ -116,6 +118,8 @@ class PostsList extends React.Component {
 
     const rightContainer =
       this.state.loading === false ? (
+      <React.Fragment >
+        <Author />
         <div className='right-container'>
           <SearchBar updateSearch={this.updateSearch}/>
           <h3 className='tag-list-title'>Tag List</h3>
@@ -123,6 +127,7 @@ class PostsList extends React.Component {
           <h3 className='featured-posts-title'>Featured Posts</h3>
           {featuredPosts}
         </div>
+      </React.Fragment>
       ):('')
 
     return (

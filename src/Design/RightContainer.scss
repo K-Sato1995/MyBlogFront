@@ -1,0 +1,43 @@
+@import "global";
+
+.right-container {
+  position: sticky;
+  top: 70px;
+  float: right;
+  min-width: 250px;
+  max-width: 250px;
+}
+.search-box {
+  .search-box-title {
+    margin-top: 0;
+    border-bottom: solid 0.5px $border-color;
+    padding-bottom: 5px;
+  }
+  .search-bar {
+    border: none;
+    margin-top: 15px;
+    outline: none !important;
+    border: solid 1px #CFD8DC;
+    width: 250px;
+  }
+}
+.featured-post-box {
+  margin: 20px 0 0 5px;;
+}
+.featured-posts-title {
+  border-bottom: solid 0.5px $border-color;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.tag-list-title {
+  @extend .featured-posts-title;
+}
+.tag {
+  color: $a-color;
+  margin: 2px;
+  outline: none !important;
+  border: solid 1px $border-color;
+}
+.tag:hover {
+  color: $h-color;
+}
