@@ -17,10 +17,10 @@ class Footer extends React.Component {
           <div className='footer-box3'>
             <h4>Links</h4>
             <ul>
-              <li><a href='https://dev.to/ksato1995'>My Profile on DEV</a></li>
-              <li><a href='https://github.com/K-Sato1995/MyBlog'>Code of this Blog</a></li>
-              <li><a href='https://github.com/K-Sato1995'>My GitHub Account</a></li>
-              <li><a href='https://github.com/K-Sato1995/GraphqlApi'>Simple GraphqlAPI</a></li>
+              <li><a href='https://dev.to/ksato1995'>My Profile on DEV.to</a></li>
+              <li><a href='https://github.com/K-Sato1995'>My GitHub Account (Profile Page)</a></li>
+              <li><a href='https://github.com/K-Sato1995/MyBlog'>Code of this Blog (server-side)</a></li>
+              <li><a href='https://github.com/K-Sato1995/MyBlogFront'>Code of this Blog (front-side)</a></li>
             </ul>
           </div>
         </div>
