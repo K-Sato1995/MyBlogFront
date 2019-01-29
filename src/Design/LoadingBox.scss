@@ -1,0 +1,24 @@
+@import "global";
+
+.loading-box {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 950px;
+  height: 700px;
+  .penguin {
+    width: 200px;
+    height: 200px;
+  }
+  .self-introduction {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+  }
+  h3 {
+    margin: 30px;
+  }
+  p {
+    text-align: left;
+  }
+}

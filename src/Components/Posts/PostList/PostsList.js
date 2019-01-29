@@ -3,7 +3,7 @@ import PostBox from './PostBox';
 import '../../../Design/PostList.scss';
 import '../../../Design/RightContainer.scss';
 import { css } from '@emotion/core';
-import { RingLoader } from 'react-spinners';
+import { BarLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';
 import SearchBar from './RightContainer/SearchBar';
 import CategoryButton from './CategoryTag/CategoryButton';
@@ -11,6 +11,7 @@ import FeaturedPost from './RightContainer/FeaturedPost';
 import Tag from './RightContainer/Tag';
 import NoPostFound from './NoPostFound';
 import Author from './Author';
+import LoadingBox from '../LoadingBox'
 
 class PostsList extends React.Component {
   constructor () {
@@ -130,15 +131,20 @@ class PostsList extends React.Component {
       </React.Fragment>
       ):('')
 
+    const loadingBox = this.state.loading === true ? (
+      <LoadingBox />
+    ): ('')
+
     return (
       <Col　className="container">
-        <RingLoader
+        <BarLoader
          css={override}
          sizeUnit={"px"}
          size={80}
          color={'#E0E0E0'}
          loading={this.state.loading}
         />
+        { loadingBox }
         <div className='post-list-container'>
           { categoryAllButton }
           { categories }
