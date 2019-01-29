@@ -15,7 +15,8 @@ class PostDetail extends React.Component {
       loading: true
     }
   }
-  componentWillMount () {
+  componentDidMount () {
+    window.scrollTo(0, 0)
     this.getPosts()
   }
   getPosts = () => {

@@ -31,6 +31,7 @@ class PostsList extends React.Component {
     this.updateTag = this.updateTag.bind(this);
   }
   componentDidMount () {
+    window.scrollTo(0, 0)
     this.getPosts()
   }
   getPosts = () => {
