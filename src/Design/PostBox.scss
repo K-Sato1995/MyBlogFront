@@ -26,12 +26,13 @@
     right: 20px;
     bottom: 7px;
     .tag-button {
-      color: $a-color;
       margin: 0 0 0 0;
       outline: none !important;
-      border: solid 1px $border-color;
       color: $theme-color2;
       border: none;
+    }
+    .tag-button:hover {
+      color: $a-color;
     }
   }
 }

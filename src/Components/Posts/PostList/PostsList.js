@@ -109,7 +109,7 @@ class PostsList extends React.Component {
     )
 
     const tags = this.state.tags.map((tag,index) =>
-      <Tag key={index} value={tag.id} name={tag.name} updateTag={this.updateTag}/>
+      <Tag activeTag={this.state.tag} key={index} value={tag.id} name={tag.name} updateTag={this.updateTag}/>
     )
 
     const categoryAllButton = this.state.loading === false ? (
