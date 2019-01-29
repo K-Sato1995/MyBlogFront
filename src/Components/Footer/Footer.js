@@ -19,8 +19,8 @@ class Footer extends React.Component {
             <ul>
               <li><a href='https://dev.to/ksato1995'>My Profile on DEV</a></li>
               <li><a href='https://github.com/K-Sato1995/MyBlog'>Code of this Blog</a></li>
+              <li><a href='https://github.com/K-Sato1995'>My GitHub Account</a></li>
               <li><a href='https://github.com/K-Sato1995/GraphqlApi'>Simple GraphqlAPI</a></li>
-              <li><a href='https://github.com/K-Sato1995/Finance'>App created with Rails and React</a></li>
             </ul>
           </div>
         </div>
