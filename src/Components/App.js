@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Nav from './Nav/Nav';
 import Main from './Posts/Main';
+import Footer from './Footer/Footer';
+
 import { HashRouter as Router } from 'react-router-dom';
 
 class App extends Component {
@@ -11,6 +13,7 @@ class App extends Component {
           <React.Fragment>
             <Nav />
             <Main />
+            <Footer />
           </React.Fragment>
         </Router>
       </div>
