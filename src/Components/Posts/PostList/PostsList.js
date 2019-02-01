@@ -63,6 +63,7 @@ class PostsList extends React.Component {
   }
   updateTag(e) {
     this.setState({ tag: parseInt(e.target.value)})
+    window.scrollTo(0, 0)
   }
 
   render() {
