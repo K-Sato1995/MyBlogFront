@@ -94,6 +94,7 @@ class PostsList extends React.Component {
                id={post.id}
                title={post.title}
                content={post.context}
+               introduction={post.introduction}
                image={post.image}
                category={post.category_id}
                tags={post.tags}

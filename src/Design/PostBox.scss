@@ -2,8 +2,9 @@
 
 .post-box {
   border-bottom: solid 1.2px $border-color;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 30px 0;
   min-height: 80px;
+  max-width: 604px;
   position: relative;
   .post-title {
     margin: 0;
@@ -16,19 +17,23 @@
   .post-title-link:hover {
     color: $a-color;
   }
+  .post-introduction {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .created-date {
+    display: inline-block;
     position: absolute;
-    left: 0;
-    bottom: 10px;
+    right: 10px;
+    color: $a-color;
   }
   .post-tag-list {
-    position: absolute;
-    right: 20px;
-    bottom: 7px;
+    display: inline-block;
     .tag-button {
-      margin: 0 0 0 0;
+      margin: 0;
+      padding: 0 10px 0 0px;
       outline: none !important;
-      color: $theme-color2;
+      color: $a-color2;
       border: none;
     }
     .tag-button:hover {
