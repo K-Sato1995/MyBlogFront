@@ -18,19 +18,20 @@
     color: $a-color;
   }
   .post-introduction {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
   }
   .created-date {
     display: inline-block;
     position: absolute;
+    margin: 10px 0 20px 0;
     right: 10px;
     color: $a-color;
   }
   .post-tag-list {
     display: inline-block;
+    margin: 10px 0 20px 0;
     .tag-button {
-      margin: 0;
       padding: 0 10px 0 0px;
       outline: none !important;
       color: $a-color2;
