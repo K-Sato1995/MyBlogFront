@@ -13,6 +13,10 @@ class Author extends React.Component {
         <div className='body'>
           <p>I'm just a silly boy aspiring to be a competent programmer.</p>
         </div>
+        <div className='snn-links'>
+          <p className='snn1'><a href='https://dev.to/ksato1995' className='snn1-link'>DEV.to</a></p>
+          <p className='snn2'><a href='https://github.com/K-Sato1995' className='snn2-link'>GitHub</a></p>
+        </div>
       </div>
     )
   }
