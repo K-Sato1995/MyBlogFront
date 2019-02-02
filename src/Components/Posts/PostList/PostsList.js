@@ -126,10 +126,16 @@ class PostsList extends React.Component {
         <Author />
         <div className='right-container'>
           <SearchBar updateSearch={this.updateSearch}/>
-          <h3 className='tag-list-title'>Tag List</h3>
-          {tags}
-          <h3 className='featured-posts-title'>Featured Posts</h3>
-          {featuredPosts}
+          <div className='tag-list-box'>
+            <h4 className='tag-list-title'>Tag List</h4>
+            <div className='tag-list'>
+              {tags}
+            </div>
+          </div>
+          <div className='featured-post-box'>
+            <h4 className='featured-posts-title'>Featured Posts</h4>
+            {featuredPosts}
+          </div>
         </div>
       </React.Fragment>
       ):('')

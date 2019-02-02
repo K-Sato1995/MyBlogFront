@@ -4,7 +4,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className='search-box'>
-        <h3 className='search-box-title'>Search Posts</h3>
+        <h4 className='search-box-title'>Search Posts</h4>
         <input
            type='text'
            onChange={this.props.updateSearch}

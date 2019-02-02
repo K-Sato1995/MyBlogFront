@@ -8,53 +8,75 @@
   max-width: 250px;
 }
 .search-box {
+  border: solid 0.5px $border-color;
   .search-box-title {
-    margin-top: 0;
+    padding: 8px;
+    margin: 0.5px;
     border-bottom: solid 0.5px $border-color;
-    padding-bottom: 5px;
+    background-color: #F5F5F5;
   }
   .search-bar {
     border: none;
-    margin-top: 15px;
+    margin: 15px 10px 15px 10px;
     outline: none !important;
     border: solid 1px #CFD8DC;
-    width: 250px;
+    width: 220px;
+  }
+}
+
+.tag-list-box {
+  margin-top: 20px;
+  border: solid 0.5px $border-color;
+  .tag-list-title {
+    padding: 8px;
+    margin: 0.5px;
+    background-color: #F5F5F5;
+    border-bottom: solid 0.5px $border-color;
+  }
+  .tag-list {
+    margin: 10px;
+  }
+  .tag {
+    color: $a-color;
+    margin: 2px;
+    outline: none !important;
+    border: solid 1px $border-color;
+  }
+  .tag-active {
+    @extend .tag;
+    background-color: $a-color;
+    color: #fff;
+  }
+  .tag:hover {
+    color: $h-color;
+  }
+  .tag-active:hover {
+    color: #fff;
   }
 }
 
 .featured-post-box {
-  margin: 20px 0 0 5px;
-  .post-title {
-    text-decoration: none;
-    font-weight: bold;
-    color: $theme-color;
+  margin-top: 20px;
+  border: solid 0.5px $border-color;
+  .featured-post {
+    margin: 20px 0 0 10px;
+    .post-title {
+      text-decoration: none;
+      font-size: 17px;
+      color: $theme-color;
+    }
+    .post-title:hover  {
+      color: $a-color;
+    }
   }
-  .post-title:hover  {
-    color: $a-color;
+  .featured-posts-title {
+    padding: 8px;
+    margin: 0.5px;
+    background-color: #F5F5F5;
+    border-bottom: solid 0.5px $border-color;
   }
-}
-.featured-posts-title {
-  border-bottom: solid 0.5px $border-color;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-.tag-list-title {
-  @extend .featured-posts-title;
-}
-.tag {
-  color: $a-color;
-  margin: 2px;
-  outline: none !important;
-  border: solid 1px $border-color;
-}
-.tag-active {
-  @extend .tag;
-  background-color: $a-color;
-  color: #fff;
-}
-.tag:hover {
-  color: $h-color;
-}
-.tag-active:hover {
-  color: #fff;
+  .featured-post-description {
+    color: $p-color;
+    font-size: 12px;
+  }
 }

@@ -1,15 +1,17 @@
 @import "global";
 
 .author-box {
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
   float: right;
+  border: solid 0.5px $border-color;
   min-width: 250px;
   max-width: 250px;
   .author-title {
-    margin: 0;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    background-color: #F5F5F5;
     border-bottom: solid 0.5px $border-color;
+    margin: 0.5px;
+    margin-bottom: 20px;
+    padding: 8px;
   }
   .top {
     text-align: center;

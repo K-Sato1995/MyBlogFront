@@ -5,7 +5,7 @@ class Author extends React.Component {
   render() {
     return (
       <div className='author-box'>
-        <h3 className='author-title'>Author</h3>
+        <h4 className='author-title'>Author</h4>
         <div className='top'>
           <img alt={'PENGUIN'} src={require('../images/penguin.png')} className='penguin'/>
           <h3>K-Sato</h3>
