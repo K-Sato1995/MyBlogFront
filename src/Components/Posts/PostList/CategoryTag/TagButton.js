@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../Design/PostList.scss';
+import '../../../../Design/Posts/PostList/PostList.scss';
 
 class TagButton extends React.Component {
   render() {

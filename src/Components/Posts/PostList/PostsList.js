@@ -1,7 +1,7 @@
 import React from 'react';
 import PostBox from './PostBox';
-import '../../../Design/PostList.scss';
-import '../../../Design/RightContainer.scss';
+import '../../../Design/Posts/PostList/PostList.scss';
+import '../../../Design/Posts/PostList/RightContainer/RightContainer.scss';
 import { css } from '@emotion/core';
 import { BarLoader } from 'react-spinners';
 import { Col } from 'react-bootstrap';

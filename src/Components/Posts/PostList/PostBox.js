@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/PostBox.scss';
+import '../../../Design/Posts/PostList/PostBox.scss';
 import { Link } from 'react-router-dom';
 import TagButton from './CategoryTag/TagButton';
 

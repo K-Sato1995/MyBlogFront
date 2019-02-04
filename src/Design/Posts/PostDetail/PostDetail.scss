@@ -1,8 +1,9 @@
-@import "global";
-@import "PostList";
+@import "../../global";
 
 .post-container{
-  @extend .container;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 950px;
   padding: 15px 50px 30px 50px;
   .post-detail-title{
     text-align: center;

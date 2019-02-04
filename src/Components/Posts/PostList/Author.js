@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/Author.scss';
+import '../../../Design/Posts/PostList/Author.scss';
 
 class Author extends React.Component {
   render() {

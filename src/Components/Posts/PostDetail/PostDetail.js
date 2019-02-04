@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/PostDetail.scss';
+import '../../../Design/Posts/PostDetail/PostDetail.scss';
 import '../../../Design/Highlight.scss';
 import { css } from '@emotion/core';
 import { BarLoader } from 'react-spinners';

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../Design/CategoryButton.scss';
+import '../../../../Design/Posts/PostList/CategoryTag/CategoryButton.scss';
 
 class CategoryButton extends React.Component {
   render() {

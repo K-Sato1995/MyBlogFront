@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/NoMatch.scss';
+import '../../../Design/Posts/PostList/NoMatch.scss';
 
 class NoMatch extends React.Component {
   render() {

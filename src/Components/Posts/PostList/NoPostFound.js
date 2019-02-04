@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Design/NoPostFound.scss';
+import '../../../Design/Posts/PostList/NoPostFound.scss';
 
 class NoPostFound extends React.Component {
   render() {
