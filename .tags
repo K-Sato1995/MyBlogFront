@@ -129,7 +129,6 @@ constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostL
 state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:11
 componentWillMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentWillMount () {$/;"	function	line:16
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:29
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Main.js	/^  render() {$/;"	function	line:7
 .navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^.navbar {$/;"	function	line:3
 .nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^  .nav-container {$/;"	function	line:12
 .logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav.scss	/^    .logo {$/;"	function	line:17
@@ -227,3 +226,23 @@ pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.
 .post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-title:hover {$/;"	function	line:12
 .post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .post-box {$/;"	function	line:15
 .sarch-bar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostList.scss	/^  .sarch-bar {$/;"	function	line:19
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoMatch.js	/^  render() {$/;"	function	line:5
+.footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^.footer {$/;"	function	line:3
+.footer-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^  .footer-container {$/;"	function	line:9
+.footer-box1	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^    .footer-box1 {$/;"	function	line:13
+h4	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^      h4{color: #F9F9F9;}$/;"	function	line:19
+p	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^      p {color: #898989;}$/;"	function	line:20
+a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^      a {color: #898989;}$/;"	function	line:21
+.footer-box2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^    .footer-box2 {@extend .footer-box1;}$/;"	function	line:23
+.footer-box3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^    .footer-box3 {@extend .footer-box1;}$/;"	function	line:24
+.footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^  .footer-container2 {$/;"	function	line:26
+h5	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^    h5{$/;"	function	line:31
+a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer.scss	/^    a {color: #898989;}$/;"	function	line:35
+.no-match-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/NoMatch.scss	/^.no-match-box {$/;"	function	line:3
+.penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/NoMatch.scss	/^  .penguin {$/;"	function	line:7
+.loading-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^.loading-box {$/;"	function	line:3
+.penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^  .penguin {$/;"	function	line:9
+.self-introduction	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^  .self-introduction {$/;"	function	line:13
+h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^  h3 {$/;"	function	line:18
+p	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^  p {$/;"	function	line:21
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Main.js	/^  render() {$/;"	function	line:8
