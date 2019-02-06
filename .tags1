@@ -4,10 +4,11 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  constructor () {$/;"	function	line:17
-state.posts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:19
-componentDidMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentDidMount () {$/;"	function	line:33
-updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateSearch(e) {$/;"	function	line:53
-updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:56
-updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:64
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:69
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
+state.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    this.state = {$/;"	property	line:6
+state.height	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      width: 300,$/;"	property	line:7
+state.numOfPenguin	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      height: 300,$/;"	property	line:8
+makeItBigger	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItBigger(){$/;"	function	line:15
+makeItSmaller	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItSmaller() {$/;"	function	line:23
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  render() {$/;"	function	line:31
+render.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    const penguin = {$/;"	property	line:32

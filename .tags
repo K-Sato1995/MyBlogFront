@@ -276,7 +276,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/A
 .tag-button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostBox.scss	/^    .tag-button {$/;"	function	line:34
 .tag-button:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/PostBox.scss	/^    .tag-button:hover {$/;"	function	line:40
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoMatch.js	/^  render() {$/;"	function	line:5
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoPostFound.js	/^  render() {$/;"	function	line:5
 .post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^.post-box {$/;"	function	line:3
 .post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-title {$/;"	function	line:9
 .post-title-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-title-link {$/;"	function	line:12
@@ -373,3 +372,15 @@ updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Post
 updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:56
 updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:64
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:69
+.no-post-found-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoPostFound.scss	/^.no-post-found-box {$/;"	function	line:3
+.penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoPostFound.scss	/^  .penguin {$/;"	function	line:6
+.penguin:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoPostFound.scss	/^  .penguin:hover {$/;"	function	line:11
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoPostFound.js	/^  render() {$/;"	function	line:5
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
+state.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    this.state = {$/;"	property	line:6
+state.height	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      width: 300,$/;"	property	line:7
+state.numOfPenguin	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      height: 300,$/;"	property	line:8
+makeItBigger	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItBigger(){$/;"	function	line:15
+makeItSmaller	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItSmaller() {$/;"	function	line:23
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  render() {$/;"	function	line:31
+render.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    const penguin = {$/;"	property	line:32
