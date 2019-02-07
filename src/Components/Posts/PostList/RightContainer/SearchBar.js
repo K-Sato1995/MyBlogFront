@@ -7,6 +7,7 @@ class SearchBar extends React.Component {
         <h4 className='search-box-title'>Search Posts</h4>
         <input
            type='text'
+           value={this.props.value}
            onChange={this.props.updateSearch}
            className='search-bar'
            placeholder='Search'

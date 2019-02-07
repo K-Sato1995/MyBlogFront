@@ -6,8 +6,10 @@ class NoPostFound extends React.Component {
     return (
       <div className='no-post-found-box'>
         <Penguin />
-        <h1>No Post Found</h1>
-        <h3>Empty the search box and/or click 'All' to show posts:)</h3>
+        <h2>No Post Found</h2>
+        <button value={0} name={'All'} onClick={this.props.showAllPosts} className='show-all-posts-btn'>
+          Show All Posts
+        </button>
       </div>
     )
   }

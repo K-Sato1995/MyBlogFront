@@ -29,6 +29,7 @@ class PostsList extends React.Component {
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
     this.updateTag = this.updateTag.bind(this);
+    this.showAllPosts = this.showAllPosts.bind(this);
   }
   componentDidMount () {
     window.scrollTo(0, 0)
@@ -66,6 +67,14 @@ class PostsList extends React.Component {
     window.scrollTo(0, 0)
   }
 
+  showAllPosts() {
+      this.setState({
+        category: 0,
+        tag:0,
+        search:''
+      })
+  }
+
   render() {
     const override = css`
         margin: 0 auto;
@@ -101,7 +110,7 @@ class PostsList extends React.Component {
                updateCategory={this.updateCategory}
                created_at={post.created_at}
              />
-    ) : this.state.loading === false? <NoPostFound /> : ''
+    ) : this.state.loading === false? <NoPostFound showAllPosts={this.showAllPosts}/> : ''
 
     const categories = this.state.categories.map((category, index)=>
       <CategoryButton activeCategory={this.state.category} value={category.id} name={category.name} updateCategory={this.updateCategory} key={index}/>
@@ -124,7 +133,7 @@ class PostsList extends React.Component {
       <React.Fragment >
         <Author />
         <div className='right-container'>
-          <SearchBar updateSearch={this.updateSearch}/>
+          <SearchBar value={this.state.search} updateSearch={this.updateSearch}/>
           <div className='tag-list-box'>
             <h4 className='tag-list-title'>Tag List</h4>
             <div className='tag-list'>
