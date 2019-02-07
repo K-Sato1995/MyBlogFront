@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../Design/Posts/Penguin.scss';
 
 class Penguin extends React.Component {
   constructor() {
@@ -35,7 +36,7 @@ class Penguin extends React.Component {
     }
     return (
       <div>
-        <img alt={'PENGUIN'} src={require('./images/penguin.png')} style={penguin}/>
+        <img alt={'PENGUIN'} src={require('./images/penguin.png')} style={penguin} className='penguin'/>
         {/* <button onClick={this.makeItBigger}>+</button>
         <button onClick={this.makeItSmaller}>-</button> */}
       </div>

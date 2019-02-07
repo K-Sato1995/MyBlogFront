@@ -3,13 +3,4 @@
 .no-post-found-box {
   margin-top: 60px;
   text-align: center;
-  .penguin {
-    width: 300px;
-    height: 300px;
-    transition: 1s ease;
-  }
-  .penguin:hover {
-    transform: scale(0.8);
-    transform: rotateZ(-10deg);
-  }
 }

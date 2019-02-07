@@ -14,11 +14,16 @@
   }
   .top {
     text-align: center;
-    .penguin {
+    .author-penguin {
       border: solid 0.5px $border-color;
       border-radius: 50px;
+      transition: 3s ease;
       height: 100px;
       width: 100px;
+    }
+    .author-penguin:hover {
+      transform: rotateZ(360deg);
+      background-color: $border-color;
     }
   }
   .body {
