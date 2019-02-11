@@ -4,11 +4,4 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
-state.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    this.state = {$/;"	property	line:6
-state.height	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      width: 300,$/;"	property	line:7
-state.numOfPenguin	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      height: 300,$/;"	property	line:8
-makeItBigger	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItBigger(){$/;"	function	line:15
-makeItSmaller	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItSmaller() {$/;"	function	line:23
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  render() {$/;"	function	line:31
-render.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    const penguin = {$/;"	property	line:32
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/AboutMain.js	/^  render() {$/;"	function	line:7

@@ -1,0 +1,41 @@
+@import "../global";
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about-main-box {
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 950px;
+  border: solid 1px;
+  .about-left-container {
+    border: solid 1px $border-color;
+    float: left;
+    width: 240px;
+    .me-box {
+      border: solid 0.5px $border-color;
+      border-radius: 5px;
+      text-align: center;
+      .me-box-penguin {
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+      }
+      .me-box-title {
+        background-color: #F5F5F5;
+        border-bottom: solid 0.5px $border-color;
+        margin: 0.5px;
+        margin-bottom: 20px;
+        padding: 8px;
+      }
+    }
+  }
+  .about-right-container {
+    border: solid 1px $border-color;
+    float: right;
+    width: 700px;
+  }
+}

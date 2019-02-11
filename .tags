@@ -384,3 +384,12 @@ makeItBigger	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Peng
 makeItSmaller	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItSmaller() {$/;"	function	line:23
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  render() {$/;"	function	line:31
 render.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    const penguin = {$/;"	property	line:32
+.clearfix::after	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.clearfix::after {$/;"	function	line:3
+.about-main-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.about-main-box {$/;"	function	line:9
+.about-left-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-left-container {$/;"	function	line:14
+.me-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^    .me-box {$/;"	function	line:18
+.me-box-penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .me-box-penguin {$/;"	function	line:22
+.me-box-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .me-box-title {$/;"	function	line:27
+.about-right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-right-container {$/;"	function	line:36
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/LeftPart/Me.js	/^  render() {$/;"	function	line:5
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/AboutMain.js	/^  render() {$/;"	function	line:7
