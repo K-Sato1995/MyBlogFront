@@ -389,18 +389,14 @@ h2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoPostFou
 .no-match-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoMatch.scss	/^.no-match-box {$/;"	function	line:3
 .penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/NoMatch.scss	/^  .penguin {$/;"	function	line:7
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/About.js	/^  render() {$/;"	function	line:5
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/LeftPart/Me.js	/^  render() {$/;"	function	line:5
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/Tab.js	/^  render() {$/;"	function	line:4
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabWork.js	/^  render() {$/;"	function	line:4
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Intro.js	/^  render() {$/;"	function	line:5
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Container.js	/^  render() {$/;"	function	line:6
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabIntro.js	/^  render() {$/;"	function	line:4
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabButton.js	/^  render() {$/;"	function	line:4
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  constructor() {$/;"	function	line:7
-class.Component.state.activeTab	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^    this.state = {$/;"	property	line:9
-activeIntro	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeIntro () {$/;"	function	line:15
-activeWork	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeWork () {$/;"	function	line:18
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  render() {$/;"	function	line:21
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/LeftPart/Container.js	/^  render() {$/;"	function	line:6
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/LeftPart/Me.js	/^  render() {$/;"	function	line:5
 .clearfix::after	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.clearfix::after {$/;"	function	line:3
 .about-main-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.about-main-box {$/;"	function	line:9
 .about-left-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-left-container {$/;"	function	line:14
@@ -411,3 +407,11 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/
 button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      button {$/;"	function	line:40
 button:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      button:hover {$/;"	function	line:49
 .about-right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-right-container {$/;"	function	line:55
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/Contact.js	/^  render() {$/;"	function	line:4
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabContact.js	/^  render() {$/;"	function	line:4
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  constructor() {$/;"	function	line:8
+class.Component.state.activeTab	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^    this.state = {$/;"	property	line:10
+activeIntro	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeIntro () {$/;"	function	line:17
+activeWork	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeWork () {$/;"	function	line:20
+activeContact	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeContact() {$/;"	function	line:23
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  render() {$/;"	function	line:27
