@@ -19,6 +19,12 @@
       border: solid 0.5px $border-color;
       border-radius: 5px;
       text-align: center;
+      .me-box-name {
+        float: left;
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 25px;
+      }
       .me-box-penguin {
         margin: 0 auto;
         height: 200px;
@@ -30,6 +36,19 @@
         margin: 0.5px;
         margin-bottom: 20px;
         padding: 8px;
+      }
+      button {
+        color: $a-color;
+        float: left;
+        margin: 10px 10px 10px 20px;
+        padding: 10px 15px 10px 15px;
+        outline: none !important;
+        border: solid 1px $border-color;
+        transition: 1s;
+      }
+      button:hover {
+        background-color: $theme-color;
+        color: #fff;
       }
     }
   }
