@@ -36,10 +36,11 @@ class TabMain extends React.Component {
 
     return (
       <div>
-        <h1>TabMain</h1>
-        <TabButton changeTab = {this.activeIntro} name='About'/>
-        <TabButton changeTab = {this.activeWork} name='Work'/>
-        <TabButton changeTab = {this.activeContact} name='Contact'/>
+        <ul className='tab-button-list'>
+          <li><TabButton changeTab = {this.activeIntro} name='About' activeTab={this.state.activeTab} value={1}/></li>
+          <li><TabButton changeTab = {this.activeWork} name='Work' activeTab={this.state.activeTab} value={2}/></li>
+          <li><TabButton changeTab = {this.activeContact} name='Contact' activeTab={this.state.activeTab} value={3}/></li>
+        </ul>
         { ActiveTab }
       </div>
     )

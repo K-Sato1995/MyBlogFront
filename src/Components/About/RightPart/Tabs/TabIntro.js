@@ -3,8 +3,7 @@ import React from 'react';
 class TabIntro extends React.Component {
   render() {
     return (
-      <div>
-        <h1>TabIntro</h1>
+      <div className='tab-intro-box'>
         <p>
           People often find me outgoing, upbeat, self-motivated and silly. I grew up in a very small and peaceful town and moved to a huge city for college.
         </p>

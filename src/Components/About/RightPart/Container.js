@@ -6,7 +6,6 @@ class Container extends React.Component {
   render() {
     return (
       <div className='about-right-container'>
-        <h2>Right</h2>
         <TabMain />
       </div>
     )
