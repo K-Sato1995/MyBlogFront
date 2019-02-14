@@ -1,22 +1,11 @@
 @import "../../global";
 
-.no-post-found-box {
-  min-height: 400px;
-  margin-top: 70px;
-  h2 {
-    margin-top: 30px;
-    letter-spacing: 5px;
-  }
-  .show-all-posts-btn {
-    color: $a-color;
-    margin: 20px 10px 10px 0;
-    padding: 10px 15px 10px 15px;
-    outline: none !important;
-    border: solid 1px $border-color;
-    transition: 1s;
-  }
-  .show-all-posts-btn:hover {
-    background-color: $theme-color;
-    color: #fff;
+.no-match-box {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  text-align: center;
+  .penguin {
+    width: 300px;
+    height: 300px;
   }
 }

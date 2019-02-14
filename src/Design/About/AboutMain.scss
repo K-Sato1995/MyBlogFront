@@ -1,0 +1,133 @@
+@import "../global";
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about-main-box {
+  margin: 0 auto;
+  margin-top: 80px;
+width: 950px;
+  // border: solid 1px;
+  /////LEFT PART/////////
+  .about-left-container {
+    // border: solid 1px $border-color;
+    float: left;
+    width: 230px;
+    .me-box {
+      border: solid 0.5px $border-color;
+      border-radius: 5px;
+      text-align: center;
+      .me-box-name {
+        float: left;
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 25px;
+      }
+      .me-box-penguin {
+        margin: 0 auto;
+        height: 230px;
+        width: 200px;
+      }
+      .me-box-title {
+        background-color: #F5F5F5;
+        border-bottom: solid 0.5px $border-color;
+        margin: 0.5px;
+        margin-bottom: 20px;
+        padding: 8px;
+      }
+      button {
+        color: $a-color;
+        float: left;
+        margin: 10px 10px 10px 20px;
+        padding: 10px 15px 10px 15px;
+        outline: none !important;
+        border: solid 1px $border-color;
+        transition: 1s;
+      }
+      button:hover {
+        background-color: $theme-color;
+        color: #fff;
+      }
+    }
+  }
+  //////RIGHT PART///////
+  .about-right-container {
+    // border: solid 1px $border-color;
+    float: right;
+    width: 680px;
+    //////TAB//////////
+    .tab-button-list {
+      padding: 0;
+      border-bottom: solid 1px $border-color;
+      li { display: inline-block; }
+      .tab-button {
+        border: none;
+        font-size: 15px;
+        margin: 5px 15px 0px 15px;
+        padding: 10px 10px 10px 10px;
+        letter-spacing: 1.5px;
+        outline:none
+      }
+      .tab-button-active {
+        @extend .tab-button;
+        border-bottom: solid 2px  #E3620A;
+        font-weight: bold;
+      }
+      .tab-button:hover {
+        border-bottom: solid 2px $border-color;
+      }
+      .tab-button-active:hover {
+        border-bottom: 2px solid #E3620A;
+      }
+    }
+    .tab-intro-box {
+      padding: 20px;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .tab-work-box {
+      .work-box {
+        border: solid 1px $border-color;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 5px 10px 5px;
+        width: 330px;
+        height: 130px;
+        float: left;
+        position: relative;
+        h5 {
+          font-size: 17px;
+          font-weight: bold;
+        }
+        p {
+          color: $a-color;
+          font-size: 13px;
+        }
+        .work-box-languag-name {
+          position: absolute;
+          bottom: 11px;
+          left: 30px;
+        }
+        .lang {
+          margin-top: 15px;
+          height: 15px;
+          width: 15px;
+          border-radius: 50px;
+        }
+        .Ruby {
+          @extend .lang;
+          color: #701516;
+          background-color: #701516;
+        }
+        .JavaScript {
+          @extend .lang;
+          color: #F1E05A;
+          background-color: #F1E05A;
+        }
+      }
+    }
+  }
+}

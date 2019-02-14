@@ -4,11 +4,28 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
-state.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    this.state = {$/;"	property	line:6
-state.height	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      width: 300,$/;"	property	line:7
-state.numOfPenguin	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^      height: 300,$/;"	property	line:8
-makeItBigger	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItBigger(){$/;"	function	line:15
-makeItSmaller	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  makeItSmaller() {$/;"	function	line:23
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  render() {$/;"	function	line:31
-render.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    const penguin = {$/;"	property	line:32
+.clearfix::after	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.clearfix::after {$/;"	function	line:3
+.about-main-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^.about-main-box {$/;"	function	line:9
+.about-left-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-left-container {$/;"	function	line:15
+.me-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^    .me-box {$/;"	function	line:19
+.me-box-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .me-box-name {$/;"	function	line:23
+.me-box-penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .me-box-penguin {$/;"	function	line:29
+.me-box-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .me-box-title {$/;"	function	line:34
+button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      button {$/;"	function	line:41
+button:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      button:hover {$/;"	function	line:50
+.about-right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^  .about-right-container {$/;"	function	line:57
+.tab-button-list	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^    .tab-button-list {$/;"	function	line:62
+li	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      li { display: inline-block; }$/;"	function	line:65
+.tab-button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .tab-button {$/;"	function	line:66
+.tab-button-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .tab-button-active {$/;"	function	line:74
+.tab-button:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .tab-button:hover {$/;"	function	line:79
+.tab-button-active:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .tab-button-active:hover {$/;"	function	line:82
+.tab-intro-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^    .tab-intro-box {$/;"	function	line:86
+.tab-work-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^    .tab-work-box {$/;"	function	line:91
+.work-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^      .work-box {$/;"	function	line:92
+h5	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        h5 {$/;"	function	line:101
+p	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        p {$/;"	function	line:105
+.work-box-languag-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        .work-box-languag-name {$/;"	function	line:109
+.lang	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        .lang {$/;"	function	line:114
+.Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        .Ruby {$/;"	function	line:120
+.JavaScript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/About/AboutMain.scss	/^        .JavaScript {$/;"	function	line:125
