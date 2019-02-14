@@ -14,10 +14,10 @@ class TabMain extends React.Component {
     this.activeIntro = this.activeIntro.bind(this);
     this.activeContact = this.activeContact.bind(this);
   }
-  activeIntro () {
+  activeWork () {
     this.setState ({ activeTab: 1 })
   }
-  activeWork () {
+  activeIntro () {
     this.setState ({ activeTab: 2 })
   }
   activeContact() {
@@ -27,9 +27,9 @@ class TabMain extends React.Component {
   render() {
     let ActiveTab;
     if (this.state.activeTab === 1) {
-      ActiveTab = <TabIntro />
-    }else if (this.state.activeTab === 2) {
       ActiveTab = <TabWork />
+    }else if (this.state.activeTab === 2) {
+      ActiveTab = <TabIntro />
     }else if (this.state.activeTab === 3) {
       ActiveTab = <TabContact />
     }
@@ -37,8 +37,8 @@ class TabMain extends React.Component {
     return (
       <div>
         <ul className='tab-button-list'>
-          <li><TabButton changeTab = {this.activeIntro} name='About' activeTab={this.state.activeTab} value={1}/></li>
-          <li><TabButton changeTab = {this.activeWork} name='Work' activeTab={this.state.activeTab} value={2}/></li>
+          <li><TabButton changeTab = {this.activeWork} name='Work' activeTab={this.state.activeTab} value={1}/></li>
+          <li><TabButton changeTab = {this.activeIntro} name='About' activeTab={this.state.activeTab} value={2}/></li>
           <li><TabButton changeTab = {this.activeContact} name='Contact' activeTab={this.state.activeTab} value={3}/></li>
         </ul>
         { ActiveTab }
