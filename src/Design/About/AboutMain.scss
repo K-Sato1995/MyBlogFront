@@ -9,7 +9,7 @@
 .about-main-box {
   margin: 0 auto;
   margin-top: 80px;
-  max-width: 950px;
+width: 950px;
   // border: solid 1px;
   /////LEFT PART/////////
   .about-left-container {
@@ -87,6 +87,47 @@
       padding: 20px;
       font-size: 15px;
       letter-spacing: 1px;
+    }
+    .tab-work-box {
+      .work-box {
+        border: solid 1px $border-color;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 5px 10px 5px;
+        width: 330px;
+        height: 130px;
+        float: left;
+        position: relative;
+        h5 {
+          font-size: 17px;
+          font-weight: bold;
+        }
+        p {
+          color: $a-color;
+          font-size: 13px;
+        }
+        .work-box-languag-name {
+          position: absolute;
+          bottom: 11px;
+          left: 30px;
+        }
+        .lang {
+          margin-top: 15px;
+          height: 15px;
+          width: 15px;
+          border-radius: 50px;
+        }
+        .Ruby {
+          @extend .lang;
+          color: #701516;
+          background-color: #701516;
+        }
+        .JavaScript {
+          @extend .lang;
+          color: #F1E05A;
+          background-color: #F1E05A;
+        }
+      }
     }
   }
 }

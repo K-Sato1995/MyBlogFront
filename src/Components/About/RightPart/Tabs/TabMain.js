@@ -1,6 +1,6 @@
 import React from 'react';
 import TabIntro from './TabIntro';
-import TabWork from './TabWork';
+import TabWork from './TabWork/TabWork';
 import TabButton from './TabButton';
 import TabContact from './TabContact';
 
