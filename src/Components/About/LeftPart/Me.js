@@ -7,7 +7,8 @@ class Me extends React.Component {
       <div className='me-box'>
           <img alt={'PENGUIN'} src={require('./images/penguin.png')} className='me-box-penguin'/>
           <h3 className='me-box-name'>K-Sato</h3>
-          <a href='https://github.com/K-Sato1995' target='_blank'><button>Check me out on GitHub</button></a>
+          <p className='me-box-profile'>Hi! I'm into baseball, pragramming, learning languages and dogs.</p>
+          <a href='https://github.com/K-Sato1995' target='_blank' rel="noopener noreferrer"><button>Check me out on GitHub</button></a>
       </div>
     )
   }

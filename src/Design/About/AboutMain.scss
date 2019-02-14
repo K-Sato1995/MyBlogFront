@@ -9,43 +9,40 @@
 .about-main-box {
   margin: 0 auto;
   margin-top: 80px;
-width: 950px;
-  // border: solid 1px;
+  width: 950px;
   /////LEFT PART/////////
   .about-left-container {
-    // border: solid 1px $border-color;
     float: left;
     width: 230px;
     .me-box {
-      border: solid 0.5px $border-color;
       border-radius: 5px;
       text-align: center;
       .me-box-name {
-        float: left;
+        text-align: left;
         font-weight: bold;
         font-size: 25px;
-        margin-left: 25px;
+      }
+      .me-box-profile {
+        text-align: left;
+        margin-top: 20px;
       }
       .me-box-penguin {
         margin: 0 auto;
+        border: solid 0.5px $border-color;
+        padding: 30px 10px 0 10px;
         height: 230px;
-        width: 200px;
-      }
-      .me-box-title {
-        background-color: #F5F5F5;
-        border-bottom: solid 0.5px $border-color;
-        margin: 0.5px;
-        margin-bottom: 20px;
-        padding: 8px;
+        width: 230px;
       }
       button {
-        color: $a-color;
+        color: $p-color;
         float: left;
-        margin: 10px 10px 10px 20px;
+        margin-top: 20px;
         padding: 10px 15px 10px 15px;
         outline: none !important;
         border: solid 1px $border-color;
+        background-color: #EBEFF4;
         transition: 1s;
+        width: 230px;
       }
       button:hover {
         background-color: $theme-color;
@@ -55,7 +52,6 @@ width: 950px;
   }
   //////RIGHT PART///////
   .about-right-container {
-    // border: solid 1px $border-color;
     float: right;
     width: 680px;
     //////TAB//////////
