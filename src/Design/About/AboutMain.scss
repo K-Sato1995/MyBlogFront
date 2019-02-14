@@ -99,20 +99,23 @@ width: 950px;
         float: left;
         position: relative;
         h5 {
-          font-size: 17px;
+          font-size: 15px;
+          margin-top: 5px;
           font-weight: bold;
         }
         p {
           color: $a-color;
+          margin-top: 15px;
           font-size: 13px;
         }
         .work-box-languag-name {
           position: absolute;
-          bottom: 11px;
+          color: $a-color;
+          bottom: 8px;
           left: 30px;
         }
         .lang {
-          margin-top: 15px;
+          margin-top: 20px;
           height: 15px;
           width: 15px;
           border-radius: 50px;
