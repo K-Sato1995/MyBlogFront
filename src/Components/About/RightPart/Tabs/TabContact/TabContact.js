@@ -1,10 +1,12 @@
 import React from 'react';
+import ContactBox from './ContactBox';
 
 class TabContact extends React.Component {
   render() {
     return (
       <div>
-        <h1>TabContact</h1>
+        <h1>Comming soon</h1>
+        <ContactBox />
       </div>
     )
   }
