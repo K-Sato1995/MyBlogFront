@@ -11,5 +11,36 @@
 .category-button-active {
   @extend .category-button;
   background-color: $h-color;
+  font-weight: bold;
   color: #fff;
+}
+.category-button-Ruby {
+  @extend .category-button-active;
+  background-color: #701516;
+}
+.category-button-Javascript {
+  @extend .category-button-active;
+  background-color: #F6D033;
+}
+.category-button-React {
+  @extend .category-button-active;
+  background-color: #009FCE;
+}
+.category-button-Go {
+  @extend .category-button-active;
+  background-color: #74CDDD;
+}
+.category-button-Life {
+  @extend .category-button-active;
+  background-color: #5AB601;
+}
+.category-button-Rails {
+  @extend .category-button-active;
+  background-color: #CC0001;
+}
+.category-button-Others {
+  @extend .category-button-active;
+}
+.category-button-All {
+  @extend .category-button-active;
 }

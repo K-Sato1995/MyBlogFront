@@ -47,6 +47,7 @@
   .tag-active {
     @extend .tag;
     background-color: $a-color;
+    font-weight: bold;
     color: #fff;
   }
   .tag:hover {

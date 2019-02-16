@@ -3,8 +3,9 @@ import '../../../../Design/Posts/PostList/CategoryTag/CategoryButton.scss';
 
 class CategoryButton extends React.Component {
   render() {
+    const ActiveButtonName = `category-button-${this.props.name}`
     const categoryButton = this.props.activeCategory === this.props.value ? (
-      <button value={this.props.value} onClick={this.props.updateCategory} className='category-button-active'>
+      <button value={this.props.value} onClick={this.props.updateCategory} className={ActiveButtonName}>
         {this.props.name}
       </button>) :
       <button value={this.props.value} onClick={this.props.updateCategory} className='category-button'>
