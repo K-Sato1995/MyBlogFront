@@ -1,13 +1,16 @@
 import React from 'react';
 import '../../Design/LoadingBox.scss';
+import { Link } from 'react-router-dom';
 
 class LoadingBox extends React.Component {
   render() {
     return (
       <div className='loading-box'>
-          <img alt={'PENGUIN'} src={require('./images/penguin.png')} className='penguin'/>
+          <Link to= {`/about`}>
+            <img alt={'PENGUIN'} src={require('./images/penguin.png')} className='penguin'/>
+          </Link>
           <h3>Hi! Sorry! It might take a while to boost up the backend-server.</h3>
-          <h3>Meanwhile, let me introduce myself:):):)</h3>
+          <h3>Meanwhile, let me introduce myself:)</h3>
           <div className='self-introduction'>
             <p>
               People often find me outgoing, upbeat, self-motivated and silly. I grew up in a very small and peaceful town and moved to a huge city for college.

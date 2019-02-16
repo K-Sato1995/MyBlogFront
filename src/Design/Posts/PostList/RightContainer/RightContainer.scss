@@ -9,6 +9,7 @@
 }
 .search-box {
   border: solid 0.5px $border-color;
+  border-radius: 3px;
   .search-box-title {
     padding: 8px;
     margin: 0.5px;
@@ -27,6 +28,7 @@
 .tag-list-box {
   margin-top: 20px;
   border: solid 0.5px $border-color;
+  border-radius: 3px;
   .tag-list-title {
     padding: 8px;
     margin: 0.5px;
@@ -58,6 +60,7 @@
 .featured-post-box {
   margin-top: 20px;
   border: solid 0.5px $border-color;
+  border-radius: 3px;
   .featured-post {
     margin: 20px 0 0 10px;
     .post-title {

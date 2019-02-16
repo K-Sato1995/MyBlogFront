@@ -7,7 +7,7 @@ class Nav extends React.Component {
     return (
       <div className='navbar'>
         <div className="nav-container">
-          <Link to='/'><span className='logo'>K-Sato's Blog</span></Link>
+          <Link to='/'><span className='logo'>BLOG</span></Link>
         </div>
       </div>
     )

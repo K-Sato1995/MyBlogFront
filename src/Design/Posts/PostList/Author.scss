@@ -4,6 +4,7 @@
   margin-bottom: 20px;
   float: right;
   border: solid 0.5px $border-color;
+  border-radius: 3px;
   width: 250px;
   .author-title {
     background-color: #F5F5F5;
@@ -14,6 +15,13 @@
   }
   h3 {
     letter-spacing: 2px;
+    .author-box-name {
+      color: $h-color;
+      text-decoration: none;
+    }
+    .author-box-name:hover {
+      color: $a-color;
+    }
   }
   .top {
     text-align: center;
@@ -38,38 +46,28 @@
     border-top: solid 0.5px $border-color;
     .snn1 {
       padding: 5px;
+      transition: 1s;
+      color: $a-color;
       margin: 0;
       display: inline-block;
       border-right: solid 0.5px $border-color;
       width: 125px;
-      .snn1-link {
-        text-decoration: none;
-        color: $a-color;
-      }
     }
     .snn1:hover {
       background-color: $h-color;
       color: #fff;
-      .snn1-link {
-        color: #fff;
-      }
     }
     .snn2 {
       padding: 5px;
       margin: 0;
+      transition: 1s;
+      color: $a-color;
       display: inline-block;
       width: 123px;
-      .snn2-link {
-        text-decoration: none;
-        color: $a-color;
-      }
     }
     .snn2:hover {
       background-color: $h-color;
       color: #fff;
-      .snn2-link {
-        color: #fff;
-      }
     }
   }
 }
