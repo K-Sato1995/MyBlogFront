@@ -21,6 +21,7 @@
     margin: 15px 10px 15px 10px;
     outline: none !important;
     border: solid 1px #CFD8DC;
+    border-radius: 3px;
     width: 220px;
   }
 }
@@ -43,6 +44,7 @@
     margin: 2px;
     outline: none !important;
     border: solid 1px $border-color;
+    border-radius: 3px;
   }
   .tag-active {
     @extend .tag;
