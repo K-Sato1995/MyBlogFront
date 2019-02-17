@@ -42,4 +42,40 @@
       color: $a-color;
     }
   }
+  .categoryBall {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+  }
+  .Ruby {
+    @extend .categoryBall;
+    background-color:  $ruby;
+  }
+  .JavaScript {
+    @extend .categoryBall;
+    background-color:  $javascript;
+  }
+  .Go {
+    @extend .categoryBall;
+    background-color:  $go;
+  }
+  .React {
+    @extend .categoryBall;
+    background-color:  $react;
+  }
+  .Rails {
+    @extend .categoryBall;
+    background-color:  $rails;
+  }
+  .Life {
+    @extend .categoryBall;
+    background-color:  $life;
+  }
+  .Others {
+    @extend .categoryBall;
+    background-color:  $h-color;
+  }
 }

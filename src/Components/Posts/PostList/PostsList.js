@@ -1,5 +1,5 @@
 import React from 'react';
-import PostBox from './PostBox';
+import PostBox from './PostBox/PostBox';
 import '../../../Design/Posts/PostList/PostList.scss';
 import '../../../Design/Posts/PostList/RightContainer/RightContainer.scss';
 import { css } from '@emotion/core';

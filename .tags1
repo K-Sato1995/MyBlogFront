@@ -4,21 +4,20 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^.author-box {$/;"	function	line:3
-.author-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .author-title {$/;"	function	line:8
-h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  h3 {$/;"	function	line:15
-.author-box-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name {$/;"	function	line:17
-.author-box-name:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name:hover {$/;"	function	line:21
-.top	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .top {$/;"	function	line:25
-.author-penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin {$/;"	function	line:27
-.author-penguin:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin:hover {$/;"	function	line:34
-.body	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .body {$/;"	function	line:39
-.snn-links	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .snn-links {$/;"	function	line:43
-.snn1	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1 {$/;"	function	line:46
-.snn1-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^      .snn1-link {$/;"	function	line:52
-.snn1:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1:hover {$/;"	function	line:57
-.snn1-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^      .snn1-link {$/;"	function	line:60
-.snn2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2 {$/;"	function	line:64
-.snn2-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^      .snn2-link {$/;"	function	line:69
-.snn2:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2:hover {$/;"	function	line:74
-.snn2-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^      .snn2-link {$/;"	function	line:77
+.post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^.post-box {$/;"	function	line:3
+.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-title {$/;"	function	line:9
+.post-title-link	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-title-link {$/;"	function	line:12
+.post-title-link:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-title-link:hover {$/;"	function	line:17
+.post-introduction	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-introduction {$/;"	function	line:20
+.created-date	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .created-date {$/;"	function	line:25
+.post-tag-list	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .post-tag-list {$/;"	function	line:32
+.tag-button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^    .tag-button {$/;"	function	line:35
+.tag-button:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^    .tag-button:hover {$/;"	function	line:41
+.categoryBall	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .categoryBall {$/;"	function	line:45
+.Ruby	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Ruby {$/;"	function	line:53
+.JavaScript	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .JavaScript {$/;"	function	line:57
+.Go	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Go {$/;"	function	line:61
+.React	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .React {$/;"	function	line:65
+.Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Rails {$/;"	function	line:69
+.Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Life {$/;"	function	line:73
+.Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Others {$/;"	function	line:77

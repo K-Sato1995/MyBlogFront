@@ -16,27 +16,27 @@
 }
 .category-button-Ruby {
   @extend .category-button-active;
-  background-color: #701516;
+  background-color: $ruby;
 }
 .category-button-Javascript {
   @extend .category-button-active;
-  background-color: #F6D033;
+  background-color: $javascript;
 }
 .category-button-React {
   @extend .category-button-active;
-  background-color: #009FCE;
+  background-color: $react;
 }
 .category-button-Go {
   @extend .category-button-active;
-  background-color: #74CDDD;
+  background-color: $go;
 }
 .category-button-Life {
   @extend .category-button-active;
-  background-color: #5AB601;
+  background-color: $life;
 }
 .category-button-Rails {
   @extend .category-button-active;
-  background-color: #CC0001;
+  background-color: $rails;
 }
 .category-button-Others {
   @extend .category-button-active;

@@ -1,7 +1,8 @@
 import React from 'react';
-import '../../../Design/Posts/PostList/PostBox.scss';
+import '../../../../Design/Posts/PostList/PostBox.scss';
 import { Link } from 'react-router-dom';
-import TagButton from './CategoryTag/TagButton';
+import TagButton from '../CategoryTag/TagButton';
+import CategoryBall from './CategoryBall';
 
 class PostBox extends React.Component {
   formatDate(date){
@@ -19,6 +20,7 @@ class PostBox extends React.Component {
     return (
       <div className="post-box">
         <h3 className='post-title'><Link to= {`/Post/${this.props.id}`} className='post-title-link'>{this.props.title}</Link></h3>
+        <CategoryBall category={this.props.category}/>
         <p className='post-introduction'>{introduction.substring(0, 300)}...</p>
         <p className='post-tag-list'>{ post_tags }</p>
         <p className='created-date'>{ this.formatDate(this.props.created_at) }</p>
