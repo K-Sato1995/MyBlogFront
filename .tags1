@@ -4,20 +4,73 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.right-container {$/;"	function	line:3
-.search-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.search-box {$/;"	function	line:10
-.search-box-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-box-title {$/;"	function	line:13
-.search-bar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-bar {$/;"	function	line:19
-.tag-list-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.tag-list-box {$/;"	function	line:29
-.tag-list-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list-title {$/;"	function	line:33
-.tag-list	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list {$/;"	function	line:39
-.tag	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag {$/;"	function	line:42
-.tag-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active {$/;"	function	line:49
-.tag:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag:hover {$/;"	function	line:55
-.tag-active:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active:hover {$/;"	function	line:58
-.featured-post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.featured-post-box {$/;"	function	line:63
-.featured-post	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post {$/;"	function	line:67
-.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title {$/;"	function	line:69
-.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title:hover  {$/;"	function	line:74
-.featured-posts-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-posts-title {$/;"	function	line:78
-.featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:84
+.post-content	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^.post-content {$/;"	function	line:3
+body > *:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:first-child {$/;"	function	line:5
+body > *:last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > *:last-child {$/;"	function	line:9
+a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  a {$/;"	function	line:13
+a.absent	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  a.absent {$/;"	function	line:18
+a.anchor	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  a.anchor {$/;"	function	line:22
+h1, h2, h3, h4, h5, h6	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h1, h2, h3, h4, h5, h6 {$/;"	function	line:33
+h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {$/;"	function	line:44
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {$/;"	function	line:49
+h1 tt, h1 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h1 tt, h1 code {$/;"	function	line:53
+h2 tt, h2 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h2 tt, h2 code {$/;"	function	line:57
+h3 tt, h3 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h3 tt, h3 code {$/;"	function	line:61
+h4 tt, h4 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h4 tt, h4 code {$/;"	function	line:65
+h5 tt, h5 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h5 tt, h5 code {$/;"	function	line:69
+h6 tt, h6 code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h6 tt, h6 code {$/;"	function	line:73
+h1	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h1 {$/;"	function	line:77
+h2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h2 {$/;"	function	line:84
+h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h3 {$/;"	function	line:91
+h4	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h4 {$/;"	function	line:96
+h5	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h5 {$/;"	function	line:101
+h6	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h6 {$/;"	function	line:106
+p, blockquote, ul, ol, dl, li, table, pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  p, blockquote, ul, ol, dl, li, table, pre {$/;"	function	line:111
+hr	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  hr {$/;"	function	line:119
+body > h2:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > h2:first-child {$/;"	function	line:126
+body > h1:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > h1:first-child {$/;"	function	line:131
+body > h1:first-child + h2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > h1:first-child + h2 {$/;"	function	line:136
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {$/;"	function	line:141
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {$/;"	function	line:146
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {$/;"	function	line:151
+li p.first	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  li p.first {$/;"	function	line:155
+ul, ol	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  ul, ol {$/;"	function	line:159
+ul :first-child, ol :first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  ul :first-child, ol :first-child {$/;"	function	line:163
+ul :last-child, ol :last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  ul :last-child, ol :last-child {$/;"	function	line:167
+dl	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl {$/;"	function	line:171
+dl dt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dt {$/;"	function	line:175
+dl dt:first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dt:first-child {$/;"	function	line:183
+dl dt > :first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dt > :first-child {$/;"	function	line:187
+dl dt > :last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dt > :last-child {$/;"	function	line:191
+dl dd	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dd {$/;"	function	line:195
+dl dd > :first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dd > :first-child {$/;"	function	line:200
+dl dd > :last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  dl dd > :last-child {$/;"	function	line:204
+blockquote	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  blockquote {$/;"	function	line:208
+blockquote > :first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  blockquote > :first-child {$/;"	function	line:214
+blockquote > :last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  blockquote > :last-child {$/;"	function	line:218
+table	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table {$/;"	function	line:222
+table tr	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr {$/;"	function	line:225
+table tr:nth-child(2n)	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr:nth-child(2n) {$/;"	function	line:232
+table tr th	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr th {$/;"	function	line:236
+table tr td	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr td {$/;"	function	line:244
+table tr th :first-child, table tr td :first-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr th :first-child, table tr td :first-child {$/;"	function	line:251
+table tr th :last-child, table tr td :last-child	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  table tr th :last-child, table tr td :last-child {$/;"	function	line:255
+img	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  img {$/;"	function	line:259
+span.frame	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.frame {$/;"	function	line:263
+span.frame > span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.frame > span {$/;"	function	line:268
+span.frame span img	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.frame span img {$/;"	function	line:278
+span.frame span span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.frame span span {$/;"	function	line:283
+span.align-center	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-center {$/;"	function	line:290
+span.align-center > span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-center > span {$/;"	function	line:296
+span.align-center span img	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-center span img {$/;"	function	line:303
+span.align-right	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-right {$/;"	function	line:308
+span.align-right > span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-right > span {$/;"	function	line:314
+span.align-right span img	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.align-right span img {$/;"	function	line:321
+span.float-left	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.float-left {$/;"	function	line:326
+span.float-left span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.float-left span {$/;"	function	line:333
+span.float-right	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.float-right {$/;"	function	line:337
+span.float-right > span	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  span.float-right > span {$/;"	function	line:344
+code, tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  code, tt {$/;"	function	line:351
+pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code {$/;"	function	line:360
+pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre {$/;"	function	line:369
+pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code, pre tt {$/;"	function	line:380

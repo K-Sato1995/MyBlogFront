@@ -54,6 +54,7 @@ class PostDetail extends React.Component {
           renderers={{
             code: CodeBlock,
           }}
+          linkTarget='true'
           className='post-content'
         />
       </div>

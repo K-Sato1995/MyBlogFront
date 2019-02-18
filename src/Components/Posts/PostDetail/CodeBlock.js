@@ -20,7 +20,6 @@ export default class CodeBlock extends React.PureComponent {
       <SyntaxHighlighter
         language={language}
         style={style}
-        showLineNumbers={true}
         ineNumberContainerStyle={true}
         >
         {value}
