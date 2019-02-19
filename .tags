@@ -249,13 +249,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/C
 .category-button-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button-active {$/;"	function	line:10
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/FeaturedPost.js	/^  render() {$/;"	function	line:6
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/Tag.js	/^  render() {$/;"	function	line:5
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  constructor () {$/;"	function	line:17
-state.posts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:19
-componentDidMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentDidMount () {$/;"	function	line:33
-updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateSearch(e) {$/;"	function	line:53
-updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:56
-updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:64
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:69
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoPostFound.js	/^  render() {$/;"	function	line:5
 constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
 state.width	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^    this.state = {$/;"	property	line:6
@@ -449,3 +442,11 @@ pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.
 .Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Rails {$/;"	function	line:70
 .Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Life {$/;"	function	line:74
 .Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Others {$/;"	function	line:78
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  constructor () {$/;"	function	line:17
+state.posts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:19
+componentDidMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentDidMount () {$/;"	function	line:34
+updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateSearch(e) {$/;"	function	line:54
+updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:57
+updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:65
+showAllPosts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  showAllPosts() {$/;"	function	line:70
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:78

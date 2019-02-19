@@ -148,9 +148,13 @@ class PostsList extends React.Component {
       </React.Fragment>
       ):('')
 
-    const loadingBox = this.state.loading === true ? (
+    const PostListContainer = this.state.loading === true ? (
       <LoadingBox />
-    ): ('')
+    ): (<div className='post-list-container'>
+          { categoryAllButton }
+          { categories }
+          { postList }
+        </div>)
 
     return (
       <Col　className="container">
@@ -161,12 +165,7 @@ class PostsList extends React.Component {
          color={'#E0E0E0'}
          loading={this.state.loading}
         />
-        { loadingBox }
-        <div className='post-list-container'>
-          { categoryAllButton }
-          { categories }
-          { postList }
-        </div>
+        {PostListContainer}
         {rightContainer}
       </Col>
     )
