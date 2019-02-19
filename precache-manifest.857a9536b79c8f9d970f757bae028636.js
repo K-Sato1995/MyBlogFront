@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/MyBlogFront/static/js/runtime~main.c6c3dbe7.js"
   },
   {
-    "revision": "d3b80d16abc373d1a4e9",
-    "url": "/MyBlogFront/static/js/main.d3b80d16.chunk.js"
+    "revision": "46264caf509590fe8f6d",
+    "url": "/MyBlogFront/static/js/main.46264caf.chunk.js"
   },
   {
     "revision": "660089dfa390fc6a04fb",
     "url": "/MyBlogFront/static/js/1.660089df.chunk.js"
   },
   {
-    "revision": "d3b80d16abc373d1a4e9",
-    "url": "/MyBlogFront/static/css/main.278dac05.chunk.css"
+    "revision": "46264caf509590fe8f6d",
+    "url": "/MyBlogFront/static/css/main.e9ec6912.chunk.css"
   },
   {
-    "revision": "73bcf54eb8c25afd0064bb5f1592e652",
+    "revision": "9b1a32ba1e045c0ca6ae7ed5c8c85cb0",
     "url": "/MyBlogFront/index.html"
   }
 ];
