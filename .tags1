@@ -11,5 +11,6 @@
 .post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-box {$/;"	function	line:10
 .right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .right-container {$/;"	function	line:14
 .author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .author-box {$/;"	function	line:17
-.footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:20
-.footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:21
+.post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-container {$/;"	function	line:20
+.footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:23
+.footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:24

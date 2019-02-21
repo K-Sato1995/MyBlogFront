@@ -17,6 +17,9 @@
   .author-box {
     @extend .right-container;
   }
+  .post-container {
+    padding: 0;
+  }
   .footer {
     .footer-container, .footer-container2 {
     display: none;
