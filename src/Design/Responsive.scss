@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+  .post-box {
+    max-width: 1000px;
+    margin-right: 0;
+  }
+  .right-container {
+    display: none;
+  }
+  .author-box {
+    @extend .right-container;
+  }
+  .footer {
+    .footer-container, .footer-container2 {
+    display: none;
+    }
+  }
+}

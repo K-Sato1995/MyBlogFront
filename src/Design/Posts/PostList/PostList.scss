@@ -3,18 +3,9 @@
 .container {
   margin: 0 auto;
   margin-top: 80px;
-  max-width: 950px;
+  max-width: 1000px;
   .post-list-container {
     float: left;
     min-height: 330px;
-  }
-}
-
-@media (max-width: 990px) {
-  .right-container {
-    display: none;
-  }
-  .author-box {
-    @extend .right-container;
   }
 }

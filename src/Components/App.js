@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './Nav/Nav';
 import Main from './Posts/Main';
 import Footer from './Footer/Footer';
+import '../Design/Responsive.scss';
 
 import { HashRouter as Router } from 'react-router-dom';
 

@@ -4,8 +4,7 @@
   position: sticky;
   top: 70px;
   float: right;
-  min-width: 250px;
-  max-width: 250px;
+  width: 280px;
 }
 .search-box {
   border: solid 0.5px $border-color;
@@ -22,7 +21,7 @@
     outline: none !important;
     border: solid 1px #CFD8DC;
     border-radius: 3px;
-    width: 220px;
+    width: 250px;
   }
 }
 

@@ -8,7 +8,7 @@ class Footer extends React.Component {
         <div className='footer-container'>
           <div className='footer-box1'>
             <h4>K-Sato's Blog</h4>
-            <p>This is my personal blog where I write mostly about programming and my daily life. Some are kinda usefull and some are garbage.</p>
+            <p>This is my personal blog where I write mostly about programming and my daily life. Some are kinda usefull and some are garbage. Hope you will find something interesting here.</p>
           </div>
           <div className='footer-box2'>
             <h4>K-Sato</h4>
