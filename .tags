@@ -452,8 +452,11 @@ a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer/Footer.scss	/^    
 h5	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer/Footer.scss	/^    h5{$/;"	function	line:31
 a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer/Footer.scss	/^    a {color: #898989;}$/;"	function	line:35
 @media (max-width: 1200px)	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^@media (max-width: 1200px) {$/;"	function	line:1
-.post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-box {$/;"	function	line:2
-.right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .right-container {$/;"	function	line:6
-.author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .author-box {$/;"	function	line:9
-.footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:12
-.footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:13
+.category-button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .category-button {$/;"	function	line:2
+.category-button-active, .category-button-Ruby, .category-button-Javascript, .category-button-React, .category-button-Go, .category-button-Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .category-button-active, .category-button-Ruby, .category-button-Javascript, .category-button-React, .category-button-Go, .category-button-Life,$/;"	function	line:6
+.category-button-Rails, .category-button-Others, .category-button-All	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .category-button-Rails, .category-button-Others, .category-button-All  {$/;"	function	line:7
+.post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-box {$/;"	function	line:10
+.right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .right-container {$/;"	function	line:14
+.author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .author-box {$/;"	function	line:17
+.footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:20
+.footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:21

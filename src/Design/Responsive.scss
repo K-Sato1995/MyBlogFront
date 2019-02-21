@@ -1,4 +1,12 @@
 @media (max-width: 1200px) {
+  .category-button {
+    margin: 5px 5px 5px 5px;
+    padding: 7px 12px;
+  }
+  .category-button-active, .category-button-Ruby, .category-button-Javascript, .category-button-React, .category-button-Go, .category-button-Life,
+  .category-button-Rails, .category-button-Others, .category-button-All  {
+    @extend .category-button;
+  }
   .post-box {
     max-width: 1000px;
     margin-right: 0;
