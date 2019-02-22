@@ -281,7 +281,6 @@ activeWork	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightP
 activeIntro	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeIntro () {$/;"	function	line:20
 activeContact	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  activeContact() {$/;"	function	line:23
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/About/RightPart/Tabs/TabMain.js	/^  render() {$/;"	function	line:27
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/Author.js	/^  render() {$/;"	function	line:6
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostBox/CategoryBall.js	/^  render() {$/;"	function	line:5
 constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail/PostDetail.js	/^  constructor() {$/;"	function	line:11
 state.data	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostDetail/PostDetail.js	/^    this.state = {$/;"	property	line:13
@@ -368,20 +367,6 @@ updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Po
 updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:65
 showAllPosts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  showAllPosts() {$/;"	function	line:70
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:78
-.author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^.author-box {$/;"	function	line:3
-.author-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .author-title {$/;"	function	line:9
-h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  h3 {$/;"	function	line:16
-.author-box-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name {$/;"	function	line:18
-.author-box-name:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name:hover {$/;"	function	line:22
-.top	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .top {$/;"	function	line:26
-.author-penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin {$/;"	function	line:28
-.author-penguin:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin:hover {$/;"	function	line:35
-.body	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .body {$/;"	function	line:40
-.snn-links	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .snn-links {$/;"	function	line:44
-.snn1	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1 {$/;"	function	line:47
-.snn1:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1:hover {$/;"	function	line:56
-.snn2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2 {$/;"	function	line:60
-.snn2:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2:hover {$/;"	function	line:68
 .navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^.navbar {$/;"	function	line:3
 .nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^  .nav-container {$/;"	function	line:12
 .logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^    .logo {$/;"	function	line:17
@@ -461,3 +446,18 @@ a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer/Footer.scss	/^    
 .post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-container {$/;"	function	line:20
 .footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:23
 .footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:24
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/Author.js	/^  render() {$/;"	function	line:6
+.author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^.author-box {$/;"	function	line:3
+.author-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .author-title {$/;"	function	line:9
+h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  h3 {$/;"	function	line:16
+.author-box-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name {$/;"	function	line:18
+.author-box-name:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name:hover {$/;"	function	line:22
+.top	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .top {$/;"	function	line:26
+.author-penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin {$/;"	function	line:28
+.author-penguin:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-penguin:hover {$/;"	function	line:36
+.body	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .body {$/;"	function	line:41
+.snn-links	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  .snn-links {$/;"	function	line:45
+.snn1	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1 {$/;"	function	line:48
+.snn1:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1:hover {$/;"	function	line:57
+.snn2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2 {$/;"	function	line:61
+.snn2:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2:hover {$/;"	function	line:69

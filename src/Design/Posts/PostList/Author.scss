@@ -29,6 +29,7 @@
       border: solid 0.5px $border-color;
       border-radius: 50px;
       transition: 3s ease;
+      z-index: 1;
       height: 100px;
       width: 100px;
     }
@@ -51,7 +52,7 @@
       margin: 0;
       display: inline-block;
       border-right: solid 0.5px $border-color;
-      width: 125px;
+      width: 139.5px;
     }
     .snn1:hover {
       background-color: $h-color;
@@ -63,7 +64,7 @@
       transition: 1s;
       color: $a-color;
       display: inline-block;
-      width: 123px;
+      width: 139.5px;
     }
     .snn2:hover {
       background-color: $h-color;
