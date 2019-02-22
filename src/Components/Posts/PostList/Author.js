@@ -6,8 +6,8 @@ class Author extends React.Component {
   render() {
     return (
       <div className='author-box'>
-        <h4 className='author-title'>Author</h4>
         <div className='top'>
+          <img alt={'BACKGROUD'} src={require('../images/background.jpeg')} className='author-background'/>  
           <Link to= {`/about`}>
             <img alt={'PENGUIN'} src={require('../images/penguin.png')} className='author-penguin'/>
           </Link>

@@ -6,14 +6,9 @@
   border: solid 0.5px $border-color;
   border-radius: 3px;
   width: 280px;
-  .author-title {
-    background-color: #F5F5F5;
-    border-bottom: solid 0.5px $border-color;
-    margin: 0.5px;
-    margin-bottom: 20px;
-    padding: 8px;
-  }
   h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
     letter-spacing: 2px;
     .author-box-name {
       color: $h-color;
@@ -25,13 +20,22 @@
   }
   .top {
     text-align: center;
+    .author-background {
+      border: solid 0.5px $border-color;
+      width: 279px;
+      height: 170px;
+      z-index: -1;
+    }
     .author-penguin {
+      margin-top: -60px;
+      padding-top: 10px;
       border: solid 0.5px $border-color;
       border-radius: 50px;
       transition: 3s ease;
-      z-index: 1;
-      height: 100px;
+      background-color: #fff;
+      height: 110px;
       width: 100px;
+      z-index: 1;
     }
     .author-penguin:hover {
       transform: rotateZ(360deg);
@@ -39,20 +43,21 @@
     }
   }
   .body {
-    padding: 5px;
+    padding: 10px;
+    letter-spacing: 0.5px;
     text-align: center;
   }
   .snn-links {
     text-align: center;
     border-top: solid 0.5px $border-color;
     .snn1 {
-      padding: 5px;
-      transition: 1s;
-      color: $a-color;
-      margin: 0;
-      display: inline-block;
       border-right: solid 0.5px $border-color;
+      display: inline-block;
+      color: $a-color;
       width: 139.5px;
+      transition: 1s;
+      padding: 5px;
+      margin: 0;
     }
     .snn1:hover {
       background-color: $h-color;
