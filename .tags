@@ -389,23 +389,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/P
 .Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Rails {$/;"	function	line:70
 .Life	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Life {$/;"	function	line:74
 .Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostBox.scss	/^  .Others {$/;"	function	line:78
-.right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.right-container {$/;"	function	line:3
-.search-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.search-box {$/;"	function	line:9
-.search-box-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-box-title {$/;"	function	line:12
-.search-bar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-bar {$/;"	function	line:18
-.tag-list-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.tag-list-box {$/;"	function	line:28
-.tag-list-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list-title {$/;"	function	line:32
-.tag-list	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list {$/;"	function	line:38
-.tag	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag {$/;"	function	line:41
-.tag-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active {$/;"	function	line:48
-.tag:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag:hover {$/;"	function	line:54
-.tag-active:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active:hover {$/;"	function	line:57
-.featured-post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.featured-post-box {$/;"	function	line:62
-.featured-post	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post {$/;"	function	line:66
-.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title {$/;"	function	line:68
-.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title:hover  {$/;"	function	line:73
-.featured-posts-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-posts-title {$/;"	function	line:77
-.featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:83
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Footer/Footer.js	/^  render() {$/;"	function	line:5
 .category-button	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button {$/;"	function	line:3
 .category-button-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button-active {$/;"	function	line:11
@@ -446,6 +429,7 @@ a	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Footer/Footer.scss	/^    
 .post-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .post-container {$/;"	function	line:20
 .footer	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^  .footer {$/;"	function	line:23
 .footer-container, .footer-container2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Responsive.scss	/^    .footer-container, .footer-container2 {$/;"	function	line:24
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/Author.js	/^  render() {$/;"	function	line:6
 .author-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^.author-box {$/;"	function	line:3
 h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^  h3 {$/;"	function	line:9
 .author-box-name	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .author-box-name {$/;"	function	line:13
@@ -460,4 +444,21 @@ h3	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.sc
 .snn1:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn1:hover {$/;"	function	line:62
 .snn2	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2 {$/;"	function	line:66
 .snn2:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/Author.scss	/^    .snn2:hover {$/;"	function	line:74
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/Author.js	/^  render() {$/;"	function	line:6
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/SearchBar.js	/^  render() {$/;"	function	line:4
+.right-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.right-container {$/;"	function	line:3
+.search-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.search-box {$/;"	function	line:9
+.search-box-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-box-title {$/;"	function	line:11
+.search-bar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .search-bar {$/;"	function	line:15
+.tag-list-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.tag-list-box {$/;"	function	line:25
+.tag-list-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list-title {$/;"	function	line:28
+.tag-list	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-list {$/;"	function	line:33
+.tag	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag {$/;"	function	line:36
+.tag-active	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active {$/;"	function	line:43
+.tag:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag:hover {$/;"	function	line:49
+.tag-active:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .tag-active:hover {$/;"	function	line:52
+.featured-post-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^.featured-post-box {$/;"	function	line:57
+.featured-post	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post {$/;"	function	line:60
+.post-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title {$/;"	function	line:62
+.post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title:hover  {$/;"	function	line:67
+.featured-posts-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-posts-title {$/;"	function	line:71
+.featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:76

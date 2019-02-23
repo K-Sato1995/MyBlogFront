@@ -7,36 +7,31 @@
   width: 280px;
 }
 .search-box {
-  border: solid 0.5px $border-color;
   border-radius: 3px;
   .search-box-title {
-    padding: 8px;
-    margin: 0.5px;
+    padding-bottom: 8px;
     border-bottom: solid 0.5px $border-color;
-    background-color: #F5F5F5;
   }
   .search-bar {
     border: none;
-    margin: 15px 10px 15px 10px;
+    margin: 15px 5px 15px 5px;
     outline: none !important;
     border: solid 1px #CFD8DC;
     border-radius: 3px;
-    width: 250px;
+    width: 270px;
   }
 }
 
 .tag-list-box {
   margin-top: 20px;
-  border: solid 0.5px $border-color;
   border-radius: 3px;
   .tag-list-title {
-    padding: 8px;
+    padding-bottom: 8px;
     margin: 0.5px;
-    background-color: #F5F5F5;
     border-bottom: solid 0.5px $border-color;
   }
   .tag-list {
-    margin: 10px;
+    margin-top: 10px;
   }
   .tag {
     color: $a-color;
@@ -61,7 +56,6 @@
 
 .featured-post-box {
   margin-top: 20px;
-  border: solid 0.5px $border-color;
   border-radius: 3px;
   .featured-post {
     margin: 20px 0 0 10px;
@@ -75,9 +69,8 @@
     }
   }
   .featured-posts-title {
-    padding: 8px;
+    padding-bottom: 8px;
     margin: 0.5px;
-    background-color: #F5F5F5;
     border-bottom: solid 0.5px $border-color;
   }
   .featured-post-description {
