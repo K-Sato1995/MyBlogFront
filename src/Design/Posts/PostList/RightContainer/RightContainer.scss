@@ -9,8 +9,9 @@
 .search-box {
   border-radius: 3px;
   .search-box-title {
-    padding-bottom: 8px;
+    padding: 8px 0px 8px 7px;
     border-bottom: solid 0.5px $border-color;
+    border-left: solid 5px $h-color;
   }
   .search-bar {
     border: none;
@@ -26,9 +27,9 @@
   margin-top: 20px;
   border-radius: 3px;
   .tag-list-title {
-    padding-bottom: 8px;
-    margin: 0.5px;
+    padding: 8px 0px 8px 7px;
     border-bottom: solid 0.5px $border-color;
+    border-left: solid 5px $h-color;
   }
   .tag-list {
     margin-top: 10px;
@@ -69,9 +70,9 @@
     }
   }
   .featured-posts-title {
-    padding-bottom: 8px;
-    margin: 0.5px;
+    padding: 8px 0px 8px 7px;
     border-bottom: solid 0.5px $border-color;
+    border-left: solid 5px $h-color;
   }
   .featured-post-description {
     color: $p-color;
