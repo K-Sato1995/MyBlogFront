@@ -400,8 +400,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Footer/Footer.js
 .category-button-Rails	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button-Rails {$/;"	function	line:37
 .category-button-Others	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button-Others {$/;"	function	line:41
 .category-button-All	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/CategoryTag/CategoryButton.scss	/^.category-button-All {$/;"	function	line:44
-.container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^.container {$/;"	function	line:3
-.post-list-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^  .post-list-container {$/;"	function	line:7
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/App.js	/^  render() {$/;"	function	line:10
 .loading-box	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^.loading-box {$/;"	function	line:3
 .penguin	/Users/katsuki/WorkSpace/React/blog_front/src/Design/LoadingBox.scss	/^  .penguin {$/;"	function	line:9
@@ -462,3 +460,5 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/R
 .post-title:hover	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^    .post-title:hover  {$/;"	function	line:68
 .featured-posts-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-posts-title {$/;"	function	line:72
 .featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:77
+.container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^.container {$/;"	function	line:3
+.post-list-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^  .post-list-container {$/;"	function	line:7
