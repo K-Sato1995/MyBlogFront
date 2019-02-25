@@ -102,7 +102,6 @@ class PostsList extends React.Component {
       <PostBox key={index}
                id={post.id}
                title={post.title}
-               content={post.context}
                introduction={post.introduction}
                category={post.category_id}
                tags={post.tags}
@@ -117,7 +116,7 @@ class PostsList extends React.Component {
     )
 
     const featuredPosts = this.state.posts.slice(0, 4).map((post, index) =>
-      <FeaturedPost key={index} title={post.title} id={post.id} content={post.context}/>
+      <FeaturedPost key={index} title={post.title} id={post.id}/>
     )
 
     const tags = this.state.tags.map((tag,index) =>

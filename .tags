@@ -217,7 +217,6 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/C
 .featured-posts-title	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer.scss	/^  .featured-posts-title {$/;"	function	line:72
 .featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:78
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/CategoryTag/CategoryButton.js	/^  render() {$/;"	function	line:5
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/FeaturedPost.js	/^  render() {$/;"	function	line:6
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/Tag.js	/^  render() {$/;"	function	line:5
 render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/NoPostFound.js	/^  render() {$/;"	function	line:5
 constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/Penguin.js	/^  constructor() {$/;"	function	line:4
@@ -359,14 +358,6 @@ code, tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^ 
 pre code	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code {$/;"	function	line:360
 pre	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre {$/;"	function	line:369
 pre code, pre tt	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Highlight.scss	/^  pre code, pre tt {$/;"	function	line:380
-constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  constructor () {$/;"	function	line:17
-state.posts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:19
-componentDidMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentDidMount () {$/;"	function	line:34
-updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateSearch(e) {$/;"	function	line:54
-updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:57
-updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:65
-showAllPosts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  showAllPosts() {$/;"	function	line:70
-render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:78
 .navbar	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^.navbar {$/;"	function	line:3
 .nav-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^  .nav-container {$/;"	function	line:12
 .logo	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Nav/Nav.scss	/^    .logo {$/;"	function	line:17
@@ -462,3 +453,12 @@ render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/R
 .featured-post-description	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/RightContainer/RightContainer.scss	/^  .featured-post-description {$/;"	function	line:77
 .container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^.container {$/;"	function	line:3
 .post-list-container	/Users/katsuki/WorkSpace/React/blog_front/src/Design/Posts/PostList/PostList.scss	/^  .post-list-container {$/;"	function	line:7
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/RightContainer/FeaturedPost.js	/^  render() {$/;"	function	line:6
+constructor	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  constructor () {$/;"	function	line:17
+state.posts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^    this.state = {$/;"	property	line:19
+componentDidMount	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  componentDidMount () {$/;"	function	line:34
+updateSearch	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateSearch(e) {$/;"	function	line:54
+updateCategory	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateCategory(e) {$/;"	function	line:57
+updateTag	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  updateTag(e) {$/;"	function	line:65
+showAllPosts	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  showAllPosts() {$/;"	function	line:70
+render	/Users/katsuki/WorkSpace/React/blog_front/src/Components/Posts/PostList/PostsList.js	/^  render() {$/;"	function	line:78
