@@ -6,6 +6,7 @@ import { BarLoader } from 'react-spinners';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
 import LoadingBox from '../LoadingBox'
+import PostAuthor from './PostAuthor';
 
 class PostDetail extends React.Component {
   constructor() {
@@ -57,6 +58,8 @@ class PostDetail extends React.Component {
           linkTarget='true'
           className='post-content'
         />
+        <span className='page-views'>{this.state.data.page_views} Page Views</span>
+        <PostAuthor />
       </div>
     )
   }

@@ -3,6 +3,7 @@
 .post-container{
   margin: 0 auto;
   margin-top: 80px;
+  position: relative;
   max-width: 1000px;
   padding: 15px 50px 30px 50px;
   .post-detail-title{
@@ -10,5 +11,72 @@
     margin-bottom: 70px;
     font-size: 40px;
     color: $h-color;
+  }
+  .page-views {
+    position: absolute;
+    right: 60px;
+    color: $a-color;
+  }
+  .post-detail-author-box {
+    margin-top: 70px;
+    max-width: 1000px;
+    border-top: solid 1px $border-color;
+    border-bottom: solid 1px $border-color;
+    .post-detail-author-box-left {
+      float: left;
+      max-width: 101px;
+      .post-author-penguin {
+        margin: 30px 0 30px 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        border: solid 0.5px $border-color;
+      }
+    }
+    .post-detail-author-box-right {
+      float: left;
+      max-width: 750px;
+      .post-detail-author-box-right-description {
+        margin: 30px 0 30px 30px;
+        font-size: 17px;
+        .post-author-button {
+          margin-top: 5px;
+          padding: 3px 12px 3px 12px;
+          border: solid 1px #075FD3;
+          border-radius: 2px;
+          transition: 0.5s;
+          color: #075FD3;
+          outline:none;
+        }
+        .post-author-button:hover {
+          background-color: #075FD3;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 880px) {
+  .post-container{
+    .post-detail-title{
+    }
+    .post-detail-author-box {
+      .post-detail-author-box-left {
+        float: none;
+        margin: 0 auto;
+        .post-author-penguin {
+          margin: 30px 0 0 0;
+        }
+      }
+      .post-detail-author-box-right {
+        float: none;
+        .post-detail-author-box-right-description {
+          text-align: center;
+          margin: 0 0 30px 0;
+        }
+      }
+    }
   }
 }
