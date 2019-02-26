@@ -53,7 +53,7 @@ class PostBox extends React.Component {
       <div className="post-box" style={postBoxHoverStyle} onMouseEnter={this.toggleOn} onMouseLeave={this.toggleOff}>
         <h3 className='post-title'><Link to= {`/Post/${this.props.id}`} className='post-title-link'>{this.props.title}</Link></h3>
         <CategoryBall category={this.props.category}/>
-        <p className='post-introduction'>{introduction.substring(0, 300)}...</p>
+        <p className='post-introduction'>{introduction.substring(0, 250)}...</p>
         <p className='post-tag-list'>{ post_tags }</p>
         <p className='created-date'>{ this.formatDate(this.props.created_at) }</p>
       </div>
