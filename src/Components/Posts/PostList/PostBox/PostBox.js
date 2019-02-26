@@ -10,7 +10,8 @@ class PostBox extends React.Component {
     this.state = {
       hover: false
     }
-    this.toggleHover = this.toggleHover.bind(this);
+    this.toggleOn = this.toggleOn.bind(this);
+    this.toggleOff = this.toggleOff.bind(this);
   }
   formatDate(date){
     const dateObject = new Date(date)
@@ -19,8 +20,12 @@ class PostBox extends React.Component {
     const year = dateObject.getFullYear();
     return `${year}/${month}/${day}`
   }
-  toggleHover() {
-    this.setState({hover: !this.state.hover})
+  // Don't do this.setState({hover: !this.state.hover}). Trust me. I tried.
+  toggleOn() {
+    this.setState({hover: true})
+  }
+  toggleOff(){
+    this.setState({hover: false})
   }
   render() {
     let category;
@@ -45,7 +50,7 @@ class PostBox extends React.Component {
     )
     const introduction = this.props.introduction ? this.props.introduction : ''
     return (
-      <div className="post-box" style={postBoxHoverStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+      <div className="post-box" style={postBoxHoverStyle} onMouseEnter={this.toggleOn} onMouseLeave={this.toggleOff}>
         <h3 className='post-title'><Link to= {`/Post/${this.props.id}`} className='post-title-link'>{this.props.title}</Link></h3>
         <CategoryBall category={this.props.category}/>
         <p className='post-introduction'>{introduction.substring(0, 300)}...</p>
