@@ -2,9 +2,11 @@
 
 .post-box {
   border-bottom: solid 1.2px $border-color;
-  margin: 20px 30px 30px 0px;
+  margin-right: 30px;
+  padding:  25px 30px 5px 10px;
   min-height: 80px;
   max-width: 750px;
+  transition: 0.3s;
   position: relative;
   .post-title {
     margin: 0;
@@ -48,7 +50,7 @@
     height: 20px;
     border-radius: 50px;
     position: absolute;
-    top: 5px;
+    top: 27px;
     right: 20px;
   }
   .Ruby {
