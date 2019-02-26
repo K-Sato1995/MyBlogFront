@@ -12,15 +12,15 @@ class Footer extends React.Component {
           </div>
           <div className='footer-box2'>
             <h4>K-Sato</h4>
-            <p>I'm into baseball, language-learning, programming and cute dogs lol. I speak English and Japanese and write Ruby, Javascript and Go. </p>
+            <p>I'm into baseball, language-learning, programming and cute dogs lol. I speak English and Japanese and mainly write Ruby and Javascript. I also paly with Go from time to time. </p>
           </div>
           <div className='footer-box3'>
             <h4>Links</h4>
             <ul>
-              <li><a href='https://dev.to/ksato1995'>My Profile on DEV.to</a></li>
-              <li><a href='https://github.com/K-Sato1995'>My GitHub Account (Profile Page)</a></li>
-              <li><a href='https://github.com/K-Sato1995/MyBlog'>Code of this Blog (server-side)</a></li>
-              <li><a href='https://github.com/K-Sato1995/MyBlogFront'>Code of this Blog (front-side)</a></li>
+              <li><a href='https://dev.to/ksato1995'>My Profile on DEV.to (Follow me there!!!)</a></li>
+              <li><a href='https://github.com/K-Sato1995'>My GitHub Account (Check out my work!!)</a></li>
+              <li><a href='https://github.com/K-Sato1995/MyBlog'>Code of this Blog (backend built with RoR)</a></li>
+              <li><a href='https://github.com/K-Sato1995/MyBlogFront'>Code of this Blog (frontend built with React)</a></li>
             </ul>
           </div>
         </div>
