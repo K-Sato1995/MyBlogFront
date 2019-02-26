@@ -13,6 +13,10 @@ import NoPostFound from './NoPostFound';
 import Author from './Author';
 import LoadingBox from '../LoadingBox'
 
+const api = {
+  baseUrl: 'https://k-blog0130.herokuapp.com/'
+};
+
 class PostsList extends React.Component {
   constructor () {
     super();
@@ -36,7 +40,7 @@ class PostsList extends React.Component {
     this.getPosts()
   }
   getPosts = () => {
-    fetch('https://k-blog0130.herokuapp.com/en/api/v1/posts')
+    fetch(`${api.baseUrl}/api/v1/posts`)
     .then(response => response.json())
     .then(data => {
       data.data.posts.map((post, index)=>

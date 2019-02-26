@@ -8,6 +8,10 @@ import CodeBlock from './CodeBlock';
 import LoadingBox from '../LoadingBox'
 import PostAuthor from './PostAuthor';
 
+const api = {
+  baseUrl: 'https://k-blog0130.herokuapp.com/'
+};
+
 class PostDetail extends React.Component {
   constructor() {
     super();
@@ -22,7 +26,7 @@ class PostDetail extends React.Component {
   }
   getPosts = () => {
     const id = this.props.match.params.id
-    fetch(`https://k-blog0130.herokuapp.com/en/api/v1/posts/${id}`)
+    fetch(`${api.baseUrl}/api/v1/posts/${id}`)
     .then(response => response.json())
     .then(data => {
       this.setState({
