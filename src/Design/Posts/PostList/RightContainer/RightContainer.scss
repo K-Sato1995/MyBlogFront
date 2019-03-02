@@ -22,11 +22,18 @@
   }
   .search-bar {
     border: none;
+    padding-left: 15px;
     margin: 25px 5px 15px 5px;
     outline: none !important;
-    border: solid 1px #CFD8DC;
+    border: solid 1px$border-color;
     border-radius: 3px;
     width: 270px;
+    height: 35px;
+    font-size: 17px;
+    transition: 1s;
+  }
+  .search-bar:focus {
+    border:solid 2px  $border-color;
   }
 }
 
@@ -48,15 +55,15 @@
     margin-top: 25px;
   }
   .tag {
-    color: $a-color;
-    margin: 2px;
+    color: $p-color;
+    margin: 3px;
     outline: none !important;
     border: solid 1px $border-color;
     border-radius: 3px;
   }
   .tag-active {
     @extend .tag;
-    background-color: $a-color;
+    background-color: $p-color;
     font-weight: bold;
     color: #fff;
   }
