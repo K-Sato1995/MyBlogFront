@@ -7,15 +7,22 @@
   width: 280px;
 }
 .search-box {
-  border-radius: 3px;
+  margin-top: 40px;
   .search-box-title {
-    padding: 8px 0px 8px 7px;
-    border-bottom: solid 0.5px $border-color;
-    border-left: solid 5px $h-color;
+    position: relative;
+    border: solid 0.5px $border-color2;
+    font-size: 23px;
+  }
+  .title {
+    position: absolute;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    top: -15px;
+    right: 75px;
   }
   .search-bar {
     border: none;
-    margin: 15px 5px 15px 5px;
+    margin: 25px 5px 15px 5px;
     outline: none !important;
     border: solid 1px #CFD8DC;
     border-radius: 3px;
@@ -24,15 +31,21 @@
 }
 
 .tag-list-box {
-  margin-top: 20px;
-  border-radius: 3px;
+  margin-top: 40px;
   .tag-list-title {
-    padding: 8px 0px 8px 7px;
-    border-bottom: solid 0.5px $border-color;
-    border-left: solid 5px $h-color;
+    position: relative;
+    border: solid 0.5px $border-color2;
+    font-size: 23px;
+  }
+  .title {
+    position: absolute;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    top: -15px;
+    right: 105px;
   }
   .tag-list {
-    margin-top: 10px;
+    margin-top: 25px;
   }
   .tag {
     color: $a-color;
@@ -56,10 +69,22 @@
 }
 
 .featured-post-box {
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 3px;
+  .featured-posts-title {
+    position: relative;
+    font-size: 23px;
+    border: solid 0.5px $border-color2;
+  }
+  .title {
+    position: absolute;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    top: -15px;
+    right: 55px;
+  }
   .featured-post {
-    margin: 20px 0 0 10px;
+    margin: 30px 0 0 10px;
     .post-title {
       text-decoration: none;
       font-size: 17px;
@@ -68,11 +93,6 @@
     .post-title:hover  {
       color: $a-color;
     }
-  }
-  .featured-posts-title {
-    padding: 8px 0px 8px 7px;
-    border-bottom: solid 0.5px $border-color;
-    border-left: solid 5px $h-color;
   }
   .featured-post-description {
     color: $p-color;

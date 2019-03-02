@@ -138,13 +138,13 @@ class PostsList extends React.Component {
         <div className='right-container'>
           <SearchBar value={this.state.search} updateSearch={this.updateSearch}/>
           <div className='tag-list-box'>
-            <h4 className='tag-list-title'>Tag List</h4>
+            <h4 className='tag-list-title'><span className='title'>Tag List</span></h4>
             <div className='tag-list'>
               {tags}
             </div>
           </div>
           <div className='featured-post-box'>
-            <h4 className='featured-posts-title'>Featured Posts</h4>
+            <h4 className='featured-posts-title'><span className='title'>Featured Posts</span></h4>
             {featuredPosts}
           </div>
         </div>

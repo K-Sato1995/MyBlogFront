@@ -1,79 +1,48 @@
 @import "../../global";
 
 .author-box {
-  margin-bottom: 20px;
-  float: right;
-  border: solid 0.5px $border-color;
-  border-radius: 3px;
   width: 280px;
-  h3 {
-    margin-top: 15px;
-    margin-bottom: 5px;
+  text-align: center;
+  float: right;
+  .author-box-title {
+    position: relative;
+    font-size: 23px;
+    border: solid 0.5px $border-color2;
+  }
+  .title {
+    position: absolute;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    top: -15px;
+    right: 75px;
+  }
+  .author-box-name {
+    color: $h-color;
+    text-decoration: none;
     letter-spacing: 2px;
-    .author-box-name {
-      color: $h-color;
-      text-decoration: none;
+    font-size: 23px;
+
     }
-    .author-box-name:hover {
-      color: $a-color;
-    }
+  .author-box-name:hover {
+    color: $a-color;
   }
-  .top {
-    text-align: center;
-    .author-background {
-      border: solid 0.5px $border-color;
-      width: 279px;
-      height: 170px;
-      z-index: -1;
-    }
-    .author-penguin {
-      margin-top: -60px;
-      padding-top: 10px;
-      border: solid 0.5px $border-color;
-      border-radius: 50px;
-      transition: 3s ease;
-      background-color: #fff;
-      height: 110px;
-      width: 100px;
-      z-index: 1;
-    }
-    .author-penguin:hover {
-      transform: rotateZ(360deg);
-      background-color: $border-color;
-    }
+  .author-penguin {
+    margin-top: 15px;
+    padding-top: 10px;
+    border: solid 0.5px $border-color;
+    border-radius: 100px;
+    transition: 3s ease;
+    background-color: #fff;
+    height: 140px;
+    width: 140px;
+    z-index: 1;
   }
-  .body {
-    padding: 10px;
-    letter-spacing: 0.5px;
-    text-align: center;
+  .author-penguin:hover {
+    transform: rotateZ(360deg);
+    background-color: $border-color;
   }
-  .snn-links {
-    text-align: center;
-    border-top: solid 0.5px $border-color;
-    .snn1 {
-      border-right: solid 0.5px $border-color;
-      display: inline-block;
-      color: $a-color;
-      width: 139.5px;
-      transition: 1s;
-      padding: 5px;
-      margin: 0;
-    }
-    .snn1:hover {
-      background-color: $h-color;
-      color: #fff;
-    }
-    .snn2 {
-      padding: 5px;
-      margin: 0;
-      transition: 1s;
-      color: $a-color;
-      display: inline-block;
-      width: 139.5px;
-    }
-    .snn2:hover {
-      background-color: $h-color;
-      color: #fff;
-    }
+  .author-box-body {
+    padding: 0 5px;
+    letter-spacing: 1px;
   }
 }
