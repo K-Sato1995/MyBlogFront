@@ -42,7 +42,12 @@ class PostDetail extends React.Component {
     `;
     const loadingBox = this.state.loading === true ? (
       <LoadingBox />
-    ): ('')
+    ): (
+      <React.Fragment>
+        <span className='page-views'>{this.state.data.page_views} Page Views</span>
+        <PostAuthor />
+      </React.Fragment>
+    )
     return (
       <div className='post-container'>
         <BarLoader
@@ -52,7 +57,6 @@ class PostDetail extends React.Component {
          color={'#F0F0F0'}
          loading={this.state.loading}
        />
-       { loadingBox }
        <h1 className='post-detail-title'>{this.state.data.title}</h1>
         <ReactMarkdown
           source={this.state.data.context}
@@ -62,8 +66,7 @@ class PostDetail extends React.Component {
           linkTarget='true'
           className='post-content'
         />
-        <span className='page-views'>{this.state.data.page_views} Page Views</span>
-        <PostAuthor />
+        { loadingBox }
       </div>
     )
   }
