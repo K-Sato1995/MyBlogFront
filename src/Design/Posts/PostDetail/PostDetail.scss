@@ -12,6 +12,32 @@
     font-size: 40px;
     color: $h-color;
   }
+  .like-box {
+    margin-right: -70px;
+    position: sticky;
+    top: 150px;
+    float: right;
+    text-align: center;
+    .like-button {
+      color: $a-color;
+      padding: 10px 10px 5px 10px;
+      background-color: #fff;
+      border: solid 1.5px $a-color;
+      border-radius: 50%;
+      outline: none !important;
+    }
+    .like-number {
+      margin-top: 5px;
+    }
+    .glyphicon-thumbs-up {
+      font-size: 20px;
+    }
+    .like-button:active {
+      color:  #00C0B8;
+      border: solid 1.5px #00C0B8;
+      transform: translateY(-4px);
+    }
+  }
   .page-views {
     position: absolute;
     right: 60px;

@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
 import LoadingBox from '../LoadingBox'
 import PostAuthor from './PostAuthor';
+import LikeBox from './LikeBox';
 
 const api = {
   baseUrl: 'https://k-blog0130.herokuapp.com/'
@@ -19,14 +20,17 @@ class PostDetail extends React.Component {
       data: {},
       loading: true
     }
+    this.addLike = this.addLike.bind(this);
   }
+
   componentDidMount () {
     window.scrollTo(0, 0)
     this.getPosts()
   }
+
   getPosts = () => {
     const id = this.props.match.params.id
-    fetch(`${api.baseUrl}/api/v1/posts/${id}`)
+    fetch(`${api.baseUrl}api/v1/posts/${id}`)
     .then(response => response.json())
     .then(data => {
       this.setState({
@@ -35,15 +39,39 @@ class PostDetail extends React.Component {
       })
     })
   }
+
+  addLike = () => {
+    const id = this.state.data.id
+    fetch(`${api.baseUrl}en/api/v1/posts/${id}/like`, {
+      method: 'PUT'
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        data: data.data
+      })
+    })
+  }
+
   render() {
     const override = css`
         display: block;
         margin: 0 auto;
     `;
-    const loadingBox = this.state.loading === true ? (
+    const main = this.state.loading === true ? (
       <LoadingBox />
     ): (
       <React.Fragment>
+        <LikeBox addLike={this.addLike} like={this.state.data.like}/>
+         <h1 className='post-detail-title'>{this.state.data.title}</h1>
+          <ReactMarkdown
+            source={this.state.data.context}
+            renderers={{
+              code: CodeBlock,
+            }}
+            linkTarget='true'
+            className='post-content'
+          />
         <span className='page-views'>{this.state.data.page_views} Page Views</span>
         <PostAuthor />
       </React.Fragment>
@@ -57,16 +85,7 @@ class PostDetail extends React.Component {
          color={'#F0F0F0'}
          loading={this.state.loading}
        />
-       <h1 className='post-detail-title'>{this.state.data.title}</h1>
-        <ReactMarkdown
-          source={this.state.data.context}
-          renderers={{
-            code: CodeBlock,
-          }}
-          linkTarget='true'
-          className='post-content'
-        />
-        { loadingBox }
+       { main }
       </div>
     )
   }
