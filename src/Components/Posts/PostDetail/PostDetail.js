@@ -58,11 +58,12 @@ class PostDetail extends React.Component {
         display: block;
         margin: 0 auto;
     `;
+    const id = this.props.match.params.id;
     const main = this.state.loading === true ? (
       <LoadingBox />
     ): (
       <React.Fragment>
-        <LikeBox addLike={this.addLike} like={this.state.data.like}/>
+        <LikeBox addLike={this.addLike} like={this.state.data.like} pageId={id}/>
          <h1 className='post-detail-title'>{this.state.data.title}</h1>
           <ReactMarkdown
             source={this.state.data.context}
