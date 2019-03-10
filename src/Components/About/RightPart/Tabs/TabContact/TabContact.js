@@ -1,5 +1,5 @@
-import React from 'react';
-import ContactBox from './ContactBox';
+import React from "react";
+import ContactBox from "./ContactBox";
 
 class TabContact extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class TabContact extends React.Component {
         <h1>Comming soon</h1>
         <ContactBox />
       </div>
-    )
+    );
   }
 }
 
