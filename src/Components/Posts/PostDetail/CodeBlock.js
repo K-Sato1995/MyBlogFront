@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import style from 'react-syntax-highlighter/dist/styles/hljs/docco';
+import React from "react";
+import PropTypes from "prop-types";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import style from "react-syntax-highlighter/dist/styles/hljs/docco";
 
 export default class CodeBlock extends React.PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
-    language: PropTypes.string,
-  }
+    language: PropTypes.string
+  };
 
   static defaultProps = {
-    language: null,
-  }
+    language: null
+  };
 
   render() {
     const { language, value } = this.props;
@@ -21,7 +21,7 @@ export default class CodeBlock extends React.PureComponent {
         language={language}
         style={style}
         ineNumberContainerStyle={true}
-        >
+      >
         {value}
       </SyntaxHighlighter>
     );

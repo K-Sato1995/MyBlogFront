@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class TabInterests extends React.Component {
   render() {
@@ -6,7 +6,7 @@ class TabInterests extends React.Component {
       <div>
         <h1>TabInterests</h1>
       </div>
-    )
+    );
   }
 }
 
