@@ -12,7 +12,7 @@ class Author extends React.Component {
         <Link to={`/about`}>
           <img
             alt={"PENGUIN"}
-            src={require("../images/penguin.png")}
+            src={require("../images/gopher_me.png")}
             className="author-penguin"
           />
         </Link>
