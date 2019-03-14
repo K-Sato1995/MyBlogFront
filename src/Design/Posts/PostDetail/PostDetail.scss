@@ -95,8 +95,10 @@
 
 @media (max-width: 880px) {
   .post-container{
-    .post-detail-title{
-    }
+    width: 90%;
+    padding-bottom: 50px !important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    background-color: #fff;
     .post-detail-author-box {
       .post-detail-author-box-left {
         float: none;
