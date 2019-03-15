@@ -27,15 +27,15 @@ class App extends Component {
     let messages = this.state.lang === "en" ? localeEn : localeJa;
     return (
       <div className="App">
-        <Router>
-          <IntlProvider locale={this.state.lang} messages={messages}>
+        <IntlProvider locale={this.state.lang} messages={messages}>
+          <Router>
             <React.Fragment>
               <Nav setLocale={this.setLocale} />
               <Main />
               <Footer />
             </React.Fragment>
-          </IntlProvider>
-        </Router>
+          </Router>
+        </IntlProvider>
       </div>
     );
   }
