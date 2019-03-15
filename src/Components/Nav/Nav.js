@@ -2,6 +2,7 @@ import React from "react";
 import "../../Design/Nav/Nav.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import LangButton from "./langButton";
 
 class Nav extends React.Component {
   render() {
@@ -14,6 +15,8 @@ class Nav extends React.Component {
             </span>
           </Link>
         </div>
+        <LangButton setLocale={this.props.setLocale} lang="en" />
+        <LangButton setLocale={this.props.setLocale} lang="ja" />
       </div>
     );
   }

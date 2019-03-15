@@ -4,14 +4,13 @@ import Main from "./Posts/Main";
 import Footer from "./Footer/Footer";
 import "../Design/Responsive.scss";
 import { IntlProvider, addLocaleData } from "react-intl";
-import en from "react-intl/locale-data/en";
-import ja from "react-intl/locale-data/ja";
+import enLocaleData from "react-intl/locale-data/en";
+import jaLocaleData from "react-intl/locale-data/ja";
 import { HashRouter as Router } from "react-router-dom";
 import localeEn from "./locales/localeEn";
 import localeJa from "./locales/localeJa";
 
-addLocaleData(en);
-addLocaleData(ja);
+addLocaleData([...jaLocaleData, ...enLocaleData]);
 
 class App extends Component {
   constructor() {
@@ -19,6 +18,10 @@ class App extends Component {
     this.state = {
       lang: "en"
     };
+    this.setLocale = this.setLocale.bind(this);
+  }
+  setLocale(lang) {
+    this.setState({ lang: lang });
   }
   render() {
     let messages = this.state.lang === "en" ? localeEn : localeJa;
