@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 class PostAuthor extends React.Component {
   render() {
@@ -15,12 +16,14 @@ class PostAuthor extends React.Component {
         </div>
         <div className="post-detail-author-box-right">
           <div className="post-detail-author-box-right-description">
-            <h3>K-Sato</h3>
+            <h3>
+              <FormattedMessage id="postAuthor.name" defaultMessage="K-Sato" />
+            </h3>
             <p>
-              I am a junior web-develope based somewhere on earth. Write Ruby as
-              my primary lannguage and also use Javascript every now and then.
-              RoR and React are my go-to Frameworks. Sometimes I play with Go
-              language.
+              <FormattedMessage
+                id="postAuthor.description"
+                defaultMessage="I am a junior web-developer based somewhere on earth. Write Ruby as my primary lannguage and also use Javascript every now and then. RoR and React are my go-to Frameworks. Sometimes I play with Go language."
+              />
             </p>
             <Link to={`/about`}>
               <button className="post-author-button">View Profile</button>
