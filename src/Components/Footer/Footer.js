@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Design/Footer/Footer.scss";
+import { FormattedMessage } from "react-intl";
 
 class Footer extends React.Component {
   render() {
@@ -7,42 +8,71 @@ class Footer extends React.Component {
       <div className="footer">
         <div className="footer-container">
           <div className="footer-box1">
-            <h4>K-Sato's Blog</h4>
+            <h4>
+              <FormattedMessage
+                id="footer.blog.title"
+                defaultMessage="Default"
+              />
+            </h4>
             <p>
-              This is my personal blog where I write mostly about programming
-              and my daily life. Some are kinda usefull and some are garbage.
-              Hope you will find something interesting here.
+              <FormattedMessage
+                id="footer.blog.description"
+                defaultMessage="Default"
+              />
             </p>
           </div>
           <div className="footer-box2">
-            <h4>K-Sato</h4>
+            <h4>
+              <FormattedMessage
+                id="footer.author.name"
+                defaultMessage="Default"
+              />
+            </h4>
             <p>
-              I'm into baseball, language-learning, programming and cute dogs
-              lol. I speak English and Japanese and mainly write Ruby and
-              Javascript. I also paly with Go from time to time.{" "}
+              <FormattedMessage
+                id="footer.author.description"
+                defaultMessage="Default"
+              />
             </p>
           </div>
           <div className="footer-box3">
-            <h4>Links</h4>
+            <h4>
+              <FormattedMessage
+                id="footer.links.title"
+                defaultMessage="Default"
+              />
+            </h4>
             <ul>
               <li>
                 <a href="https://dev.to/ksato1995">
-                  My Profile on DEV.to (Follow me there!!!)
+                  <FormattedMessage
+                    id="footer.links.link1"
+                    defaultMessage="Default"
+                  />
                 </a>
               </li>
               <li>
                 <a href="https://github.com/K-Sato1995">
-                  My GitHub Account (Check out my work!!)
+                  <FormattedMessage
+                    id="footer.links.link2"
+                    defaultMessage="Default"
+                  />
                 </a>
               </li>
               <li>
                 <a href="https://github.com/K-Sato1995/MyBlog">
-                  Code of this Blog (backend built with RoR)
+                  <FormattedMessage
+                    id="footer.links.link3"
+                    defaultMessage="Default"
+                  />
                 </a>
               </li>
               <li>
                 <a href="https://github.com/K-Sato1995/MyBlogFront">
-                  Code of this Blog (frontend built with React)
+                  <FormattedMessage
+                    id="footer.links.link4"
+                    defaultMessage="Default"
+                  />
                 </a>
               </li>
             </ul>

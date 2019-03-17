@@ -12,6 +12,7 @@ import Tag from "./RightContainer/Tag";
 import NoPostFound from "./NoPostFound";
 import Author from "./Author";
 import LoadingBox from "../LoadingBox";
+import { FormattedMessage } from "react-intl";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -183,13 +184,23 @@ class PostsList extends React.Component {
             />
             <div className="tag-list-box">
               <h4 className="tag-list-title">
-                <span className="title">Tag List</span>
+                <span className="title">
+                  <FormattedMessage
+                    id="tagList.title"
+                    defaultMessage="Tag List"
+                  />
+                </span>
               </h4>
               <div className="tag-list">{tags}</div>
             </div>
             <div className="featured-post-box">
               <h4 className="featured-posts-title">
-                <span className="title">Featured Posts</span>
+                <span className="title">
+                  <FormattedMessage
+                    id="featuredPosts.title"
+                    defaultMessage="Featured Posts"
+                  />
+                </span>
               </h4>
               {featuredPosts}
             </div>

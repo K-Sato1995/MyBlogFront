@@ -1,13 +1,16 @@
 import React from "react";
 import "../../../Design/Posts/PostList/Author.scss";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 class Author extends React.Component {
   render() {
     return (
       <div className="author-box">
         <h4 className="author-box-title">
-          <span className="title">About Me</span>
+          <span className="title">
+            <FormattedMessage id="author.title" defaultMessage="About Me" />
+          </span>
         </h4>
         <Link to={`/about`}>
           <img
@@ -18,11 +21,14 @@ class Author extends React.Component {
         </Link>
         <h4>
           <Link to={`/about`} className="author-box-name">
-            K-Sato
+            <FormattedMessage id="author.name" defaultMessage="K-Sato" />
           </Link>
         </h4>
         <p className="author-box-body">
-          I'm just a silly boy aspiring to be a competent programmer.
+          <FormattedMessage
+            id="author.body"
+            defaultMessage="I'm just a silly boy aspiring to be a competent programmer."
+          />
         </p>
         {/* SNN-LINKS */}
         {/* <div className='snn-links'>
