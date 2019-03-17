@@ -30,7 +30,7 @@ class App extends Component {
         <IntlProvider locale={this.state.lang} messages={messages}>
           <Router>
             <React.Fragment>
-              <Nav setLocale={this.setLocale} lang={this.state.lang}/>
+              <Nav setLocale={this.setLocale} lang={this.state.lang} />
               <Main />
               <Footer />
             </React.Fragment>

@@ -2,10 +2,11 @@
 
 .post-container{
   margin: 0 auto;
-  margin-top: 80px;
   position: relative;
   max-width: 900px;
-  padding: 15px 50px 30px 50px;
+  padding: 90px 50px 80px 50px !important;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
   .post-detail-title{
     text-align: center;
     margin-bottom: 70px;
@@ -14,7 +15,7 @@
   }
   .like-box {
     margin-top: 80px;
-    margin-left: -100px;
+    margin-left: -120px;
     position: sticky;
     top: 120px;
     float: left;
@@ -40,7 +41,7 @@
       transform: translateY(-4px);
     }
     .snn-link {
-      margin-top: 20px;
+      margin-top: 25px;
       outline: none !important;
     }
     .snn-link:hover {
@@ -96,9 +97,7 @@
 @media (max-width: 880px) {
   .post-container{
     width: 90%;
-    padding-bottom: 50px !important;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-    background-color: #fff;
+    padding: 90px 20px 80px 20px !important;
     .post-detail-author-box {
       .post-detail-author-box-left {
         float: none;
@@ -115,5 +114,8 @@
         }
       }
     }
+  }
+  .like-box {
+    display: none;
   }
 }
