@@ -2,11 +2,11 @@
 
 .post-container{
   margin: 0 auto;
+  margin-top: 80px;
   position: relative;
   max-width: 900px;
-  padding: 90px 50px 80px 50px !important;
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  padding: 15px 50px 70px 50px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.1);
   .post-detail-title{
     text-align: center;
     margin-bottom: 70px;
@@ -97,7 +97,8 @@
 @media (max-width: 880px) {
   .post-container{
     width: 90%;
-    padding: 90px 20px 80px 20px !important;
+    background-color: #fff;
+    padding-bottom: 30px;
     .post-detail-author-box {
       .post-detail-author-box-left {
         float: none;
