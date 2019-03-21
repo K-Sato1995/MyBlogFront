@@ -5,14 +5,10 @@ import "../../../Design/Posts/PostList/RightContainer/RightContainer.scss";
 import { css } from "@emotion/core";
 import { BarLoader } from "react-spinners";
 import { Col } from "react-bootstrap";
-import SearchBar from "./RightContainer/SearchBar";
 import CategoryButton from "./CategoryTag/CategoryButton";
-import FeaturedPost from "./RightContainer/FeaturedPost";
-import Tag from "./RightContainer/Tag";
 import NoPostFound from "./NoPostFound";
-import Author from "./Author";
 import LoadingBox from "../LoadingBox";
-import { FormattedMessage } from "react-intl";
+import RightContainer from "./RightContainer/RightContainer";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -79,6 +75,10 @@ class PostsList extends React.Component {
   }
 
   render() {
+    const override = css`
+      margin: 0 auto;
+      display: block;
+    `;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = this.state.posts.filter(post => {
       let postTags = [];
@@ -138,92 +138,42 @@ class PostsList extends React.Component {
       />
     ));
 
-    const featuredPosts = this.state.posts
-      .slice(0, 4)
-      .map((post, index) => (
-        <FeaturedPost key={index} title={post.title} id={post.id} />
-      ));
-
-    const tags = this.state.tags.map((tag, index) => (
-      <Tag
-        activeTag={this.state.tag}
-        key={index}
-        value={tag.id}
-        name={tag.name}
-        updateTag={this.updateTag}
-      />
-    ));
-
-    const categoryAllButton =
-      this.state.loading === false ? (
-        <CategoryButton
-          activeCategory={this.state.category}
-          value={0}
-          name={"All"}
-          updateCategory={this.updateCategory}
-        />
-      ) : (
-        ""
-      );
-
-    const rightContainer =
-      this.state.loading === false ? (
-        <React.Fragment>
-          <Author />
-          <div className="right-container">
-            <SearchBar
-              value={this.state.search}
-              updateSearch={this.updateSearch}
-            />
-            <div className="tag-list-box">
-              <h4 className="tag-list-title">
-                <span className="title">
-                  <FormattedMessage
-                    id="tagList.title"
-                    defaultMessage="Tag List"
-                  />
-                </span>
-              </h4>
-              <div className="tag-list">{tags}</div>
-            </div>
-            <div className="featured-post-box">
-              <h4 className="featured-posts-title">
-                <span className="title">
-                  <FormattedMessage
-                    id="featuredPosts.title"
-                    defaultMessage="Featured Posts"
-                  />
-                </span>
-              </h4>
-              {featuredPosts}
-            </div>
-          </div>
-        </React.Fragment>
-      ) : (
-        ""
-      );
-
-    const PostListContainer =
+    const Content =
       this.state.loading === true ? (
         <LoadingBox />
       ) : (
-        <div className="post-list-container">
-          {categoryAllButton}
-          {categories}
-          {postList}
-        </div>
+        <React.Fragment>
+          <div className="post-list-container">
+            <CategoryButton
+              activeCategory={this.state.category}
+              value={0}
+              name={"All"}
+              updateCategory={this.updateCategory}
+            />
+            {categories}
+            {postList}
+          </div>
+          <RightContainer
+            posts={this.state.posts}
+            tags={this.state.tags}
+            tag={this.state.tag}
+            search={this.state.search}
+            updateSearch={this.updateSearch}
+            updateTag={this.updateTag}
+          />
+        </React.Fragment>
       );
 
     return (
       <Col className="container">
         <BarLoader
+          css={override}
           sizeUnit={"px"}
           size={80}
           color={"#E0E0E0"}
           loading={this.state.loading}
         />
-        {PostListContainer}
-        {rightContainer}
+        {Content}
       </Col>
     );
   }
