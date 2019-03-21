@@ -79,38 +79,31 @@ class PostsList extends React.Component {
   }
 
   render() {
-    const override = css`
-      margin: 0 auto;
-      display: block;
-    `;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = this.state.posts.filter(post => {
       let postTags = [];
       post.tags.map(tag => postTags.push(tag.id));
-      if (this.state.category === 0 && this.state.tag === 0) {
-        return post.title
-          .toLowerCase()
-          .includes(this.state.search.toLowerCase());
-      } else if (this.state.category !== 0 && this.state.tag !== 0) {
-        return (
-          post.category_id === this.state.category &&
-          postTags.includes(this.state.tag) &&
-          post.title.toLowerCase().includes(this.state.search.toLowerCase())
-        );
-      } else if (this.state.tag !== 0) {
-        return (
-          postTags.includes(this.state.tag) &&
-          post.title.toLowerCase().includes(this.state.search.toLowerCase())
-        );
-      } else if (this.state.category !== 0) {
-        return (
-          post.category_id === this.state.category &&
-          post.title.toLowerCase().includes(this.state.search.toLowerCase())
-        );
+
+      // Conditions
+      const all_not_zero = this.state.category !== 0 && this.state.tag !== 0;
+      const tag_not_zero = this.state.tag !== 0;
+      const catgory_not_zero = this.state.category !== 0;
+
+      // Check post
+      const taggedPost = postTags.includes(this.state.tag);
+      const categoryPost = post.category_id === this.state.category;
+      const searchedPost = post.title
+        .toLowerCase()
+        .includes(this.state.search.toLowerCase());
+
+      if (all_not_zero) {
+        return categoryPost && taggedPost && searchedPost;
+      } else if (tag_not_zero) {
+        return taggedPost && searchedPost;
+      } else if (catgory_not_zero) {
+        return categoryPost && searchedPost;
       } else {
-        return post.title
-          .toLowerCase()
-          .includes(this.state.search.toLowerCase());
+        return searchedPost;
       }
     });
 
@@ -224,7 +217,6 @@ class PostsList extends React.Component {
     return (
       <Col className="container">
         <BarLoader
-          css={override}
           sizeUnit={"px"}
           size={80}
           color={"#E0E0E0"}
