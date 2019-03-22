@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/MyBlogFront/static/js/runtime~main.c6c3dbe7.js"
   },
   {
-    "revision": "7f20253054c385f005b6",
-    "url": "/MyBlogFront/static/js/main.7f202530.chunk.js"
+    "revision": "7864f5a15e8a69e0a3c3",
+    "url": "/MyBlogFront/static/js/main.7864f5a1.chunk.js"
   },
   {
     "revision": "34f06e5e3343af7a4194",
     "url": "/MyBlogFront/static/js/1.34f06e5e.chunk.js"
   },
   {
-    "revision": "7f20253054c385f005b6",
-    "url": "/MyBlogFront/static/css/main.7ce9acb0.chunk.css"
+    "revision": "7864f5a15e8a69e0a3c3",
+    "url": "/MyBlogFront/static/css/main.e093b33f.chunk.css"
   },
   {
-    "revision": "a9c21075e7dfe7185e0d86d6749409e8",
+    "revision": "4c804f60772c47aee9ca5c4971ebf9bf",
     "url": "/MyBlogFront/index.html"
   }
 ];
