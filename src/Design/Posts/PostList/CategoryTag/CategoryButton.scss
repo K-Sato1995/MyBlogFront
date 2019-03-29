@@ -11,33 +11,33 @@
 }
 .category-button-active {
   @extend .category-button;
-  background-color: $h-color;
+  background-color: $h-color !important;
   font-weight: bold;
   color: #fff;
 }
 .category-button-Ruby {
   @extend .category-button-active;
-  background-color: $ruby;
+  background-color: $ruby !important;
 }
 .category-button-Javascript {
   @extend .category-button-active;
-  background-color: $javascript;
+  background-color: $javascript !important;
 }
 .category-button-React {
   @extend .category-button-active;
-  background-color: $react;
+  background-color: $react !important;
 }
 .category-button-Go {
   @extend .category-button-active;
-  background-color: $go;
+  background-color: $go !important;
 }
 .category-button-Life {
   @extend .category-button-active;
-  background-color: $life;
+  background-color: $life !important;
 }
 .category-button-Rails {
   @extend .category-button-active;
-  background-color: $rails;
+  background-color: $rails !important;
 }
 .category-button-Others {
   @extend .category-button-active;
