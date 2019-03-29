@@ -2,10 +2,10 @@
 
 .post-container{
   margin: 0 auto;
-  margin-top: 80px;
   position: relative;
   max-width: 900px;
   padding: 15px 50px 50px 50px;
+  padding-top: 80px;
   .post-detail-title{
     text-align: center;
     margin-bottom: 70px;
@@ -96,8 +96,7 @@
 @media (max-width: 880px) {
   .post-container{
     width: 90%;
-    background-color: #fff;
-    padding-bottom: 30px;
+    padding-top: 80px !important;
     .post-detail-author-box {
       .post-detail-author-box-left {
         float: none;

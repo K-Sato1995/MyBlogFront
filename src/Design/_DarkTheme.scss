@@ -1,0 +1,75 @@
+#DarkTheme {
+  $theme-color: #1E2227;
+
+  background-color: $theme-color;
+  h1, h2, h3, h4, h5, h6,p ,a, li { color: #fff;}
+  .navbar {
+    background-color: $theme-color;
+    border-bottom: solid 1px #fff;
+    box-shadow: none;
+  }
+  .logo {
+    color: #fff;
+  }
+  .title {
+    background-color: $theme-color;
+  }
+  .tag-button {
+    background-color: $theme-color;
+  }
+  .category-button{
+    border: none;
+  }
+  .search-bar {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  .author-box-title, .search-box-title, .tag-list-title {
+    border-color: #fff;
+  }
+  .tag {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  .lang-box {
+    border: 1px solid black;
+  }
+  .category-button {
+    background-color: $theme-color;
+    border: solid 1px #fff;
+    color: #fff;
+  }
+  .author-penguin {
+    background-color: #272C34;
+  }
+  .about-left-container {
+    button {
+      background-color: $theme-color;
+      color: #fff;
+    }
+    button:hover {
+      background-color: #fff;
+      color: #444444;
+    }
+  }
+  .tab-button {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  pre {
+    background-color: #272C34 !important;
+    border: 1px solid #e1e1e1 !important;
+    color: #fff !important;
+  }
+  code {
+    background-color: #272C34 !important;
+    color: #fff;
+  }
+  .footer {
+    background-color: $theme-color;
+  }
+  .like-button {
+    background-color: $theme-color;
+    color: #fff;
+  }
+}
