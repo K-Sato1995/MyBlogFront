@@ -2,7 +2,7 @@
   $theme-color: #1E2227;
 
   background-color: $theme-color;
-  h1, h2, h3, h4, h5, h6,p ,a { color: #fff;}
+  h1, h2, h3, h4, h5, h6,p ,a, li { color: #fff;}
   .navbar {
     background-color: $theme-color;
     border-bottom: solid 1px #fff;
@@ -40,7 +40,7 @@
     color: #fff;
   }
   .author-penguin {
-    background-color: #272C34 ;
+    background-color: #272C34;
   }
   .about-left-container {
     button {
@@ -67,5 +67,9 @@
   }
   .footer {
     background-color: $theme-color;
+  }
+  .like-button {
+    background-color: $theme-color;
+    color: #fff;
   }
 }

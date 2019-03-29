@@ -18,7 +18,7 @@ class App extends Component {
     super();
     this.state = {
       lang: "en",
-      darkTheme: true
+      darkTheme: false
     };
     this.setLocale = this.setLocale.bind(this);
     this.handleToggleTheme = this.handleToggleTheme.bind(this);
@@ -40,7 +40,10 @@ class App extends Component {
             <React.Fragment>
               <Nav setLocale={this.setLocale} lang={this.state.lang} />
               <Main />
-              <ThemeButton handleToggleTheme={this.handleToggleTheme} />
+              <ThemeButton
+                handleToggleTheme={this.handleToggleTheme}
+                darkTheme={this.state.darkTheme}
+              />
               <Footer />
             </React.Fragment>
           </Router>

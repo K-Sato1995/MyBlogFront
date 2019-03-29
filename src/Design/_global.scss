@@ -15,5 +15,24 @@ $rails: #CC0001;
 $life: #5AB601;
 
 .theme-button {
-  
+  position: fixed;
+  height: 50px;
+  width: 100px;
+  right: 0px;
+  bottom: 0px;
+  outline: none;
+  background-color: #272C34;
+  border: none;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.light-theme-button {
+  @extend .theme-button;
+  background-color: #fff;
+  color: $p-color;
+}
+
+.dark-theme-button {
+  @extend .theme-button;
 }
