@@ -72,4 +72,15 @@
     background-color: $theme-color;
     color: #fff;
   }
+  .post-author-button {
+    background-color: $theme-color;
+  }
+  .show-all-posts-btn {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  .show-all-posts-btn:hover {
+    background-color: #fff;
+    color: $theme-color;
+  }
 }
