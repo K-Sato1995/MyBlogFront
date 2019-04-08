@@ -25,6 +25,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx; exit 0",
     "lint-fix": "eslint --fix . --ext .js,.jsx; exit 0",
+    "lint-sass": "sass-lint -c app/config/.sass-lint.yml '**/*.scss' -v -q",
     "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
@@ -43,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "sass-lint": "^1.12.1"
   }
 }
