@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="App" id={theme}>
         <IntlProvider locale={this.state.lang} messages={messages}>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <React.Fragment>
               <Nav setLocale={this.setLocale} lang={this.state.lang} />
               <Main />
