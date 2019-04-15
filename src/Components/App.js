@@ -7,7 +7,7 @@ import "../Design/Responsive.scss";
 import { IntlProvider, addLocaleData } from "react-intl";
 import enLocaleData from "react-intl/locale-data/en";
 import jaLocaleData from "react-intl/locale-data/ja";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import localeEn from "./locales/localeEn";
 import localeJa from "./locales/localeJa";
 
