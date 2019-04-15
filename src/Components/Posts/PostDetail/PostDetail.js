@@ -13,6 +13,19 @@ const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
 };
 
+function flatten(text, child) {
+  return typeof child === "string"
+    ? text + child
+    : React.Children.toArray(child.props.children).reduce(flatten, text);
+}
+
+function HeadingRenderer(props) {
+  var children = React.Children.toArray(props.children);
+  var text = children.reduce(flatten, "");
+  var slug = text.toLowerCase().replace(/\W/g, "-");
+  return React.createElement("h" + props.level, { id: slug }, props.children);
+}
+
 class PostDetail extends React.Component {
   constructor() {
     super();
@@ -73,7 +86,8 @@ class PostDetail extends React.Component {
           <ReactMarkdown
             source={this.state.data.context}
             renderers={{
-              code: CodeBlock
+              code: CodeBlock,
+              heading: HeadingRenderer
             }}
             linkTarget="true"
             className="post-content"
