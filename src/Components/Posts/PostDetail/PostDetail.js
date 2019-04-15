@@ -89,7 +89,6 @@ class PostDetail extends React.Component {
               code: CodeBlock,
               heading: HeadingRenderer
             }}
-            linkTarget="true"
             className="post-content"
           />
           <span className="page-views">
