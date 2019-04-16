@@ -9,6 +9,7 @@ import LoadingBox from "../LoadingBox";
 import PostAuthor from "./PostAuthor";
 import LikeBox from "./LikeBox";
 import breaks from "remark-breaks";
+import Toc from "./Toc";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -84,6 +85,7 @@ class PostDetail extends React.Component {
             pageId={id}
           />
           <h1 className="post-detail-title">{this.state.data.title}</h1>
+          <Toc content={this.state.data.context} postId={this.state.data.id} />
           <ReactMarkdown
             source={this.state.data.context}
             renderers={{
