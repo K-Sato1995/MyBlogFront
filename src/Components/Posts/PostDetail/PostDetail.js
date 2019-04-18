@@ -8,6 +8,7 @@ import CodeBlock from "./CodeBlock";
 import LoadingBox from "../LoadingBox";
 import PostAuthor from "./PostAuthor";
 import LikeBox from "./LikeBox";
+import breaks from "remark-breaks";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -89,6 +90,7 @@ class PostDetail extends React.Component {
               code: CodeBlock,
               heading: HeadingRenderer
             }}
+            plugins={[breaks]}
             className="post-content"
           />
           <span className="page-views">
