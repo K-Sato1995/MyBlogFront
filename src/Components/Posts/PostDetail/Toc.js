@@ -15,38 +15,24 @@ export default class Toc extends React.Component {
     var anchor = strArr.join("-");
     return this.stringReplacer(anchor, /[?!]/g, "-");
   }
-  createTitle(string) {
-    return this.stringReplacer(string, /#+/g, "");
+  returnTitle(string) {
+    const link = this.createLink(string);
+    const postPath = `/Post/${this.props.postId}`;
+    return (
+      <Link to={`${postPath}${link}`} className="toc-title">
+        {`#${this.stringReplacer(string, /#+/g, "")}`}
+      </Link>
+    );
   }
   createAnchorLink(string) {
-    const postPath = `/Post/${this.props.postId}`;
-    const title = this.createTitle(string);
-    const link = this.createLink(string);
-
     if (/^#{1}\s\w/.test(string)) {
-      return (
-        <li className="header1">
-          <Link to={`${postPath}${link}`}>{title}</Link>
-        </li>
-      );
+      return <li className="header1">{this.returnTitle(string)}</li>;
     } else if (/^#{2}\s\w/.test(string)) {
-      return (
-        <li className="header2">
-          <Link to={`${postPath}${link}`}>{title}</Link>
-        </li>
-      );
+      return <li className="header2">{this.returnTitle(string)}</li>;
     } else if (/^#{3}\s\w/.test(string)) {
-      return (
-        <li className="header3">
-          <Link to={`${postPath}${link}`}>{title}</Link>
-        </li>
-      );
+      return <li className="header3">{this.returnTitle(string)}</li>;
     } else {
-      return (
-        <li>
-          <Link to={`${postPath}${link}`}>{string}</Link>
-        </li>
-      );
+      return <li>{this.returnTitle(string)}</li>;
     }
   }
   render() {
@@ -59,6 +45,7 @@ export default class Toc extends React.Component {
     const toc = headers.map(header => <li>{this.createAnchorLink(header)}</li>);
     return (
       <div className="toc">
+        <h3 className="toc-list-title">Table of Contents</h3>
         <ul className="toc-list">{toc}</ul>
       </div>
     );

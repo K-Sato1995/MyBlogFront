@@ -1,10 +1,41 @@
-.toc-list {
-  list-style: none;
-}
-.header2 {
-  text-indent: 25px;
-}
+@import "../../global";
 
-.header3 {
-  text-indent: 50px;
+.toc {
+  border: solid 1px;
+  float: right;
+  position: sticky;
+  top: 90px;
+  width: 300px;
+  .toc-list-title {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px $border-color;
+  }
+  .toc-list {
+    list-style: none;
+    .toc-title {
+      color: $theme-color;
+      text-decoration: none;
+    }
+    .toc-title:hover {
+      color: $a-color;
+    }
+  }
+  .header {
+    font-size: 14px;
+    padding: 4px;
+    margin-left: -20px;
+  }
+  .header1 {
+    @extend .header;
+  }
+  .header2 {
+    @extend .header;
+    text-indent: 20px;
+  }
+  .header3 {
+    @extend .header;
+    text-indent: 40px;
+  }
 }

@@ -1,16 +1,20 @@
 @import "../../global";
 
-.post-container{
+.post-container {
   margin: 0 auto;
   position: relative;
-  max-width: 900px;
-  padding: 15px 50px 50px 50px;
+  max-width: 1100px;
   padding-top: 80px;
-  .post-detail-title{
+  .post-detail-title {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     font-size: 40px;
     color: $h-color;
+  }
+  .post-content {
+    padding: 10px 20px 50px 20px;
+    width: 800px;
+    border: solid 1px;
   }
   .like-box {
     margin-top: 80px;
@@ -35,8 +39,8 @@
       font-size: 20px;
     }
     .like-button:active {
-      color:  #00C0B8;
-      border: solid 1.5px #00C0B8;
+      color: #00c0b8;
+      border: solid 1.5px #00c0b8;
       transform: translateY(-4px);
     }
     .snn-link {
@@ -49,12 +53,12 @@
   }
   .page-views {
     position: absolute;
-    right: 60px;
+    right: 330px;
     color: $a-color;
   }
   .post-detail-author-box {
     margin-top: 70px;
-    max-width: 900px;
+    max-width: 800px;
     border-top: solid 1px $border-color;
     border-bottom: solid 1px $border-color;
     .post-detail-author-box-left {
@@ -77,14 +81,14 @@
         .post-author-button {
           margin-top: 5px;
           padding: 3px 12px 3px 12px;
-          border: solid 1px #075FD3;
+          border: solid 1px #075fd3;
           border-radius: 2px;
           transition: 0.5s;
-          color: #075FD3;
-          outline:none;
+          color: #075fd3;
+          outline: none;
         }
         .post-author-button:hover {
-          background-color: #075FD3;
+          background-color: #075fd3;
           color: #fff;
         }
       }
@@ -92,9 +96,8 @@
   }
 }
 
-
 @media (max-width: 880px) {
-  .post-container{
+  .post-container {
     width: 90%;
     padding-top: 80px !important;
     .post-detail-author-box {
