@@ -25,7 +25,11 @@ function HeadingRenderer(props) {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, "");
   var slug = text.toLowerCase().replace(/\W/g, "-");
-  return React.createElement("h" + props.level, { id: slug }, props.children);
+  return React.createElement(
+    "h" + props.level,
+    { id: slug, class: "anchor" },
+    props.children
+  );
 }
 
 class PostDetail extends React.Component {

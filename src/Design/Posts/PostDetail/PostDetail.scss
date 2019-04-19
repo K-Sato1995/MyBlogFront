@@ -1,10 +1,17 @@
 @import "../../global";
 
 .post-container {
+  border: solid 1px;
   margin: 0 auto;
   position: relative;
   max-width: 1100px;
   padding-top: 80px;
+  .anchor::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin: -60px 0 0;
+  }
   .post-detail-title {
     text-align: center;
     margin-bottom: 30px;

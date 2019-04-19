@@ -9,12 +9,26 @@
     min-height: 400px;
   }
 }
-
+@media (max-width: 1200px) {
+  .post-box {
+    max-width: 1000px;
+    margin-right: 0;
+  }
+  .post-container {
+    padding: 17px;
+  }
+  .footer {
+    .footer-container,
+    .footer-container2 {
+      display: none;
+    }
+  }
+}
 @media (max-width: 880px) {
-  .container{
+  .container {
     width: 90%;
   }
   .post-list-container {
-    width:  100%;
+    width: 100%;
   }
 }
