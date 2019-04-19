@@ -2,14 +2,24 @@
 
 .post-container {
   margin: 0 auto;
-  position: relative;
-  max-width: 1100px;
+  max-width: 100%;
   padding-top: 80px;
+  position: relative;
   .anchor::before {
     content: "";
     display: block;
     height: 80px;
     margin: -60px 0 0;
+  }
+  .post-detail-righ-zone {
+    border-left: solid 1px $border-color;
+    background-color: #fbfbfc;
+    position: absolute;
+    width: 300px;
+    margin-bottom: -80px;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
   .post-detail-title {
     text-align: center;
@@ -18,9 +28,9 @@
     color: $h-color;
   }
   .post-content {
-    padding: 0 20px 50px 20px;
-    width: 800px;
-    // border: solid 1px;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    max-width: 800px;
   }
   .like-box {
     margin-top: 80px;
@@ -58,11 +68,13 @@
     }
   }
   .page-views {
+    display: none;
     position: absolute;
-    right: 330px;
+    right: 60px;
     color: $a-color;
   }
   .post-detail-author-box {
+    margin: 0 auto;
     margin-top: 70px;
     max-width: 800px;
     border-top: solid 1px $border-color;
@@ -101,10 +113,14 @@
     }
   }
 }
+@media (max-width: 1330px) {
+  .post-detail-righ-zone {
+    display: none;
+  }
+}
 
 @media (max-width: 880px) {
   .post-container {
-    width: 90%;
     padding-top: 80px !important;
     .post-detail-author-box {
       .post-detail-author-box-left {

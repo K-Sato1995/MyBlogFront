@@ -83,13 +83,18 @@ class PostDetail extends React.Component {
         <LoadingBox />
       ) : (
         <React.Fragment>
+          <div className="post-detail-righ-zone">
+            <Toc
+              content={this.state.data.context}
+              postId={this.state.data.id}
+            />
+          </div>
           <LikeBox
             addLike={this.addLike}
             like={this.state.data.like}
             pageId={id}
           />
           <h1 className="post-detail-title">{this.state.data.title}</h1>
-          <Toc content={this.state.data.context} postId={this.state.data.id} />
           <ReactMarkdown
             source={this.state.data.context}
             renderers={{
