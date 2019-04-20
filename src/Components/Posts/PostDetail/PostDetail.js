@@ -24,7 +24,7 @@ function flatten(text, child) {
 function HeadingRenderer(props) {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, "");
-  var slug = text.toLowerCase().replace(/\W/g, "-");
+  var slug = text.toLowerCase().replace(/[!?\s]/g, "-");
   return React.createElement(
     "h" + props.level,
     { id: slug, class: "anchor" },
