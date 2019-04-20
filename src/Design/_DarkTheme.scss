@@ -1,8 +1,18 @@
 #DarkTheme {
-  $theme-color: #1E2227;
+  $theme-color: #1e2227;
 
   background-color: $theme-color;
-  h1, h2, h3, h4, h5, h6,p ,a, li { color: #fff;}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  li {
+    color: #fff;
+  }
   .navbar {
     background-color: $theme-color;
     border-bottom: solid 1px #fff;
@@ -17,14 +27,16 @@
   .tag-button {
     background-color: $theme-color;
   }
-  .category-button{
+  .category-button {
     border: none;
   }
   .search-bar {
     background-color: $theme-color;
     color: #fff;
   }
-  .author-box-title, .search-box-title, .tag-list-title {
+  .author-box-title,
+  .search-box-title,
+  .tag-list-title {
     border-color: #fff;
   }
   .tag {
@@ -40,7 +52,7 @@
     color: #fff;
   }
   .author-penguin {
-    background-color: #272C34;
+    background-color: #272c34;
   }
   .about-left-container {
     button {
@@ -57,12 +69,12 @@
     color: #fff;
   }
   pre {
-    background-color: #272C34 !important;
+    background-color: #272c34 !important;
     border: 1px solid #e1e1e1 !important;
     color: #fff !important;
   }
   code {
-    background-color: #272C34 !important;
+    background-color: #272c34 !important;
     color: #fff;
   }
   .footer {
@@ -86,5 +98,8 @@
   .lang-box {
     background-color: $theme-color;
     border-color: #fff;
+  }
+  .post-detail-righ-zone {
+    background-color: #1e2221;
   }
 }

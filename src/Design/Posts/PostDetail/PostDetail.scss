@@ -18,7 +18,7 @@
     width: 300px;
     margin-bottom: -80px;
     right: 0;
-    top: 0;
+    top: 60px;
     bottom: 0;
   }
   .post-detail-title {
@@ -33,12 +33,14 @@
     max-width: 800px;
   }
   .like-box {
+    display: none;
     margin-top: 80px;
-    margin-left: -100px;
-    position: sticky;
-    top: 120px;
-    float: left;
+    margin-left: 320px;
+    position: fixed;
+    top: 100px;
+    width: 45px;
     text-align: center;
+    float: left;
     .like-button {
       color: $a-color;
       padding: 10px 10px 5px 10px;
