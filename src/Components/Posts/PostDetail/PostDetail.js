@@ -9,6 +9,7 @@ import LoadingBox from "../LoadingBox";
 import PostAuthor from "./PostAuthor";
 import LikeBox from "./LikeBox";
 import breaks from "remark-breaks";
+import Toc from "./Toc";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -23,8 +24,12 @@ function flatten(text, child) {
 function HeadingRenderer(props) {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, "");
-  var slug = text.toLowerCase().replace(/\W/g, "-");
-  return React.createElement("h" + props.level, { id: slug }, props.children);
+  var slug = text.toLowerCase().replace(/[!?\s]/g, "-");
+  return React.createElement(
+    "h" + props.level,
+    { id: slug, class: "anchor" },
+    props.children
+  );
 }
 
 class PostDetail extends React.Component {
@@ -78,6 +83,12 @@ class PostDetail extends React.Component {
         <LoadingBox />
       ) : (
         <React.Fragment>
+          <div className="post-detail-righ-zone">
+            <Toc
+              content={this.state.data.context}
+              postId={this.state.data.id}
+            />
+          </div>
           <LikeBox
             addLike={this.addLike}
             like={this.state.data.like}

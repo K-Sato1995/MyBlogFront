@@ -3,7 +3,6 @@ import Nav from "./Nav/Nav";
 import Main from "./Posts/Main";
 import Footer from "./Footer/Footer";
 import ThemeButton from "./ThemeButton";
-import "../Design/Responsive.scss";
 import { IntlProvider, addLocaleData } from "react-intl";
 import enLocaleData from "react-intl/locale-data/en";
 import jaLocaleData from "react-intl/locale-data/ja";

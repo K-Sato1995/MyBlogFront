@@ -2,10 +2,10 @@
 
 .footer {
   border-top: solid 1px $border-color;
-  margin-top: 80px;
   width: 100%;
   min-height: 200px;
   background-color: #222222;
+  margin-top: 80px;
   .footer-container {
     position: relative;
     margin: 0 auto;
@@ -16,22 +16,34 @@
       width: 360px;
       min-width: 300px;
       display: inline-block;
-      h4{color: #F9F9F9;}
-      p {color: #898989;}
-      a {color: #898989;}
+      h4 {
+        color: #f9f9f9;
+      }
+      p {
+        color: #898989;
+      }
+      a {
+        color: #898989;
+      }
     }
-    .footer-box2 {@extend .footer-box1;}
-    .footer-box3 {@extend .footer-box1;}
+    .footer-box2 {
+      @extend .footer-box1;
+    }
+    .footer-box3 {
+      @extend .footer-box1;
+    }
   }
   .footer-container2 {
     @extend .footer-container;
     margin-top: 20px;
     border-top: solid #898989 0.5px;
     height: 100px;
-    h5{
+    h5 {
       margin-top: 40px;
-      color: #F9F9F9;
+      color: #f9f9f9;
     }
-    a {color: #898989;}
+    a {
+      color: #898989;
+    }
   }
 }
