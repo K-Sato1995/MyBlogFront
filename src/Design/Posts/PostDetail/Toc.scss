@@ -11,6 +11,12 @@
     padding-left: 10px;
     padding-bottom: 5px;
     border-bottom: solid 1px $border-color;
+    .arrow-icon {
+      color: $theme-color;
+      background-color: #fbfbfc;
+      border: none;
+      outline: none !important;
+    }
   }
   .toc-list {
     list-style: none;
