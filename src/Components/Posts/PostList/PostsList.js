@@ -9,6 +9,7 @@ import CategoryButton from "./CategoryTag/CategoryButton";
 import NoPostFound from "./NoPostFound";
 import LoadingBox from "../LoadingBox";
 import RightContainer from "./RightContainer/RightContainer";
+import SideNav from "../../Nav/SideNav/SideNav";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -166,6 +167,7 @@ class PostsList extends React.Component {
 
     return (
       <Col className="container">
+        <SideNav setLocale={this.props.setLocale} lang={this.props.lang} />
         <BarLoader
           css={override}
           sizeUnit={"px"}
