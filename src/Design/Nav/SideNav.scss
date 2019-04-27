@@ -1,0 +1,14 @@
+@import "../global";
+
+.SideNavbar {
+  position: fixed;
+  background-color: #f5f7f9;
+  border-right: solid 1px $border-color-light;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  padding-top: 70px;
+  .content {
+  }
+}

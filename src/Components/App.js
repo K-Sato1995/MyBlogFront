@@ -37,8 +37,8 @@ class App extends Component {
         <IntlProvider locale={this.state.lang} messages={messages}>
           <Router basename={process.env.PUBLIC_URL}>
             <React.Fragment>
-              <Nav setLocale={this.setLocale} lang={this.state.lang} />
-              <Main />
+              <Nav />
+              <Main setLocale={this.setLocale} lang={this.state.lang} />
               <ThemeButton
                 handleToggleTheme={this.handleToggleTheme}
                 darkTheme={this.state.darkTheme}
