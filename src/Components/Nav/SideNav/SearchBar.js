@@ -5,11 +5,6 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-box">
-        <h4 className="search-box-title">
-          <span className="title">
-            <FormattedMessage id="search.title" defaultMessage="Search Box" />
-          </span>
-        </h4>
         <input
           type="text"
           value={this.props.value}

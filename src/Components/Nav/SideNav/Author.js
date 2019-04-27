@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Design/Posts/PostList/Author.scss";
+import "../../../Design/Nav/Author.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
@@ -15,7 +15,7 @@ class Author extends React.Component {
         <Link to={`/about`}>
           <img
             alt={"PENGUIN"}
-            src={require("../images/gopher_me.png")}
+            src={require("../../Posts/images/gopher_me.png")}
             className="author-penguin"
           />
         </Link>

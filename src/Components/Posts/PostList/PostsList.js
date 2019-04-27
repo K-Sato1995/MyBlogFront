@@ -5,10 +5,8 @@ import "../../../Design/Posts/PostList/RightContainer/RightContainer.scss";
 import { css } from "@emotion/core";
 import { BarLoader } from "react-spinners";
 import { Col } from "react-bootstrap";
-import CategoryButton from "./CategoryTag/CategoryButton";
 import NoPostFound from "./NoPostFound";
 import LoadingBox from "../LoadingBox";
-import RightContainer from "./RightContainer/RightContainer";
 import SideNav from "../../Nav/SideNav/SideNav";
 
 const api = {
@@ -57,6 +55,7 @@ class PostsList extends React.Component {
     this.setState({ search: e.target.value });
   }
   updateCategory(e) {
+    console.log("updateCategory");
     this.setState({
       tag: 0,
       category: parseInt(e.target.value)
@@ -129,45 +128,30 @@ class PostsList extends React.Component {
         ""
       );
 
-    const categories = this.state.categories.map((category, index) => (
-      <CategoryButton
-        activeCategory={this.state.category}
-        value={category.id}
-        name={category.name}
-        updateCategory={this.updateCategory}
-        key={index}
-      />
-    ));
-
     const Content =
       this.state.loading === true ? (
         <LoadingBox />
       ) : (
         <React.Fragment>
-          <div className="post-list-container">
-            <CategoryButton
-              activeCategory={this.state.category}
-              value={0}
-              name={"All"}
-              updateCategory={this.updateCategory}
-            />
-            {categories}
-            {postList}
-          </div>
-          <RightContainer
-            posts={this.state.posts}
-            tags={this.state.tags}
-            tag={this.state.tag}
-            search={this.state.search}
-            updateSearch={this.updateSearch}
-            updateTag={this.updateTag}
-          />
+          <div className="post-list-container">{postList}</div>
         </React.Fragment>
       );
 
     return (
       <Col className="container">
-        <SideNav setLocale={this.props.setLocale} lang={this.props.lang} />
+        <SideNav
+          setLocale={this.props.setLocale}
+          lang={this.props.lang}
+          posts={this.state.posts}
+          tags={this.state.tags}
+          tag={this.state.tag}
+          search={this.state.search}
+          updateSearch={this.updateSearch}
+          updateTag={this.updateTag}
+          categories={this.state.categories}
+          category={this.state.category}
+          updateCategory={this.updateCategory}
+        />
         <BarLoader
           css={override}
           sizeUnit={"px"}

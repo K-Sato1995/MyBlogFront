@@ -1,4 +1,4 @@
-@import "../../global";
+@import "../global";
 
 .author-box {
   width: 280px;
@@ -21,8 +21,7 @@
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 23px;
-
-    }
+  }
   .author-box-name:hover {
     color: $a-color;
   }
