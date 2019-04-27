@@ -7,11 +7,6 @@ class Author extends React.Component {
   render() {
     return (
       <div className="author-box">
-        <h4 className="author-box-title">
-          <span className="title">
-            <FormattedMessage id="author.title" defaultMessage="About Me" />
-          </span>
-        </h4>
         <Link to={`/about`}>
           <img
             alt={"PENGUIN"}

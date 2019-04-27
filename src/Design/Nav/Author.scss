@@ -3,19 +3,7 @@
 .author-box {
   width: 280px;
   text-align: center;
-  float: right;
-  .author-box-title {
-    position: relative;
-    font-size: 23px;
-    border: solid 0.5px $border-color2;
-  }
-  .title {
-    position: absolute;
-    padding: 0 10px 0 10px;
-    background-color: #fff;
-    top: -15px;
-    right: 75px;
-  }
+  margin: 0 auto;
   .author-box-name {
     color: $h-color;
     text-decoration: none;
@@ -31,8 +19,8 @@
     border-radius: 100px;
     transition: 3s ease;
     background-color: #fff;
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
     z-index: 1;
   }
   .author-penguin:hover {

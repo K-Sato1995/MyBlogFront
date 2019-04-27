@@ -10,16 +10,7 @@ class Main extends React.Component {
     return (
       <div>
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <PostsList
-                setLocale={this.props.setLocale}
-                lang={this.props.lang}
-              />
-            )}
-          />
+          <Route exact path="/" component={PostsList} />
           <Route path="/Post/:id" component={PostDetail} />
           <Route path="/About" component={AboutMain} />
           <Route component={NoMatch} />

@@ -9,6 +9,8 @@
   bottom: 0;
   width: 300px;
   padding-top: 70px;
-  .content {
+  overflow-y: scroll;
+  .list-title {
+    color: $list-title;
   }
 }

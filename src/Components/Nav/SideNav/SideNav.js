@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../Design/Nav/SideNav.scss";
-import LangButton from "../langButton";
 import FeaturedPost from "./FeaturedPost";
 import Tag from "./Tag";
 import SearchBar from "./SearchBar";
@@ -10,13 +9,15 @@ import CategoryButton from "./CategoryTag/CategoryButton";
 export default class SideNav extends React.Component {
   render() {
     const categories = this.props.categories.map((category, index) => (
-      <CategoryButton
-        activeCategory={this.props.category}
-        value={category.id}
-        name={category.name}
-        updateCategory={this.props.updateCategory}
-        key={index}
-      />
+      <li>
+        <CategoryButton
+          activeCategory={this.props.category}
+          value={category.id}
+          name={category.name}
+          updateCategory={this.props.updateCategory}
+          key={index}
+        />
+      </li>
     ));
     const featuredPosts = this.props.posts
       .slice(0, 4)
@@ -34,34 +35,21 @@ export default class SideNav extends React.Component {
     ));
     return (
       <div className="SideNavbar">
-        <div className="content">
-          <LangButton
-            setLocale={this.props.setLocale}
-            lang={this.props.lang}
-            langValue="en"
-            displayLang="EN"
-          />
-          <LangButton
-            setLocale={this.props.setLocale}
-            lang={this.props.lang}
-            langValue="ja"
-            displayLang="JA"
-          />
-          <SearchBar
-            value={this.props.search}
-            updateSearch={this.props.updateSearch}
-          />
-          {tags}
-          {featuredPosts}
-          <CategoryButton
-            activeCategory={this.props.category}
-            value={0}
-            name={"All"}
-            updateCategory={this.props.updateCategory}
-          />
-          {categories}
-          <Author />
-        </div>
+        <Author />
+        <SearchBar
+          value={this.props.search}
+          updateSearch={this.props.updateSearch}
+        />
+        <h4 className="list-title">Categories</h4>
+        <ul>{categories}</ul>
+        {tags}
+        {featuredPosts}
+        <CategoryButton
+          activeCategory={this.props.category}
+          value={0}
+          name={"All"}
+          updateCategory={this.props.updateCategory}
+        />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../../Design/Posts/PostList/PostBox.scss";
 import { Link } from "react-router-dom";
-import TagButton from "../CategoryTag/TagButton";
+import TagButton from "../../../Nav/SideNav/CategoryTag/TagButton";
 import CategoryBall from "./CategoryBall";
 
 class PostBox extends React.Component {
