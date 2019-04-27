@@ -1,12 +1,13 @@
 @import "DarkTheme";
-$theme-color: #3b444e;
+$theme-color: #3681fc;
 $h-color: #3b444e;
 $p-color: #444444;
 $p2-color: #eeeeee;
 $a-color: #666;
 $a-color2: #2b71d0;
-$border-color: #e4e4e4;
+$border-color: #d4dadf;
 $border-color2: #d4c0ae;
+$box-shadow: 0 1px 3px #efefef, 0 1px 3px #efefef;
 $ruby: #701516;
 $javascript: #f6d033;
 $react: #009fce;
@@ -26,7 +27,9 @@ $life: #5ab601;
   color: #fff;
   opacity: 0.8;
 }
-
+p {
+  font-size: 16px;
+}
 .light-theme-button {
   @extend .theme-button;
   background-color: #fff;
