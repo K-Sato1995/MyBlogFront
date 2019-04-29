@@ -41,3 +41,10 @@ p {
 .dark-theme-button {
   @extend .theme-button;
 }
+
+.border-less-button {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}

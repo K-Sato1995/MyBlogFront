@@ -7,6 +7,7 @@ import { Col } from "react-bootstrap";
 import NoPostFound from "./NoPostFound";
 import LoadingBox from "../LoadingBox";
 import SideNav from "../../Nav/SideNav/SideNav";
+import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -157,6 +158,12 @@ class PostsList extends React.Component {
           size={80}
           color={"#E0E0E0"}
           loading={this.state.loading}
+        />
+        <CategoryButton
+          activeCategory={this.category}
+          value={0}
+          name={"All"}
+          updateCategory={this.updateCategory}
         />
         {Content}
       </Col>

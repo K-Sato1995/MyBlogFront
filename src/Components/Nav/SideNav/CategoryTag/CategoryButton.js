@@ -3,7 +3,7 @@ import React from "react";
 
 class CategoryButton extends React.Component {
   render() {
-    const ActiveButtonName = `category-button-${this.props.name}`;
+    const ActiveButtonName = `category-button-active`;
     const categoryButton =
       this.props.activeCategory === this.props.value ? (
         <button
