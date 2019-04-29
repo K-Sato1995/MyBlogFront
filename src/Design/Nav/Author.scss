@@ -1,26 +1,26 @@
 @import "../global";
 
 .author-box {
-  width: 280px;
-  text-align: center;
-  margin: 0 auto;
+  border-bottom: solid 1px $border-color-light;
   .author-box-name {
+    margin-left: 25px;
     color: $h-color;
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 23px;
+    font-weight: 500;
   }
   .author-box-name:hover {
     color: $a-color;
   }
   .author-penguin {
-    margin-top: 15px;
+    margin: 10px 0 0 20px;
     border: solid 0.5px $border-color;
     border-radius: 100px;
     transition: 3s ease;
     background-color: #fff;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     z-index: 1;
   }
   .author-penguin:hover {
@@ -28,7 +28,7 @@
     background-color: $border-color;
   }
   .author-box-body {
-    padding: 0 5px;
+    padding: 20px 25px 15px 25px;
     letter-spacing: 1px;
   }
 }

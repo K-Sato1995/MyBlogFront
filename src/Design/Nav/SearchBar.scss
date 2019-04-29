@@ -2,14 +2,14 @@
 
 .search-bar {
   border: none;
-  margin: 15px;
   padding-left: 15px;
   outline: none !important;
   border: solid 1px$border-color;
   border-radius: 3px;
-  width: 270px;
-  height: 30px;
+  width: 250px;
+  height: 40px;
   font-size: 17px;
+  margin: 25px 0 25px 23px;
   transition: 1s;
 }
 .search-bar:focus {

@@ -1,5 +1,7 @@
 import React from "react";
 import "../../../Design/Nav/SideNav.scss";
+import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 import FeaturedPost from "./FeaturedPost";
 import Tag from "./Tag";
 import SearchBar from "./SearchBar";
@@ -12,23 +14,33 @@ export default class SideNav extends React.Component {
     this.state = {
       categoryList: false,
       tagList: false,
-      featuredPosts: false
+      featuredPosts: false,
+      links: false
     };
   }
   toggleCategoryList() {
     this.setState({ categoryList: !this.state.categoryList });
     this.setState({ tagList: false });
     this.setState({ featuredPosts: false });
+    this.setState({ links: false });
   }
   toggleTagList() {
     this.setState({ tagList: !this.state.tagList });
     this.setState({ categoryList: false });
     this.setState({ featuredPosts: false });
+    this.setState({ links: false });
   }
   toggleFeaturedPosts() {
     this.setState({ featuredPosts: !this.state.featuredPosts });
     this.setState({ categoryList: false });
     this.setState({ tagList: false });
+    this.setState({ links: false });
+  }
+  toggleLinks() {
+    this.setState({ links: !this.state.links });
+    this.setState({ tagList: false });
+    this.setState({ categoryList: false });
+    this.setState({ featuredPosts: false });
   }
   render() {
     const categoryArrow = this.state.categoryList ? (
@@ -42,6 +54,11 @@ export default class SideNav extends React.Component {
       <span className="glyphicon glyphicon-chevron-right" />
     );
     const featuredPostsArrow = this.state.featuredPosts ? (
+      <span className="glyphicon glyphicon-chevron-down" />
+    ) : (
+      <span className="glyphicon glyphicon-chevron-right" />
+    );
+    const linksArrow = this.state.links ? (
       <span className="glyphicon glyphicon-chevron-down" />
     ) : (
       <span className="glyphicon glyphicon-chevron-right" />
@@ -62,6 +79,48 @@ export default class SideNav extends React.Component {
         <FeaturedPost key={index} title={post.title} id={post.id} />
       </li>
     ));
+    const links = (
+      <React.Fragment>
+        <li className="list-item">
+          <a href="https://dev.to/ksato1995" className="list-item-ele">
+            <FormattedMessage
+              id="sideNav.links.link1"
+              defaultMessage="Default"
+            />
+          </a>
+        </li>
+        <li className="list-item">
+          <a href="https://github.com/K-Sato1995" className="list-item-ele">
+            <FormattedMessage
+              id="sideNav.links.link2"
+              defaultMessage="Default"
+            />
+          </a>
+        </li>
+        <li className="list-item">
+          <a
+            href="https://github.com/K-Sato1995/MyBlog"
+            className="list-item-ele"
+          >
+            <FormattedMessage
+              id="sideNav.links.link3"
+              defaultMessage="Default"
+            />
+          </a>
+        </li>
+        <li className="list-item">
+          <a
+            href="https://github.com/K-Sato1995/MyBlogFront"
+            className="list-item-ele"
+          >
+            <FormattedMessage
+              id="sideNav.links.link4"
+              defaultMessage="Default"
+            />
+          </a>
+        </li>
+      </React.Fragment>
+    );
     const tags = this.props.tags.map((tag, index) => (
       <li className="list-item">
         <Tag
@@ -130,6 +189,28 @@ export default class SideNav extends React.Component {
             >
               {featuredPosts}
             </ul>
+          </div>
+
+          {/* ListGroup4 */}
+          <div className="list-group">
+            <button
+              id={this.state.links ? "active" : ""}
+              className="list-title"
+              onClick={() => this.toggleLinks()}
+            >
+              Links
+              {linksArrow}
+            </button>
+            <ul id={this.state.links ? "show" : "hide"} className="list">
+              {links}
+            </ul>
+          </div>
+
+          {/* ListGroup5 */}
+          <div className="list-group">
+            <Link to={`/about`}>
+              <button className="list-title">About Me</button>
+            </Link>
           </div>
         </div>
       </div>

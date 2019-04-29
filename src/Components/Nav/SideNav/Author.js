@@ -14,11 +14,11 @@ class Author extends React.Component {
             className="author-penguin"
           />
         </Link>
-        <h4>
+        <span>
           <Link to={`/about`} className="author-box-name">
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
           </Link>
-        </h4>
+        </span>
         <p className="author-box-body">
           <FormattedMessage
             id="author.body"

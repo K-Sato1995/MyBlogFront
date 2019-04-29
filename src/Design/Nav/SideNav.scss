@@ -14,6 +14,7 @@
     padding-left: 25px;
     .list-group {
       margin: 0;
+      margin-bottom: 10px;
     }
     .list-title {
       @extend .border-less-button;
@@ -49,6 +50,10 @@
       .list-item {
         padding-left: 15px;
         list-style: none;
+      }
+      .list-item-ele {
+        text-decoration: none;
+        color: #9dabb7;
       }
       .list-item:hover {
         background-color: #e6ecf1;

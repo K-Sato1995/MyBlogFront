@@ -22,16 +22,9 @@ export default {
     "In college, I majored in political economy and mainly spent my time there studying international political economy and public economics. I also started coding when I was a senior and have been studying programming since then.",
   "loadingBox.paragraphThree":
     "Though what I learnt in college was academically very interesting, I didn't necessarily consider myself suitable for a politician or economist. I also was not interested in sales or marketing which a lot of my friends in the same department ended up doing after college. So I ended up getting a job as a webdeveloper since I really liked coding and I was really fascinated with the idea of createing something unique and original that didn't exist before.",
-  // Footer
-  "footer.blog.title": "K-Sato's Blog",
-  "footer.blog.description":
-    "This is my personal blog where I write mostly about programming and my daily life. Some are kinda usefull and some are garbage. Hope you will find something interesting here.",
-  "footer.author.name": "K-Sato",
-  "footer.author.description":
-    "I'm into baseball, language-learning, programming and cute dogs lol. I speak English and Japanese and mainly write Ruby and Javascript. I also paly with Go from time to time.",
-  "footer.links.title": "Links",
-  "footer.links.link1": "My Profile on DEV.to (Follow me there!!!)",
-  "footer.links.link2": "My GitHub Account (Check out my work!!)",
-  "footer.links.link3": "Code of this Blog (backend built with RoR)",
-  "footer.links.link4": "Code of this Blog (frontend built with React)"
+  // sideNav
+  "sideNav.links.link1": "Profile On DEV.to",
+  "sideNav.links.link2": "Profile On GitHub",
+  "sideNav.links.link3": "SourceCode(Backend)",
+  "sideNav.links.link4": "SourceCode(FrontEnd)"
 };
