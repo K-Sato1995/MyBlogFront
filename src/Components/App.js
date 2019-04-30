@@ -43,7 +43,6 @@ class App extends Component {
                 handleToggleTheme={this.handleToggleTheme}
                 darkTheme={this.state.darkTheme}
               />
-              <Footer />
             </React.Fragment>
           </Router>
         </IntlProvider>

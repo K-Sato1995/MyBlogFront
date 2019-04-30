@@ -3,11 +3,11 @@ import PostBox from "./PostBox/PostBox";
 import "../../../Design/Posts/PostList/PostList.scss";
 import { css } from "@emotion/core";
 import { BarLoader } from "react-spinners";
-import { Col } from "react-bootstrap";
 import NoPostFound from "./NoPostFound";
 import LoadingBox from "../LoadingBox";
 import SideNav from "../../Nav/SideNav/SideNav";
 import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
+import ContentHeader from "./ContentHeader";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -132,41 +132,49 @@ class PostsList extends React.Component {
       this.state.loading === true ? (
         <LoadingBox />
       ) : (
-        <React.Fragment>
-          <div className="post-list-container">{postList}</div>
-        </React.Fragment>
+        <React.Fragment>{postList}</React.Fragment>
       );
 
     return (
-      <Col className="container">
-        <SideNav
-          setLocale={this.props.setLocale}
-          lang={this.props.lang}
-          posts={this.state.posts}
-          tags={this.state.tags}
-          tag={this.state.tag}
-          search={this.state.search}
-          updateSearch={this.updateSearch}
-          updateTag={this.updateTag}
-          categories={this.state.categories}
-          category={this.state.category}
-          updateCategory={this.updateCategory}
-        />
-        <BarLoader
-          css={override}
-          sizeUnit={"px"}
-          size={80}
-          color={"#E0E0E0"}
-          loading={this.state.loading}
-        />
-        <CategoryButton
-          activeCategory={this.category}
-          value={0}
-          name={"All"}
-          updateCategory={this.updateCategory}
-        />
-        {Content}
-      </Col>
+      <div className="whole-container">
+        <div className="left-container">
+          <SideNav
+            setLocale={this.props.setLocale}
+            lang={this.props.lang}
+            posts={this.state.posts}
+            tags={this.state.tags}
+            tag={this.state.tag}
+            search={this.state.search}
+            updateSearch={this.updateSearch}
+            updateTag={this.updateTag}
+            categories={this.state.categories}
+            category={this.state.category}
+            updateCategory={this.updateCategory}
+          />
+        </div>
+        <div className="main-container">
+          <BarLoader
+            css={override}
+            sizeUnit={"px"}
+            size={80}
+            color={"#E0E0E0"}
+            loading={this.state.loading}
+          />
+          <CategoryButton
+            activeCategory={this.category}
+            value={0}
+            name={"All"}
+            updateCategory={this.updateCategory}
+          />
+          <div className="content-container">
+            <ContentHeader
+              headerTitle="Blog Posts"
+              headerDescription="List of posts"
+            />
+            {Content}
+          </div>
+        </div>
+      </div>
     );
   }
 }

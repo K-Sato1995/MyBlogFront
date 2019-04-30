@@ -1,0 +1,15 @@
+@import "../../global";
+
+.content-header {
+  margin: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid $border-color-light;
+  .content-header-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+  .content-header-description {
+    color: #828e99;
+  }
+}
