@@ -8,6 +8,7 @@ import LoadingBox from "../LoadingBox";
 import SideNav from "../../Nav/SideNav/SideNav";
 import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
 import ContentHeader from "./ContentHeader";
+import About from "./About";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -24,12 +25,18 @@ class PostsList extends React.Component {
       search: "",
       category: 0,
       tag: 0,
+      postList: true,
+      about: false,
+      projects: false,
       loading: true
     };
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
     this.updateTag = this.updateTag.bind(this);
     this.showAllPosts = this.showAllPosts.bind(this);
+    this.onClickPostList = this.onClickPostList.bind(this);
+    this.onClickAbout = this.onClickAbout.bind(this);
+    this.onClickProjects = this.onClickProjects.bind(this);
   }
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -51,6 +58,21 @@ class PostsList extends React.Component {
         });
       });
   };
+  onClickPostList() {
+    this.setState({ postList: true });
+    this.setState({ about: false });
+    this.setState({ projects: false });
+  }
+  onClickAbout() {
+    this.setState({ about: true });
+    this.setState({ postList: false });
+    this.setState({ projects: false });
+  }
+  onClickProjects() {
+    this.setState({ projects: true });
+    this.setState({ postList: false });
+    this.setState({ about: false });
+  }
   updateSearch(e) {
     this.setState({ search: e.target.value });
   }
@@ -128,12 +150,32 @@ class PostsList extends React.Component {
         ""
       );
 
-    const Content =
+    const postContent =
       this.state.loading === true ? (
         <LoadingBox />
       ) : (
         <React.Fragment>{postList}</React.Fragment>
       );
+
+    let Content;
+    if (this.state.postList) {
+      Content = postContent;
+    } else if (this.state.about) {
+      Content = <About />;
+    } else if (this.state.projects) {
+      Content = "Projects";
+    } else {
+      Content = postContent;
+    }
+
+    const contentHeader = this.state.postList ? (
+      <ContentHeader
+        headerTitle="Blog Posts"
+        headerDescription="This is the list of my blog posts. I mostly write about programming and my daily life. "
+      />
+    ) : (
+      ""
+    );
 
     return (
       <div className="whole-container">
@@ -150,6 +192,10 @@ class PostsList extends React.Component {
             categories={this.state.categories}
             category={this.state.category}
             updateCategory={this.updateCategory}
+            postList={this.state.postList}
+            onClickPostList={this.onClickPostList}
+            onClickAbout={this.onClickAbout}
+            onClickProjects={this.onClickProjects}
           />
         </div>
         <div className="main-container">
@@ -167,10 +213,7 @@ class PostsList extends React.Component {
             updateCategory={this.updateCategory}
           />
           <div className="content-container">
-            <ContentHeader
-              headerTitle="Blog Posts"
-              headerDescription="List of posts"
-            />
+            {contentHeader}
             {Content}
           </div>
         </div>
