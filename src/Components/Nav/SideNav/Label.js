@@ -4,7 +4,9 @@ export default class Label extends React.Component {
   render() {
     return (
       <div className="nav-label">
-        <h3>Lable</h3>
+        <a className="label-link" href="https://pages.github.com/">
+          Powered By <span>GithubPages</span>
+        </a>
       </div>
     );
   }

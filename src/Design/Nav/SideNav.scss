@@ -94,5 +94,22 @@
   }
   .nav-label {
     position: absolute;
+    bottom: 20px;
+    left: 25px;
+    padding: 15px;
+    align-items: center;
+    width: 250px;
+    border-radius: 3px;
+    background-color: #e6ecf1;
+    .label-link {
+      text-decoration: none;
+      color: #9daab6;
+      span {
+        font-weight: 700;
+      }
+    }
+    .label-link:hover {
+      color: $theme-color;
+    }
   }
 }

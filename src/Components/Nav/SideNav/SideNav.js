@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../Design/Nav/SideNav.scss";
-import { Link } from "react-router-dom";
+import Label from "./Label";
 import { FormattedMessage } from "react-intl";
 import FeaturedPost from "./FeaturedPost";
 import Tag from "./Tag";
@@ -231,6 +231,8 @@ export default class SideNav extends React.Component {
               Projects
             </button>
           </div>
+
+          <Label />
         </div>
       </div>
     );
