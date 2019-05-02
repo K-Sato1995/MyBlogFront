@@ -1,8 +1,6 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
 import "../../../Design/Highlight.scss";
-import { css } from "@emotion/core";
-import { BarLoader } from "react-spinners";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./CodeBlock";
 import PostAuthor from "./PostAuthor";
@@ -72,10 +70,6 @@ class PostDetail extends React.Component {
   };
 
   render() {
-    const override = css`
-      display: block;
-      margin: 0 auto;
-    `;
     const id = this.props.match.params.id;
     const main =
       this.state.loading === true ? (
@@ -109,18 +103,7 @@ class PostDetail extends React.Component {
           <PostAuthor />
         </React.Fragment>
       );
-    return (
-      <div className="post-container">
-        <BarLoader
-          css={override}
-          sizeUnit={"px"}
-          size={80}
-          color={"#F0F0F0"}
-          loading={this.state.loading}
-        />
-        {main}
-      </div>
-    );
+    return <div className="post-container">{main}</div>;
   }
 }
 

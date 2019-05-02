@@ -6,6 +6,8 @@ import NoPostFound from "./NoPostFound";
 import SideNav from "../../Nav/SideNav/SideNav";
 import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
 import ContentHeader from "./ContentHeader";
+import CategoryTag from "./ContentTags/CategoryTag";
+import TagTag from "./ContentTags/TagTag";
 import About from "./About";
 
 const api = {
@@ -35,6 +37,8 @@ class PostsList extends React.Component {
     this.onClickPostList = this.onClickPostList.bind(this);
     this.onClickAbout = this.onClickAbout.bind(this);
     this.onClickProjects = this.onClickProjects.bind(this);
+    this.resetCategory = this.resetCategory.bind(this);
+    this.resetTag = this.resetTag.bind(this);
   }
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -94,6 +98,13 @@ class PostsList extends React.Component {
     });
   }
 
+  resetCategory() {
+    this.setState({ category: 0 });
+  }
+
+  resetTag() {
+    this.setState({ tag: 0 });
+  }
   render() {
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = this.state.posts.filter(post => {
@@ -179,6 +190,36 @@ class PostsList extends React.Component {
       ""
     );
 
+    // Content Tags
+    const categoryTag =
+      this.state.category === 0 ? (
+        ""
+      ) : (
+        <CategoryTag
+          category={this.state.category}
+          categories={this.state.categories}
+          resetCategory={this.resetCategory}
+        />
+      );
+
+    const tagTag =
+      this.state.tag === 0 ? (
+        ""
+      ) : (
+        <TagTag
+          tag={this.state.tag}
+          tags={this.state.tags}
+          resetTag={this.resetTag}
+        />
+      );
+
+    const contentTags = (
+      <div className="content-tag-box">
+        {categoryTag}
+        {tagTag}
+      </div>
+    );
+
     return (
       <div className="whole-container">
         <div className="left-container">
@@ -210,6 +251,7 @@ class PostsList extends React.Component {
           />
           <div className="content-container">
             {contentHeader}
+            {contentTags}
             {Content}
           </div>
         </div>

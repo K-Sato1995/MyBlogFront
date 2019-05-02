@@ -1,0 +1,40 @@
+@import "../../global";
+
+.content-tag-box {
+  margin: 30px;
+  display: flex;
+  .category-tag {
+    margin-right: 30px;
+    width: 300px;
+    padding: 10px 20px;
+    background-color: #f5f7f9;
+    border-radius: 3px;
+    border-left: solid 4px $theme-color;
+    cursor: pointer;
+    span {
+      font-size: 18px;
+      color: $p-color;
+    }
+    .content-tag-name {
+      font-weight: bold;
+      margin-left: 5px;
+    }
+  }
+
+  .tag-tag {
+    width: 300px;
+    padding: 10px 20px;
+    background-color: #f5f7f9;
+    border-radius: 3px;
+    border-left: solid 4px #f77c06;
+    cursor: pointer;
+    span {
+      font-size: 18px;
+      color: $p-color;
+    }
+    .content-tag-name {
+      font-weight: bold;
+      margin-left: 5px;
+    }
+  }
+}
