@@ -5,7 +5,6 @@ import { css } from "@emotion/core";
 import { BarLoader } from "react-spinners";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./CodeBlock";
-import LoadingBox from "../LoadingBox";
 import PostAuthor from "./PostAuthor";
 import LikeBox from "./LikeBox";
 import breaks from "remark-breaks";
@@ -80,7 +79,7 @@ class PostDetail extends React.Component {
     const id = this.props.match.params.id;
     const main =
       this.state.loading === true ? (
-        <LoadingBox />
+        ""
       ) : (
         <React.Fragment>
           <div className="post-detail-righ-zone">

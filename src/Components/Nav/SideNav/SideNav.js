@@ -7,6 +7,7 @@ import Tag from "./Tag";
 import SearchBar from "./SearchBar";
 import Author from "./Author";
 import CategoryButton from "./CategoryTag/CategoryButton";
+import ContentLoader from "react-content-loader";
 
 export default class SideNav extends React.Component {
   constructor(props) {
@@ -63,23 +64,35 @@ export default class SideNav extends React.Component {
     ) : (
       <span className="glyphicon glyphicon-chevron-right" />
     );
-    const categories = this.props.categories.map((category, index) => (
-      <li className="list-item">
-        <CategoryButton
-          activeCategory={this.props.category}
-          value={category.id}
-          name={category.name}
-          updateCategory={this.props.updateCategory}
-          key={index}
-          onClickPostList={this.props.onClickPostList}
-        />
-      </li>
-    ));
-    const featuredPosts = this.props.posts.slice(0, 4).map((post, index) => (
-      <li className="list-item">
-        <FeaturedPost key={index} title={post.title} id={post.id} />
-      </li>
-    ));
+    const listLoader = (
+      <ContentLoader>
+        <rect x="20" y="20" rx="4" ry="4" width="300" height="15" />
+        <rect x="20" y="50" rx="4" ry="4" width="300" height="15" />
+        <rect x="20" y="80" rx="4" ry="4" width="300" height="15" />
+        <rect x="20" y="110" rx="4" ry="4" width="300" height="15" />
+      </ContentLoader>
+    );
+    const categories = this.props.loading
+      ? listLoader
+      : this.props.categories.map((category, index) => (
+          <li className="list-item">
+            <CategoryButton
+              activeCategory={this.props.category}
+              value={category.id}
+              name={category.name}
+              updateCategory={this.props.updateCategory}
+              key={index}
+              onClickPostList={this.props.onClickPostList}
+            />
+          </li>
+        ));
+    const featuredPosts = this.props.loading
+      ? listLoader
+      : this.props.posts.slice(0, 4).map((post, index) => (
+          <li className="list-item">
+            <FeaturedPost key={index} title={post.title} id={post.id} />
+          </li>
+        ));
     const links = (
       <React.Fragment>
         <li className="list-item">
@@ -122,17 +135,19 @@ export default class SideNav extends React.Component {
         </li>
       </React.Fragment>
     );
-    const tags = this.props.tags.map((tag, index) => (
-      <li className="list-item">
-        <Tag
-          activeTag={this.props.tag}
-          key={index}
-          value={tag.id}
-          name={tag.name}
-          updateTag={this.props.updateTag}
-        />
-      </li>
-    ));
+    const tags = this.props.loading
+      ? listLoader
+      : this.props.tags.map((tag, index) => (
+          <li className="list-item">
+            <Tag
+              activeTag={this.props.tag}
+              key={index}
+              value={tag.id}
+              name={tag.name}
+              updateTag={this.props.updateTag}
+            />
+          </li>
+        ));
     const postNav = this.props.postList ? (
       <React.Fragment>
         <SearchBar

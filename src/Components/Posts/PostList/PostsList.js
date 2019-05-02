@@ -1,10 +1,8 @@
 import React from "react";
 import PostBox from "./PostBox/PostBox";
 import "../../../Design/Posts/PostList/PostList.scss";
-import { css } from "@emotion/core";
-import { BarLoader } from "react-spinners";
+import ContentLoader from "react-content-loader";
 import NoPostFound from "./NoPostFound";
-import LoadingBox from "../LoadingBox";
 import SideNav from "../../Nav/SideNav/SideNav";
 import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
 import ContentHeader from "./ContentHeader";
@@ -97,10 +95,6 @@ class PostsList extends React.Component {
   }
 
   render() {
-    const override = css`
-      margin: 0 auto;
-      display: block;
-    `;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = this.state.posts.filter(post => {
       let postTags = [];
@@ -152,7 +146,15 @@ class PostsList extends React.Component {
 
     const postContent =
       this.state.loading === true ? (
-        <LoadingBox />
+        <ContentLoader height={300}>
+          <rect x="20" y="10" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="40" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="70" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="100" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="130" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="160" rx="2.5" ry="2.5" width="350" height="20" />
+          <rect x="20" y="190" rx="2.5" ry="2.5" width="350" height="20" />
+        </ContentLoader>
       ) : (
         <React.Fragment>{postList}</React.Fragment>
       );
@@ -186,6 +188,7 @@ class PostsList extends React.Component {
             posts={this.state.posts}
             tags={this.state.tags}
             tag={this.state.tag}
+            loading={this.state.loading}
             search={this.state.search}
             updateSearch={this.updateSearch}
             updateTag={this.updateTag}
@@ -199,13 +202,6 @@ class PostsList extends React.Component {
           />
         </div>
         <div className="main-container">
-          <BarLoader
-            css={override}
-            sizeUnit={"px"}
-            size={80}
-            color={"#E0E0E0"}
-            loading={this.state.loading}
-          />
           <CategoryButton
             activeCategory={this.category}
             value={0}
