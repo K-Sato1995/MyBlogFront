@@ -4,11 +4,11 @@ import "../../../Design/Posts/PostList/PostList.scss";
 import ContentLoader from "react-content-loader";
 import NoPostFound from "./NoPostFound";
 import SideNav from "../../Nav/SideNav/SideNav";
-import CategoryButton from "../../Nav/SideNav/CategoryTag/CategoryButton";
 import ContentHeader from "./ContentHeader";
 import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import About from "./About";
+import Footer from "../../Footer/Footer";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -64,16 +64,22 @@ class PostsList extends React.Component {
     this.setState({ postList: true });
     this.setState({ about: false });
     this.setState({ projects: false });
+    this.setState({ category: 0 });
+    this.setState({ tag: 0 });
   }
   onClickAbout() {
     this.setState({ about: true });
     this.setState({ postList: false });
     this.setState({ projects: false });
+    this.setState({ category: 0 });
+    this.setState({ tag: 0 });
   }
   onClickProjects() {
     this.setState({ projects: true });
     this.setState({ postList: false });
     this.setState({ about: false });
+    this.setState({ category: 0 });
+    this.setState({ tag: 0 });
   }
   updateSearch(e) {
     this.setState({ search: e.target.value });
@@ -167,7 +173,7 @@ class PostsList extends React.Component {
           <rect x="20" y="190" rx="2.5" ry="2.5" width="350" height="20" />
         </ContentLoader>
       ) : (
-        <React.Fragment>{postList}</React.Fragment>
+        <div className="postList">{postList}</div>
       );
 
     let Content;
@@ -213,12 +219,15 @@ class PostsList extends React.Component {
         />
       );
 
-    const contentTags = (
-      <div className="content-tag-box">
-        {categoryTag}
-        {tagTag}
-      </div>
-    );
+    const contentTags =
+      this.state.tag === 0 && this.state.category === 0 ? (
+        <div className="content-tag-box-hidden" />
+      ) : (
+        <div className="content-tag-box">
+          {categoryTag}
+          {tagTag}
+        </div>
+      );
 
     return (
       <div className="whole-container">
@@ -243,16 +252,11 @@ class PostsList extends React.Component {
           />
         </div>
         <div className="main-container">
-          <CategoryButton
-            activeCategory={this.category}
-            value={0}
-            name={"All"}
-            updateCategory={this.updateCategory}
-          />
           <div className="content-container">
             {contentHeader}
             {contentTags}
             {Content}
+            <Footer />
           </div>
         </div>
       </div>
