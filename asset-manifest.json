@@ -1,15 +1,15 @@
 {
-  "main.css": "/MyBlogFront/static/css/main.9a1c2572.chunk.css",
-  "main.js": "/MyBlogFront/static/js/main.1ea2d28a.chunk.js",
-  "main.js.map": "/MyBlogFront/static/js/main.1ea2d28a.chunk.js.map",
-  "static/js/1.0ac2db65.chunk.js": "/MyBlogFront/static/js/1.0ac2db65.chunk.js",
-  "static/js/1.0ac2db65.chunk.js.map": "/MyBlogFront/static/js/1.0ac2db65.chunk.js.map",
+  "main.css": "/MyBlogFront/static/css/main.cce36da1.chunk.css",
+  "main.js": "/MyBlogFront/static/js/main.c7b2946d.chunk.js",
+  "main.js.map": "/MyBlogFront/static/js/main.c7b2946d.chunk.js.map",
+  "static/js/1.eff2107b.chunk.js": "/MyBlogFront/static/js/1.eff2107b.chunk.js",
+  "static/js/1.eff2107b.chunk.js.map": "/MyBlogFront/static/js/1.eff2107b.chunk.js.map",
   "runtime~main.js": "/MyBlogFront/static/js/runtime~main.c6c3dbe7.js",
   "runtime~main.js.map": "/MyBlogFront/static/js/runtime~main.c6c3dbe7.js.map",
-  "static/css/main.9a1c2572.chunk.css.map": "/MyBlogFront/static/css/main.9a1c2572.chunk.css.map",
+  "static/css/main.cce36da1.chunk.css.map": "/MyBlogFront/static/css/main.cce36da1.chunk.css.map",
   "static/media/penguin.png": "/MyBlogFront/static/media/penguin.b1533602.png",
   "static/media/gopher_me.png": "/MyBlogFront/static/media/gopher_me.dd4ade1c.png",
   "index.html": "/MyBlogFront/index.html",
-  "precache-manifest.856a9ee66d0de56eecacd2adb427f63d.js": "/MyBlogFront/precache-manifest.856a9ee66d0de56eecacd2adb427f63d.js",
+  "precache-manifest.5f9ed61743fe46abe18ff755b6b56de7.js": "/MyBlogFront/precache-manifest.5f9ed61743fe46abe18ff755b6b56de7.js",
   "service-worker.js": "/MyBlogFront/service-worker.js"
 }
