@@ -7,17 +7,26 @@ class Author extends React.Component {
   render() {
     return (
       <div className="author-box">
-        <Link to={`/about`}>
+        <a
+          href="https://dev.to/ksato1995"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             alt={"PENGUIN"}
             src={require("../../Posts/images/gopher_me.png")}
             className="author-penguin"
           />
-        </Link>
+        </a>
         <span>
-          <Link to={`/about`} className="author-box-name">
+          <a
+            href="https://dev.to/ksato1995"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="author-box-name"
+          >
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
-          </Link>
+          </a>
         </span>
         <p className="author-box-body">
           <FormattedMessage

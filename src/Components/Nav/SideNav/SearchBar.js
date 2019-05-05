@@ -5,12 +5,13 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-box">
+        <span className="glyphicon glyphicon-search" />
         <input
           type="text"
           value={this.props.value}
           onChange={this.props.updateSearch}
           className="search-bar"
-          placeholder="Search"
+          placeholder="Type to search"
         />
       </div>
     );

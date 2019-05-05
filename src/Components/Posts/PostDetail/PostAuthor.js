@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
-import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
 class PostAuthor extends React.Component {
@@ -25,9 +24,13 @@ class PostAuthor extends React.Component {
                 defaultMessage="I am a junior web-developer based somewhere on earth. Write Ruby as my primary lannguage and also use Javascript every now and then. RoR and React are my go-to Frameworks. Sometimes I play with Go language."
               />
             </p>
-            <Link to={`/about`}>
+            <a
+              href="https://dev.to/ksato1995"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="post-author-button">View Profile</button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
