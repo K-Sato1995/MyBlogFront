@@ -1,0 +1,114 @@
+@import "../global";
+
+.SideNavbar {
+  position: fixed;
+  background-color: #f5f7f9;
+  border-right: solid 1px $border-color-light;
+  height: 100%;
+  width: 300px;
+  padding-top: 70px;
+  overflow-y: scroll;
+  .side-bottom {
+    padding-left: 25px;
+    .list-group {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .list-title {
+      @extend .border-less-button;
+      padding: 7px;
+      position: relative;
+      width: 100%;
+      text-align: left;
+      color: $list-title;
+      font-size: 16px;
+      font-weight: 600;
+      .glyphicon-chevron-right {
+        font-size: 15px;
+        position: absolute;
+        right: 15px;
+        top: 11px;
+        color: #9dabb7;
+      }
+      .glyphicon-chevron-down {
+        @extend .glyphicon-chevron-right;
+        top: 13px;
+      }
+    }
+    .list-title:hover {
+      background-color: #e6ecf1;
+    }
+    .list {
+      margin-left: 20px;
+      border-left: solid 1px #e6ecf1;
+      padding-left: 0px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      .list-item {
+        padding-left: 15px;
+        list-style: none;
+      }
+      .list-item-ele {
+        text-decoration: none;
+        color: #9dabb7;
+      }
+      .list-item:hover {
+        background-color: #e6ecf1;
+      }
+      .category-button-active {
+        @extend .border-less-button;
+        color: $theme-color;
+      }
+      .category-button {
+        @extend .border-less-button;
+        color: #9dabb7;
+      }
+      .tag-active {
+        @extend .border-less-button;
+        color: $theme-color;
+      }
+      .tag {
+        @extend .border-less-button;
+        color: #9dabb7;
+      }
+      .featured-post-title {
+        color: #9dabb7;
+        text-decoration: none;
+      }
+    }
+  }
+  #show {
+    display: block;
+  }
+  #hide {
+    display: none;
+  }
+  #active {
+    color: $theme-color;
+    background-color: #fff;
+    border: solid 1px $border-color-light;
+  }
+  #blogPosts {
+    margin-top: 20px;
+  }
+  .nav-label {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 15px;
+    align-items: center;
+    width: 250px;
+    border-radius: 3px;
+    background-color: #e6ecf1;
+    .label-link {
+      text-decoration: none;
+      color: #9daab6;
+      span {
+        font-weight: 700;
+      }
+    }
+    .label-link:hover {
+      color: $theme-color;
+    }
+  }
+}

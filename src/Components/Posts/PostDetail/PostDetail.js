@@ -1,15 +1,14 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
 import "../../../Design/Highlight.scss";
-import { css } from "@emotion/core";
-import { BarLoader } from "react-spinners";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./CodeBlock";
-import LoadingBox from "../LoadingBox";
 import PostAuthor from "./PostAuthor";
 import LikeBox from "./LikeBox";
 import breaks from "remark-breaks";
-import Toc from "./Toc";
+import Toc from "./SideNav/Toc";
+import ContentLoader from "react-content-loader";
+import Footer from "../../Footer/Footer";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -73,55 +72,84 @@ class PostDetail extends React.Component {
   };
 
   render() {
-    const override = css`
-      display: block;
-      margin: 0 auto;
-    `;
     const id = this.props.match.params.id;
     const main =
       this.state.loading === true ? (
-        <LoadingBox />
+        <div className="post-container">
+          <div className="post-left-container">
+            <ContentLoader height={200} className="post-list-loader">
+              <rect x="30" y="70" rx="4" ry="4" width="270" height="15" />
+              <rect x="30" y="100" rx="4" ry="4" width="270" height="15" />
+              <rect x="30" y="130" rx="4" ry="4" width="270" height="15" />
+              <rect x="30" y="160" rx="4" ry="4" width="270" height="15" />
+            </ContentLoader>
+          </div>
+          <div className="post-main-container">
+            <div className="post-loading-content-container">
+              <ContentLoader height={300}>
+                <rect x="20" y="0" rx="4" ry="4" width="250" height="25" />
+                <rect x="20" y="35" rx="4" ry="4" width="300" height="4" />
+                <rect x="20" y="45" rx="4" ry="4" width="270" height="4" />
+
+                <rect x="20" y="70" rx="4" ry="4" width="300" height="8" />
+                <rect x="30" y="90" rx="4" ry="4" width="280" height="8" />
+                <rect x="30" y="110" rx="4" ry="4" width="220" height="8" />
+
+                <rect x="20" y="130" rx="4" ry="4" width="300" height="8" />
+                <rect x="30" y="150" rx="4" ry="4" width="280" height="8" />
+                <rect x="30" y="170" rx="4" ry="4" width="230" height="8" />
+
+                <rect x="20" y="200" rx="4" ry="4" width="300" height="8" />
+                <rect x="30" y="220" rx="4" ry="4" width="280" height="8" />
+                <rect x="30" y="240" rx="4" ry="4" width="270" height="8" />
+
+                <rect x="20" y="270" rx="4" ry="4" width="300" height="8" />
+                <rect x="30" y="290" rx="4" ry="4" width="280" height="8" />
+                <rect x="30" y="310" rx="4" ry="4" width="270" height="8" />
+              </ContentLoader>
+            </div>
+          </div>
+        </div>
       ) : (
-        <React.Fragment>
-          <div className="post-detail-righ-zone">
+        <div className="post-container">
+          <div className="post-left-container">
             <Toc
               content={this.state.data.context}
               postId={this.state.data.id}
             />
           </div>
-          <LikeBox
+          {console.log(this.state.data)}
+          {/* <LikeBox
             addLike={this.addLike}
             like={this.state.data.like}
             pageId={id}
-          />
-          <h1 className="post-detail-title">{this.state.data.title}</h1>
-          <ReactMarkdown
-            source={this.state.data.context}
-            renderers={{
-              code: CodeBlock,
-              heading: HeadingRenderer
-            }}
-            plugins={[breaks]}
-            className="post-content"
-          />
-          <span className="page-views">
-            {this.state.data.page_views} Page Views
-          </span>
-          <PostAuthor />
-        </React.Fragment>
+          /> */}
+
+          <div className="post-main-container">
+            <div className="post-content-container">
+              <div className="post-detail-title">
+                <h1 className="title">{this.state.data.title}</h1>
+                <p className="description" />
+              </div>
+              <ReactMarkdown
+                source={this.state.data.context}
+                renderers={{
+                  code: CodeBlock,
+                  heading: HeadingRenderer
+                }}
+                plugins={[breaks]}
+                className="post-content"
+              />
+              <span className="page-views">
+                {this.state.data.page_views} Page Views
+              </span>
+              <PostAuthor />
+              <Footer />
+            </div>
+          </div>
+        </div>
       );
-    return (
-      <div className="post-container">
-        <BarLoader
-          css={override}
-          sizeUnit={"px"}
-          size={80}
-          color={"#F0F0F0"}
-          loading={this.state.loading}
-        />
-        {main}
-      </div>
-    );
+    return <React.Fragment>{main}</React.Fragment>;
   }
 }
 

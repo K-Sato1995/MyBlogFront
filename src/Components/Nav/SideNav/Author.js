@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Design/Posts/PostList/Author.scss";
+import "../../../Design/Nav/Author.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
@@ -7,23 +7,27 @@ class Author extends React.Component {
   render() {
     return (
       <div className="author-box">
-        <h4 className="author-box-title">
-          <span className="title">
-            <FormattedMessage id="author.title" defaultMessage="About Me" />
-          </span>
-        </h4>
-        <Link to={`/about`}>
+        <a
+          href="https://dev.to/ksato1995"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             alt={"PENGUIN"}
-            src={require("../images/gopher_me.png")}
+            src={require("../../Posts/images/gopher_me.png")}
             className="author-penguin"
           />
-        </Link>
-        <h4>
-          <Link to={`/about`} className="author-box-name">
+        </a>
+        <span>
+          <a
+            href="https://dev.to/ksato1995"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="author-box-name"
+          >
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
-          </Link>
-        </h4>
+          </a>
+        </span>
         <p className="author-box-body">
           <FormattedMessage
             id="author.body"

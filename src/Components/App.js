@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./Nav/Nav";
 import Main from "./Posts/Main";
-import Footer from "./Footer/Footer";
 import ThemeButton from "./ThemeButton";
 import { IntlProvider, addLocaleData } from "react-intl";
 import enLocaleData from "react-intl/locale-data/en";
@@ -39,11 +38,10 @@ class App extends Component {
             <React.Fragment>
               <Nav setLocale={this.setLocale} lang={this.state.lang} />
               <Main />
-              <ThemeButton
+              {/* <ThemeButton
                 handleToggleTheme={this.handleToggleTheme}
                 darkTheme={this.state.darkTheme}
-              />
-              <Footer />
+              /> */}
             </React.Fragment>
           </Router>
         </IntlProvider>

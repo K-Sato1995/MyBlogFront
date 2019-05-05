@@ -1,6 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import "../../../Design/Posts/PostDetail/Toc.scss";
+import "../../../../Design/Posts/PostDetail/Toc.scss";
 
 export default class Toc extends React.Component {
   constructor(props) {
@@ -34,9 +34,9 @@ export default class Toc extends React.Component {
     if (/^#{1}\s[\s\S]/.test(string)) {
       return <li className="header1">{this.returnTitle(string)}</li>;
     } else if (/^#{2}\s[\s\S]/.test(string) && this.state.filter === false) {
-      return <li className="header2">・{this.returnTitle(string)}</li>;
+      return <li className="header2">{this.returnTitle(string)}</li>;
     } else if (/^#{3}\s[\s\S]/.test(string) && this.state.filter === false) {
-      return <li className="header3">- {this.returnTitle(string)}</li>;
+      return <li className="header3">{this.returnTitle(string)}</li>;
     } else {
       return "";
     }
@@ -54,14 +54,14 @@ export default class Toc extends React.Component {
     }
     const toc = headers.map(header => <li>{this.createAnchorLink(header)}</li>);
     const icon = this.state.filter ? (
-      <span className="glyphicon glyphicon-chevron-up" />
+      <span className="glyphicon glyphicon-chevron-right" />
     ) : (
       <span className="glyphicon glyphicon-chevron-down" />
     );
     return (
       <div className="toc">
         <h3 className="toc-list-title">
-          Table of Contents{" "}
+          CONTENTS{" "}
           <button className="arrow-icon" onClick={() => this.tocFilter()}>
             {icon}
           </button>

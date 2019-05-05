@@ -1,0 +1,39 @@
+@import "../global";
+
+.search-box {
+  position: relative;
+  .glyphicon {
+    position: absolute;
+    color: #616d79;
+    top: 19px;
+    left: 6px;
+  }
+  .search-bar {
+    // border: none;
+    // padding-left: 15px;
+    // border: solid 1px$border-color;
+    // border-radius: 3px;
+    // width: 250px;
+    // height: 40px;
+    // font-size: 17px;
+    // margin: 25px 0;
+    // transition: 1s;
+    outline: none !important;
+    margin-bottom: 17px;
+    padding-left: 55px;
+    border: none;
+    border-bottom: solid 1px $border-color-light;
+    background-color: #f5f7f9;
+    margin-left: -25px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 300px;
+    color: #616d79;
+    transition: 1s;
+  }
+  .search-bar:focus {
+    // border: solid 2px $border-color;
+    background-color: #fff;
+  }
+}

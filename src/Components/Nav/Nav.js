@@ -15,8 +15,18 @@ class Nav extends React.Component {
             </span>
           </Link>
           <div className="nav-locale-box">
-            <LangButton setLocale={this.props.setLocale} lang={this.props.lang} langValue="en" displayLang="EN" />
-            <LangButton setLocale={this.props.setLocale} lang={this.props.lang} langValue="ja" displayLang="JA" />
+            <LangButton
+              setLocale={this.props.setLocale}
+              lang={this.props.lang}
+              langValue="en"
+              displayLang="EN"
+            />
+            <LangButton
+              setLocale={this.props.setLocale}
+              lang={this.props.lang}
+              langValue="ja"
+              displayLang="JA"
+            />
           </div>
         </div>
       </div>

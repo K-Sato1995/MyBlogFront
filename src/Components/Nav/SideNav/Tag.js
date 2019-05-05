@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../Design/Posts/PostList/RightContainer/RightContainer.scss";
+// import "../../../../Design/Posts/PostList/RightContainer/RightContainer.scss";
 
 class Tag extends React.Component {
   render() {

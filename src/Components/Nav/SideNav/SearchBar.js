@@ -1,21 +1,17 @@
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import "../../../Design/Nav/SearchBar.scss";
 
 class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-box">
-        <h4 className="search-box-title">
-          <span className="title">
-            <FormattedMessage id="search.title" defaultMessage="Search Box" />
-          </span>
-        </h4>
+        <span className="glyphicon glyphicon-search" />
         <input
           type="text"
           value={this.props.value}
           onChange={this.props.updateSearch}
           className="search-bar"
-          placeholder="Search"
+          placeholder="Type to search"
         />
       </div>
     );
