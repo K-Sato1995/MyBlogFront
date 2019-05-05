@@ -1,0 +1,59 @@
+@import "../global";
+
+.projects-content {
+  margin: 30px;
+}
+
+.tab-work-box {
+  .work-box {
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border: 1px solid $border-color-light;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px 0;
+    height: 140px;
+    position: relative;
+    h5 {
+      font-size: 16px;
+      margin-top: 5px;
+      font-weight: 600;
+      a {
+        text-decoration: none;
+        color: $h-color;
+      }
+      a:hover {
+        color: $theme-color;
+      }
+    }
+    p {
+      color: #828e99;
+      margin-top: 16px;
+      font-size: 16px;
+    }
+    .work-box-languag-name {
+      position: absolute;
+      color: #828e99;
+      bottom: 17px;
+      left: 40px;
+    }
+    .lang {
+      margin-top: 20px;
+      height: 15px;
+      width: 15px;
+      border-radius: 50px;
+    }
+    .Ruby {
+      @extend .lang;
+      color: #701516;
+      background-color: #701516;
+    }
+    .JavaScript {
+      @extend .lang;
+      color: #f1e05a;
+      background-color: #f1e05a;
+    }
+  }
+  .work-box:hover {
+    border: solid 1px $theme-color;
+  }
+}

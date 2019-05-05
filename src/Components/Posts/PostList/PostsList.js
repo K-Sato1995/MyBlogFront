@@ -8,6 +8,7 @@ import ContentHeader from "./ContentHeader";
 import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import About from "./About";
+import Projects from "./Projects/Projects";
 import Footer from "../../Footer/Footer";
 
 const api = {
@@ -182,7 +183,7 @@ class PostsList extends React.Component {
     } else if (this.state.about) {
       Content = <About />;
     } else if (this.state.projects) {
-      Content = "Projects";
+      Content = <Projects />;
     } else {
       Content = postContent;
     }
