@@ -112,3 +112,13 @@
     }
   }
 }
+.SideNavbar::-webkit-scrollbar {
+  width: 4px;
+  height: 20px;
+}
+
+.SideNavbar::-webkit-scrollbar-thumb {
+  background-color: $border-color-light;
+  outline: 1px solid $border-color;
+  border-radius: 10px;
+}
