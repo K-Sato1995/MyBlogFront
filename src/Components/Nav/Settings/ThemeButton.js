@@ -1,5 +1,5 @@
 import React from "react";
-import Emoji from "./Emoji";
+import Emoji from "../../Emoji";
 
 export default class ThemeButton extends React.Component {
   render() {
@@ -8,7 +8,6 @@ export default class ThemeButton extends React.Component {
         className="light-theme-button"
         onClick={() => this.props.handleToggleTheme()}
       >
-        Light Theme
         <Emoji symbol="☀️" label="sun" />
       </button>
     ) : (
@@ -16,7 +15,6 @@ export default class ThemeButton extends React.Component {
         className="dark-theme-button"
         onClick={() => this.props.handleToggleTheme()}
       >
-        Dark Theme
         <Emoji symbol="🌙" label="moon" />
       </button>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import "../../Design/Nav/Nav.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import LangButton from "./langButton";
+import Settings from "./Settings/Settings";
 
 class Nav extends React.Component {
   render() {
@@ -14,20 +14,12 @@ class Nav extends React.Component {
               <FormattedMessage id="nav.title" defaultMessage="BLOG" />
             </span>
           </Link>
-          <div className="nav-locale-box">
-            <LangButton
-              setLocale={this.props.setLocale}
-              lang={this.props.lang}
-              langValue="en"
-              displayLang="EN"
-            />
-            <LangButton
-              setLocale={this.props.setLocale}
-              lang={this.props.lang}
-              langValue="ja"
-              displayLang="JA"
-            />
-          </div>
+          <Settings
+            toggleLocale={this.props.toggleLocale}
+            lang={this.props.lang}
+            handleToggleTheme={this.props.handleToggleTheme}
+            darkTheme={this.props.darkTheme}
+          />
         </div>
       </div>
     );

@@ -1,0 +1,40 @@
+@import "../global";
+
+.settings-box {
+  position: absolute;
+  display: flex;
+  top: 23px;
+  right: 30px;
+  .lang-btn {
+    padding-right: 15px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: $h-color;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .theme-button {
+    padding-left: 15px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    border-left: solid 1px $border-color-light;
+  }
+  .light-theme-button {
+    @extend .theme-button;
+    background-color: #fff;
+  }
+
+  .dark-theme-button {
+    @extend .theme-button;
+  }
+}
+
+.lang-btn:hover {
+  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+.theme-button:hover {
+  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}

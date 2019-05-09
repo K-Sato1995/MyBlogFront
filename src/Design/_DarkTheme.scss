@@ -1,6 +1,7 @@
 #DarkTheme {
   $theme-color: #1e2227;
-
+  $hover-color: #2e363d;
+  $side-nav: #23282d;
   background-color: $theme-color;
   h1,
   h2,
@@ -17,6 +18,69 @@
     background-color: $theme-color;
     border-bottom: solid 1px #fff;
     box-shadow: none;
+  }
+  .lang-btn {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  .theme-button {
+    background-color: $theme-color;
+  }
+  .left-container {
+    background-color: $side-nav;
+  }
+  .SideNavbar {
+    background-color: $side-nav;
+    .list-title {
+      color: #fff;
+    }
+    .list-title:hover {
+      background-color: $hover-color;
+    }
+    .list {
+      .list-item {
+        list-style: none;
+      }
+      .list-item-ele {
+        background-color: $side-nav;
+      }
+      .list-item:hover {
+        background-color: $hover-color;
+      }
+      .category-button-active {
+        color: #fff;
+      }
+      .category-button {
+        @extend .border-less-button;
+        color: #9dabb7;
+      }
+      .tag-active {
+        @extend .border-less-button;
+        color: #fff;
+      }
+      .tag {
+        @extend .border-less-button;
+        color: #9dabb7;
+      }
+      .featured-post-title {
+        color: #9dabb7;
+        text-decoration: none;
+      }
+    }
+  }
+  #active {
+    color: #fff;
+    background-color: $theme-color;
+    border: solid 1px #e4e4e4;
+  }
+  .nav-label {
+    background-color: $theme-color;
+    .label-link {
+      color: #9daab6;
+    }
+    .label-link:hover {
+      color: #fff;
+    }
   }
   .logo {
     color: #fff;
@@ -101,5 +165,14 @@
   }
   .post-detail-righ-zone {
     background-color: #1e2221;
+  }
+  .post-left-container {
+    background-color: $side-nav;
+  }
+  .toc {
+    background-color: $side-nav;
+    .arrow-icon {
+      background-color: $side-nav;
+    }
   }
 }
