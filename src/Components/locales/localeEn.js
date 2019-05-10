@@ -26,5 +26,7 @@ export default {
   "sideNav.links.link1": "Profile On DEV.to",
   "sideNav.links.link2": "Profile On GitHub",
   "sideNav.links.link3": "SourceCode(Backend)",
-  "sideNav.links.link4": "SourceCode(FrontEnd)"
+  "sideNav.links.link4": "SourceCode(FrontEnd)",
+  // contentHeader
+  "contentHeader.blogPosts": "BlogPosts"
 };
