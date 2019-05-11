@@ -161,7 +161,10 @@ export default class SideNav extends React.Component {
             className="list-title"
             onClick={() => this.toggleCategoryList()}
           >
-            Category List
+            <FormattedMessage
+              id="sideNav.categoryList"
+              defaultMessage="Category List"
+            />
             {categoryArrow}
           </button>
           <ul id={this.state.categoryList ? "show" : "hide"} className="list">
@@ -176,7 +179,7 @@ export default class SideNav extends React.Component {
             className="list-title"
             onClick={() => this.toggleTagList()}
           >
-            Tag List
+            <FormattedMessage id="sideNav.tagList" defaultMessage="Tag List" />
             {tagArrow}
           </button>
           <ul id={this.state.tagList ? "show" : "hide"} className="list">
@@ -191,7 +194,10 @@ export default class SideNav extends React.Component {
             className="list-title"
             onClick={() => this.toggleFeaturedPosts()}
           >
-            Featured Posts
+            <FormattedMessage
+              id="sideNav.featuredPosts"
+              defaultMessage="Featured Posts"
+            />
             {featuredPostsArrow}
           </button>
           <ul id={this.state.featuredPosts ? "show" : "hide"} className="list">
@@ -206,7 +212,10 @@ export default class SideNav extends React.Component {
           id="blogPosts"
           onClick={this.props.onClickPostList}
         >
-          Blog Posts
+          <FormattedMessage
+            id="sideNav.blogPosts"
+            defaultMessage="Blog Posts"
+          />
         </button>
       </div>
     );
@@ -225,7 +234,7 @@ export default class SideNav extends React.Component {
               className="list-title"
               onClick={() => this.toggleLinks()}
             >
-              Links
+              <FormattedMessage id="sideNav.Links" defaultMessage="Links" />
               {linksArrow}
             </button>
             <ul id={this.state.links ? "show" : "hide"} className="list">
@@ -236,14 +245,17 @@ export default class SideNav extends React.Component {
           {/* ListGroup5 */}
           <div className="list-group">
             <button className="list-title" onClick={this.props.onClickAbout}>
-              About Me
+              <FormattedMessage id="sideNav.about" defaultMessage="About Me" />
             </button>
           </div>
 
           {/* ListGroup6 */}
           <div className="list-group">
             <button className="list-title" onClick={this.props.onClickProjects}>
-              Projects
+              <FormattedMessage
+                id="sideNav.projects"
+                defaultMessage="Projects"
+              />
             </button>
           </div>
 

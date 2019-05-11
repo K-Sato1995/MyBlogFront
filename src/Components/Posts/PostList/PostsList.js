@@ -195,7 +195,10 @@ class PostsList extends React.Component {
           id="contentHeader.blogPosts"
           defaultMessage="Blog Posts"
         />
-        headerDescription="This is the list of my blog posts. I mostly write about programming and my daily life. "
+        headerDescription=<FormattedMessage
+          id="contentHeader.blogDescription"
+          defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
+        />
       />
     ) : (
       ""
