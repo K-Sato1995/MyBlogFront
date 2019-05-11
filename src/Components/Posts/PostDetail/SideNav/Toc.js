@@ -1,6 +1,7 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../../../../Design/Posts/PostDetail/Toc.scss";
+import { FormattedMessage } from "react-intl";
 
 export default class Toc extends React.Component {
   constructor(props) {
@@ -61,7 +62,7 @@ export default class Toc extends React.Component {
     return (
       <div className="toc">
         <h3 className="toc-list-title">
-          CONTENTS{" "}
+          <FormattedMessage id="toc" defaultMessage="CONTENTS" />
           <button className="arrow-icon" onClick={() => this.tocFilter()}>
             {icon}
           </button>

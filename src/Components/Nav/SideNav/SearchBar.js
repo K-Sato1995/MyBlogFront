@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../Design/Nav/SearchBar.scss";
-import { FormattedMessage } from "react-intl";
 
 class SearchBar extends React.Component {
   render() {

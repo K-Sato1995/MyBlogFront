@@ -12,6 +12,7 @@ export default {
   "postAuthor.name": "K-Sato",
   "postAuthor.description":
     "I am a junior web-developer based somewhere on earth. Write Ruby as my primary lannguage and also use Javascript every now and then. RoR and React are my go-to Frameworks. Sometimes I play with Go language.",
+  toc: "CONTENTS",
   // about
   "about.header": "Self Introduction",
   "about.paragraphOne":
@@ -43,5 +44,12 @@ export default {
   "contentHeader.aboutDescription": "Here is a short introduction of myself.",
   "contentHeader.projectsTitle": "Projects",
   "contentHeader.projectsDescription":
-    "Here are some of my personal projects on GitHub."
+    "Here are some of my personal projects on GitHub.",
+  // No Posts Found
+  "noPosts.title": "No Post Found",
+  "noPosts.btn": "Show All Posts",
+  // NoMatch
+  "noMatch.title": "404 NOT FOUND",
+  "noMatch.description":
+    "Seems like the page you are looking for does not exist."
 };

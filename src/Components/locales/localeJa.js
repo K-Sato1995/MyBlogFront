@@ -12,6 +12,7 @@ export default {
   "postAuthor.name": "さとう",
   "postAuthor.description":
     "地球のどっかで活動するWeb系のプログラマーです。主にRubyとJavascriptを使用して開発を行います。時々Go言語を使って遊んでます。",
+  toc: "コンテント",
   // about
   "about.header": "自己紹介",
   "about.paragraphOne":
@@ -43,5 +44,12 @@ export default {
   "contentHeader.aboutDescription": "私自身に関する簡単な自己紹介です。",
   "contentHeader.projectsTitle": "プロジェクト",
   "contentHeader.projectsDescription":
-    "GitHub上に挙げてあるいくつかの個人プロジェクトをここに列挙しました。"
+    "GitHub上に挙げてあるいくつかの個人プロジェクトをここに列挙しました。",
+  // No Posts Found
+  "noPosts.title": "該当する投稿は見つかりませんでした",
+  "noPosts.btn": "全ての投稿を表示する",
+  // NoMatch
+  "noMatch.title": "404 見つかりません",
+  "noMatch.description":
+    "どうやらあなたが探しているページは存在しないようです。"
 };
