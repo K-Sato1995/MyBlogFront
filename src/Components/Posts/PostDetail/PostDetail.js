@@ -45,7 +45,13 @@ class PostDetail extends React.Component {
     window.scrollTo(0, 0);
     this.getPosts();
   }
-
+  formatDate(date) {
+    const dateObject = new Date(date);
+    const month = dateObject.getMonth() + 1;
+    const day = dateObject.getDate();
+    const year = dateObject.getFullYear();
+    return `${year}/${month}/${day}`;
+  }
   getPosts = () => {
     const id = this.props.match.params.id;
     fetch(`${api.baseUrl}api/v1/posts/${id}`)
@@ -77,35 +83,31 @@ class PostDetail extends React.Component {
       this.state.loading === true ? (
         <div className="post-container">
           <div className="post-left-container">
-            <ContentLoader height={200} className="post-list-loader">
-              <rect x="30" y="70" rx="4" ry="4" width="270" height="15" />
-              <rect x="30" y="100" rx="4" ry="4" width="270" height="15" />
-              <rect x="30" y="130" rx="4" ry="4" width="270" height="15" />
-              <rect x="30" y="160" rx="4" ry="4" width="270" height="15" />
+            <ContentLoader height={300} className="post-list-loader">
+              <rect x="30" y="60" rx="4" ry="4" width="230" height="30" />
+              <rect x="30" y="120" rx="4" ry="4" width="270" height="18" />
+              <rect x="30" y="160" rx="4" ry="4" width="270" height="18" />
+              <rect x="30" y="200" rx="4" ry="4" width="270" height="18" />
+              <rect x="30" y="250" rx="4" ry="4" width="270" height="18" />
             </ContentLoader>
           </div>
           <div className="post-main-container">
             <div className="post-loading-content-container">
-              <ContentLoader height={300}>
-                <rect x="20" y="0" rx="4" ry="4" width="250" height="25" />
-                <rect x="20" y="35" rx="4" ry="4" width="300" height="4" />
-                <rect x="20" y="45" rx="4" ry="4" width="270" height="4" />
+              <ContentLoader height={400}>
+                <rect x="20" y="5" rx="4" ry="4" width="250" height="25" />
+                <rect x="20" y="40" rx="4" ry="4" width="100" height="10" />
 
-                <rect x="20" y="70" rx="4" ry="4" width="300" height="8" />
-                <rect x="30" y="90" rx="4" ry="4" width="280" height="8" />
-                <rect x="30" y="110" rx="4" ry="4" width="220" height="8" />
+                <rect x="20" y="70" rx="4" ry="4" width="200" height="15" />
+                <rect x="20" y="100" rx="4" ry="4" width="350" height="8" />
+                <rect x="20" y="120" rx="4" ry="4" width="330" height="8" />
+                <rect x="20" y="140" rx="4" ry="4" width="350" height="8" />
 
-                <rect x="20" y="130" rx="4" ry="4" width="300" height="8" />
-                <rect x="30" y="150" rx="4" ry="4" width="280" height="8" />
-                <rect x="30" y="170" rx="4" ry="4" width="230" height="8" />
+                <rect x="20" y="170" rx="4" ry="4" width="300" height="100" />
 
-                <rect x="20" y="200" rx="4" ry="4" width="300" height="8" />
-                <rect x="30" y="220" rx="4" ry="4" width="280" height="8" />
-                <rect x="30" y="240" rx="4" ry="4" width="270" height="8" />
-
-                <rect x="20" y="270" rx="4" ry="4" width="300" height="8" />
-                <rect x="30" y="290" rx="4" ry="4" width="280" height="8" />
-                <rect x="30" y="310" rx="4" ry="4" width="270" height="8" />
+                <rect x="20" y="290" rx="4" ry="4" width="200" height="15" />
+                <rect x="20" y="320" rx="4" ry="4" width="350" height="8" />
+                <rect x="20" y="340" rx="4" ry="4" width="330" height="8" />
+                <rect x="20" y="360" rx="4" ry="4" width="350" height="8" />
               </ContentLoader>
             </div>
           </div>
@@ -118,7 +120,6 @@ class PostDetail extends React.Component {
               postId={this.state.data.id}
             />
           </div>
-          {console.log(this.state.data)}
           {/* <LikeBox
             addLike={this.addLike}
             like={this.state.data.like}
@@ -129,7 +130,9 @@ class PostDetail extends React.Component {
             <div className="post-content-container">
               <div className="post-detail-title">
                 <h1 className="title">{this.state.data.title}</h1>
-                <p className="description" />
+                <p className="post-created-date">
+                  {this.formatDate(this.state.data.created_at)}
+                </p>
               </div>
               <ReactMarkdown
                 source={this.state.data.context}
