@@ -18,26 +18,12 @@
     .logo {
       border-right: solid 1px $border-color-light;
       position: absolute;
-      padding: 5px 162px 5px 25px;
+      padding: 5px 0px 5px 25px;
+      width: 300px;
       top: 7px;
       font-size: 30px;
       color: $h-color;
       font-weight: bold;
-    }
-    .nav-locale-box {
-      display: none;
-      position: absolute;
-      border: solid 1px;
-      right: 15px;
-      top: 15px;
-      .lang-box {
-        padding: 7px 20px 7px 20px;
-        outline: none !important;
-        border: solid 1px $border-color;
-        border-radius: 3px;
-        color: $a-color;
-        margin: 0 0 10px 10px;
-      }
     }
   }
 }

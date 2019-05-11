@@ -12,8 +12,14 @@ export default class projects extends React.Component {
     return (
       <div>
         <ContentHeader
-          headerTitle="Projects"
-          headerDescription="Here are some of my personal projects on GitHub."
+          headerTitle=<FormattedMessage
+            id="contentHeader.projectsTitle"
+            defaultMessage="Projects"
+          />
+          headerDescription=<FormattedMessage
+            id="contentHeader.projectsDescription"
+            defaultMessage="Here are some of my personal projects on GitHub."
+          />
         />
         <div className="projects-content">
           <TabWork />

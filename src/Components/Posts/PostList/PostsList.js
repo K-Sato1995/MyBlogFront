@@ -10,6 +10,7 @@ import TagTag from "./ContentTags/TagTag";
 import About from "./About";
 import Projects from "./Projects/Projects";
 import Footer from "../../Footer/Footer";
+import { FormattedMessage } from "react-intl";
 
 const api = {
   baseUrl: "https://k-blog0130.herokuapp.com/"
@@ -190,8 +191,14 @@ class PostsList extends React.Component {
 
     const contentHeader = this.state.postList ? (
       <ContentHeader
-        headerTitle="Blog Posts"
-        headerDescription="This is the list of my blog posts. I mostly write about programming and my daily life. "
+        headerTitle=<FormattedMessage
+          id="contentHeader.blogPosts"
+          defaultMessage="Blog Posts"
+        />
+        headerDescription=<FormattedMessage
+          id="contentHeader.blogDescription"
+          defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
+        />
       />
     ) : (
       ""

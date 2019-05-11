@@ -2,6 +2,7 @@ import React from "react";
 import "../../../Design/Posts/PostList/NoPostFound.scss";
 import Penguin from "../Penguin";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 class NoPostFound extends React.Component {
   render() {
@@ -10,14 +11,20 @@ class NoPostFound extends React.Component {
         <Link to={`/about`}>
           <Penguin />
         </Link>
-        <h2>No Post Found</h2>
+        <h2>
+          <FormattedMessage id="noPosts.title" defaultMessage="No Post Found" />
+        </h2>
         <button
           value={0}
           name={"All"}
           onClick={this.props.showAllPosts}
           className="show-all-posts-btn"
         >
-          Show All Posts
+          <FormattedMessage
+            id="noPosts.btn"
+            defaultMessage="
+            Show All Posts"
+          />
         </button>
       </div>
     );

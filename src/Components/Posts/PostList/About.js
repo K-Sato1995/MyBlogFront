@@ -10,26 +10,37 @@ export default class About extends React.Component {
     return (
       <div>
         <ContentHeader
-          headerTitle="About Me"
-          headerDescription="Here is a short introduction of myself."
+          headerTitle=<FormattedMessage
+            id="contentHeader.aboutTitle"
+            defaultMessage="About Me"
+          />
+          headerDescription=<FormattedMessage
+            id="contentHeader.aboutDescription"
+            defaultMessage="Here is a short introduction of myself."
+          />
         />
         <div className="about-content">
-          <h3 className="about-header">Self Introduction</h3>
+          <h3 className="about-header">
+            <FormattedMessage
+              id="about.header"
+              defaultMessage="Self Introduction"
+            />
+          </h3>
           <p>
             <FormattedMessage
-              id="loadingBox.paragraphOne"
+              id="about.paragraphOne"
               defaultMessage="Default"
             />
           </p>
           <p>
             <FormattedMessage
-              id="loadingBox.paragraphTwo"
+              id="about.paragraphTwo"
               defaultMessage="Default"
             />
           </p>
           <p>
             <FormattedMessage
-              id="loadingBox.paragraphThree"
+              id="about.paragraphThree"
               defaultMessage="Default"
             />
           </p>
