@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../Design/Nav/Author.scss";
-import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import Emoji from "../../Emoji";
 
 class Author extends React.Component {
   render() {
@@ -28,17 +28,15 @@ class Author extends React.Component {
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
           </a>
         </span>
+        <span className="author-tag" id="dog">
+          Dog Lover <Emoji symbol="🐶" label="dog" />
+        </span>
         <p className="author-box-body">
           <FormattedMessage
             id="author.body"
             defaultMessage="I'm just a silly boy aspiring to be a competent programmer."
           />
         </p>
-        {/* SNN-LINKS */}
-        {/* <div className='snn-links'>
-          <a href='https://dev.to/ksato1995' className='snn1-link'><p className='snn1'>DEV.to</p></a>
-          <a href='https://github.com/K-Sato1995' className='snn2-link'><p className='snn2'>GitHub</p></a>
-        </div> */}
       </div>
     );
   }
