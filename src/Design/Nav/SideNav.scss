@@ -122,3 +122,11 @@
   outline: 1px solid $border-color;
   border-radius: 10px;
 }
+
+@media (max-width: 950px) {
+  .SideNavbar {
+    padding-top: 10px;
+  }
+  .author-tag {
+  }
+}

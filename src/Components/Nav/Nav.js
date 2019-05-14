@@ -8,8 +8,11 @@ class Nav extends React.Component {
   render() {
     return (
       <div className="navbar">
+        <button className="mobile-nav-btn">
+          <span className="glyphicon glyphicon-menu-hamburger" />
+        </button>
         <div className="nav-container">
-          <Link to="/">
+          <Link to="/" className="logo-name">
             <span className="logo">
               <FormattedMessage id="nav.title" defaultMessage="BLOG" />
             </span>
