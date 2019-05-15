@@ -93,3 +93,30 @@
     }
   }
 }
+
+@media (min-width: 950px) {
+  .toc {
+    display: block !important;
+  }
+  .wrapper {
+    display: none !important;
+  }
+}
+@media (max-width: 950px) {
+  .post-left-container {
+    display: none;
+    position: fixed;
+  }
+  .post-content-container {
+    margin: 0 auto !important;
+  }
+  .post-detail-author-box {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .post-detail-title {
+    margin-top: 110px !important;
+  }
+}

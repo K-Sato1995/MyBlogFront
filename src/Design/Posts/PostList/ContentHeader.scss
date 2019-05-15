@@ -14,3 +14,9 @@
     color: #828e99;
   }
 }
+
+@media (max-width: 560px) {
+  .content-header {
+    margin-top: 110px !important;
+  }
+}
