@@ -9,7 +9,7 @@
   box-shadow: $box-shadow;
   background-color: #fff;
   opacity: 0.9;
-  z-index: 1;
+  z-index: 2;
   .nav-container {
     position: relative;
     margin: 0 auto;
@@ -24,6 +24,96 @@
       font-size: 30px;
       color: $h-color;
       font-weight: bold;
+    }
+    .logo-name {
+      text-decoration: none;
+    }
+  }
+  .mobile-nav-btn {
+    outline: none !important;
+    border: none !important;
+    background-color: #fff !important;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    font-size: 17px;
+    .glyphicon-menu-hamburger {
+      color: #242a31;
+    }
+  }
+  .close-tab {
+    width: 300px;
+    height: 70px;
+    border-bottom: solid 1px $border-color;
+    border-right: solid 1px $border-color;
+    // box-shadow: $box-shadow;
+    background-color: #fff;
+    position: fixed;
+    display: none;
+    button {
+      outline: none !important;
+      border: none !important;
+      background-color: #fff !important;
+      position: absolute;
+      left: 30px;
+      top: 20px;
+      .glyphicon-menu-left {
+        color: #74818d;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .mobile-nav-btn {
+    display: none !important;
+  }
+  .close-tab {
+    display: none !important;
+  }
+}
+@media (max-width: 950px) {
+  .navbar {
+    display: flex;
+  }
+  .logo {
+    display: flex;
+    position: relative !important;
+    width: 100% !important;
+    padding: 0px !important;
+    padding-top: 5px !important;
+    padding-top: 5px !important;
+    border: none !important;
+  }
+  .mobile-nav-btn {
+    display: block !important;
+  }
+  .settings-box {
+    display: none !important;
+  }
+  .close-tab {
+    display: none;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    height: 60px !important;
+    display: flex;
+  }
+  .logo {
+    font-size: 24px !important;
+  }
+  .mobile-nav-btn {
+    top: 18px !important;
+    left: 10px !important;
+  }
+  .close-tab {
+    height: 60px !important;
+    button {
+      top: 15px !important;
     }
   }
 }

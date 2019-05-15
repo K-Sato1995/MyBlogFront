@@ -6,10 +6,37 @@ import Settings from "./Settings/Settings";
 
 class Nav extends React.Component {
   render() {
+    const hmbMenu = this.props.showLeftContainer
+      ? {
+          display: "none"
+        }
+      : {
+          display: "block"
+        };
+    const closeTab = this.props.showLeftContainer
+      ? {
+          display: "block"
+        }
+      : {
+          display: "none"
+        };
     return (
       <div className="navbar">
+        <button
+          className="mobile-nav-btn"
+          onClick={this.props.handleToggleLeftContainer}
+          style={hmbMenu}
+        >
+          <span className="glyphicon glyphicon-menu-hamburger" />
+        </button>
+
+        <div className="close-tab" style={closeTab}>
+          <button onClick={this.props.handleToggleLeftContainer}>
+            <span className="glyphicon glyphicon-menu-left" />
+          </button>
+        </div>
         <div className="nav-container">
-          <Link to="/">
+          <Link to="/" className="logo-name">
             <span className="logo">
               <FormattedMessage id="nav.title" defaultMessage="BLOG" />
             </span>

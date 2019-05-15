@@ -76,7 +76,6 @@ class PostDetail extends React.Component {
         });
       });
   };
-
   render() {
     const id = this.props.match.params.id;
     const main =

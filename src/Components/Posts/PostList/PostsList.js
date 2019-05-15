@@ -236,10 +236,17 @@ class PostsList extends React.Component {
           {tagTag}
         </div>
       );
-
+    const showLeftContainer = this.props.showLeftContainer
+      ? {
+          display: "block"
+        }
+      : {
+          display: "none"
+        };
     return (
       <div className="whole-container">
-        <div className="left-container">
+        <div className="wrapper" style={showLeftContainer} />
+        <div className="left-container" style={showLeftContainer}>
           <SideNav
             setLocale={this.props.setLocale}
             lang={this.props.lang}
