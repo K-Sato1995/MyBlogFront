@@ -30,9 +30,7 @@ class PostsList extends React.Component {
       postList: true,
       about: false,
       projects: false,
-      loading: true,
-      // For mobile style
-      showLeftContainer: false
+      loading: true
     };
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
@@ -238,16 +236,16 @@ class PostsList extends React.Component {
           {tagTag}
         </div>
       );
-    const showLeftContainer = this.state.showLeftContainer
+    const showLeftContainer = this.props.showLeftContainer
       ? {
           display: "block"
         }
       : {
-          // display: "none"
+          display: "none"
         };
-
     return (
       <div className="whole-container">
+        <div className="wrapper" style={showLeftContainer} />
         <div className="left-container" style={showLeftContainer}>
           <SideNav
             setLocale={this.props.setLocale}

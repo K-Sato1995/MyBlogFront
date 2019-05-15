@@ -9,7 +9,16 @@ class Main extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={PostsList} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <PostsList
+                showLeftContainer={this.props.showLeftContainer}
+                handleToggleLeftContainer={this.props.handleToggleLeftContainer}
+              />
+            )}
+          />
           <Route path="/Post/:id" component={PostDetail} />
           <Route component={NoMatch} />
         </Switch>

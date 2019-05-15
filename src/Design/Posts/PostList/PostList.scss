@@ -10,9 +10,21 @@
   padding-left: calc((100% - 1448px) / 2);
   min-width: 300px;
   min-height: 1000px;
+  z-index: 1;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $border-color-light;
+  opacity: 0.3;
+  z-index: 1;
 }
 .main-container {
   flex: 2;
+  z-index: 0;
   .content-container {
     margin-top: 80px;
     margin-left: 60px;
@@ -39,10 +51,18 @@
   }
 }
 
+@media (min-width: 950px) {
+  .left-container {
+    display: block !important;
+  }
+  .wrapper {
+    display: none !important;
+  }
+}
 @media (max-width: 950px) {
   .left-container {
+    display: none;
     position: fixed;
-    z-index: 1;
   }
   .content-container {
     margin: 0 auto !important;

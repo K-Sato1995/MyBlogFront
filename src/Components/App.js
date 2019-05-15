@@ -15,10 +15,13 @@ class App extends Component {
     super();
     this.state = {
       lang: "en",
-      darkTheme: false
+      darkTheme: false,
+      // For mobile style
+      showLeftContainer: false
     };
     this.toggleLocale = this.toggleLocale.bind(this);
     this.handleToggleTheme = this.handleToggleTheme.bind(this);
+    this.handleToggleLeftContainer = this.handleToggleLeftContainer.bind(this);
   }
   toggleLocale() {
     if (this.state.lang === "en") {
@@ -29,6 +32,9 @@ class App extends Component {
   }
   handleToggleTheme() {
     this.setState({ darkTheme: !this.state.darkTheme });
+  }
+  handleToggleLeftContainer() {
+    this.setState({ showLeftContainer: !this.state.showLeftContainer });
   }
 
   render() {
@@ -44,8 +50,13 @@ class App extends Component {
                 lang={this.state.lang}
                 handleToggleTheme={this.handleToggleTheme}
                 darkTheme={this.state.darkTheme}
+                showLeftContainer={this.state.showLeftContainer}
+                handleToggleLeftContainer={this.handleToggleLeftContainer}
               />
-              <Main />
+              <Main
+                showLeftContainer={this.state.showLeftContainer}
+                handleToggleLeftContainer={this.handleToggleLeftContainer}
+              />
             </React.Fragment>
           </Router>
         </IntlProvider>
