@@ -77,11 +77,17 @@ class PostDetail extends React.Component {
       });
   };
   render() {
-    const id = this.props.match.params.id;
+    const showLeftContainer = this.props.showLeftContainer
+      ? {
+          display: "block"
+        }
+      : {
+          display: "none"
+        };
     const main =
       this.state.loading === true ? (
         <div className="post-container">
-          <div className="post-left-container">
+          <div className="post-left-container" style={showLeftContainer}>
             <ContentLoader height={300} className="post-list-loader">
               <rect x="30" y="60" rx="4" ry="4" width="230" height="30" />
               <rect x="30" y="120" rx="4" ry="4" width="270" height="18" />
@@ -113,7 +119,8 @@ class PostDetail extends React.Component {
         </div>
       ) : (
         <div className="post-container">
-          <div className="post-left-container">
+          <div className="wrapper" style={showLeftContainer} />
+          <div className="post-left-container" style={showLeftContainer}>
             <Toc
               content={this.state.data.context}
               postId={this.state.data.id}

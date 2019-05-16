@@ -19,7 +19,16 @@ class Main extends React.Component {
               />
             )}
           />
-          <Route path="/Post/:id" component={PostDetail} />
+          <Route
+            path="/Post/:id"
+            render={props => (
+              <PostDetail
+                {...props}
+                showLeftContainer={this.props.showLeftContainer}
+                handleToggleLeftContainer={this.props.handleToggleLeftContainer}
+              />
+            )}
+          />
           <Route component={NoMatch} />
         </Switch>
       </div>
