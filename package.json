@@ -2,7 +2,7 @@
   "name": "blog_front",
   "version": "2.0.0",
   "private": true,
-  "homepage": "http://k-sato1995.github.io/k_blog",
+  "homepage": "http://k-sato1995.github.io/MyBlogFront",
   "dependencies": {
     "i": "^0.3.6",
     "node-sass": "^4.11.0",
@@ -28,7 +28,8 @@
     "lint": "eslint . --ext .js,.jsx; exit 0",
     "lint-fix": "eslint --fix . --ext .js,.jsx; exit 0",
     "lint-sass": "sass-lint -c app/config/.sass-lint.yml '**/*.scss' -v -q",
-    "deploy": "npm run build && gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
