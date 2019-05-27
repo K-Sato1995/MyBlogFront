@@ -7,8 +7,15 @@ import jaLocaleData from "react-intl/locale-data/ja";
 import { BrowserRouter as Router } from "react-router-dom";
 import localeEn from "./locales/localeEn";
 import localeJa from "./locales/localeJa";
+import ReactGA from "react-ga";
 
+function initializeReactGA() {
+  ReactGA.initialize("UA-140916506-1");
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 addLocaleData([...jaLocaleData, ...enLocaleData]);
+
+initializeReactGA();
 
 class App extends Component {
   constructor() {
@@ -36,7 +43,6 @@ class App extends Component {
   handleToggleLeftContainer() {
     this.setState({ showLeftContainer: !this.state.showLeftContainer });
   }
-
   render() {
     let theme = this.state.darkTheme ? "DarkTheme" : "LightTheme";
     let messages = this.state.lang === "en" ? localeEn : localeJa;
