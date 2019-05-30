@@ -125,6 +125,7 @@ class PostsList extends React.Component {
       const catgory_not_zero = this.state.category !== 0;
 
       // Check post
+      const isLanguage = this.props.lang === post.language.substring(0, 2);
       const taggedPost = postTags.includes(this.state.tag);
       const categoryPost = post.category_id === this.state.category;
       const searchedPost = post.title
@@ -132,13 +133,13 @@ class PostsList extends React.Component {
         .includes(this.state.search.toLowerCase());
 
       if (all_not_zero) {
-        return categoryPost && taggedPost && searchedPost;
+        return categoryPost && taggedPost && searchedPost && isLanguage;
       } else if (tag_not_zero) {
-        return taggedPost && searchedPost;
+        return taggedPost && searchedPost && isLanguage;
       } else if (catgory_not_zero) {
-        return categoryPost && searchedPost;
+        return categoryPost && searchedPost && isLanguage;
       } else {
-        return searchedPost;
+        return searchedPost && isLanguage;
       }
     });
 

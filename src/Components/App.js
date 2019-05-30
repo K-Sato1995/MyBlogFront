@@ -63,6 +63,7 @@ class App extends Component {
               <Main
                 showLeftContainer={this.state.showLeftContainer}
                 handleToggleLeftContainer={this.handleToggleLeftContainer}
+                lang={this.state.lang}
               />
             </React.Fragment>
           </Router>

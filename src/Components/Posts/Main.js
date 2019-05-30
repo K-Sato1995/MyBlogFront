@@ -14,6 +14,7 @@ class Main extends React.Component {
             path="/"
             render={() => (
               <PostsList
+                lang={this.props.lang}
                 showLeftContainer={this.props.showLeftContainer}
                 handleToggleLeftContainer={this.props.handleToggleLeftContainer}
               />
