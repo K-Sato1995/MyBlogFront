@@ -15,8 +15,6 @@ function initializeReactGA() {
 }
 addLocaleData([...jaLocaleData, ...enLocaleData]);
 
-initializeReactGA();
-
 class App extends Component {
   constructor() {
     super();
@@ -49,7 +47,10 @@ class App extends Component {
     return (
       <div className="App" id={theme}>
         <IntlProvider locale={this.state.lang} messages={messages}>
-          <Router basename={process.env.PUBLIC_URL}>
+          <Router
+            onUpdate={initializeReactGA}
+            basename={process.env.PUBLIC_URL}
+          >
             <React.Fragment>
               <Nav
                 toggleLocale={this.toggleLocale}
