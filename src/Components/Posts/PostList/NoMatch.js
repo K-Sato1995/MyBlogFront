@@ -6,11 +6,7 @@ class NoMatch extends React.Component {
   render() {
     return (
       <div className="no-match-box">
-        <img
-          alt={"PENGUIN"}
-          src={require("../images/penguin.png")}
-          className="penguin"
-        />
+        <img alt={"IMG"} src={require("../images/404.svg")} className="image" />
         <h1>
           <FormattedMessage id="noMatch.title" defaultMessage="404 NOT FOUND" />
         </h1>
