@@ -1,8 +1,8 @@
 @import "../global";
 
 .author-box {
-  border-bottom: solid 1px $border-color-light;
-  margin-top: 5px;
+  margin-top: 10px;
+  padding-left: 25px;
   .author-box-name {
     margin-left: 25px;
     color: $h-color;
@@ -15,7 +15,7 @@
     color: $a-color;
   }
   .author-image {
-    margin: 0 0 15px 25px;
+    margin: 0 0 15px 0px;
     border: solid 0.5px $border-color;
     border-radius: 100px;
     background-color: #fff;
@@ -24,7 +24,7 @@
     z-index: 1;
   }
   .author-box-body {
-    padding: 0px 25px 10px 25px;
+    padding: 0px 25px 10px 0px;
     letter-spacing: 1px;
     // border: solid 1px;
   }

@@ -74,8 +74,9 @@
     border: solid 1px #e4e4e4;
   }
   .nav-label {
-    background-color: $theme-color;
+    background-color: $side-nav;
     .label-link {
+      background-color: $theme-color;
       color: #9daab6;
     }
     .label-link:hover {
@@ -93,6 +94,9 @@
   }
   .category-button {
     border: none;
+  }
+  .search-box {
+    background-color: $theme-color;
   }
   .search-bar {
     background-color: $theme-color;
