@@ -2,6 +2,7 @@
 
 .author-box {
   border-bottom: solid 1px $border-color-light;
+  margin-top: 5px;
   .author-box-name {
     margin-left: 25px;
     color: $h-color;
@@ -13,33 +14,28 @@
   .author-box-name:hover {
     color: $a-color;
   }
-  .author-penguin {
-    margin: 10px 0 0 20px;
+  .author-image {
+    margin: 0 0 15px 25px;
     border: solid 0.5px $border-color;
     border-radius: 100px;
-    transition: 3s ease;
     background-color: #fff;
-    height: 90px;
-    width: 90px;
+    height: 65px;
+    width: 65px;
     z-index: 1;
   }
-  .author-penguin:hover {
-    transform: rotateZ(360deg);
-    background-color: $border-color;
-  }
   .author-box-body {
-    padding: 20px 25px 15px 25px;
+    padding: 0px 25px 10px 25px;
     letter-spacing: 1px;
+    // border: solid 1px;
   }
-  .author-tag {
-    position: absolute;
-    color: #828e99;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: 500;
-    left: 132px;
-  }
-  #dog {
-    top: 155px;
-  }
+  // .author-tag {
+  //   position: absolute;
+  //   display: none;
+  //   top: 140px;
+  //   color: #828e99;
+  //   border-radius: 3px;
+  //   font-size: 14px;
+  //   font-weight: 500;
+  //   left: 113px;
+  // }
 }

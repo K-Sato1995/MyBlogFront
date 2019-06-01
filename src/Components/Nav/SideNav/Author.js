@@ -15,7 +15,7 @@ class Author extends React.Component {
           <img
             alt={"PENGUIN"}
             src={require("../../Posts/images/gopher_me.png")}
-            className="author-penguin"
+            className="author-image"
           />
         </a>
         <span>
@@ -28,9 +28,9 @@ class Author extends React.Component {
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
           </a>
         </span>
-        <span className="author-tag" id="dog">
+        {/* <span className="author-tag" id="dog">
           Dog Lover <Emoji symbol="🐶" label="dog" />
-        </span>
+        </span> */}
         <p className="author-box-body">
           <FormattedMessage
             id="author.body"

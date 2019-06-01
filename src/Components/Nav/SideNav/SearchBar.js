@@ -1,11 +1,12 @@
 import React from "react";
 import "../../../Design/Nav/SearchBar.scss";
+import { Search } from "react-feather";
 
 class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-box">
-        <span className="glyphicon glyphicon-search" />
+        <Search className="icon" size={19} />
         <input
           type="text"
           value={this.props.value}

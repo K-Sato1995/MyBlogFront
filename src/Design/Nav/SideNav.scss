@@ -23,16 +23,18 @@
       color: $list-title;
       font-size: 16px;
       font-weight: 600;
-      .glyphicon-chevron-right {
-        font-size: 15px;
+      .chevron-right {
         position: absolute;
+        font-size: 16px;
         right: 15px;
-        top: 11px;
+        top: 7px;
         color: #9dabb7;
       }
-      .glyphicon-chevron-down {
-        @extend .glyphicon-chevron-right;
-        top: 13px;
+      .chevron-down {
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        color: #9dabb7;
       }
     }
     .list-title:hover {

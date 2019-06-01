@@ -8,6 +8,8 @@ import SearchBar from "./SearchBar";
 import Author from "./Author";
 import CategoryButton from "./CategoryTag/CategoryButton";
 import ContentLoader from "react-content-loader";
+import { ChevronRight } from "react-feather";
+import { ChevronDown } from "react-feather";
 
 export default class SideNav extends React.Component {
   constructor(props) {
@@ -45,24 +47,24 @@ export default class SideNav extends React.Component {
   }
   render() {
     const categoryArrow = this.state.categoryList ? (
-      <span className="glyphicon glyphicon-chevron-down" />
+      <ChevronDown className="chevron-down" />
     ) : (
-      <span className="glyphicon glyphicon-chevron-right" />
+      <ChevronRight className="chevron-right" />
     );
     const tagArrow = this.state.tagList ? (
-      <span className="glyphicon glyphicon-chevron-down" />
+      <ChevronDown className="chevron-down" />
     ) : (
-      <span className="glyphicon glyphicon-chevron-right" />
+      <ChevronRight className="chevron-right" />
     );
     const featuredPostsArrow = this.state.featuredPosts ? (
-      <span className="glyphicon glyphicon-chevron-down" />
+      <ChevronDown className="chevron-down" />
     ) : (
-      <span className="glyphicon glyphicon-chevron-right" />
+      <ChevronRight className="chevron-right" />
     );
     const linksArrow = this.state.links ? (
-      <span className="glyphicon glyphicon-chevron-down" />
+      <ChevronDown className="chevron-down" />
     ) : (
-      <span className="glyphicon glyphicon-chevron-right" />
+      <ChevronRight className="chevron-right" />
     );
     const listLoader = (
       <ContentLoader>
