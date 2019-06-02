@@ -28,9 +28,6 @@ class Author extends React.Component {
             <FormattedMessage id="author.name" defaultMessage="K-Sato" />
           </a>
         </span>
-        {/* <span className="author-tag" id="dog">
-          Dog Lover <Emoji symbol="🐶" label="dog" />
-        </span> */}
         <p className="author-box-body">
           <FormattedMessage
             id="author.body"

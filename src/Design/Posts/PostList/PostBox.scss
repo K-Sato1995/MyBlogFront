@@ -6,7 +6,7 @@
   border-radius: 3px;
   padding: 30px 30px 5px 10px;
   margin: 30px;
-  min-height: 80px;
+  min-height: 150px;
   transition: 0.5s;
   position: relative;
   .post-title {
@@ -20,7 +20,8 @@
     color: $h-color;
   }
   .post-introduction {
-    margin-top: 17px;
+    margin-top: 15px;
+    font-size: 15px;
     color: $p-color;
   }
   .post-tag-list {
@@ -30,6 +31,7 @@
       padding: 0 10px 0 0px;
       outline: none !important;
       color: #99a2ab;
+      font-size: 14px;
       border: none;
     }
     .tag-button:hover {

@@ -2,6 +2,8 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../../../../Design/Posts/PostDetail/Toc.scss";
 import { FormattedMessage } from "react-intl";
+import { ChevronRight } from "react-feather";
+import { ChevronDown } from "react-feather";
 
 export default class Toc extends React.Component {
   constructor(props) {
@@ -54,11 +56,7 @@ export default class Toc extends React.Component {
       headers = content.match(regex);
     }
     const toc = headers.map(header => <li>{this.createAnchorLink(header)}</li>);
-    const icon = this.state.filter ? (
-      <span className="glyphicon glyphicon-chevron-right" />
-    ) : (
-      <span className="glyphicon glyphicon-chevron-down" />
-    );
+    const icon = this.state.filter ? <ChevronRight /> : <ChevronDown />;
     return (
       <div className="toc">
         <h3 className="toc-list-title">
