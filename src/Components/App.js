@@ -13,6 +13,8 @@ function initializeReactGA() {
   ReactGA.initialize("UA-140916506-1");
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
+initializeReactGA();
+
 addLocaleData([...jaLocaleData, ...enLocaleData]);
 
 class App extends Component {
@@ -47,10 +49,7 @@ class App extends Component {
     return (
       <div className="App" id={theme}>
         <IntlProvider locale={this.state.lang} messages={messages}>
-          <Router
-            onUpdate={initializeReactGA}
-            basename={process.env.PUBLIC_URL}
-          >
+          <Router basename={process.env.PUBLIC_URL}>
             <React.Fragment>
               <Nav
                 toggleLocale={this.toggleLocale}
