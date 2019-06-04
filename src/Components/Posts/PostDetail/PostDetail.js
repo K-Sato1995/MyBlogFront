@@ -109,11 +109,6 @@ class PostDetail extends React.Component {
               <rect x="50" y="700" rx="4" ry="4" width="250" height="16" />
               <rect x="50" y="740" rx="4" ry="4" width="250" height="16" />
               <rect x="50" y="780" rx="4" ry="4" width="250" height="16" />
-
-              <rect x="30" y="840" rx="4" ry="4" width="270" height="18" />
-              <rect x="50" y="880" rx="4" ry="4" width="250" height="16" />
-              <rect x="50" y="920" rx="4" ry="4" width="250" height="16" />
-              <rect x="50" y="960" rx="4" ry="4" width="250" height="16" />
             </ContentLoader>
           </div>
           <div className="post-main-container">
