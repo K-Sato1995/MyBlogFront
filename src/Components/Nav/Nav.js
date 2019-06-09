@@ -3,6 +3,7 @@ import "../../Design/Nav/Nav.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import Settings from "./Settings/Settings";
+import { ArrowLeft } from "react-feather";
 
 class Nav extends React.Component {
   render() {
@@ -32,7 +33,7 @@ class Nav extends React.Component {
 
         <div className="close-tab" style={closeTab}>
           <button onClick={this.props.handleToggleLeftContainer}>
-            <span className="glyphicon glyphicon-menu-left" />
+            <ArrowLeft size={32} />
           </button>
         </div>
         <div className="nav-container">
