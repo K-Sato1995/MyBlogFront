@@ -35,7 +35,11 @@ class PostBox extends React.Component {
         name={tag.name}
       />
     ));
-    const introduction = this.props.introduction ? this.props.introduction : "";
+    const intro = this.props.introduction ? this.props.introduction : "";
+    const introduction =
+      this.props.introduction.length < 200
+        ? intro
+        : `${intro.substring(0, 200)}...`;
     return (
       <div
         className="post-box"
@@ -47,7 +51,7 @@ class PostBox extends React.Component {
             {this.props.title}
           </Link>
         </h3>
-        <p className="post-introduction">{introduction.substring(0, 150)}...</p>
+        <p className="post-introduction">{introduction}</p>
         <p className="post-tag-list">{post_tags}</p>
       </div>
     );
