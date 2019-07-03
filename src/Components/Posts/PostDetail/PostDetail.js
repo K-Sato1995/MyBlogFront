@@ -137,7 +137,7 @@ class PostDetail extends React.Component {
           <div className="wrapper" style={showLeftContainer} />
           <div className="post-left-container" style={showLeftContainer}>
             <Toc
-              content={this.state.data.context}
+              content={this.state.data.content}
               postId={this.state.data.id}
             />
           </div>
@@ -156,7 +156,7 @@ class PostDetail extends React.Component {
                 </p>
               </div>
               <ReactMarkdown
-                source={this.state.data.context}
+                source={this.state.data.content}
                 renderers={{
                   code: CodeBlock,
                   heading: HeadingRenderer
