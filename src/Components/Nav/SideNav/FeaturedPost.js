@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 class FeaturedPost extends React.Component {
   render() {
+    const { id, title } = this.props;
     return (
-      <Link to={`/Post/${this.props.id}`} className="featured-post-title">
-        {this.props.title}
+      <Link to={`/Post/${id}`} className="featured-post-title">
+        {title}
       </Link>
     );
   }

@@ -5,15 +5,13 @@ import "../../../Design/Nav/Settings.scss";
 
 export default class Settings extends React.Component {
   render() {
+    const { toggleLocale, lang, handleToggleTheme, darkTheme } = this.props;
     return (
       <div className="settings-box">
-        <LangBtn
-          toggleLocale={this.props.toggleLocale}
-          lang={this.props.lang}
-        />
+        <LangBtn toggleLocale={toggleLocale} lang={lang} />
         <ThemeButton
-          handleToggleTheme={this.props.handleToggleTheme}
-          darkTheme={this.props.darkTheme}
+          handleToggleTheme={handleToggleTheme}
+          darkTheme={darkTheme}
         />
       </div>
     );

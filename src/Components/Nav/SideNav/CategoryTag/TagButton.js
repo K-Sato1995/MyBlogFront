@@ -3,13 +3,10 @@ import "../../../../Design/Posts/PostList/PostList.scss";
 
 class TagButton extends React.Component {
   render() {
+    const { value, updateTag, name } = this.props;
     return (
-      <button
-        value={this.props.value}
-        onClick={this.props.updateTag}
-        className="tag-button"
-      >
-        #{this.props.name}
+      <button value={value} onClick={updateTag} className="tag-button">
+        #{name}
       </button>
     );
   }

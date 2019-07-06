@@ -3,23 +3,24 @@ import React from "react";
 
 class CategoryButton extends React.Component {
   render() {
+    const { activeCategory, value, updateCategory, name } = this.props;
     const ActiveButtonName = `category-button-active`;
     const categoryButton =
-      this.props.activeCategory === this.props.value ? (
+      activeCategory === value ? (
         <button
-          value={this.props.value}
-          onClick={this.props.updateCategory}
+          value={value}
+          onClick={updateCategory}
           className={ActiveButtonName}
         >
-          {this.props.name}
+          {name}
         </button>
       ) : (
         <button
-          value={this.props.value}
-          onClick={this.props.updateCategory}
+          value={value}
+          onClick={updateCategory}
           className="category-button"
         >
-          {this.props.name}
+          {name}
         </button>
       );
     return <React.Fragment>{categoryButton}</React.Fragment>;

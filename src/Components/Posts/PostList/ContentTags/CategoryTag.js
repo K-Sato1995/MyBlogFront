@@ -3,14 +3,13 @@ import "../../../../Design/Posts/PostList/ContentTags.scss";
 
 export default class CategoryTag extends React.Component {
   render() {
-    const category = this.props.categories.filter(
-      category => category.id === this.props.category
-    );
-    const name = category[0] ? category[0].name : "";
+    const { categories, category, resetCategory } = this.props;
+    const categoryTag = categories.filter(c => c.id === category);
+    const tagName = categoryTag[0] ? categoryTag[0].name : "";
     return (
-      <div className="category-tag" onClick={this.props.resetCategory}>
+      <div className="category-tag" onClick={resetCategory}>
         <span>
-          Category: <span className="content-tag-name">{name}</span>
+          Category: <span className="content-tag-name">{tagName}</span>
         </span>
       </div>
     );

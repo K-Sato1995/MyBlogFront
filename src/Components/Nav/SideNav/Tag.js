@@ -3,22 +3,15 @@ import React from "react";
 
 class Tag extends React.Component {
   render() {
+    const { value, updateTag, name, activeTag } = this.props;
     const TagButton =
-      this.props.activeTag === this.props.value ? (
-        <button
-          className="tag-active"
-          value={this.props.value}
-          onClick={this.props.updateTag}
-        >
-          #{this.props.name}
+      activeTag === value ? (
+        <button className="tag-active" value={value} onClick={updateTag}>
+          #{name}
         </button>
       ) : (
-        <button
-          className="tag"
-          value={this.props.value}
-          onClick={this.props.updateTag}
-        >
-          #{this.props.name}
+        <button className="tag" value={value} onClick={updateTag}>
+          #{name}
         </button>
       );
 

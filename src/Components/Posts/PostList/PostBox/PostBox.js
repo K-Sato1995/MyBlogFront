@@ -27,19 +27,20 @@ class PostBox extends React.Component {
     this.setState({ hover: false });
   }
   render() {
-    const post_tags = this.props.tags.map((tag, index) => (
+    const { tags, updateTag, introduction, id, title } = this.props;
+
+    const post_tags = tags.map((tag, index) => (
       <TagButton
         key={index}
         value={tag.id}
-        updateTag={this.props.updateTag}
+        updateTag={updateTag}
         name={tag.name}
       />
     ));
-    const intro = this.props.introduction ? this.props.introduction : "";
-    const introduction =
-      this.props.introduction.length < 200
-        ? intro
-        : `${intro.substring(0, 200)}...`;
+    const intro =
+      introduction.length < 200
+        ? introduction
+        : `${introduction.substring(0, 200)}...`;
     return (
       <div
         className="post-box"
@@ -47,11 +48,11 @@ class PostBox extends React.Component {
         onMouseLeave={this.toggleOff}
       >
         <h3 className="post-title">
-          <Link to={`/Post/${this.props.id}`} className="post-title-link">
-            {this.props.title}
+          <Link to={`/Post/${id}`} className="post-title-link">
+            {title}
           </Link>
         </h3>
-        <p className="post-introduction">{introduction}</p>
+        <p className="post-introduction">{intro}</p>
         <p className="post-tag-list">{post_tags}</p>
       </div>
     );
