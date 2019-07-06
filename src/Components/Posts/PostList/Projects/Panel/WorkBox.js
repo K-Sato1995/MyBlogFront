@@ -2,16 +2,17 @@ import React from "react";
 
 class WorkBox extends React.Component {
   render() {
+    const { href, title, description, language } = this.props;
     return (
       <div className="work-box">
         <h5>
-          <a href={this.props.href} target="_blank" rel="noopener noreferrer">
-            {this.props.title}
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {title}
           </a>
         </h5>
-        <p>{this.props.description}</p>
-        <div className={this.props.language} />
-        <span className="work-box-languag-name">{this.props.language}</span>
+        <p>{description}</p>
+        <div className={language} />
+        <span className="work-box-languag-name">{language}</span>
       </div>
     );
   }

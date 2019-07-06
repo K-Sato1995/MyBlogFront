@@ -114,23 +114,35 @@ class PostsList extends React.Component {
     this.setState({ tag: 0 });
   }
   render() {
+    const {
+      posts,
+      categories,
+      tags,
+      search,
+      category,
+      tag,
+      postList,
+      about,
+      projects,
+      loading
+    } = this.state;
     // Array.prototype.filter() is Array#select in Ruby.
-    const filterd_posts = this.state.posts.filter(post => {
+    const filterd_posts = posts.filter(post => {
       let postTags = [];
       post.tags.map(tag => postTags.push(tag.id));
 
       // Conditions
-      const all_not_zero = this.state.category !== 0 && this.state.tag !== 0;
-      const tag_not_zero = this.state.tag !== 0;
-      const catgory_not_zero = this.state.category !== 0;
+      const all_not_zero = category !== 0 && tag !== 0;
+      const tag_not_zero = tag !== 0;
+      const catgory_not_zero = category !== 0;
 
       // Check post
       const isLanguage = this.props.lang === post.language.substring(0, 2);
-      const taggedPost = postTags.includes(this.state.tag);
-      const categoryPost = post.category_id === this.state.category;
+      const taggedPost = postTags.includes(tag);
+      const categoryPost = post.category_id === category;
       const searchedPost = post.title
         .toLowerCase()
-        .includes(this.state.search.toLowerCase());
+        .includes(search.toLowerCase());
 
       if (all_not_zero) {
         return categoryPost && taggedPost && searchedPost && isLanguage;
@@ -143,7 +155,7 @@ class PostsList extends React.Component {
       }
     });
 
-    const postList =
+    const VisiblepostList =
       filterd_posts.length !== 0 ? (
         filterd_posts.map((post, index) => (
           <PostBox
@@ -158,14 +170,14 @@ class PostsList extends React.Component {
             created_at={post.created_at}
           />
         ))
-      ) : this.state.loading === false ? (
+      ) : loading === false ? (
         <NoPostFound showAllPosts={this.showAllPosts} />
       ) : (
         ""
       );
 
     const postContent =
-      this.state.loading === true ? (
+      loading === true ? (
         <ContentLoader height={300}>
           <rect x="20" y="10" rx="2.5" ry="2.5" width="350" height="20" />
           <rect x="20" y="50" rx="2.5" ry="2.5" width="350" height="20" />
@@ -176,21 +188,21 @@ class PostsList extends React.Component {
           <rect x="20" y="250" rx="2.5" ry="2.5" width="350" height="20" />
         </ContentLoader>
       ) : (
-        <div className="postList">{postList}</div>
+        <div className="postList">{VisiblepostList}</div>
       );
 
     let Content;
-    if (this.state.postList) {
+    if (postList) {
       Content = postContent;
-    } else if (this.state.about) {
+    } else if (about) {
       Content = <About />;
-    } else if (this.state.projects) {
+    } else if (projects) {
       Content = <Projects />;
     } else {
       Content = postContent;
     }
 
-    const contentHeader = this.state.postList ? (
+    const contentHeader = postList ? (
       <ContentHeader
         headerTitle=<FormattedMessage
           id="contentHeader.blogPosts"
@@ -207,29 +219,25 @@ class PostsList extends React.Component {
 
     // Content Tags
     const categoryTag =
-      this.state.category === 0 ? (
+      category === 0 ? (
         ""
       ) : (
         <CategoryTag
-          category={this.state.category}
-          categories={this.state.categories}
+          category={category}
+          categories={categories}
           resetCategory={this.resetCategory}
         />
       );
 
     const tagTag =
-      this.state.tag === 0 ? (
+      tag === 0 ? (
         ""
       ) : (
-        <TagTag
-          tag={this.state.tag}
-          tags={this.state.tags}
-          resetTag={this.resetTag}
-        />
+        <TagTag tag={tag} tags={tags} resetTag={this.resetTag} />
       );
 
     const contentTags =
-      this.state.tag === 0 && this.state.category === 0 ? (
+      tag === 0 && category === 0 ? (
         <div className="content-tag-box-hidden" />
       ) : (
         <div className="content-tag-box">
@@ -251,17 +259,17 @@ class PostsList extends React.Component {
           <SideNav
             setLocale={this.props.setLocale}
             lang={this.props.lang}
-            posts={this.state.posts}
-            tags={this.state.tags}
-            tag={this.state.tag}
-            loading={this.state.loading}
-            search={this.state.search}
+            posts={posts}
+            tags={tags}
+            tag={tag}
+            loading={loading}
+            search={search}
             updateSearch={this.updateSearch}
             updateTag={this.updateTag}
-            categories={this.state.categories}
-            category={this.state.category}
+            categories={categories}
+            category={category}
             updateCategory={this.updateCategory}
-            postList={this.state.postList}
+            postList={postList}
             onClickPostList={this.onClickPostList}
             onClickAbout={this.onClickAbout}
             onClickProjects={this.onClickProjects}

@@ -7,14 +7,22 @@ import { ArrowLeft } from "react-feather";
 
 class Nav extends React.Component {
   render() {
-    const hmbMenu = this.props.showLeftContainer
+    const {
+      showLeftContainer,
+      handleToggleLeftContainer,
+      toggleLocale,
+      handleToggleTheme,
+      darkTheme,
+      lang
+    } = this.props;
+    const hmbMenu = showLeftContainer
       ? {
           display: "none"
         }
       : {
           display: "block"
         };
-    const closeTab = this.props.showLeftContainer
+    const closeTab = showLeftContainer
       ? {
           display: "block"
         }
@@ -25,14 +33,14 @@ class Nav extends React.Component {
       <div className="navbar">
         <button
           className="mobile-nav-btn"
-          onClick={this.props.handleToggleLeftContainer}
+          onClick={handleToggleLeftContainer}
           style={hmbMenu}
         >
           <span className="glyphicon glyphicon-menu-hamburger" />
         </button>
 
         <div className="close-tab" style={closeTab}>
-          <button onClick={this.props.handleToggleLeftContainer}>
+          <button onClick={handleToggleLeftContainer}>
             <ArrowLeft size={32} />
           </button>
         </div>
@@ -43,10 +51,10 @@ class Nav extends React.Component {
             </span>
           </Link>
           <Settings
-            toggleLocale={this.props.toggleLocale}
-            lang={this.props.lang}
-            handleToggleTheme={this.props.handleToggleTheme}
-            darkTheme={this.props.darkTheme}
+            toggleLocale={toggleLocale}
+            lang={lang}
+            handleToggleTheme={handleToggleTheme}
+            darkTheme={darkTheme}
           />
         </div>
       </div>

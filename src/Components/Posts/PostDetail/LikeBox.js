@@ -10,17 +10,16 @@ import {
 
 class LikeBox extends React.Component {
   render() {
-    const pageUrl = `https://k-sato1995.github.io/MyBlogFront/#/Post/${
-      this.props.pageId
-    }`;
+    const { pageId, addLike, like } = this.props;
+    const pageUrl = `https://k-sato1995.github.io/MyBlogFront/#/Post/${pageId}`;
     const comment = "Check out K-Sato's post";
 
     return (
       <div className="like-box">
-        <button className="like-button" onClick={() => this.props.addLike()}>
+        <button className="like-button" onClick={() => addLike()}>
           <span className="glyphicon glyphicon-thumbs-up" />
         </button>
-        <p className="like-number">{this.props.like}</p>
+        <p className="like-number">{like}</p>
         <TwitterShareButton title={comment} url={pageUrl} className="snn-link">
           <TwitterIcon size={43} round={true} />
         </TwitterShareButton>

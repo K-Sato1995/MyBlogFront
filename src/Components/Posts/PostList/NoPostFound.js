@@ -1,10 +1,10 @@
 import React from "react";
 import "../../../Design/Posts/PostList/NoPostFound.scss";
-import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
 class NoPostFound extends React.Component {
   render() {
+    const { showAllPosts } = this.props;
     return (
       <div className="no-post-found-box">
         <img
@@ -18,7 +18,7 @@ class NoPostFound extends React.Component {
         <button
           value={0}
           name={"All"}
-          onClick={this.props.showAllPosts}
+          onClick={showAllPosts}
           className="show-all-posts-btn"
         >
           <FormattedMessage

@@ -46,22 +46,38 @@ export default class SideNav extends React.Component {
     this.setState({ featuredPosts: false });
   }
   render() {
-    const categoryArrow = this.state.categoryList ? (
+    const { categoryList, tagList, featuredPosts, links } = this.state;
+    const {
+      postList,
+      loading,
+      posts,
+      categories,
+      search,
+      tags,
+      onClickPostList,
+      onClickAbout,
+      onClickProjects,
+      updateCategory,
+      updateTag,
+      updateSearch
+    } = this.props;
+    // const {}
+    const categoryArrow = categoryList ? (
       <ChevronDown className="chevron-down" />
     ) : (
       <ChevronRight className="chevron-right" />
     );
-    const tagArrow = this.state.tagList ? (
+    const tagArrow = tagList ? (
       <ChevronDown className="chevron-down" />
     ) : (
       <ChevronRight className="chevron-right" />
     );
-    const featuredPostsArrow = this.state.featuredPosts ? (
+    const featuredPostsArrow = featuredPosts ? (
       <ChevronDown className="chevron-down" />
     ) : (
       <ChevronRight className="chevron-right" />
     );
-    const linksArrow = this.state.links ? (
+    const linksArrow = links ? (
       <ChevronDown className="chevron-down" />
     ) : (
       <ChevronRight className="chevron-right" />
@@ -74,28 +90,28 @@ export default class SideNav extends React.Component {
         <rect x="20" y="110" rx="4" ry="4" width="300" height="15" />
       </ContentLoader>
     );
-    const categories = this.props.loading
+    const categoryItems = loading
       ? listLoader
-      : this.props.categories.map((category, index) => (
+      : categories.map((category, index) => (
           <li className="list-item">
             <CategoryButton
-              activeCategory={this.props.category}
+              activeCategory={category}
               value={category.id}
               name={category.name}
-              updateCategory={this.props.updateCategory}
+              updateCategory={updateCategory}
               key={index}
-              onClickPostList={this.props.onClickPostList}
+              onClickPostList={onClickPostList}
             />
           </li>
         ));
-    const featuredPosts = this.props.loading
+    const featuredPostList = loading
       ? listLoader
-      : this.props.posts.slice(0, 4).map((post, index) => (
+      : posts.slice(0, 4).map((post, index) => (
           <li className="list-item">
             <FeaturedPost key={index} title={post.title} id={post.id} />
           </li>
         ));
-    const links = (
+    const linkList = (
       <React.Fragment>
         <li className="list-item">
           <a href="https://dev.to/ksato1995" className="list-item-ele">
@@ -137,29 +153,26 @@ export default class SideNav extends React.Component {
         </li>
       </React.Fragment>
     );
-    const tags = this.props.loading
+    const tagItems = loading
       ? listLoader
-      : this.props.tags.map((tag, index) => (
+      : tags.map((tag, index) => (
           <li className="list-item">
             <Tag
-              activeTag={this.props.tag}
+              activeTag={tag}
               key={index}
               value={tag.id}
               name={tag.name}
-              updateTag={this.props.updateTag}
+              updateTag={updateTag}
             />
           </li>
         ));
-    const postNav = this.props.postList ? (
+    const postNav = postList ? (
       <React.Fragment>
-        <SearchBar
-          value={this.props.search}
-          updateSearch={this.props.updateSearch}
-        />
+        <SearchBar value={search} updateSearch={updateSearch} />
         {/* ListGroup1 */}
         <div className="list-group">
           <button
-            id={this.state.categoryList ? "active" : ""}
+            id={categoryList ? "active" : ""}
             className="list-title"
             onClick={() => this.toggleCategoryList()}
           >
@@ -169,30 +182,30 @@ export default class SideNav extends React.Component {
             />
             {categoryArrow}
           </button>
-          <ul id={this.state.categoryList ? "show" : "hide"} className="list">
-            {categories}
+          <ul id={categoryList ? "show" : "hide"} className="list">
+            {categoryItems}
           </ul>
         </div>
 
         {/* ListGroup2 */}
         <div className="list-group">
           <button
-            id={this.state.tagList ? "active" : ""}
+            id={tagList ? "active" : ""}
             className="list-title"
             onClick={() => this.toggleTagList()}
           >
             <FormattedMessage id="sideNav.tagList" defaultMessage="Tag List" />
             {tagArrow}
           </button>
-          <ul id={this.state.tagList ? "show" : "hide"} className="list">
-            {tags}
+          <ul id={tagList ? "show" : "hide"} className="list">
+            {tagItems}
           </ul>
         </div>
 
         {/* ListGroup3 */}
         <div className="list-group">
           <button
-            id={this.state.featuredPosts ? "active" : ""}
+            id={featuredPosts ? "active" : ""}
             className="list-title"
             onClick={() => this.toggleFeaturedPosts()}
           >
@@ -202,18 +215,14 @@ export default class SideNav extends React.Component {
             />
             {featuredPostsArrow}
           </button>
-          <ul id={this.state.featuredPosts ? "show" : "hide"} className="list">
-            {featuredPosts}
+          <ul id={featuredPosts ? "show" : "hide"} className="list">
+            {featuredPostList}
           </ul>
         </div>
       </React.Fragment>
     ) : (
       <div className="list-group">
-        <button
-          className="list-title"
-          id="blogPosts"
-          onClick={this.props.onClickPostList}
-        >
+        <button className="list-title" id="blogPosts" onClick={onClickPostList}>
           <FormattedMessage
             id="sideNav.blogPosts"
             defaultMessage="Blog Posts"
@@ -232,28 +241,28 @@ export default class SideNav extends React.Component {
           {/* ListGroup4 */}
           <div className="list-group">
             <button
-              id={this.state.links ? "active" : ""}
+              id={links ? "active" : ""}
               className="list-title"
               onClick={() => this.toggleLinks()}
             >
               <FormattedMessage id="sideNav.Links" defaultMessage="Links" />
               {linksArrow}
             </button>
-            <ul id={this.state.links ? "show" : "hide"} className="list">
-              {links}
+            <ul id={links ? "show" : "hide"} className="list">
+              {linkList}
             </ul>
           </div>
 
           {/* ListGroup5 */}
           <div className="list-group">
-            <button className="list-title" onClick={this.props.onClickAbout}>
+            <button className="list-title" onClick={onClickAbout}>
               <FormattedMessage id="sideNav.about" defaultMessage="About Me" />
             </button>
           </div>
 
           {/* ListGroup6 */}
           <div className="list-group">
-            <button className="list-title" onClick={this.props.onClickProjects}>
+            <button className="list-title" onClick={onClickProjects}>
               <FormattedMessage
                 id="sideNav.projects"
                 defaultMessage="Projects"
