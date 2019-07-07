@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Design/Footer/Footer.scss";
-// import { FormattedMessage } from "react-intl";
 
 class Footer extends React.Component {
   render() {

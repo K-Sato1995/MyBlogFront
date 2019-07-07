@@ -9,7 +9,7 @@ import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import About from "./About";
 import Projects from "./Projects/Projects";
-import Footer from "../../Footer/Footer";
+import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
 
 const api = {

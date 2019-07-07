@@ -8,10 +8,10 @@ import LikeBox from "./LikeBox";
 import breaks from "remark-breaks";
 import Toc from "./SideNav/Toc";
 import ContentLoader from "react-content-loader";
-import Footer from "../../Footer/Footer";
+import Footer from "../../Footer";
 
 const api = {
-  baseUrl: "https://k-blog0130.herokuapp.com/"
+  baseUrl: "http://localhost:3000/"
 };
 
 function flatten(text, child) {
@@ -53,6 +53,7 @@ class PostDetail extends React.Component {
     return `${year}/${month}/${day}`;
   }
   getPosts = () => {
+    console.log(this.props.match.params);
     const id = this.props.match.params.id;
     fetch(`${api.baseUrl}api/v1/posts/${id}`)
       .then(response => response.json())
@@ -65,7 +66,7 @@ class PostDetail extends React.Component {
   };
 
   addLike = () => {
-    const id = this.state.data.id;
+    const id = this.state.data.post.id;
     fetch(`${api.baseUrl}en/api/v1/posts/${id}/like`, {
       method: "PUT"
     })
@@ -136,27 +137,27 @@ class PostDetail extends React.Component {
         <div className="post-container">
           <div className="wrapper" style={showLeftContainer} />
           <div className="post-left-container" style={showLeftContainer}>
-            <Toc
-              content={this.state.data.content}
-              postId={this.state.data.id}
-            />
+            {/* <Toc
+              content={this.state.data.post.content}
+              postId={this.state.data.post.id}
+            /> */}
           </div>
           {/* <LikeBox
             addLike={this.addLike}
-            like={this.state.data.like}
+            like={this.state.data.post.like}
             pageId={id}
           /> */}
 
           <div className="post-main-container">
             <div className="post-content-container">
               <div className="post-detail-title">
-                <h1 className="title">{this.state.data.title}</h1>
+                <h1 className="title">{this.state.data.post.title}</h1>
                 <p className="post-created-date">
-                  {this.formatDate(this.state.data.created_at)}
+                  {this.formatDate(this.state.data.post.created_at)}
                 </p>
               </div>
               <ReactMarkdown
-                source={this.state.data.content}
+                source={this.state.data.post.content}
                 renderers={{
                   code: CodeBlock,
                   heading: HeadingRenderer
@@ -165,7 +166,7 @@ class PostDetail extends React.Component {
                 className="post-content"
               />
               <span className="page-views">
-                {this.state.data.page_views} Page Views
+                {this.state.data.post.page_views} Page Views
               </span>
               <PostAuthor />
               <Footer />
