@@ -13,9 +13,11 @@ import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
 
 const api = {
-  baseUrl: "https://k-blog0130.herokuapp.com/"
+  baseUrl:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/"
+      : "https://k-blog0130.herokuapp.com/"
 };
-
 class PostsList extends React.Component {
   constructor() {
     super();
@@ -155,7 +157,7 @@ class PostsList extends React.Component {
       }
     });
 
-    const VisiblepostList =
+    const VisiblePostList =
       filterd_posts.length !== 0 ? (
         filterd_posts.map((post, index) => (
           <PostBox
@@ -165,6 +167,7 @@ class PostsList extends React.Component {
             introduction={post.introduction}
             category={post.category_id}
             tags={post.tags}
+            slug={post.slug}
             updateTag={this.updateTag}
             updateCategory={this.updateCategory}
             created_at={post.created_at}
@@ -188,7 +191,7 @@ class PostsList extends React.Component {
           <rect x="20" y="250" rx="2.5" ry="2.5" width="350" height="20" />
         </ContentLoader>
       ) : (
-        <div className="postList">{VisiblepostList}</div>
+        <div className="postList">{VisiblePostList}</div>
       );
 
     let Content;
@@ -255,6 +258,7 @@ class PostsList extends React.Component {
     return (
       <div className="whole-container">
         <div className="wrapper" style={showLeftContainer} />
+        {console.log(posts)}
         <div className="left-container" style={showLeftContainer}>
           <SideNav
             setLocale={this.props.setLocale}

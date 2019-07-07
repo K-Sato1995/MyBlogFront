@@ -11,7 +11,10 @@ import ContentLoader from "react-content-loader";
 import Footer from "../../Footer";
 
 const api = {
-  baseUrl: "http://localhost:3000/"
+  baseUrl:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/"
+      : "https://k-blog0130.herokuapp.com/"
 };
 
 function flatten(text, child) {
@@ -43,7 +46,7 @@ class PostDetail extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.getPosts();
+    this.getPost();
   }
   formatDate(date) {
     const dateObject = new Date(date);
@@ -52,10 +55,9 @@ class PostDetail extends React.Component {
     const year = dateObject.getFullYear();
     return `${year}/${month}/${day}`;
   }
-  getPosts = () => {
-    console.log(this.props.match.params);
-    const id = this.props.match.params.id;
-    fetch(`${api.baseUrl}api/v1/posts/${id}`)
+  getPost = () => {
+    const slug = this.props.match.params.id;
+    fetch(`${api.baseUrl}api/v1/posts/${slug}`)
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -137,17 +139,16 @@ class PostDetail extends React.Component {
         <div className="post-container">
           <div className="wrapper" style={showLeftContainer} />
           <div className="post-left-container" style={showLeftContainer}>
-            {/* <Toc
+            <Toc
               content={this.state.data.post.content}
               postId={this.state.data.post.id}
-            /> */}
+            />
           </div>
           {/* <LikeBox
             addLike={this.addLike}
             like={this.state.data.post.like}
             pageId={id}
           /> */}
-
           <div className="post-main-container">
             <div className="post-content-container">
               <div className="post-detail-title">

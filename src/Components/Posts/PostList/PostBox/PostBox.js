@@ -27,8 +27,7 @@ class PostBox extends React.Component {
     this.setState({ hover: false });
   }
   render() {
-    const { tags, updateTag, introduction, id, title } = this.props;
-
+    const { tags, updateTag, introduction, slug, title } = this.props;
     const post_tags = tags.map((tag, index) => (
       <TagButton
         key={index}
@@ -48,7 +47,7 @@ class PostBox extends React.Component {
         onMouseLeave={this.toggleOff}
       >
         <h3 className="post-title">
-          <Link to={`/Post/${id}`} className="post-title-link">
+          <Link to={`/Post/${slug}`} className="post-title-link">
             {title}
           </Link>
         </h3>
