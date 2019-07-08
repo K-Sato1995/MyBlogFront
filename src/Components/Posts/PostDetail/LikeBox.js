@@ -16,11 +16,11 @@ class LikeBox extends React.Component {
 
     return (
       <div className="like-box">
-        <button className="like-button" onClick={() => addLike()}>
+        <button className="like-button" onClick={() => addLike(pageId)}>
           <span className="glyphicon glyphicon-thumbs-up" />
         </button>
         <p className="like-number">{like}</p>
-        <TwitterShareButton title={comment} url={pageUrl} className="snn-link">
+        {/* <TwitterShareButton title={comment} url={pageUrl} className="snn-link">
           <TwitterIcon size={43} round={true} />
         </TwitterShareButton>
 
@@ -30,7 +30,7 @@ class LikeBox extends React.Component {
 
         <LineShareButton title={comment} url={pageUrl} className="snn-link">
           <LineIcon size={43} round={true} />
-        </LineShareButton>
+        </LineShareButton> */}
       </div>
     );
   }
