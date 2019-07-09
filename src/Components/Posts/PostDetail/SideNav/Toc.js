@@ -4,6 +4,7 @@ import "../../../../Design/Posts/PostDetail/Toc.scss";
 import { FormattedMessage } from "react-intl";
 import { ChevronRight } from "react-feather";
 import { ChevronDown } from "react-feather";
+import { stringReplacer, createLink, returnTitle } from "./Renderers";
 
 export default class Toc extends React.Component {
   constructor(props) {
@@ -12,34 +13,17 @@ export default class Toc extends React.Component {
       filter: false
     };
   }
-  stringReplacer(string, regex, mark) {
-    return string.replace(regex, mark);
-  }
-  createLink(string) {
-    var shapedString = string
-      .toLowerCase()
-      .replace(/#+\s/, "#")
-      .trimRight();
-    var strArr = shapedString.split(" ");
-    var anchor = strArr.join("-");
-    return this.stringReplacer(anchor, /[?!]/g, "-");
-  }
-  returnTitle(string) {
-    const link = this.createLink(string);
-    const postPath = `/Post/${this.props.postId}`;
-    return (
-      <Link to={`${postPath}${link}`} className="toc-title">
-        {`${this.stringReplacer(string, /#+/g, "")}`}
-      </Link>
-    );
-  }
+
   createAnchorLink(string) {
+    const { filter } = this.state;
+    const postPath = `/Post/${this.props.postId}`;
+
     if (/^#{1}\s[\s\S]/.test(string)) {
-      return <li className="header1">{this.returnTitle(string)}</li>;
-    } else if (/^#{2}\s[\s\S]/.test(string) && this.state.filter === false) {
-      return <li className="header2">{this.returnTitle(string)}</li>;
-    } else if (/^#{3}\s[\s\S]/.test(string) && this.state.filter === false) {
-      return <li className="header3">{this.returnTitle(string)}</li>;
+      return <li className="header1">{returnTitle(string, postPath)}</li>;
+    } else if (/^#{2}\s[\s\S]/.test(string) && filter === false) {
+      return <li className="header2">{returnTitle(string, postPath)}</li>;
+    } else if (/^#{3}\s[\s\S]/.test(string) && filter === false) {
+      return <li className="header3">{returnTitle(string, postPath)}</li>;
     } else {
       return "";
     }
@@ -48,9 +32,10 @@ export default class Toc extends React.Component {
     this.setState({ filter: !this.state.filter });
   }
   render() {
+    const { filter } = this.state;
     const regex = /#+\s[\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf\w\s!?()//]+\n/g;
     const codeRegex = /```*([\s\S]+?)```/g;
-    const content = this.stringReplacer(this.props.content, codeRegex, " ");
+    const content = stringReplacer(this.props.content, codeRegex, " ");
     let headers;
     if (typeof content === "string") {
       headers = content.match(regex);
@@ -59,7 +44,7 @@ export default class Toc extends React.Component {
       headers === null
         ? ""
         : headers.map(header => <li>{this.createAnchorLink(header)}</li>);
-    const icon = this.state.filter ? <ChevronRight /> : <ChevronDown />;
+    const icon = filter ? <ChevronRight /> : <ChevronDown />;
     return (
       <div className="toc">
         <h3 className="toc-list-title">
