@@ -1,5 +1,5 @@
 import React from "react";
-import PostsList from "./PostList/PostsList";
+import PostsList from "./PostList";
 import NoMatch from "./PostList/NoMatch";
 import PostDetail from "./PostDetail";
 import { Route, Switch } from "react-router-dom";

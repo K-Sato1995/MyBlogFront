@@ -6,8 +6,8 @@ import PostAuthor from "./PostAuthor";
 import Toc from "./SideNav/Toc";
 import Loading from "./Loading";
 import Footer from "../../Footer";
-import { formatDate } from "./Renderers";
-import { getPost } from "../Api";
+import { formatDate } from "../../../MiddleWares/Renderers/Data";
+import { getPost } from "../../../MiddleWares/Api";
 
 class PostDetail extends React.Component {
   constructor() {

@@ -11,6 +11,7 @@ import About from "./About";
 import Projects from "./Projects/Projects";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
+import { getPosts } from "../../../MiddleWares/Api";
 
 const api = {
   baseUrl:
@@ -46,24 +47,22 @@ class PostsList extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.getPosts();
+    this.setData();
   }
-  getPosts = () => {
-    fetch(`${api.baseUrl}/api/v1/posts`)
-      .then(response => response.json())
-      .then(data => {
-        data.data.posts.map(
-          (post, index) => (post.tags = data.data.post_tags[index])
-        );
-        this.setState({
-          posts: data.data.posts,
-          categories: data.data.categories,
-          tags: data.data.tags,
-          post_tags: data.data.post_tags,
-          loading: false
-        });
+  setData() {
+    getPosts().then(data => {
+      data.data.posts.map(
+        (post, index) => (post.tags = data.data.post_tags[index])
+      );
+      this.setState({
+        posts: data.data.posts,
+        categories: data.data.categories,
+        tags: data.data.tags,
+        post_tags: data.data.post_tags,
+        loading: false
       });
-  };
+    });
+  }
   onClickPostList() {
     this.setState({ postList: true });
     this.setState({ about: false });
