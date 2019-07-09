@@ -24,7 +24,7 @@ class App extends Component {
       lang: "en",
       darkTheme: false,
       // For mobile style
-      showLeftContainer: false
+      showLC: false
     };
     this.toggleLocale = this.toggleLocale.bind(this);
     this.handleToggleTheme = this.handleToggleTheme.bind(this);
@@ -41,7 +41,7 @@ class App extends Component {
     this.setState({ darkTheme: !this.state.darkTheme });
   }
   handleToggleLeftContainer() {
-    this.setState({ showLeftContainer: !this.state.showLeftContainer });
+    this.setState({ showLC: !this.state.showLC });
   }
   render() {
     let theme = this.state.darkTheme ? "DarkTheme" : "LightTheme";
@@ -56,11 +56,11 @@ class App extends Component {
                 lang={this.state.lang}
                 handleToggleTheme={this.handleToggleTheme}
                 darkTheme={this.state.darkTheme}
-                showLeftContainer={this.state.showLeftContainer}
+                showLC={this.state.showLC}
                 handleToggleLeftContainer={this.handleToggleLeftContainer}
               />
               <Main
-                showLeftContainer={this.state.showLeftContainer}
+                showLC={this.state.showLC}
                 handleToggleLeftContainer={this.handleToggleLeftContainer}
                 lang={this.state.lang}
               />

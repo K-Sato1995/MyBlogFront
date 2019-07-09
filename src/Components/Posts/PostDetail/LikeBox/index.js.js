@@ -8,6 +8,13 @@ import {
   LineIcon
 } from "react-share";
 
+{
+  /* <LikeBox
+  addLike={addLike}
+  like={data.post.like}
+  pageId={data.post.id}
+/> */
+}
 class LikeBox extends React.Component {
   render() {
     const { pageId, addLike, like } = this.props;
@@ -20,7 +27,7 @@ class LikeBox extends React.Component {
           <span className="glyphicon glyphicon-thumbs-up" />
         </button>
         <p className="like-number">{like}</p>
-        {/* <TwitterShareButton title={comment} url={pageUrl} className="snn-link">
+        <TwitterShareButton title={comment} url={pageUrl} className="snn-link">
           <TwitterIcon size={43} round={true} />
         </TwitterShareButton>
 
@@ -30,7 +37,7 @@ class LikeBox extends React.Component {
 
         <LineShareButton title={comment} url={pageUrl} className="snn-link">
           <LineIcon size={43} round={true} />
-        </LineShareButton> */}
+        </LineShareButton>
       </div>
     );
   }

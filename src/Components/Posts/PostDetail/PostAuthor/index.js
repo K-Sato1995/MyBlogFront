@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Design/Posts/PostDetail/PostDetail.scss";
+import "../../../../Design/Posts/PostDetail/PostDetail.scss";
 import { FormattedMessage } from "react-intl";
 
 class PostAuthor extends React.Component {
@@ -9,7 +9,7 @@ class PostAuthor extends React.Component {
         <div className="post-detail-author-box-left">
           <img
             alt={"PENGUIN"}
-            src={require("../images/penguin.png")}
+            src={require("../../images/penguin.png")}
             className="post-author-penguin"
           />
         </div>

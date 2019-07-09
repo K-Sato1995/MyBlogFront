@@ -1,16 +1,12 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
 import "../../../Design/Highlight.scss";
-import ReactMarkdown from "react-markdown";
-import CodeBlock from "./CodeBlock";
+import MarkDown from "./MarkDown";
 import PostAuthor from "./PostAuthor";
-import LikeBox from "./LikeBox";
-import breaks from "remark-breaks";
 import Toc from "./SideNav/Toc";
-import MainLoading from "./Loading/main";
-import SideLoading from "./Loading/side";
+import Loading from "./Loading";
 import Footer from "../../Footer";
-import { HeadingRenderer, formatDate } from "./Renderers";
+import { formatDate } from "./Renderers";
 import { getPost } from "../Api";
 
 class PostDetail extends React.Component {
@@ -37,36 +33,18 @@ class PostDetail extends React.Component {
 
   render() {
     const { data, loading } = this.state;
-    const showLeftContainer = this.props.showLeftContainer
-      ? {
-          display: "block"
-        }
-      : {
-          display: "none"
-        };
+    const showLC = this.props.showLC
+      ? { display: "block" }
+      : { display: "none" };
     const main =
       loading === true ? (
-        <div className="post-container">
-          <div className="post-left-container" style={showLeftContainer}>
-            <SideLoading />
-          </div>
-          <div className="post-main-container">
-            <div className="post-loading-content-container">
-              <MainLoading />
-            </div>
-          </div>
-        </div>
+        <Loading showLC={showLC} />
       ) : (
         <div className="post-container">
-          <div className="wrapper" style={showLeftContainer} />
-          <div className="post-left-container" style={showLeftContainer}>
+          <div className="wrapper" style={showLC} />
+          <div className="post-left-container" style={showLC}>
             <Toc content={data.post.content} postId={data.post.id} />
           </div>
-          {/* <LikeBox
-            addLike={addLike}
-            like={data.post.like}
-            pageId={data.post.id}
-          /> */}
           <div className="post-main-container">
             <div className="post-content-container">
               <div className="post-detail-title">
@@ -75,15 +53,7 @@ class PostDetail extends React.Component {
                   {formatDate(data.post.created_at)}
                 </p>
               </div>
-              <ReactMarkdown
-                source={data.post.content}
-                renderers={{
-                  code: CodeBlock,
-                  heading: HeadingRenderer
-                }}
-                plugins={[breaks]}
-                className="post-content"
-              />
+              <MarkDown content={data.post.content} />
               <span className="page-views">
                 {data.post.page_views} Page Views
               </span>
