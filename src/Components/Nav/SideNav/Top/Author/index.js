@@ -1,7 +1,6 @@
 import React from "react";
-import "../../../Design/Nav/Author.scss";
+import "../../../../../Design/Nav/Author.scss";
 import { FormattedMessage } from "react-intl";
-import Emoji from "../../Emoji";
 
 class Author extends React.Component {
   render() {
@@ -14,7 +13,7 @@ class Author extends React.Component {
         >
           <img
             alt={"PENGUIN"}
-            src={require("../../Posts/images/gopher_me.png")}
+            src={require("../../../../Posts/images/gopher_me.png")}
             className="author-image"
           />
         </a>

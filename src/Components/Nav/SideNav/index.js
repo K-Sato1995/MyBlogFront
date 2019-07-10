@@ -1,15 +1,15 @@
 import React from "react";
 import "../../../Design/Nav/SideNav.scss";
-import Label from "./Label";
 import { FormattedMessage } from "react-intl";
 import FeaturedPost from "./FeaturedPost";
 import Tag from "./Tag";
 import SearchBar from "./SearchBar";
-import Author from "./Author";
 import CategoryButton from "./CategoryTag/CategoryButton";
 import ContentLoader from "react-content-loader";
 import { ChevronRight } from "react-feather";
 import { ChevronDown } from "react-feather";
+import Top from "./Top";
+import Bottom from "./Bottom";
 
 export default class SideNav extends React.Component {
   constructor(props) {
@@ -20,6 +20,10 @@ export default class SideNav extends React.Component {
       featuredPosts: false,
       links: false
     };
+    this.toggleLinks = this.toggleLinks.bind(this);
+    this.toggleCategoryList = this.toggleCategoryList.bind(this);
+    this.toggleTagList = this.toggleTagList.bind(this);
+    this.toggleFeaturedPosts = this.toggleFeaturedPosts.bind(this);
   }
   toggleCategoryList() {
     this.setState({ categoryList: !this.state.categoryList });
@@ -161,85 +165,30 @@ export default class SideNav extends React.Component {
             />
           </li>
         ));
-    const postNav = (
-      <React.Fragment>
-        <SearchBar value={search} updateSearch={updateSearch} />
-        {/* ListGroup1 */}
-        <div className="list-group">
-          <button
-            id={categoryList ? "active" : ""}
-            className="list-title"
-            onClick={() => this.toggleCategoryList()}
-          >
-            <FormattedMessage
-              id="sideNav.categoryList"
-              defaultMessage="Category List"
-            />
-            {categoryArrow}
-          </button>
-          <ul id={categoryList ? "show" : "hide"} className="list">
-            {categoryItems}
-          </ul>
-        </div>
 
-        {/* ListGroup2 */}
-        <div className="list-group">
-          <button
-            id={tagList ? "active" : ""}
-            className="list-title"
-            onClick={() => this.toggleTagList()}
-          >
-            <FormattedMessage id="sideNav.tagList" defaultMessage="Tag List" />
-            {tagArrow}
-          </button>
-          <ul id={tagList ? "show" : "hide"} className="list">
-            {tagItems}
-          </ul>
-        </div>
-
-        {/* ListGroup3 */}
-        <div className="list-group">
-          <button
-            id={featuredPosts ? "active" : ""}
-            className="list-title"
-            onClick={() => this.toggleFeaturedPosts()}
-          >
-            <FormattedMessage
-              id="sideNav.featuredPosts"
-              defaultMessage="Featured Posts"
-            />
-            {featuredPostsArrow}
-          </button>
-          <ul id={featuredPosts ? "show" : "hide"} className="list">
-            {featuredPostList}
-          </ul>
-        </div>
-      </React.Fragment>
-    );
     return (
       <div className="SideNavbar">
-        <div className="side-top">
-          <Author />
-        </div>
-
-        <div className="side-bottom">
-          {postNav}
-          {/* ListGroup4 */}
-          <div className="list-group">
-            <button
-              id={links ? "active" : ""}
-              className="list-title"
-              onClick={() => this.toggleLinks()}
-            >
-              <FormattedMessage id="sideNav.Links" defaultMessage="Links" />
-              {linksArrow}
-            </button>
-            <ul id={links ? "show" : "hide"} className="list">
-              {linkList}
-            </ul>
-          </div>
-          <Label />
-        </div>
+        <Top />
+        <Bottom
+          categoryList={categoryList}
+          categoryArrow={categoryArrow}
+          categoryItems={categoryItems}
+          tagList={tagList}
+          tagArrow={tagArrow}
+          tagItems={tagItems}
+          linksArrow={linksArrow}
+          links={links}
+          linkList={linkList}
+          featuredPosts={featuredPosts}
+          featuredPostsArrow={featuredPostsArrow}
+          featuredPostList={featuredPostList}
+          toggleFeaturedPosts={this.toggleFeaturedPosts}
+          toggleTagList={this.toggleTagList}
+          toggleCategoryList={this.toggleCategoryList}
+          toggleLinks={this.toggleLinks}
+          value={search}
+          updateSearch={updateSearch}
+        />
       </div>
     );
   }

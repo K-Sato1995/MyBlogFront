@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Design/Posts/PostList/NoPostFound.scss";
+import "../../../../Design/Posts/PostList/NoPostFound.scss";
 import { FormattedMessage } from "react-intl";
 
 class NoPostFound extends React.Component {
@@ -9,7 +9,7 @@ class NoPostFound extends React.Component {
       <div className="no-post-found-box">
         <img
           alt={"IMG"}
-          src={require("../images/no-post.svg")}
+          src={require("../../images/no-post.svg")}
           className="image"
         />
         <h2>

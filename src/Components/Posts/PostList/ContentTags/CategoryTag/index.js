@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../Design/Posts/PostList/ContentTags.scss";
+import "../../../../../Design/Posts/PostList/ContentTags.scss";
 
 export default class CategoryTag extends React.Component {
   render() {

@@ -1,10 +1,10 @@
 import React from "react";
-import PostBox from "./PostBox/PostBox";
+import PostBox from "./PostBox";
 import "../../../Design/Posts/PostList/PostList.scss";
-import ContentLoader from "react-content-loader";
+import Loading from "./Loading";
 import NoPostFound from "./NoPostFound";
-import SideNav from "../../Nav/SideNav";
 import ContentHeader from "./ContentHeader";
+import SideNav from "../../Nav/SideNav";
 import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
@@ -49,7 +49,6 @@ class PostsList extends React.Component {
       });
     });
   }
-
   updateSearch(e) {
     this.setState({ search: e.target.value });
   }
@@ -63,7 +62,6 @@ class PostsList extends React.Component {
     this.setState({ tag: parseInt(e.target.value) });
     window.scrollTo(0, 0);
   }
-
   showAllPosts() {
     this.setState({
       category: 0,
@@ -71,14 +69,13 @@ class PostsList extends React.Component {
       search: ""
     });
   }
-
   resetCategory() {
     this.setState({ category: 0 });
   }
-
   resetTag() {
     this.setState({ tag: 0 });
   }
+
   render() {
     const {
       posts,
@@ -142,32 +139,10 @@ class PostsList extends React.Component {
 
     const postContent =
       loading === true ? (
-        <ContentLoader height={300}>
-          <rect x="20" y="10" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="50" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="90" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="130" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="170" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="210" rx="2.5" ry="2.5" width="350" height="20" />
-          <rect x="20" y="250" rx="2.5" ry="2.5" width="350" height="20" />
-        </ContentLoader>
+        <Loading />
       ) : (
         <div className="postList">{VisiblePostList}</div>
       );
-
-    const contentHeader = (
-      <ContentHeader
-        headerTitle=<FormattedMessage
-          id="contentHeader.blogPosts"
-          defaultMessage="Blog Posts"
-        />
-        headerDescription=<FormattedMessage
-          id="contentHeader.blogDescription"
-          defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
-        />
-      />
-    );
-
     // Content Tags
     const categoryTag =
       category === 0 ? (
@@ -206,7 +181,6 @@ class PostsList extends React.Component {
     return (
       <div className="whole-container">
         <div className="wrapper" style={showLC} />
-        {console.log(posts)}
         <div className="left-container" style={showLC}>
           <SideNav
             setLocale={this.props.setLocale}
@@ -225,7 +199,16 @@ class PostsList extends React.Component {
         </div>
         <div className="main-container">
           <div className="content-container">
-            {contentHeader}
+            <ContentHeader
+              headerTitle=<FormattedMessage
+                id="contentHeader.blogPosts"
+                defaultMessage="Blog Posts"
+              />
+              headerDescription=<FormattedMessage
+                id="contentHeader.blogDescription"
+                defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
+              />
+            />
             {contentTags}
             {postContent}
             <Footer />

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Design/Posts/PostList/ContentHeader.scss";
+import "../../../../Design/Posts/PostList/ContentHeader.scss";
 
 export default class ContentHeader extends React.Component {
   render() {
