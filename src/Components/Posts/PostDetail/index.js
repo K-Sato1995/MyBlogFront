@@ -1,12 +1,9 @@
 import React from "react";
 import "../../../Design/Posts/PostDetail/PostDetail.scss";
 import "../../../Design/Highlight.scss";
-import MarkDown from "./MarkDown";
-import PostAuthor from "./PostAuthor";
-import Toc from "./SideNav/Toc";
 import Loading from "./Loading";
-import Footer from "../../Footer";
-import { formatDate } from "../../../MiddleWares/Renderers/Data";
+import MainContent from "./MainContent";
+import SideNav from "./SideNav";
 import { getPost } from "../../../MiddleWares/Api";
 
 class PostDetail extends React.Component {
@@ -42,25 +39,17 @@ class PostDetail extends React.Component {
       ) : (
         <div className="post-container">
           <div className="wrapper" style={showLC} />
-          <div className="post-left-container" style={showLC}>
-            <Toc content={data.post.content} postId={data.post.id} />
-          </div>
-          <div className="post-main-container">
-            <div className="post-content-container">
-              <div className="post-detail-title">
-                <h1 className="title">{data.post.title}</h1>
-                <p className="post-created-date">
-                  {formatDate(data.post.created_at)}
-                </p>
-              </div>
-              <MarkDown content={data.post.content} />
-              <span className="page-views">
-                {data.post.page_views} Page Views
-              </span>
-              <PostAuthor />
-              <Footer />
-            </div>
-          </div>
+          <SideNav
+            content={data.post.content}
+            slug={data.post.slug}
+            showLC={showLC}
+          />
+          <MainContent
+            title={data.post.title}
+            content={data.post.content}
+            created_at={data.post.created_at}
+            page_views={data.post.page_views}
+          />
         </div>
       );
     return <React.Fragment>{main}</React.Fragment>;

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const formatDate = date => {
   const dateObject = new Date(date);
   const month = dateObject.getMonth() + 1;

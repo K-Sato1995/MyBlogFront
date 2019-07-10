@@ -1,10 +1,12 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import "../../../../Design/Posts/PostDetail/Toc.scss";
+import "../../../../../Design/Posts/PostDetail/Toc.scss";
 import { FormattedMessage } from "react-intl";
 import { ChevronRight } from "react-feather";
 import { ChevronDown } from "react-feather";
-import { stringReplacer, createLink, returnTitle } from "./Renderers";
+import {
+  stringReplacer,
+  returnTitle
+} from "../../../../../MiddleWares/Renderers/Toc";
 
 export default class Toc extends React.Component {
   constructor(props) {
@@ -16,7 +18,7 @@ export default class Toc extends React.Component {
 
   createAnchorLink(string) {
     const { filter } = this.state;
-    const postPath = `/Post/${this.props.postId}`;
+    const postPath = `/Post/${this.props.slug}`;
 
     if (/^#{1}\s[\s\S]/.test(string)) {
       return <li className="header1">{returnTitle(string, postPath)}</li>;

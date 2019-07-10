@@ -88,7 +88,6 @@ class PostsList extends React.Component {
     this.setState({ search: e.target.value });
   }
   updateCategory(e) {
-    console.log("updateCategory");
     this.setState({
       tag: 0,
       category: parseInt(e.target.value)
