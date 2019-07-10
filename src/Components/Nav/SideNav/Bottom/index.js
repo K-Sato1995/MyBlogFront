@@ -27,34 +27,35 @@ export default class Bottom extends React.Component {
       toggleFeaturedPosts,
       toggleLinks,
       value,
-      updateSearch
+      updateSearch,
+      arrow
     } = this.props;
     return (
       <div className="side-bottom">
         <SearchBar value={value} updateSearch={updateSearch} />
         <CategoryList
           categoryList={categoryList}
-          categoryArrow={categoryArrow}
           categoryItems={categoryItems}
           toggleCategoryList={toggleCategoryList}
+          arrow={arrow}
         />
         <TagList
           tagList={tagList}
-          tagArrow={tagArrow}
           tagItems={tagItems}
           toggleTagList={toggleTagList}
+          arrow={arrow}
         />
         <FeaturedPosts
           featuredPosts={featuredPosts}
-          featuredPostsArrow={featuredPostsArrow}
           featuredPostList={featuredPostList}
           toggleFeaturedPosts={toggleFeaturedPosts}
+          arrow={arrow}
         />
         <Links
-          linksArrow={linksArrow}
           links={links}
           linkList={linkList}
           toggleLinks={toggleLinks}
+          arrow={arrow}
         />
         <Label />
       </div>

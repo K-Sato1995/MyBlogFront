@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 
 export default class CategoryList extends React.Component {
   render() {
-    const { categoryList, categoryArrow, categoryItems } = this.props;
+    const { categoryList, categoryArrow, categoryItems, arrow } = this.props;
     return (
       <div className="list-group">
         <button
@@ -15,7 +15,7 @@ export default class CategoryList extends React.Component {
             id="sideNav.categoryList"
             defaultMessage="Category List"
           />
-          {categoryArrow}
+          {arrow(categoryList)}
         </button>
         <ul id={categoryList ? "show" : "hide"} className="list">
           {categoryItems}

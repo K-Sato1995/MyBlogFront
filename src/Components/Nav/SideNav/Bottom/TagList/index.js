@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 
 export default class TagList extends React.Component {
   render() {
-    const { tagList, tagArrow, tagItems } = this.props;
+    const { tagList, arrow, tagItems } = this.props;
     return (
       <div className="list-group">
         <button
@@ -12,7 +12,7 @@ export default class TagList extends React.Component {
           onClick={() => this.props.toggleTagList()}
         >
           <FormattedMessage id="sideNav.tagList" defaultMessage="Tag List" />
-          {tagArrow}
+          {arrow(tagList)}
         </button>
         <ul id={tagList ? "show" : "hide"} className="list">
           {tagItems}

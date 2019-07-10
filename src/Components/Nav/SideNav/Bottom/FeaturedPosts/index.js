@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 
 export default class FeaturedPosts extends React.Component {
   render() {
-    const { featuredPosts, featuredPostsArrow, featuredPostList } = this.props;
+    const { featuredPosts, arrow, featuredPostList } = this.props;
     return (
       <div className="list-group">
         <button
@@ -15,7 +15,7 @@ export default class FeaturedPosts extends React.Component {
             id="sideNav.featuredPosts"
             defaultMessage="Featured Posts"
           />
-          {featuredPostsArrow}
+          {arrow(featuredPosts)}
         </button>
         <ul id={featuredPosts ? "show" : "hide"} className="list">
           {featuredPostList}

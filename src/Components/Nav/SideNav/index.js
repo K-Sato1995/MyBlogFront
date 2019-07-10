@@ -3,7 +3,6 @@ import "../../../Design/Nav/SideNav.scss";
 import { FormattedMessage } from "react-intl";
 import FeaturedPost from "./FeaturedPost";
 import Tag from "./Tag";
-import SearchBar from "./SearchBar";
 import CategoryButton from "./CategoryTag/CategoryButton";
 import ContentLoader from "react-content-loader";
 import { ChevronRight } from "react-feather";
@@ -62,26 +61,13 @@ export default class SideNav extends React.Component {
       updateSearch
     } = this.props;
     // const {}
-    const categoryArrow = categoryList ? (
-      <ChevronDown className="chevron-down" />
-    ) : (
-      <ChevronRight className="chevron-right" />
-    );
-    const tagArrow = tagList ? (
-      <ChevronDown className="chevron-down" />
-    ) : (
-      <ChevronRight className="chevron-right" />
-    );
-    const featuredPostsArrow = featuredPosts ? (
-      <ChevronDown className="chevron-down" />
-    ) : (
-      <ChevronRight className="chevron-right" />
-    );
-    const linksArrow = links ? (
-      <ChevronDown className="chevron-down" />
-    ) : (
-      <ChevronRight className="chevron-right" />
-    );
+    const arrow = target => {
+      if (target) {
+        return <ChevronDown className="chevron-down" />;
+      } else {
+        return <ChevronRight className="chevron-right" />;
+      }
+    };
     const listLoader = (
       <ContentLoader>
         <rect x="20" y="20" rx="4" ry="4" width="300" height="15" />
@@ -171,16 +157,12 @@ export default class SideNav extends React.Component {
         <Top />
         <Bottom
           categoryList={categoryList}
-          categoryArrow={categoryArrow}
           categoryItems={categoryItems}
           tagList={tagList}
-          tagArrow={tagArrow}
           tagItems={tagItems}
-          linksArrow={linksArrow}
           links={links}
           linkList={linkList}
           featuredPosts={featuredPosts}
-          featuredPostsArrow={featuredPostsArrow}
           featuredPostList={featuredPostList}
           toggleFeaturedPosts={this.toggleFeaturedPosts}
           toggleTagList={this.toggleTagList}
@@ -188,6 +170,7 @@ export default class SideNav extends React.Component {
           toggleLinks={this.toggleLinks}
           value={search}
           updateSearch={updateSearch}
+          arrow={arrow}
         />
       </div>
     );
