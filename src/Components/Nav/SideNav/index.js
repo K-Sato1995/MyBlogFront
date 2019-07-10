@@ -48,15 +48,11 @@ export default class SideNav extends React.Component {
   render() {
     const { categoryList, tagList, featuredPosts, links } = this.state;
     const {
-      postList,
       loading,
       posts,
       categories,
       search,
       tags,
-      onClickPostList,
-      onClickAbout,
-      onClickProjects,
       updateCategory,
       updateTag,
       updateSearch
@@ -100,7 +96,6 @@ export default class SideNav extends React.Component {
               name={category.name}
               updateCategory={updateCategory}
               key={index}
-              onClickPostList={onClickPostList}
             />
           </li>
         ));
@@ -166,7 +161,7 @@ export default class SideNav extends React.Component {
             />
           </li>
         ));
-    const postNav = postList ? (
+    const postNav = (
       <React.Fragment>
         <SearchBar value={search} updateSearch={updateSearch} />
         {/* ListGroup1 */}
@@ -220,15 +215,6 @@ export default class SideNav extends React.Component {
           </ul>
         </div>
       </React.Fragment>
-    ) : (
-      <div className="list-group">
-        <button className="list-title" id="blogPosts" onClick={onClickPostList}>
-          <FormattedMessage
-            id="sideNav.blogPosts"
-            defaultMessage="Blog Posts"
-          />
-        </button>
-      </div>
     );
     return (
       <div className="SideNavbar">
@@ -252,24 +238,6 @@ export default class SideNav extends React.Component {
               {linkList}
             </ul>
           </div>
-
-          {/* ListGroup5 */}
-          <div className="list-group">
-            <button className="list-title" onClick={onClickAbout}>
-              <FormattedMessage id="sideNav.about" defaultMessage="About Me" />
-            </button>
-          </div>
-
-          {/* ListGroup6 */}
-          <div className="list-group">
-            <button className="list-title" onClick={onClickProjects}>
-              <FormattedMessage
-                id="sideNav.projects"
-                defaultMessage="Projects"
-              />
-            </button>
-          </div>
-
           <Label />
         </div>
       </div>

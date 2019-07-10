@@ -3,22 +3,14 @@ import PostBox from "./PostBox/PostBox";
 import "../../../Design/Posts/PostList/PostList.scss";
 import ContentLoader from "react-content-loader";
 import NoPostFound from "./NoPostFound";
-import SideNav from "../../Nav/SideNav/SideNav";
+import SideNav from "../../Nav/SideNav";
 import ContentHeader from "./ContentHeader";
 import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
-import About from "./About";
-import Projects from "./Projects/Projects";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
 import { getPosts } from "../../../MiddleWares/Api";
 
-const api = {
-  baseUrl:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/"
-      : "https://k-blog0130.herokuapp.com/"
-};
 class PostsList extends React.Component {
   constructor() {
     super();
@@ -30,18 +22,12 @@ class PostsList extends React.Component {
       search: "",
       category: 0,
       tag: 0,
-      postList: true,
-      about: false,
-      projects: false,
       loading: true
     };
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
     this.updateTag = this.updateTag.bind(this);
     this.showAllPosts = this.showAllPosts.bind(this);
-    this.onClickPostList = this.onClickPostList.bind(this);
-    this.onClickAbout = this.onClickAbout.bind(this);
-    this.onClickProjects = this.onClickProjects.bind(this);
     this.resetCategory = this.resetCategory.bind(this);
     this.resetTag = this.resetTag.bind(this);
   }
@@ -63,27 +49,7 @@ class PostsList extends React.Component {
       });
     });
   }
-  onClickPostList() {
-    this.setState({ postList: true });
-    this.setState({ about: false });
-    this.setState({ projects: false });
-    this.setState({ category: 0 });
-    this.setState({ tag: 0 });
-  }
-  onClickAbout() {
-    this.setState({ about: true });
-    this.setState({ postList: false });
-    this.setState({ projects: false });
-    this.setState({ category: 0 });
-    this.setState({ tag: 0 });
-  }
-  onClickProjects() {
-    this.setState({ projects: true });
-    this.setState({ postList: false });
-    this.setState({ about: false });
-    this.setState({ category: 0 });
-    this.setState({ tag: 0 });
-  }
+
   updateSearch(e) {
     this.setState({ search: e.target.value });
   }
@@ -121,9 +87,6 @@ class PostsList extends React.Component {
       search,
       category,
       tag,
-      postList,
-      about,
-      projects,
       loading
     } = this.state;
     // Array.prototype.filter() is Array#select in Ruby.
@@ -192,18 +155,7 @@ class PostsList extends React.Component {
         <div className="postList">{VisiblePostList}</div>
       );
 
-    let Content;
-    if (postList) {
-      Content = postContent;
-    } else if (about) {
-      Content = <About />;
-    } else if (projects) {
-      Content = <Projects />;
-    } else {
-      Content = postContent;
-    }
-
-    const contentHeader = postList ? (
+    const contentHeader = (
       <ContentHeader
         headerTitle=<FormattedMessage
           id="contentHeader.blogPosts"
@@ -214,8 +166,6 @@ class PostsList extends React.Component {
           defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
         />
       />
-    ) : (
-      ""
     );
 
     // Content Tags
@@ -271,17 +221,13 @@ class PostsList extends React.Component {
             categories={categories}
             category={category}
             updateCategory={this.updateCategory}
-            postList={postList}
-            onClickPostList={this.onClickPostList}
-            onClickAbout={this.onClickAbout}
-            onClickProjects={this.onClickProjects}
           />
         </div>
         <div className="main-container">
           <div className="content-container">
             {contentHeader}
             {contentTags}
-            {Content}
+            {postContent}
             <Footer />
           </div>
         </div>
