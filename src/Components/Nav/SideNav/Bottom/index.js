@@ -1,6 +1,5 @@
 import React from "react";
 import Label from "./Label";
-import { FormattedMessage } from "react-intl";
 import CategoryList from "./Lists/CategoryList";
 import TagList from "./Lists/TagList";
 import FeaturedPostList from "./Lists/FeaturedPostList";
@@ -11,14 +10,9 @@ export default class Bottom extends React.Component {
   render() {
     const {
       categoryList,
-      categoryArrow,
-      categoryItems,
       featuredPosts,
-      featuredPostsArrow,
-      linksArrow,
       links,
       tagList,
-      tagArrow,
       toggleCategoryList,
       toggleTagList,
       toggleFeaturedPosts,

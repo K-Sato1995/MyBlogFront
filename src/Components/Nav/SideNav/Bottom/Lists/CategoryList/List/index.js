@@ -4,7 +4,7 @@ import Item from "./Item";
 
 export default class List extends React.Component {
   render() {
-    const { tags, loading, updateCategory, categories } = this.props;
+    const { loading, updateCategory, categories } = this.props;
     const categoryList = categories.map((category, index) => (
       <li className="list-item">
         <Item
@@ -16,7 +16,7 @@ export default class List extends React.Component {
         />
       </li>
     ));
-    if (this.props.loading) {
+    if (loading) {
       return <Loading />;
     } else {
       return categoryList;

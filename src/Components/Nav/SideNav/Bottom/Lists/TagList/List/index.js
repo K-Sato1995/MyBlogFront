@@ -16,7 +16,7 @@ export default class TagList extends React.Component {
         />
       </li>
     ));
-    if (this.props.loading) {
+    if (loading) {
       return <Loading />;
     } else {
       return tagList;

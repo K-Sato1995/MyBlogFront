@@ -4,7 +4,7 @@ import LinkList from "./List";
 
 export default class TagList extends React.Component {
   render() {
-    const { arrow, links, linkList, toggleLinks } = this.props;
+    const { arrow, links, toggleLinks } = this.props;
     return (
       <div className="list-group">
         <button

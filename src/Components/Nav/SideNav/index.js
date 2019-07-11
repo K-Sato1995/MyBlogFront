@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../Design/Nav/SideNav.scss";
-import { FormattedMessage } from "react-intl";
 import { ChevronRight } from "react-feather";
 import { ChevronDown } from "react-feather";
 import Top from "./Top";

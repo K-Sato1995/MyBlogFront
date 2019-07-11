@@ -4,13 +4,7 @@ import List from "./List";
 
 export default class CategoryList extends React.Component {
   render() {
-    const {
-      categoryList,
-      categoryArrow,
-      arrow,
-      categories,
-      updateCategory
-    } = this.props;
+    const { categoryList, arrow, categories, updateCategory } = this.props;
     return (
       <div className="list-group">
         <button

@@ -10,7 +10,7 @@ export default class FeaturedPostList extends React.Component {
         <Item key={index} title={post.title} slug={post.slug} />
       </li>
     ));
-    if (this.props.loading) {
+    if (loading) {
       return <Loading />;
     } else {
       return postList;
