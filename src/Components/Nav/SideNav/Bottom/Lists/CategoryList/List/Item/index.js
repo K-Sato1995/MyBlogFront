@@ -1,5 +1,4 @@
 import React from "react";
-// import "../../../../Design/Nav/CategoryTag/CategoryButton.scss";
 
 class CategoryButton extends React.Component {
   render() {

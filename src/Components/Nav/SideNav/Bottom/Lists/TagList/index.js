@@ -1,9 +1,10 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import List from "./List";
 
 export default class TagList extends React.Component {
   render() {
-    const { tagList, arrow, tagItems } = this.props;
+    const { tagList, arrow, updateTag, tags } = this.props;
     return (
       <div className="list-group">
         <button
@@ -15,7 +16,7 @@ export default class TagList extends React.Component {
           {arrow(tagList)}
         </button>
         <ul id={tagList ? "show" : "hide"} className="list">
-          {tagItems}
+          <List updateTag={updateTag} tags={tags} />
         </ul>
       </div>
     );

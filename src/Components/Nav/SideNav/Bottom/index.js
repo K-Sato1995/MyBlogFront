@@ -1,10 +1,10 @@
 import React from "react";
 import Label from "./Label";
 import { FormattedMessage } from "react-intl";
-import CategoryList from "./CategoryList";
-import TagList from "./TagList";
-import FeaturedPosts from "./FeaturedPosts";
-import Links from "./Links";
+import CategoryList from "./Lists/CategoryList";
+import TagList from "./Lists/TagList";
+import FeaturedPostList from "./Lists/FeaturedPostList";
+import LinkList from "./Lists/LinkList";
 import SearchBar from "./SearchBar";
 
 export default class Bottom extends React.Component {
@@ -15,48 +15,49 @@ export default class Bottom extends React.Component {
       categoryItems,
       featuredPosts,
       featuredPostsArrow,
-      featuredPostList,
       linksArrow,
       links,
-      linkList,
       tagList,
       tagArrow,
-      tagItems,
       toggleCategoryList,
       toggleTagList,
       toggleFeaturedPosts,
       toggleLinks,
       value,
       updateSearch,
-      arrow
+      arrow,
+      loading,
+      posts,
+      tags,
+      updateTag,
+      categories,
+      updateCategory
     } = this.props;
     return (
       <div className="side-bottom">
         <SearchBar value={value} updateSearch={updateSearch} />
         <CategoryList
           categoryList={categoryList}
-          categoryItems={categoryItems}
+          updateCategory={updateCategory}
+          categories={categories}
           toggleCategoryList={toggleCategoryList}
           arrow={arrow}
         />
         <TagList
           tagList={tagList}
-          tagItems={tagItems}
           toggleTagList={toggleTagList}
+          updateTag={updateTag}
+          tags={tags}
           arrow={arrow}
         />
-        <FeaturedPosts
+        <FeaturedPostList
           featuredPosts={featuredPosts}
-          featuredPostList={featuredPostList}
           toggleFeaturedPosts={toggleFeaturedPosts}
+          loading={loading}
+          posts={posts}
           arrow={arrow}
         />
-        <Links
-          links={links}
-          linkList={linkList}
-          toggleLinks={toggleLinks}
-          arrow={arrow}
-        />
+        <LinkList links={links} toggleLinks={toggleLinks} arrow={arrow} />
         <Label />
       </div>
     );

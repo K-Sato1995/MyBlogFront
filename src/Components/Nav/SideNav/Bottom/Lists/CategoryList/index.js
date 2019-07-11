@@ -1,9 +1,16 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import List from "./List";
 
 export default class CategoryList extends React.Component {
   render() {
-    const { categoryList, categoryArrow, categoryItems, arrow } = this.props;
+    const {
+      categoryList,
+      categoryArrow,
+      arrow,
+      categories,
+      updateCategory
+    } = this.props;
     return (
       <div className="list-group">
         <button
@@ -18,7 +25,7 @@ export default class CategoryList extends React.Component {
           {arrow(categoryList)}
         </button>
         <ul id={categoryList ? "show" : "hide"} className="list">
-          {categoryItems}
+          <List categories={categories} updateCategory={updateCategory} />
         </ul>
       </div>
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import LinkList from "./List";
 
 export default class TagList extends React.Component {
   render() {
@@ -15,7 +16,7 @@ export default class TagList extends React.Component {
           {arrow(links)}
         </button>
         <ul id={links ? "show" : "hide"} className="list">
-          {linkList}
+          <LinkList />
         </ul>
       </div>
     );

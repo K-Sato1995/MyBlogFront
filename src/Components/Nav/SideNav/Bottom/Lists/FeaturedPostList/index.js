@@ -1,9 +1,10 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import FeaturedPostList from "./List";
 
 export default class FeaturedPosts extends React.Component {
   render() {
-    const { featuredPosts, arrow, featuredPostList } = this.props;
+    const { featuredPosts, arrow, loading, posts } = this.props;
     return (
       <div className="list-group">
         <button
@@ -18,7 +19,7 @@ export default class FeaturedPosts extends React.Component {
           {arrow(featuredPosts)}
         </button>
         <ul id={featuredPosts ? "show" : "hide"} className="list">
-          {featuredPostList}
+          <FeaturedPostList loading={loading} posts={posts} />
         </ul>
       </div>
     );
