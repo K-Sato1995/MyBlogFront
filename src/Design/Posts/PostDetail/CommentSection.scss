@@ -1,0 +1,23 @@
+@import "../../global";
+
+.comment-container {
+  // border: solid 1px red;
+  margin: 30px;
+  .comment-container-header {
+    border-bottom: 2px solid $border-color-light;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .comment-box {
+    // border: solid 1px blue;
+    margin-top: 20px;
+    padding-left: 10px;
+    .comment-box-header {
+      // border: solid 1px yellow;
+    }
+    .comment-box-content {
+      padding-left: 20px;
+      // border: solid 1px green;
+    }
+  }
+}

@@ -1,12 +1,20 @@
 import React from "react";
 import MarkDown from "./MarkDown";
 import PostAuthor from "./PostAuthor";
+import CommentSection from "./CommentSection";
 import Footer from "../../../Footer";
 import { formatDate } from "../../../../MiddleWares/Renderers/Data";
 
 export default class SideNav extends React.Component {
   render() {
-    const { title, created_at, content, page_views } = this.props;
+    const {
+      title,
+      created_at,
+      content,
+      page_views,
+      slug,
+      comments
+    } = this.props;
     return (
       <div className="post-main-container">
         <div className="post-content-container">
@@ -17,6 +25,7 @@ export default class SideNav extends React.Component {
           <MarkDown content={content} />
           <span className="page-views">{page_views} Page Views</span>
           <PostAuthor />
+          <CommentSection comments={comments} slug={slug} />
           <Footer />
         </div>
       </div>

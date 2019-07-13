@@ -22,3 +22,19 @@ export async function addLike(slug) {
   let data = await response.json();
   return data;
 }
+
+export async function createComment(slug, name, content) {
+  let response = await fetch(`${baseUrl}/api/v1/posts/${slug}/comments`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      content: content
+    })
+  });
+  let data = await response.json();
+  return data;
+}

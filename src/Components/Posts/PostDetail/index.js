@@ -48,6 +48,8 @@ class PostDetail extends React.Component {
             title={data.post.title}
             content={data.post.content}
             created_at={data.post.created_at}
+            comments={data.comments}
+            slug={data.post.slug}
             page_views={data.post.page_views}
           />
         </div>
