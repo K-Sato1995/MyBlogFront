@@ -4,8 +4,8 @@ export default class Input extends React.Component {
   render() {
     const { value, handleChange, name } = this.props;
     return (
-      <div class="form-group">
-        <div class="row">
+      <div className="form-group">
+        <div className="row">
           <input
             className="form-control"
             type="text"

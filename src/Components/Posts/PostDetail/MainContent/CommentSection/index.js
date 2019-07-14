@@ -41,7 +41,14 @@ export default class CommentSection extends React.Component {
     const comments = this.props.comments.map((comment, i) => (
       <CommentBox name={comment.name} content={comment.content} key={i} />
     ));
-
+    const noCommentMessage = (
+      <h4 className="no-comment">
+        <FormattedMessage
+          id="comment.noComment"
+          defaultMessage="There is not comment yet."
+        />
+      </h4>
+    );
     return (
       <div className="comment-container">
         <h3 className="comment-container-header ">
@@ -51,7 +58,7 @@ export default class CommentSection extends React.Component {
           />
         </h3>
         {flashMessage}
-        {comments}
+        {comments.length === 0 ? noCommentMessage : comments}
         <CommentForm
           name={name}
           content={content}

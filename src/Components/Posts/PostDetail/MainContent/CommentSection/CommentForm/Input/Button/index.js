@@ -3,8 +3,8 @@ import React from "react";
 export default class Input extends React.Component {
   render() {
     return (
-      <div class="form-group">
-        <div class="row">
+      <div className="form-group">
+        <div className="row">
           <button
             className="comment-button"
             onClick={() => {

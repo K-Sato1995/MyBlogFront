@@ -55,5 +55,6 @@ export default {
   // Comments
   "comment.commentContainer.header": "Comments",
   "comment.flashMessage":
-    "Your comment will be posted after getting reviewed by the author of this article."
+    "Your comment will be posted after getting reviewed by the author of this article.",
+  "comment.noComment": "There is no comment yet."
 };

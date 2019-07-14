@@ -6,7 +6,17 @@ import "../../../../../../Design/Posts/PostDetail/CommentSection.scss";
 import { createComment } from "../../../../../../MiddleWares/Api";
 
 export default class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isFormVisible: true
+    };
+  }
+  hideForm() {
+    this.setState({ isFormVisible: false });
+  }
   render() {
+    const { isFormVisible } = this.state;
     const {
       name,
       content,
@@ -24,6 +34,7 @@ export default class CommentSection extends React.Component {
       } else {
         createComment(slug, name, content);
         updateStates();
+        this.hideForm();
         showFlashMessage();
       }
     };
@@ -31,8 +42,17 @@ export default class CommentSection extends React.Component {
     const handleClick = () => {
       submitComment();
     };
+
+    const visibility = isFormVisible
+      ? {
+          display: "block"
+        }
+      : {
+          display: "none"
+        };
+
     return (
-      <div className="comment-form-container">
+      <div className="comment-form-container" style={visibility}>
         <InputForm handleChange={handleChange} name="name" value={name} />
         <TextArea handleChange={handleChange} name="content" value={content} />
         <InputButton handleClick={handleClick} />

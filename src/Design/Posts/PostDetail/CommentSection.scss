@@ -8,6 +8,10 @@
     padding-bottom: 10px;
     font-size: 20px;
   }
+  .no-comment {
+    margin-top: 30px;
+    color: $a-color;
+  }
   .comment-box {
     margin-top: 30px;
     padding-left: 10px;
@@ -16,7 +20,7 @@
     .comment-box-content {
       margin-top: 15px;
       padding-left: 20px;
-      color: #808080;
+      color: $a-color;
     }
   }
   .comment-form-container {
