@@ -51,5 +51,9 @@ export default {
   // NoMatch
   "noMatch.title": "404 見つかりません",
   "noMatch.description":
-    "どうやらあなたが探しているページは存在しないようです。"
+    "どうやらあなたが探しているページは存在しないようです。",
+  // Comments
+  "comment.commentContainer.header": "コメント欄",
+  "comment.flashMessage":
+    "コメントを頂き有難うございます。著者の確認の後、コメントが表示されます。"
 };

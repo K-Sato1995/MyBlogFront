@@ -51,5 +51,9 @@ export default {
   // NoMatch
   "noMatch.title": "404 NOT FOUND",
   "noMatch.description":
-    "Seems like the page you are looking for does not exist."
+    "Seems like the page you are looking for does not exist.",
+  // Comments
+  "comment.commentContainer.header": "Comments",
+  "comment.flashMessage":
+    "Thank you for commenting!! Your comment will be posted after getting reviewed by the author of this article."
 };
