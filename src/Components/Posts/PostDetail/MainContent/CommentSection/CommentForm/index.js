@@ -1,4 +1,7 @@
 import React from "react";
+import InputForm from "./Input/Form/Input";
+import TextArea from "./Input/Form/TextArea";
+import InputButton from "./Input/Button";
 import "../../../../../../Design/Posts/PostDetail/CommentSection.scss";
 import { createComment } from "../../../../../../MiddleWares/Api";
 
@@ -30,29 +33,9 @@ export default class CommentSection extends React.Component {
     };
     return (
       <div className="comment-form-container">
-        <input
-          className="form"
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          placeholder="Name"
-        />
-        <input
-          className="form"
-          type="text"
-          name="content"
-          value={content}
-          onChange={handleChange}
-          placeholder="Add a comment"
-        />
-        <button
-          onClick={() => {
-            handleClick();
-          }}
-        >
-          Submit
-        </button>
+        <InputForm handleChange={handleChange} name="name" value={name} />
+        <TextArea handleChange={handleChange} name="content" value={content} />
+        <InputButton handleClick={handleClick} />
       </div>
     );
   }

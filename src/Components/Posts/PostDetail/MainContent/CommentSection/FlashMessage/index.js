@@ -41,10 +41,14 @@ class FlashMessage extends Component {
 
   render() {
     const { isVisible } = this.state;
-    const { children } = this.props;
+    const { children, className } = this.props;
 
     return isVisible ? (
-      <div onMouseEnter={this.pauseTimer} onMouseLeave={this.resumeTimer}>
+      <div
+        onMouseEnter={this.pauseTimer}
+        onMouseLeave={this.resumeTimer}
+        className={className}
+      >
         {children}
       </div>
     ) : null;

@@ -29,8 +29,8 @@ export default class CommentSection extends React.Component {
   render() {
     const { name, content, isFlashMVisible } = this.state;
     const flashMessage = isFlashMVisible ? (
-      <FlashMessage duration={5000}>
-        <strong>
+      <FlashMessage duration={5000} className="flash-message">
+        <strong className="message">
           <FormattedMessage
             id="comment.flashMessage"
             defaultMessage="Your comment will be posted after getting reviewed by the author of this article."
@@ -44,12 +44,14 @@ export default class CommentSection extends React.Component {
 
     return (
       <div className="comment-container">
-        <h3 className="comment.comment_container.header">
+        <h3 className="comment-container-header ">
           <FormattedMessage
             id="comment.commentContainer.header"
             defaultMessage="Comments"
           />
         </h3>
+        {flashMessage}
+        {comments}
         <CommentForm
           name={name}
           content={content}
@@ -58,8 +60,6 @@ export default class CommentSection extends React.Component {
           updateStates={this.updateStates}
           showFlashMessage={this.showFlashMessage}
         />
-        {flashMessage}
-        {comments}
       </div>
     );
   }

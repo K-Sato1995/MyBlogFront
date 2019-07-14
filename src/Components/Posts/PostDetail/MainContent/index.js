@@ -24,8 +24,8 @@ export default class SideNav extends React.Component {
           </div>
           <MarkDown content={content} />
           <span className="page-views">{page_views} Page Views</span>
-          <PostAuthor />
           <CommentSection comments={comments} slug={slug} />
+          <PostAuthor />
           <Footer />
         </div>
       </div>
