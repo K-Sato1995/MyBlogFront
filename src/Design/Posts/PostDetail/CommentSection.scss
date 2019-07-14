@@ -1,7 +1,6 @@
 @import "../../global";
 
 .comment-container {
-  // border: solid 1px red;
   margin: 30px;
   .comment-container-header {
     border-bottom: 2px solid $border-color-light;
@@ -14,26 +13,24 @@
   }
   .comment-box {
     margin-top: 30px;
-    padding-left: 10px;
     .comment-box-header {
     }
     .comment-box-content {
       margin-top: 15px;
-      padding-left: 20px;
+      padding-left: 10px;
       color: $a-color;
     }
   }
   .comment-form-container {
-    margin: 20px;
-    margin-top: 40px;
+    margin: 13px;
+    margin-top: 30px;
     #name {
     }
     #content {
       height: 80px;
     }
     .comment-button {
-      margin-top: 10px;
-      padding: 3px 12px 3px 12px;
+      padding: 5px 12px 5px 12px;
       border: solid 1px $theme-color;
       border-radius: 2px;
       transition: 0.5s;
@@ -46,8 +43,7 @@
     }
   }
   .flash-message {
-    margin: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     .message {
       margin-right: 30px;
