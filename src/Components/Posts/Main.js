@@ -1,7 +1,7 @@
 import React from "react";
-import PostsList from "./PostList/PostsList";
+import PostsList from "./PostList";
 import NoMatch from "./PostList/NoMatch";
-import PostDetail from "./PostDetail/PostDetail";
+import PostDetail from "./PostDetail";
 import { Route, Switch } from "react-router-dom";
 
 class Main extends React.Component {
@@ -15,7 +15,7 @@ class Main extends React.Component {
             render={() => (
               <PostsList
                 lang={this.props.lang}
-                showLeftContainer={this.props.showLeftContainer}
+                showLC={this.props.showLC}
                 handleToggleLeftContainer={this.props.handleToggleLeftContainer}
               />
             )}
@@ -25,7 +25,7 @@ class Main extends React.Component {
             render={props => (
               <PostDetail
                 {...props}
-                showLeftContainer={this.props.showLeftContainer}
+                showLC={this.props.showLC}
                 handleToggleLeftContainer={this.props.handleToggleLeftContainer}
               />
             )}

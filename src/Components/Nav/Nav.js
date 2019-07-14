@@ -8,21 +8,21 @@ import { ArrowLeft } from "react-feather";
 class Nav extends React.Component {
   render() {
     const {
-      showLeftContainer,
+      showLC,
       handleToggleLeftContainer,
       toggleLocale,
       handleToggleTheme,
       darkTheme,
       lang
     } = this.props;
-    const hmbMenu = showLeftContainer
+    const hmbMenu = showLC
       ? {
           display: "none"
         }
       : {
           display: "block"
         };
-    const closeTab = showLeftContainer
+    const closeTab = showLC
       ? {
           display: "block"
         }
