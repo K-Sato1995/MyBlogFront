@@ -41,6 +41,7 @@ class PostDetail extends React.Component {
           <div className="wrapper" style={showLC} />
           <SideNav
             content={data.post.content}
+            like={data.post.like}
             slug={data.post.slug}
             showLC={showLC}
           />
