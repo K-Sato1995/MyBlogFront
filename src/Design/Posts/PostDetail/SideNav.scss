@@ -6,6 +6,8 @@
   min-width: 300px;
   min-height: 1000px;
   z-index: 1;
+  border-right: solid 1px $border-color-light;
+  // border: solid red 1px;
 }
 
 .like-box {
