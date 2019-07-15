@@ -1,0 +1,44 @@
+.post-left-container {
+  background-color: #f5f7f9;
+  flex: 0 0 auto;
+  width: calc((100% - 1448px) / 2 + 300px);
+  padding-left: calc((100% - 1448px) / 2);
+  min-width: 300px;
+  min-height: 1000px;
+  z-index: 1;
+}
+
+.like-box {
+  position: fixed;
+  padding-left: 25px;
+  bottom: 0px;
+  display: block;
+  background-color: #f5f7f9;
+  height: 65px;
+  width: 300px;
+  border-right: solid 1px $border-color-light;
+  .like-button {
+    position: fixed;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 3px;
+    bottom: 15px;
+    text-decoration: none;
+    color: #9daab6;
+    outline: none;
+    background-color: #e6ecf1;
+    .glyphicon-thumbs-up {
+      font-size: 25px;
+      margin-left: 70px;
+    }
+    .like-number {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+  }
+  .label-link:hover {
+    color: $theme-color;
+  }
+}
