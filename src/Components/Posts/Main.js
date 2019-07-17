@@ -21,7 +21,7 @@ class Main extends React.Component {
             )}
           />
           <Route
-            path="/Post/:id"
+            path="/:id"
             render={props => (
               <PostDetail
                 {...props}

@@ -47,7 +47,7 @@ class PostBox extends React.Component {
         onMouseLeave={this.toggleOff}
       >
         <h3 className="post-title">
-          <Link to={`/Post/${slug}`} className="post-title-link">
+          <Link to={`/${slug}`} className="post-title-link">
             {title}
           </Link>
         </h3>
