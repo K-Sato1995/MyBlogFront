@@ -2,7 +2,7 @@
   "name": "blog_front",
   "version": "2.0.0",
   "private": true,
-  "homepage": "http://k-sato1995.github.io/MyBlogFront",
+  "homepage": "http://k-sato1995.github.io/blog",
   "dependencies": {
     "i": "^0.3.6",
     "node-sass": "^4.12.0",
