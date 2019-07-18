@@ -18,7 +18,7 @@ export default class Toc extends React.Component {
 
   createAnchorLink(string) {
     const { filter } = this.state;
-    const postPath = `/Post/${this.props.slug}`;
+    const postPath = `/${this.props.slug}`;
 
     if (/^#{1}\s[\s\S]/.test(string)) {
       return <li className="header1">{returnTitle(string, postPath)}</li>;
