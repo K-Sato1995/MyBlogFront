@@ -55,7 +55,7 @@ export default class SideNav extends React.Component {
       updateTag,
       updateSearch
     } = this.props;
-    // const {}
+
     const arrow = target => {
       if (target) {
         return <ChevronDown className="chevron-down" />;

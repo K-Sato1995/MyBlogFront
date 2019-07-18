@@ -14,6 +14,12 @@
   li {
     color: #fff;
   }
+  input {
+    background-color: $theme-color;
+  }
+  textarea {
+    background-color: $theme-color;
+  }
   .navbar {
     background-color: $theme-color;
     border-bottom: solid 1px #fff;
@@ -83,6 +89,14 @@
       color: #fff;
     }
   }
+  .like-box {
+    background-color: $side-nav;
+    .like-button {
+      background-color: $theme-color;
+      color: #fff;
+      border-color: $side-nav;
+    }
+  }
   .logo {
     color: #fff;
   }
@@ -148,11 +162,10 @@
   .footer {
     background-color: $theme-color;
   }
-  .like-button {
-    background-color: $theme-color;
-    color: #fff;
-  }
   .post-author-button {
+    background-color: $theme-color;
+  }
+  .comment-button {
     background-color: $theme-color;
   }
   .show-all-posts-btn {
@@ -172,6 +185,7 @@
   }
   .post-left-container {
     background-color: $side-nav;
+    border-right: solid 1px #e6ecf1;
   }
   .toc {
     background-color: $side-nav;

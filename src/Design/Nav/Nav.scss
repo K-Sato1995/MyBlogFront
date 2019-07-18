@@ -85,8 +85,13 @@
   .mobile-nav-btn {
     display: block !important;
   }
+
   .settings-box {
     display: none !important;
+    .dark-theme-button,
+    .light-theme-button {
+      display: none !important;
+    }
   }
   .close-tab {
     display: none;
