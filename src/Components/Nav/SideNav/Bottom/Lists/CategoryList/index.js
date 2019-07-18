@@ -4,7 +4,13 @@ import List from "./List";
 
 export default class CategoryList extends React.Component {
   render() {
-    const { categoryList, arrow, categories, updateCategory } = this.props;
+    const {
+      categoryList,
+      arrow,
+      categories,
+      updateCategory,
+      loading
+    } = this.props;
     return (
       <div className="list-group">
         <button
@@ -19,7 +25,11 @@ export default class CategoryList extends React.Component {
           {arrow(categoryList)}
         </button>
         <ul id={categoryList ? "show" : "hide"} className="list">
-          <List categories={categories} updateCategory={updateCategory} />
+          <List
+            categories={categories}
+            updateCategory={updateCategory}
+            loading={loading}
+          />
         </ul>
       </div>
     );

@@ -35,6 +35,7 @@ export default class Bottom extends React.Component {
           updateCategory={updateCategory}
           categories={categories}
           toggleCategoryList={toggleCategoryList}
+          loading={loading}
           arrow={arrow}
         />
         <TagList
@@ -42,6 +43,7 @@ export default class Bottom extends React.Component {
           toggleTagList={toggleTagList}
           updateTag={updateTag}
           tags={tags}
+          loading={loading}
           arrow={arrow}
         />
         <FeaturedPostList
