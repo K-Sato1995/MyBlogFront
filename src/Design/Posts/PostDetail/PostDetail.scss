@@ -71,19 +71,6 @@
       color: $p-color;
       font-size: 17px;
       line-height: 25px;
-      .post-author-button {
-        margin-top: 10px;
-        padding: 3px 12px 3px 12px;
-        border: solid 1px $theme-color;
-        border-radius: 2px;
-        transition: 0.5s;
-        color: $theme-color;
-        outline: none;
-      }
-      .post-author-button:hover {
-        background-color: $theme-color;
-        color: #fff;
-      }
     }
   }
 }
