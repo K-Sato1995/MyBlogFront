@@ -11,7 +11,7 @@ export default {
   // PostDetaiol
   "postAuthor.name": "K-Sato",
   "postAuthor.description":
-    "I am a junior web-developer based somewhere on earth. Write Ruby as my primary lannguage and also use Javascript every now and then. RoR and React are my go-to Frameworks. Sometimes I play with Go language.",
+    "I am a junior web-developer based somewhere on earth. I use Ruby as my primary language and also use Javascript every now and then. RoR and React are my go-to Frameworks. Sometimes I play with Go language.",
   toc: "CONTENTS",
   // about
   "about.header": "Self Introduction",

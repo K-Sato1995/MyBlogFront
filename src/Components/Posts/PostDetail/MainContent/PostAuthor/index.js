@@ -38,13 +38,3 @@ class PostAuthor extends React.Component {
 }
 
 export default PostAuthor;
-
-/* Author Button
-<a
-  href="https://dev.to/ksato1995"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="post-author-button">View Profile</button>
-</a>
-*/
