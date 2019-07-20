@@ -21,10 +21,10 @@
     outline: none;
     border: none;
     border-left: solid 1px $border-color-light;
+    background-color: #fff;
   }
   .light-theme-button {
     @extend .theme-button;
-    background-color: #fff;
   }
 
   .dark-theme-button {
