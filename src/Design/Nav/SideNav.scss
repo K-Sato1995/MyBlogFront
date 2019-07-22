@@ -48,6 +48,8 @@
       line-height: 30px;
       .list-item {
         padding-left: 15px;
+        white-space: nowrap;
+        overflow: hidden;
         list-style: none;
       }
       .list-item-ele {

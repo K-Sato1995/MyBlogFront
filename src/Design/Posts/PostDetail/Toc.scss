@@ -27,6 +27,8 @@
   .toc-list {
     list-style: none;
     padding-left: 25px;
+    overflow: hidden;
+    white-space: nowrap;
     .toc-title {
       text-decoration: none;
     }

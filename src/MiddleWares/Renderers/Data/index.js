@@ -5,3 +5,11 @@ export const formatDate = date => {
   const year = dateObject.getFullYear();
   return `${year}/${month}/${day}`;
 };
+
+export const trimString = (string, limit) => {
+  if (string.length >= limit) {
+    let slicedString = string.slice(0, limit);
+    return `${slicedString}..`;
+  }
+  return string;
+};

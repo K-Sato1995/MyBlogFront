@@ -14,7 +14,6 @@ export default class List extends React.Component {
           updateCategory={updateCategory}
           key={index}
         />
-        {console.log(loading)}
       </li>
     ));
     if (loading) {

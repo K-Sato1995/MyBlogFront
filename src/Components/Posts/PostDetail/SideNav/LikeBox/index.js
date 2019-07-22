@@ -11,7 +11,6 @@ export default class LikeBox extends React.Component {
   setLike(slug) {
     addLike(slug);
     this.setState({ like: this.state.like + 1 });
-    console.log(this.state.like);
   }
   render() {
     const { slug } = this.props;

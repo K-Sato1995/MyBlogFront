@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { trimString } from "../Data";
 
 export const stringReplacer = (string, regex, mark) => {
   return string.replace(regex, mark);
@@ -17,9 +18,12 @@ export const createLink = string => {
 
 export const returnTitle = (string, path) => {
   const link = createLink(string);
+  const limit = 34;
+  const title = trimString(stringReplacer(string, /#+/g, ""), limit);
+
   return (
     <Link to={`${path}${link}`} className="toc-title">
-      {`${stringReplacer(string, /#+/g, "")}`}
+      {title}
     </Link>
   );
 };
