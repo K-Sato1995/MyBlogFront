@@ -9,7 +9,7 @@ export function fetchPosts() {
       .then(res => res.json())
       .then(json => {
         dispatch(fetchPostsSuccess(json.data));
-        return json.data.posts;
+        return json.data;
       })
       .catch(error => dispatch(fetchPostsFailure(error)));
   };

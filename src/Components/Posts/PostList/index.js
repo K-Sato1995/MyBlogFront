@@ -9,20 +9,18 @@ import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
-import { getPosts } from "../../../MiddleWares/Api";
 import { connect } from "react-redux";
 import { fetchPosts } from "../../../actions/posts";
 import { fetchCategories } from "../../../actions/categories";
+import { fetchTags } from "../../../actions/tags";
 
 class PostList extends React.Component {
   constructor() {
     super();
     this.state = {
-      tags: [],
       search: "",
       category: 0,
-      tag: 0,
-      loading: true
+      tag: 0
     };
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
@@ -34,17 +32,8 @@ class PostList extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.dispatch(fetchCategories());
+    this.props.dispatch(fetchTags());
     this.props.dispatch(fetchPosts());
-    this.setData();
-  }
-  setData() {
-    getPosts().then(data => {
-      this.setState({
-        categories: data.data.categories,
-        tags: data.data.tags,
-        loading: false
-      });
-    });
   }
   updateSearch(e) {
     this.setState({ search: e.target.value });
@@ -74,8 +63,8 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { error, loading, posts, post_tags, categories } = this.props;
-    const { tags, search, category, tag } = this.state;
+    const { error, loading, posts, post_tags, categories, tags } = this.props;
+    const { search, category, tag } = this.state;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = posts.filter(post => {
       posts.map((post, index) => (post.tags = post_tags[index]));
@@ -213,6 +202,7 @@ const mapStateToProps = state => ({
   posts: state.postReducer.posts,
   post_tags: state.postReducer.post_tags,
   categories: state.categoryReducer.categories,
+  tags: state.tagReducer.tags,
   loading: state.postReducer.loading,
   error: state.postReducer.error
 });

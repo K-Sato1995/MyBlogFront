@@ -7,7 +7,7 @@ import {
 const initialState = {
   posts: [],
   post_tags: [],
-  loading: false,
+  loading: true,
   error: null
 };
 
