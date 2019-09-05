@@ -6,6 +6,7 @@ import {
 
 const initialState = {
   posts: [],
+  post_tags: [],
   loading: false,
   error: null
 };
@@ -23,7 +24,8 @@ export default function postReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        posts: action.payload.posts
+        posts: action.payload.posts,
+        post_tags: action.payload.post_tags
       };
 
     case FETCH_POSTS_FAILURE:

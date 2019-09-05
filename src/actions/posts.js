@@ -4,11 +4,11 @@ export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
 
 export function fetchPosts() {
   return dispatch => {
-    return fetch("https://k-blog0130.herokuapp.com/api/v1/posts")
+    return fetch("http://localhost:3000/api/v2/posts")
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
-        dispatch(fetchPostsSuccess(json.data.posts));
+        dispatch(fetchPostsSuccess(json.data));
         return json.data.posts;
       })
       .catch(error => dispatch(fetchPostsFailure(error)));
@@ -27,9 +27,9 @@ export const fetchPostsBegin = () => ({
   type: FETCH_POSTS_BEGIN
 });
 
-export const fetchPostsSuccess = posts => ({
+export const fetchPostsSuccess = data => ({
   type: FETCH_POSTS_SUCCESS,
-  payload: { posts }
+  payload: { posts: data.posts, post_tags: data.post_tags }
 });
 
 export const fetchPostsFailure = error => ({

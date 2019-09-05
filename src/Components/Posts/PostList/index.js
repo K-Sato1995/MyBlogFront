@@ -10,14 +10,14 @@ import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
 import { getPosts } from "../../../MiddleWares/Api";
+import { connect } from "react-redux";
+import { fetchPosts } from "../../../actions/posts";
 
-class PostsList extends React.Component {
+class PostList extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
       categories: [],
-      post_tags: [],
       tags: [],
       search: "",
       category: 0,
@@ -33,18 +33,14 @@ class PostsList extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.props.dispatch(fetchPosts());
     this.setData();
   }
   setData() {
     getPosts().then(data => {
-      data.data.posts.map(
-        (post, index) => (post.tags = data.data.post_tags[index])
-      );
       this.setState({
-        posts: data.data.posts,
         categories: data.data.categories,
         tags: data.data.tags,
-        post_tags: data.data.post_tags,
         loading: false
       });
     });
@@ -77,17 +73,11 @@ class PostsList extends React.Component {
   }
 
   render() {
-    const {
-      posts,
-      categories,
-      tags,
-      search,
-      category,
-      tag,
-      loading
-    } = this.state;
+    const { error, loading, posts, post_tags } = this.props;
+    const { categories, tags, search, category, tag } = this.state;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = posts.filter(post => {
+      posts.map((post, index) => (post.tags = post_tags[index]));
       let postTags = [];
       post.tags.map(tag => postTags.push(tag.id));
 
@@ -219,4 +209,11 @@ class PostsList extends React.Component {
   }
 }
 
-export default PostsList;
+const mapStateToProps = state => ({
+  posts: state.posts.posts,
+  post_tags: state.posts.post_tags,
+  loading: state.posts.loading,
+  error: state.posts.error
+});
+
+export default connect(mapStateToProps)(PostList);

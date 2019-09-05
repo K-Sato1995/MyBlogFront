@@ -8,7 +8,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import localeEn from "./locales/localeEn";
 import localeJa from "./locales/localeJa";
 import ReactGA from "react-ga";
-import PostList from "./posts";
 import store from "../stores";
 import { Provider } from "react-redux";
 
@@ -68,7 +67,6 @@ class App extends Component {
                   handleToggleLeftContainer={this.handleToggleLeftContainer}
                   lang={this.state.lang}
                 />
-                <PostList />
               </React.Fragment>
             </Router>
           </IntlProvider>
