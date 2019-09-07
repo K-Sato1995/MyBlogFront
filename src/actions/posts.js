@@ -2,6 +2,7 @@ export const FETCH_POSTS_BEGIN = "FETCH_POSTS_BEGIN";
 export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
 export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
 export const SEARCH_POSTS = "SEARCH_POSTS";
+export const SET_CATEGORY = "SET_CATEGORY";
 
 export function fetchPosts() {
   return dispatch => {
@@ -41,4 +42,9 @@ export const fetchPostsFailure = error => ({
 export const searchPosts = value => ({
   type: SEARCH_POSTS,
   payload: { value }
+});
+
+export const setCategory = category => ({
+  type: SET_CATEGORY,
+  payload: { category }
 });
