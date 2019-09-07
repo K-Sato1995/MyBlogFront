@@ -10,7 +10,12 @@ import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { fetchPosts, searchPosts, setCategory } from "../../../actions/posts";
+import {
+  fetchPosts,
+  searchPosts,
+  setCategory,
+  setTag
+} from "../../../actions/posts";
 import { fetchCategories } from "../../../actions/categories";
 import { fetchTags } from "../../../actions/tags";
 
@@ -18,7 +23,6 @@ class PostList extends React.Component {
   constructor() {
     super();
     this.state = {
-      category: 0,
       tag: 0
     };
     this.updateSearch = this.updateSearch.bind(this);
@@ -41,7 +45,7 @@ class PostList extends React.Component {
     this.props.dispatch(setCategory(parseInt(e.target.value)));
   }
   updateTag(e) {
-    this.setState({ tag: parseInt(e.target.value) });
+    this.props.dispatch(setTag(parseInt(e.target.value)));
     window.scrollTo(0, 0);
   }
   showAllPosts() {
@@ -67,9 +71,9 @@ class PostList extends React.Component {
       categories,
       category,
       tags,
+      tag,
       search
     } = this.props;
-    const { tag } = this.state;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = posts.filter(post => {
       posts.map((post, index) => (post.tags = post_tags[index]));
@@ -210,6 +214,7 @@ const mapStateToProps = state => ({
   categories: state.categoryReducer.categories,
   category: state.postReducer.category,
   tags: state.tagReducer.tags,
+  tag: state.postReducer.tag,
   loading: state.postReducer.loading,
   error: state.postReducer.error
 });

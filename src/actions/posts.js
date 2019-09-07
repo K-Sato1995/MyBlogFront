@@ -3,6 +3,7 @@ export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
 export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
 export const SEARCH_POSTS = "SEARCH_POSTS";
 export const SET_CATEGORY = "SET_CATEGORY";
+export const SET_TAG = "SET_TAG";
 
 export function fetchPosts() {
   return dispatch => {
@@ -47,4 +48,9 @@ export const searchPosts = value => ({
 export const setCategory = category => ({
   type: SET_CATEGORY,
   payload: { category }
+});
+
+export const setTag = tag => ({
+  type: SET_TAG,
+  payload: { tag }
 });
