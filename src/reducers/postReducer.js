@@ -4,7 +4,8 @@ import {
   FETCH_POSTS_FAILURE,
   SEARCH_POSTS,
   SET_CATEGORY,
-  SET_TAG
+  SET_TAG,
+  RESET_FILTER
 } from "../actions/posts";
 
 const initialState = {
@@ -59,6 +60,12 @@ export default function postReducer(state = initialState, action) {
       return {
         ...state,
         tag: action.payload.tag
+      };
+
+    case RESET_FILTER:
+      return {
+        ...state,
+        [action.target]: action.value
       };
     default:
       return state;

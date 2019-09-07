@@ -4,6 +4,7 @@ export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
 export const SEARCH_POSTS = "SEARCH_POSTS";
 export const SET_CATEGORY = "SET_CATEGORY";
 export const SET_TAG = "SET_TAG";
+export const RESET_FILTER = "RESET_FILTER";
 
 export function fetchPosts() {
   return dispatch => {
@@ -53,4 +54,10 @@ export const setCategory = category => ({
 export const setTag = tag => ({
   type: SET_TAG,
   payload: { tag }
+});
+
+export const resetFilter = (target, value) => ({
+  type: RESET_FILTER,
+  target: target,
+  value: value
 });

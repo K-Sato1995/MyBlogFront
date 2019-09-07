@@ -14,7 +14,8 @@ import {
   fetchPosts,
   searchPosts,
   setCategory,
-  setTag
+  setTag,
+  resetFilter
 } from "../../../actions/posts";
 import { fetchCategories } from "../../../actions/categories";
 import { fetchTags } from "../../../actions/tags";
@@ -22,9 +23,6 @@ import { fetchTags } from "../../../actions/tags";
 class PostList extends React.Component {
   constructor() {
     super();
-    this.state = {
-      tag: 0
-    };
     this.updateSearch = this.updateSearch.bind(this);
     this.updateCategory = this.updateCategory.bind(this);
     this.updateTag = this.updateTag.bind(this);
@@ -49,17 +47,15 @@ class PostList extends React.Component {
     window.scrollTo(0, 0);
   }
   showAllPosts() {
-    this.setState({
-      category: 0,
-      tag: 0,
-      search: ""
-    });
+    this.props.dispatch(resetFilter("category", 0));
+    this.props.dispatch(resetFilter("tag", 0));
+    this.props.dispatch(resetFilter("search", ""));
   }
   resetCategory() {
-    this.setState({ category: 0 });
+    this.props.dispatch(resetFilter("category", 0));
   }
   resetTag() {
-    this.setState({ tag: 0 });
+    this.props.dispatch(resetFilter("tag", 0));
   }
 
   render() {
