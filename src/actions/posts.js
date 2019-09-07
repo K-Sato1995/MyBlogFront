@@ -1,6 +1,7 @@
 export const FETCH_POSTS_BEGIN = "FETCH_POSTS_BEGIN";
 export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
 export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
+export const SEARCH_POSTS = "SEARCH_POSTS";
 
 export function fetchPosts() {
   return dispatch => {
@@ -35,4 +36,9 @@ export const fetchPostsSuccess = data => ({
 export const fetchPostsFailure = error => ({
   type: FETCH_POSTS_FAILURE,
   payload: { error }
+});
+
+export const searchPosts = value => ({
+  type: SEARCH_POSTS,
+  payload: { value }
 });

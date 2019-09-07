@@ -1,12 +1,14 @@
 import {
   FETCH_POSTS_BEGIN,
   FETCH_POSTS_SUCCESS,
-  FETCH_POSTS_FAILURE
+  FETCH_POSTS_FAILURE,
+  SEARCH_POSTS
 } from "../actions/posts";
 
 const initialState = {
   posts: [],
   post_tags: [],
+  search: "",
   loading: true,
   error: null
 };
@@ -36,6 +38,11 @@ export default function postReducer(state = initialState, action) {
         posts: []
       };
 
+    case SEARCH_POSTS:
+      return {
+        ...state,
+        search: action.payload.value
+      };
     default:
       return state;
   }
