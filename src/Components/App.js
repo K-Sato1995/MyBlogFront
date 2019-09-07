@@ -8,6 +8,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import localeEn from "./locales/localeEn";
 import localeJa from "./locales/localeJa";
 import ReactGA from "react-ga";
+import store from "../stores";
+import { Provider } from "react-redux";
 
 function initializeReactGA() {
   ReactGA.initialize("UA-140916506-1");
@@ -47,27 +49,29 @@ class App extends Component {
     let theme = this.state.darkTheme ? "DarkTheme" : "LightTheme";
     let messages = this.state.lang === "en" ? localeEn : localeJa;
     return (
-      <div className="App" id={theme}>
-        <IntlProvider locale={this.state.lang} messages={messages}>
-          <Router basename={process.env.PUBLIC_URL}>
-            <React.Fragment>
-              <Nav
-                toggleLocale={this.toggleLocale}
-                lang={this.state.lang}
-                handleToggleTheme={this.handleToggleTheme}
-                darkTheme={this.state.darkTheme}
-                showLC={this.state.showLC}
-                handleToggleLeftContainer={this.handleToggleLeftContainer}
-              />
-              <Main
-                showLC={this.state.showLC}
-                handleToggleLeftContainer={this.handleToggleLeftContainer}
-                lang={this.state.lang}
-              />
-            </React.Fragment>
-          </Router>
-        </IntlProvider>
-      </div>
+      <Provider store={store}>
+        <div className="App" id={theme}>
+          <IntlProvider locale={this.state.lang} messages={messages}>
+            <Router basename={process.env.PUBLIC_URL}>
+              <React.Fragment>
+                <Nav
+                  toggleLocale={this.toggleLocale}
+                  lang={this.state.lang}
+                  handleToggleTheme={this.handleToggleTheme}
+                  darkTheme={this.state.darkTheme}
+                  showLC={this.state.showLC}
+                  handleToggleLeftContainer={this.handleToggleLeftContainer}
+                />
+                <Main
+                  showLC={this.state.showLC}
+                  handleToggleLeftContainer={this.handleToggleLeftContainer}
+                  lang={this.state.lang}
+                />
+              </React.Fragment>
+            </Router>
+          </IntlProvider>
+        </div>
+      </Provider>
     );
   }
 }
