@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { trimString } from "../../../../../../../../MiddleWares/Renderers/Data";
+import { trimString } from "../../../../../../../../middlewares/Renderers/Data";
 class FeaturedPost extends React.Component {
   render() {
     const { slug, title } = this.props;

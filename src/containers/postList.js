@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import PostList from "../Components/Posts/PostList";
+import PostList from "../components/Posts/PostList";
 import {
   fetchPosts,
   searchPosts,
