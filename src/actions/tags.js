@@ -1,10 +1,11 @@
+import { baseUrl } from "../MiddleWares/Api/V2";
 export const FETCH_TAGS_BEGIN = "FETCH_TAGS_BEGIN";
 export const FETCH_TAGS_SUCCESS = "FETCH_TAGS_SUCCESS";
 export const FETCH_TAGS_FAILURE = "FETCH_TAGS_FAILURE";
 
 export function fetchTags() {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v2/tags")
+    return fetch(`${baseUrl}/tags`)
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {

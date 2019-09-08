@@ -1,34 +1,34 @@
 export const baseUrl =
   process.env.NODE_ENV === "development"
-    ? "http://localhost:3000/"
-    : "https://k-blog0130.herokuapp.com/";
+    ? "http://localhost:3000/api/v2"
+    : "https://k-blog0130.herokuapp.com/api/v2";
 
 export async function getPosts() {
-  let response = await fetch(`${baseUrl}/api/v2/posts`);
+  let response = await fetch(`${baseUrl}/posts`);
   let data = await response.json();
   return data;
 }
 
 export async function getFeaturedPosts() {
-  let response = await fetch(`${baseUrl}api/v2/featured_posts`);
+  let response = await fetch(`${baseUrl}/featured_posts`);
   let data = await response.json();
   return data;
 }
 
 export async function getPost(slug) {
-  let response = await fetch(`${baseUrl}api/v2/posts/${slug}`);
+  let response = await fetch(`${baseUrl}/posts/${slug}`);
   let data = await response.json();
   return data;
 }
 
 export async function getCategories() {
-  let response = await fetch(`${baseUrl}api/v2/categories`);
+  let response = await fetch(`${baseUrl}/categories`);
   let data = await response.json();
   return data;
 }
 
 export async function getTags() {
-  let response = await fetch(`${baseUrl}api/v2/tags`);
+  let response = await fetch(`${baseUrl}/tags`);
   let data = await response.json();
   return data;
 }

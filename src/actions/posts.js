@@ -1,3 +1,4 @@
+import { baseUrl } from "../MiddleWares/Api/V2";
 export const FETCH_POSTS_BEGIN = "FETCH_POSTS_BEGIN";
 export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
 export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
@@ -8,7 +9,7 @@ export const RESET_FILTER = "RESET_FILTER";
 
 export function fetchPosts() {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v2/posts")
+    return fetch(`${baseUrl}/posts`)
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
