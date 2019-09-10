@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import PostList from "../components/Posts/PostList";
+import App from "../components/App";
 import {
   fetchPosts,
   searchPosts,
@@ -61,4 +61,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PostList);
+)(App);

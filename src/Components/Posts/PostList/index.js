@@ -4,7 +4,6 @@ import "../../../Design/Posts/PostList/PostList.scss";
 import Loading from "./Loading";
 import NoPostFound from "./NoPostFound";
 import ContentHeader from "./ContentHeader";
-import SideNav from "../../Nav/SideNav";
 import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
@@ -27,7 +26,6 @@ class PostList extends React.Component {
       tags,
       tag,
       search,
-      updateSearch,
       updateCategory,
       updateTag,
       showAllPosts,
@@ -115,49 +113,21 @@ class PostList extends React.Component {
           {tagTag}
         </div>
       );
-    const showLC = this.props.showLC
-      ? {
-          display: "block"
-        }
-      : {
-          display: "none"
-        };
     return (
-      <div className="whole-container">
-        <div className="wrapper" style={showLC} />
-        <div className="left-container" style={showLC}>
-          <SideNav
-            setLocale={this.props.setLocale}
-            lang={this.props.lang}
-            posts={posts}
-            tags={tags}
-            tag={tag}
-            loading={loading}
-            search={search}
-            updateSearch={updateSearch}
-            updateTag={updateTag}
-            categories={categories}
-            category={category}
-            updateCategory={updateCategory}
+      <div className="content-container">
+        <ContentHeader
+          headerTitle=<FormattedMessage
+            id="contentHeader.blogPosts"
+            defaultMessage="Blog Posts"
           />
-        </div>
-        <div className="main-container">
-          <div className="content-container">
-            <ContentHeader
-              headerTitle=<FormattedMessage
-                id="contentHeader.blogPosts"
-                defaultMessage="Blog Posts"
-              />
-              headerDescription=<FormattedMessage
-                id="contentHeader.blogDescription"
-                defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
-              />
-            />
-            {contentTags}
-            {postContent}
-            <Footer />
-          </div>
-        </div>
+          headerDescription=<FormattedMessage
+            id="contentHeader.blogDescription"
+            defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
+          />
+        />
+        {contentTags}
+        {postContent}
+        <Footer />
       </div>
     );
   }
