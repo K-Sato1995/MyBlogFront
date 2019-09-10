@@ -9,58 +9,16 @@ import CategoryTag from "./ContentTags/CategoryTag";
 import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
 import { FormattedMessage } from "react-intl";
-import { connect } from "react-redux";
-import {
-  fetchPosts,
-  searchPosts,
-  setCategory,
-  setTag,
-  resetFilter
-} from "../../../actions/posts";
-import { fetchCategories } from "../../../actions/categories";
-import { fetchTags } from "../../../actions/tags";
 
 class PostList extends React.Component {
-  constructor() {
-    super();
-    this.updateSearch = this.updateSearch.bind(this);
-    this.updateCategory = this.updateCategory.bind(this);
-    this.updateTag = this.updateTag.bind(this);
-    this.showAllPosts = this.showAllPosts.bind(this);
-    this.resetCategory = this.resetCategory.bind(this);
-    this.resetTag = this.resetTag.bind(this);
-  }
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.props.dispatch(fetchCategories());
-    this.props.dispatch(fetchTags());
-    this.props.dispatch(fetchPosts());
+    this.props.fetchCategories();
+    this.props.fetchTags();
+    this.props.fetchPosts();
   }
-  updateSearch(e) {
-    this.props.dispatch(searchPosts(e.target.value));
-  }
-  updateCategory(e) {
-    this.props.dispatch(setCategory(parseInt(e.target.value)));
-  }
-  updateTag(e) {
-    this.props.dispatch(setTag(parseInt(e.target.value)));
-    window.scrollTo(0, 0);
-  }
-  showAllPosts() {
-    this.props.dispatch(resetFilter("category", 0));
-    this.props.dispatch(resetFilter("tag", 0));
-    this.props.dispatch(resetFilter("search", ""));
-  }
-  resetCategory() {
-    this.props.dispatch(resetFilter("category", 0));
-  }
-  resetTag() {
-    this.props.dispatch(resetFilter("tag", 0));
-  }
-
   render() {
     const {
-      error,
       loading,
       posts,
       post_tags,
@@ -68,7 +26,13 @@ class PostList extends React.Component {
       category,
       tags,
       tag,
-      search
+      search,
+      updateSearch,
+      updateCategory,
+      updateTag,
+      showAllPosts,
+      resetCategory,
+      resetTag
     } = this.props;
     // Array.prototype.filter() is Array#select in Ruby.
     const filterd_posts = posts.filter(post => {
@@ -110,13 +74,13 @@ class PostList extends React.Component {
             category={post.category_id}
             tags={post.tags}
             slug={post.slug}
-            updateTag={this.updateTag}
-            updateCategory={this.updateCategory}
+            updateTag={updateTag}
+            updateCategory={updateCategory}
             created_at={post.created_at}
           />
         ))
       ) : loading === false ? (
-        <NoPostFound showAllPosts={this.showAllPosts} />
+        <NoPostFound showAllPosts={showAllPosts} />
       ) : (
         ""
       );
@@ -135,16 +99,12 @@ class PostList extends React.Component {
         <CategoryTag
           category={category}
           categories={categories}
-          resetCategory={this.resetCategory}
+          resetCategory={resetCategory}
         />
       );
 
     const tagTag =
-      tag === 0 ? (
-        ""
-      ) : (
-        <TagTag tag={tag} tags={tags} resetTag={this.resetTag} />
-      );
+      tag === 0 ? "" : <TagTag tag={tag} tags={tags} resetTag={resetTag} />;
 
     const contentTags =
       tag === 0 && category === 0 ? (
@@ -174,11 +134,11 @@ class PostList extends React.Component {
             tag={tag}
             loading={loading}
             search={search}
-            updateSearch={this.updateSearch}
-            updateTag={this.updateTag}
+            updateSearch={updateSearch}
+            updateTag={updateTag}
             categories={categories}
             category={category}
-            updateCategory={this.updateCategory}
+            updateCategory={updateCategory}
           />
         </div>
         <div className="main-container">
@@ -203,16 +163,4 @@ class PostList extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  posts: state.postReducer.posts,
-  post_tags: state.postReducer.post_tags,
-  search: state.postReducer.search,
-  categories: state.categoryReducer.categories,
-  category: state.postReducer.category,
-  tags: state.tagReducer.tags,
-  tag: state.postReducer.tag,
-  loading: state.postReducer.loading,
-  error: state.postReducer.error
-});
-
-export default connect(mapStateToProps)(PostList);
+export default PostList;

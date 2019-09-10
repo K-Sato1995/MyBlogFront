@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./CodeBlock";
 import breaks from "remark-breaks";
-import { HeadingRenderer } from "../../../../../MiddleWares/Renderers/MarkDown";
+import { HeadingRenderer } from "../../../../../middlewares/Renderers/MarkDown";
 
 export default class MarkDown extends React.Component {
   render() {

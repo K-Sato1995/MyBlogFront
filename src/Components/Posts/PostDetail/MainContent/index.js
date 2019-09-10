@@ -3,7 +3,7 @@ import MarkDown from "./MarkDown";
 import PostAuthor from "./PostAuthor";
 import CommentSection from "./CommentSection";
 import Footer from "../../../Footer";
-import { formatDate } from "../../../../MiddleWares/Renderers/Data";
+import { formatDate } from "../../../../middlewares/Renderers/Data";
 
 export default class SideNav extends React.Component {
   render() {

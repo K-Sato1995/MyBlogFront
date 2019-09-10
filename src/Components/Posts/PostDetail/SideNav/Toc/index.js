@@ -6,7 +6,7 @@ import { ChevronDown } from "react-feather";
 import {
   stringReplacer,
   returnTitle
-} from "../../../../../MiddleWares/Renderers/Toc";
+} from "../../../../../middlewares/Renderers/Toc";
 
 export default class Toc extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { addLike } from "../../../../../MiddleWares/Api";
+import { addLike } from "../../../../../middlewares/Api";
 
 export default class LikeBox extends React.Component {
   constructor(props) {

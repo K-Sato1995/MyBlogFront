@@ -1,22 +1,22 @@
 export const baseUrl =
   process.env.NODE_ENV === "development"
-    ? "http://localhost:3000/"
-    : "https://k-blog0130.herokuapp.com/";
+    ? "http://localhost:3000/api/v1"
+    : "https://k-blog0130.herokuapp.com/api/v1";
 
 export async function getPosts() {
-  let response = await fetch(`${baseUrl}/api/v1/posts`);
+  let response = await fetch(`${baseUrl}//posts`);
   let data = await response.json();
   return data;
 }
 
 export async function getPost(slug) {
-  let response = await fetch(`${baseUrl}api/v1/posts/${slug}`);
+  let response = await fetch(`${baseUrl}/posts/${slug}`);
   let data = await response.json();
   return data;
 }
 
 export async function addLike(slug) {
-  let response = await fetch(`${baseUrl}/api/v1/posts/${slug}/like`, {
+  let response = await fetch(`${baseUrl}//posts/${slug}/like`, {
     method: "PUT"
   });
   let data = await response.json();
@@ -24,7 +24,7 @@ export async function addLike(slug) {
 }
 
 export async function createComment(slug, name, content) {
-  let response = await fetch(`${baseUrl}/api/v1/posts/${slug}/comments`, {
+  let response = await fetch(`${baseUrl}//posts/${slug}/comments`, {
     method: "POST",
     headers: {
       Accept: "application/json",

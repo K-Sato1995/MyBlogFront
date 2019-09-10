@@ -1,10 +1,10 @@
+import { baseUrl } from "../middlewares/Api/V2";
 export const FETCH_CATEGORIES_BEGIN = "FETCH_CATEGORIES_BEGIN";
 export const FETCH_CATEGORIES_SUCCESS = "FETCH_CATEGORIES_SUCCESS";
 export const FETCH_CATEGORIES_FAILURE = "FETCH_CATEGORIES_FAILURE";
-
 export function fetchCategories() {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v2/categories")
+    return fetch(`${baseUrl}/categories`)
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
