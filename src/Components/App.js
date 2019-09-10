@@ -25,8 +25,7 @@ class App extends Component {
       lang: "en",
       darkTheme: false,
       // For mobile style
-      showLC: false,
-      detailPage: false
+      showLC: false
     };
     this.toggleLocale = this.toggleLocale.bind(this);
     this.handleToggleTheme = this.handleToggleTheme.bind(this);
@@ -72,13 +71,6 @@ class App extends Component {
       : {
           display: "none"
         };
-    const detailPage = this.state.detailPage
-      ? {
-          visibility: "hidden"
-        }
-      : {
-          visibility: "visible"
-        };
     let theme = this.state.darkTheme ? "DarkTheme" : "LightTheme";
     let messages = this.state.lang === "en" ? localeEn : localeJa;
     return (
@@ -96,10 +88,7 @@ class App extends Component {
               />
               <div className="whole-container">
                 <div className="wrapper" style={showLC} />
-                <div
-                  className="left-container"
-                  style={Object.assign({}, showLC, detailPage)}
-                >
+                <div className="left-container" style={showLC}>
                   <SideNav
                     setLocale={this.props.setLocale}
                     lang={this.props.lang}
