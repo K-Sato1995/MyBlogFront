@@ -12,7 +12,7 @@ export const HeadingRenderer = props => {
   var slug = text.toLowerCase().replace(/[!?\s]/g, "-");
   return React.createElement(
     "h" + props.level,
-    { id: slug, class: "anchor" },
+    { id: slug, className: "anchor" },
     props.children
   );
 };

@@ -45,7 +45,9 @@ export default class Toc extends React.Component {
     const toc =
       headers === null
         ? ""
-        : headers.map(header => <li>{this.createAnchorLink(header)}</li>);
+        : headers.map((header, i) => (
+            <span key={i}>{this.createAnchorLink(header)}</span>
+          ));
     const icon = filter ? <ChevronRight /> : <ChevronDown />;
     return (
       <div className="toc">

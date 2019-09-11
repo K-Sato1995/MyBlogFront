@@ -25,7 +25,6 @@ export default class CategoryList extends React.Component {
           {arrow(categoryList)}
         </button>
         <ul id={categoryList ? "show" : "hide"} className="list">
-          {console.log(categories)}
           <List
             categories={categories}
             updateCategory={updateCategory}
