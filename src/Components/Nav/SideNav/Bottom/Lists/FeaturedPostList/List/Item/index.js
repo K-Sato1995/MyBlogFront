@@ -6,7 +6,7 @@ class FeaturedPost extends React.Component {
     const { slug, title } = this.props;
     const featuredPostTitle = trimString(title, 30);
     return (
-      <Link to={`/Post/${slug}`} className="featured-post-title">
+      <Link to={`/${slug}`} className="featured-post-title">
         {featuredPostTitle}
       </Link>
     );
