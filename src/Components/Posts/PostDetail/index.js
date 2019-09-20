@@ -4,7 +4,7 @@ import "../../../Design/Highlight.scss";
 import Loading from "./Loading";
 import MainContent from "./MainContent";
 import SideNav from "./SideNav";
-import { getPost } from "../../../middlewares/Api";
+import { getPost } from "../../../middlewares/Api/V2";
 
 class PostDetail extends React.Component {
   constructor() {
