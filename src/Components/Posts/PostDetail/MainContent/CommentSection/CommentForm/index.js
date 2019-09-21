@@ -3,7 +3,7 @@ import InputForm from "./Input/Form/Input";
 import TextArea from "./Input/Form/TextArea";
 import InputButton from "./Input/Button";
 import "../../../../../../Design/Posts/PostDetail/CommentSection.scss";
-import { createComment } from "../../../../../../middlewares/Api";
+import { createComment } from "../../../../../../middlewares/Api/V2";
 
 export default class CommentSection extends React.Component {
   constructor(props) {
