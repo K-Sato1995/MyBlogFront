@@ -34,7 +34,7 @@ export async function getTags() {
 }
 
 export async function addLike(slug) {
-  let response = await fetch(`${baseUrl}/api/v1/posts/${slug}/like`, {
+  let response = await fetch(`${baseUrl}/posts/${slug}/like`, {
     method: "PUT"
   });
   let data = await response.json();
@@ -42,7 +42,7 @@ export async function addLike(slug) {
 }
 
 export async function createComment(slug, name, content) {
-  let response = await fetch(`${baseUrl}/api/v1/posts/${slug}/comments`, {
+  let response = await fetch(`${baseUrl}/posts/${slug}/comments`, {
     method: "POST",
     headers: {
       Accept: "application/json",
