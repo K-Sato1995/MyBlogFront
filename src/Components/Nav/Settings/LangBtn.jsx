@@ -5,7 +5,7 @@ const LangButton = props => {
   const { toggleLocale, lang } = props;
   return (
     <button onClick={() => toggleLocale()} className="lang-btn">
-      {lang === "en" ? "English" : "日本語"}
+      {lang === "en" ? "日本語" : "English"}
     </button>
   );
 };
