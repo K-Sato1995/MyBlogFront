@@ -1,6 +1,6 @@
 export default {
   // Nav
-  "nav.title": "K-BLOG",
+  "nav.title": "K-Sato's Blog",
   // RightContainer
   "author.title": "About Me",
   "author.name": "K-Sato",
