@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react";
-import PostBox from "./PostBox";
+import React, { useEffect } from "react";
 import "../../../Design/Posts/PostList/PostList.scss";
-import NoPostFound from "./NoPostFound";
 import ContentHeader from "./ContentHeader";
 import SideNav from "../../Nav/SideNav";
-import CategoryTag from "./ContentTags/CategoryTag";
-import TagTag from "./ContentTags/TagTag";
 import Footer from "../../Footer";
 import PostListContent from "./PostListContent";
+import ContentTags from "./ContentTags";
 import { FormattedMessage } from "react-intl";
 
 const PostList = props => {
@@ -36,15 +33,8 @@ const PostList = props => {
     showLC
   } = props;
 
-  // Pagenation
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [postsPerPage, setPostsPerPage] = useState(10);
-
-  // const indexOfLastPost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
-
   // Array.prototype.filter() is Array#select in Ruby.
-  const filterd_posts = posts.filter(post => {
+  const filterdPosts = posts.filter(post => {
     posts.map((post, index) => (post.tags = post_tags[index]));
     let postTags = [];
     post.tags.map(tag => postTags.push(tag.id));
@@ -72,52 +62,6 @@ const PostList = props => {
     }
   });
 
-  const VisiblePostList =
-    filterd_posts.length !== 0 ? (
-      filterd_posts.map((post, index) => (
-        <PostBox
-          key={index}
-          id={post.id}
-          title={post.title}
-          introduction={post.introduction}
-          category={post.category_id}
-          tags={post.tags}
-          slug={post.slug}
-          updateTag={updateTag}
-          updateCategory={updateCategory}
-          created_at={post.created_at}
-        />
-      ))
-    ) : loading === false ? (
-      <NoPostFound showAllPosts={showAllPosts} />
-    ) : (
-      ""
-    );
-
-  // Content Tags
-  const categoryTag =
-    category === 0 ? (
-      ""
-    ) : (
-      <CategoryTag
-        category={category}
-        categories={categories}
-        resetCategory={resetCategory}
-      />
-    );
-
-  const tagTag =
-    tag === 0 ? "" : <TagTag tag={tag} tags={tags} resetTag={resetTag} />;
-
-  const contentTags =
-    tag === 0 && category === 0 ? (
-      <div className="content-tag-box-hidden" />
-    ) : (
-      <div className="content-tag-box">
-        {categoryTag}
-        {tagTag}
-      </div>
-    );
   const sLC = showLC ? { display: "block" } : { display: "none" };
 
   return (
@@ -151,8 +95,19 @@ const PostList = props => {
               defaultMessage="This is the list of my blog posts. I mostly write about programming and my daily life."
             />
           />
-          {contentTags}
-          <PostListContent currentPosts={VisiblePostList} loading={loading} />
+          <ContentTags
+            category={category}
+            categories={categories}
+            resetCategory={resetCategory}
+            tag={tag}
+            tags={tags}
+            resetTag={resetTag}
+          />
+          <PostListContent
+            filterdPosts={filterdPosts}
+            loading={loading}
+            showAllPosts={showAllPosts}
+          />
           <Footer />
         </div>
       </div>
