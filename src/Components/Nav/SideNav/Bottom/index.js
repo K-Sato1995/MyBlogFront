@@ -5,6 +5,7 @@ import TagList from "./Lists/TagList";
 import FeaturedPostList from "./Lists/FeaturedPostList";
 import LinkList from "./Lists/LinkList";
 import SearchBar from "./SearchBar";
+import LinkItem from "./LinkItem";
 
 export default class Bottom extends React.Component {
   render() {
@@ -54,6 +55,8 @@ export default class Bottom extends React.Component {
           arrow={arrow}
         />
         <LinkList links={links} toggleLinks={toggleLinks} arrow={arrow} />
+        <LinkItem url="https://k-sato.netlify.com/" text="About Me" />
+        <LinkItem url="https://github.com/K-Sato1995" text="Other Projects" />
         <Label />
       </div>
     );

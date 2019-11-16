@@ -6,7 +6,7 @@
   border-right: solid 1px $border-color-light;
   height: 100%;
   width: 300px;
-  padding-top: 85px;
+  padding-top: 100px;
   overflow-y: scroll;
   .side-bottom {
     .list-group {
@@ -19,8 +19,8 @@
       padding: 7px;
       position: relative;
       width: 100%;
+      color: $h-color;
       text-align: left;
-      color: $list-title;
       font-size: 15px;
       font-weight: 600;
       .chevron-right {
@@ -36,7 +36,22 @@
         color: #9dabb7;
       }
     }
+    a {
+      text-decoration: none;
+    }
+    .link-item {
+      @extend .list-group;
+      .link-text {
+        padding: 7px;
+        color: $h-color;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
     .list-title:hover {
+      background-color: #e6ecf1;
+    }
+    .link-text:hover {
       background-color: #e6ecf1;
     }
     .list {
