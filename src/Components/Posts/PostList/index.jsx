@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../Design/Posts/PostList/PostList.scss";
 import ContentHeader from "./ContentHeader";
 import SideNav from "../../Nav/SideNav";
@@ -35,6 +35,10 @@ const PostList = ({
     fetchTags();
     fetchPosts();
   }, []);
+
+  // Pagenation
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(7);
 
   // Array.prototype.filter() is Array#select in Ruby.
   const filterdPosts = posts.filter(post => {
@@ -84,6 +88,7 @@ const PostList = ({
           categories={categories}
           category={category}
           updateCategory={updateCategory}
+          setCurrentPage={setCurrentPage}
         />
       </div>
       <div className="main-container">
@@ -112,6 +117,9 @@ const PostList = ({
             updateTag={updateTag}
             updateCategory={updateCategory}
             showAllPosts={showAllPosts}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            postsPerPage={postsPerPage}
           />
           <Footer />
         </div>

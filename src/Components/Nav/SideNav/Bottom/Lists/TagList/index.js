@@ -4,7 +4,14 @@ import List from "./List";
 
 export default class TagList extends React.Component {
   render() {
-    const { tagList, arrow, updateTag, tags, loading } = this.props;
+    const {
+      tagList,
+      arrow,
+      updateTag,
+      tags,
+      loading,
+      setCurrentPage
+    } = this.props;
     return (
       <div className="list-group">
         <button
@@ -16,7 +23,12 @@ export default class TagList extends React.Component {
           {arrow(tagList)}
         </button>
         <ul id={tagList ? "show" : "hide"} className="list">
-          <List updateTag={updateTag} tags={tags} loading={loading} />
+          <List
+            updateTag={updateTag}
+            tags={tags}
+            loading={loading}
+            setCurrentPage={setCurrentPage}
+          />
         </ul>
       </div>
     );

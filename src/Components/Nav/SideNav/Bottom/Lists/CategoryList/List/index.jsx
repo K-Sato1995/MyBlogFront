@@ -3,7 +3,7 @@ import Loading from "../../../Loading";
 import Item from "./Item";
 
 const List = props => {
-  const { loading, updateCategory, categories } = props;
+  const { loading, updateCategory, categories, setCurrentPage } = props;
   if (loading) {
     return <Loading />;
   }
@@ -16,6 +16,7 @@ const List = props => {
             value={category.id}
             name={category.name}
             updateCategory={updateCategory}
+            setCurrentPage={setCurrentPage}
             key={index}
           />
         </li>
