@@ -2,8 +2,8 @@ import React from "react";
 import "../../../Design/Nav/SideNav.scss";
 import { ChevronRight } from "react-feather";
 import { ChevronDown } from "react-feather";
-import Top from "./Top";
 import Bottom from "./Bottom";
+// import Top from "./Top";
 
 export default class SideNav extends React.Component {
   constructor(props) {
@@ -65,7 +65,7 @@ export default class SideNav extends React.Component {
     };
     return (
       <div className="SideNavbar">
-        <Top />
+        {/* <Top /> */}
         <Bottom
           posts={posts}
           categoryList={categoryList}

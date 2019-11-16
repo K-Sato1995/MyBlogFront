@@ -7,7 +7,6 @@ class SearchBar extends React.Component {
     const { value, updateSearch } = this.props;
     return (
       <div className="search-box">
-        <Search className="icon" size={19} />
         <input
           type="text"
           value={value}
@@ -15,6 +14,7 @@ class SearchBar extends React.Component {
           className="search-bar"
           placeholder="Type to search"
         />
+        <Search className="icon" size={19} />
       </div>
     );
   }
