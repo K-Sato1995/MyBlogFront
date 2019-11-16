@@ -9,7 +9,8 @@ export default class CategoryList extends React.Component {
       arrow,
       categories,
       updateCategory,
-      loading
+      loading,
+      setCurrentPage
     } = this.props;
     return (
       <div className="list-group">
@@ -29,6 +30,7 @@ export default class CategoryList extends React.Component {
             categories={categories}
             updateCategory={updateCategory}
             loading={loading}
+            setCurrentPage={setCurrentPage}
           />
         </ul>
       </div>

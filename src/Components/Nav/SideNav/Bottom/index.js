@@ -26,7 +26,8 @@ export default class Bottom extends React.Component {
       tags,
       updateTag,
       categories,
-      updateCategory
+      updateCategory,
+      setCurrentPage
     } = this.props;
     return (
       <div className="side-bottom">
@@ -38,6 +39,7 @@ export default class Bottom extends React.Component {
           toggleCategoryList={toggleCategoryList}
           loading={loading}
           arrow={arrow}
+          setCurrentPage={setCurrentPage}
         />
         <TagList
           tagList={tagList}
@@ -46,6 +48,7 @@ export default class Bottom extends React.Component {
           tags={tags}
           loading={loading}
           arrow={arrow}
+          setCurrentPage={setCurrentPage}
         />
         <FeaturedPostList
           featuredPosts={featuredPosts}

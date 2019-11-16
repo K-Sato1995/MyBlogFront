@@ -4,7 +4,7 @@ import Item from "./Item";
 
 export default class TagList extends React.Component {
   render() {
-    const { tags, loading, updateTag } = this.props;
+    const { tags, loading, updateTag, setCurrentPage } = this.props;
     const tagList = tags.map((tag, index) => (
       <li className="list-item">
         <Item
@@ -13,6 +13,7 @@ export default class TagList extends React.Component {
           value={tag.id}
           name={tag.name}
           updateTag={updateTag}
+          setCurrentPage={setCurrentPage}
         />
       </li>
     ));

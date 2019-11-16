@@ -27,13 +27,21 @@ class PostBox extends React.Component {
     this.setState({ hover: false });
   }
   render() {
-    const { tags, updateTag, introduction, slug, title } = this.props;
+    const {
+      tags,
+      updateTag,
+      introduction,
+      slug,
+      title,
+      setCurrentPage
+    } = this.props;
     const post_tags = tags.map((tag, index) => (
       <TagButton
         key={index}
         value={tag.id}
         updateTag={updateTag}
         name={tag.name}
+        setCurrentPage={setCurrentPage}
       />
     ));
     const intro =

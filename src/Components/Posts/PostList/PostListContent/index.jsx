@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import PostBox from "../PostBox";
 import Loading from "../Loading";
 import NoPostFound from "../NoPostFound";
 import Pagination from "../Pagination";
 
-const PostListContent = props => {
-  const { filterdPosts, showAllPosts, loading } = props;
-
+const PostListContent = ({
+  filterdPosts,
+  showAllPosts,
+  loading,
+  postsPerPage,
+  currentPage,
+  setCurrentPage,
+  updateTag
+}) => {
   if (loading === true) return <Loading />;
 
   if (filterdPosts.length === 0)
     return <NoPostFound showAllPosts={showAllPosts} />;
-
-  // Pagenation
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(7);
 
   // The index of the last post on the page.
   const indexOfLastPost = currentPage * postsPerPage;
@@ -41,9 +43,9 @@ const PostListContent = props => {
           category={post.category_id}
           tags={post.tags}
           slug={post.slug}
-          updateTag={props.updateTag}
-          updateCategory={props.updateCategory}
           created_at={post.created_at}
+          updateTag={updateTag}
+          setCurrentPage={setCurrentPage}
         />
       ))}
       <Pagination

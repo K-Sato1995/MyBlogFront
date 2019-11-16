@@ -53,7 +53,8 @@ export default class SideNav extends React.Component {
       tags,
       updateCategory,
       updateTag,
-      updateSearch
+      updateSearch,
+      setCurrentPage
     } = this.props;
 
     const arrow = target => {
@@ -84,6 +85,7 @@ export default class SideNav extends React.Component {
           updateTag={updateTag}
           categories={categories}
           updateCategory={updateCategory}
+          setCurrentPage={setCurrentPage}
         />
       </div>
     );
