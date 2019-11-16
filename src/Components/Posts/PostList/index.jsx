@@ -7,31 +7,34 @@ import PostListContent from "./PostListContent";
 import ContentTags from "./ContentTags";
 import { FormattedMessage } from "react-intl";
 
-const PostList = props => {
+const PostList = ({
+  loading,
+  posts,
+  post_tags,
+  categories,
+  category,
+  tags,
+  tag,
+  search,
+  updateSearch,
+  updateCategory,
+  updateTag,
+  showAllPosts,
+  resetCategory,
+  resetTag,
+  showLC,
+  fetchCategories,
+  fetchTags,
+  fetchPosts,
+  lang,
+  setLocale
+}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    props.fetchCategories();
-    props.fetchTags();
-    props.fetchPosts();
+    fetchCategories();
+    fetchTags();
+    fetchPosts();
   }, []);
-
-  const {
-    loading,
-    posts,
-    post_tags,
-    categories,
-    category,
-    tags,
-    tag,
-    search,
-    updateSearch,
-    updateCategory,
-    updateTag,
-    showAllPosts,
-    resetCategory,
-    resetTag,
-    showLC
-  } = props;
 
   // Array.prototype.filter() is Array#select in Ruby.
   const filterdPosts = posts.filter(post => {
@@ -44,7 +47,7 @@ const PostList = props => {
     const catgory_not_zero = category !== 0;
 
     // Check post
-    const isLanguage = props.lang === post.language.substring(0, 2);
+    const isLanguage = lang === post.language.substring(0, 2);
     const taggedPost = postTags.includes(tag);
     const categoryPost = post.category_id === category;
     const searchedPost = post.title
@@ -69,8 +72,8 @@ const PostList = props => {
       <div className="wrapper" style={sLC} />
       <div className="left-container" style={sLC}>
         <SideNav
-          setLocale={props.setLocale}
-          lang={props.lang}
+          setLocale={setLocale}
+          lang={lang}
           posts={posts}
           tags={tags}
           tag={tag}
@@ -106,6 +109,8 @@ const PostList = props => {
           <PostListContent
             filterdPosts={filterdPosts}
             loading={loading}
+            updateTag={updateTag}
+            updateCategory={updateCategory}
             showAllPosts={showAllPosts}
           />
           <Footer />

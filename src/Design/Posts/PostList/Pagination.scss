@@ -1,0 +1,59 @@
+@import "../../global";
+
+.pagination {
+  display: flex;
+  .button {
+    flex: 1;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    outline: none;
+    border: 1px solid $border-color-light;
+    border-radius: 3px;
+    margin: 15px 30px;
+    min-height: 80px;
+    transition: 0.5s;
+    position: relative;
+    .text {
+      color: $h-color;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .next-text {
+      @extend .text;
+      padding-left: 20px;
+    }
+    .previous-text {
+      @extend .text;
+      padding-right: 20px;
+    }
+    .arrow {
+      position: absolute;
+      color: #99a2ab;
+    }
+    .right-arrow {
+      @extend .arrow;
+      right: 20px;
+      top: 27px;
+    }
+    .left-arrow {
+      @extend .arrow;
+      left: 20px;
+      top: 27px;
+    }
+  }
+  .next-button {
+    @extend .button;
+    text-align: left;
+  }
+  .previous-button {
+    @extend .button;
+    text-align: right;
+  }
+}
+
+.button:hover {
+  border: solid 1px $theme-color;
+  .text,
+  .arrow {
+    color: $theme-color;
+  }
+}

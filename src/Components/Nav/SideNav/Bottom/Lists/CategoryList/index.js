@@ -24,12 +24,13 @@ export default class CategoryList extends React.Component {
           />
           {arrow(categoryList)}
         </button>
-        <List
-          categories={categories}
-          updateCategory={updateCategory}
-          categoryList={categoryList}
-          loading={loading}
-        />
+        <ul id={categoryList ? "show" : "hide"} className="list">
+          <List
+            categories={categories}
+            updateCategory={updateCategory}
+            loading={loading}
+          />
+        </ul>
       </div>
     );
   }
