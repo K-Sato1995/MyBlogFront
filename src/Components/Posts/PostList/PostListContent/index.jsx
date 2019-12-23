@@ -28,9 +28,21 @@ const PostListContent = ({
   // Total page number
   const totalPageNumber = Math.ceil(filterdPosts.length / postsPerPage);
 
+  const scrollToTop = () =>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
   // Change Page
-  const nextPage = () => setCurrentPage(currentPage + 1);
-  const previousPage = () => setCurrentPage(currentPage - 1);
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
+    scrollToTop();
+  };
+  const previousPage = () => {
+    setCurrentPage(currentPage - 1);
+    scrollToTop();
+  };
 
   return (
     <div className="postList">
